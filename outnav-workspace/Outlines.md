@@ -31,7 +31,9 @@ vscode-outnav
                     For Outline Webview
                         EARS
                             When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
-                            While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds..
+                            While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.
+                            The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.
+                            The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).
                         Keyboard shortcuts
                             While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing
                             While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close

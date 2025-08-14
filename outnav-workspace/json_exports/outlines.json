@@ -170,7 +170,17 @@
                                     "children": []
                                   },
                                   {
-                                    "title": "While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds..",
+                                    "title": "While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).",
                                     "level": 8,
                                     "children": []
                                   }

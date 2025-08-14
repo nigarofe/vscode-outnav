@@ -121,7 +121,7 @@ function openOutlineWebview(context, jsonUri, outlines, workspaceRootPath) {
     panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, data, workspaceRootPath);
     // handle messages from webview (if any)
     panel.webview.onDidReceiveMessage(msg => {
-        if (msg === 'close') {
+        if (msg && msg.command === 'close') {
             panel.dispose();
         }
     });
@@ -135,18 +135,23 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource} file: https: data:; script-src 'unsafe-inline' ${webview.cspSource}; style-src 'unsafe-inline' ${webview.cspSource};">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-			body { font-family: sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
-			#title { font-size: 2.5rem; text-align:center; padding:1rem; }
+			body { font-family: sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; position:relative; }
+			#breadcrumb { position: absolute; top: 0.8rem; left: 1rem; right: 1rem; text-align:center; font-size:0.95rem; color:#333; }
+			.crumb { cursor:pointer; color: #0366d6; margin: 0 0.35rem; }
+			.crumb:hover { text-decoration: underline; }
+			.crumb-current { font-weight: 600; color: #000; cursor: default; }
+			#title { font-size: 2.1rem; text-align:center; padding:1.6rem 1rem 1rem 1rem; }
 			img { max-width: 60vw; max-height: 60vh; display:block; margin: 0.5rem auto; }
 		</style>
 	</head>
 	<body>
+		<nav id="breadcrumb">(loading)</nav>
 		<div id="title">(loading)</div>
 		<script>
 			const vscode = acquireVsCodeApi();
 			const workspaceRoot = ${JSON.stringify(workspaceRoot || '')};
 			const data = ${dataJson};
-			// flatten current level titles (start at document)
+
 			let currentNode = data.document;
 			let levelStack = [currentNode];
 			let titles = (currentNode.children || []).map(n=>n.title);
@@ -154,26 +159,42 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 			let intervalMs = 2000;
 			let playing = true;
 			const titleEl = document.getElementById('title');
+			const breadcrumbEl = document.getElementById('breadcrumb');
+
+			function renderBreadcrumbs() {
+				// show full stack as breadcrumbs (root ... current)
+				breadcrumbEl.innerHTML = '';
+				levelStack.forEach((n, i) => {
+					const span = document.createElement('span');
+					span.textContent = n.title || '(untitled)';
+					span.dataset.idx = String(i);
+					span.className = (i === levelStack.length - 1) ? 'crumb-current' : 'crumb';
+					breadcrumbEl.appendChild(span);
+					if (i < levelStack.length - 1) {
+						const sep = document.createElement('span');
+						sep.textContent = ' › ';
+						sep.style.color = '#666';
+						breadcrumbEl.appendChild(sep);
+					}
+				});
+			}
 
 			function renderTitle() {
+				renderBreadcrumbs();
 				if (!titles || titles.length===0) { titleEl.innerText = currentNode.title || '(empty)'; return; }
 				const raw = titles[idx % titles.length];
-				// render markdown-like images: simple replace of ![alt](src)
 				const imgMatch = raw.match(/!\[[^\]]*\]\(([^)]+)\)/);
 				if (imgMatch) {
 					const src = imgMatch[1];
-					// resolve relative to workspace root by using file: URI
 					let resolved = src;
 					if (!src.startsWith('http') && !src.startsWith('file:')) {
 						if (workspaceRoot) {
-							// normalize backslashes to forward for file URI
 							resolved = 'file://' + (workspaceRoot + '/' + src).replace(/\\\\/g, '/');
 						} else {
 							resolved = 'file://' + src;
 						}
 					}
 					titleEl.innerHTML = raw.replace(imgMatch[0], '') + '<br>';
-					// remove existing images
 					const existing = document.querySelectorAll('img');
 					existing.forEach(e=>e.remove());
 					const im = document.createElement('img');
@@ -181,7 +202,6 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 					document.body.appendChild(im);
 				} else {
 					titleEl.innerText = raw;
-					// remove images
 					const existing = document.querySelectorAll('img');
 					existing.forEach(e=>e.remove());
 				}
@@ -194,9 +214,21 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 			}
 
 			let timer = setInterval(tick, intervalMs);
-
-			// initial render
 			renderTitle();
+
+			// breadcrumb click: navigate to that level
+			breadcrumbEl.addEventListener('click', (ev) => {
+				const target = ev.target;
+				if (!target || !target.dataset) return;
+				const i = parseInt(target.dataset.idx, 10);
+				if (isNaN(i)) return;
+				// navigate to selected level
+				levelStack = levelStack.slice(0, i+1);
+				currentNode = levelStack[levelStack.length - 1];
+				titles = (currentNode.children || []).map(n=>n.title);
+				idx = 0;
+				renderTitle();
+			});
 
 			window.addEventListener('keydown', e=>{
 				if (e.code === 'Space') { playing = !playing; }
@@ -215,8 +247,8 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 			// listen for messages from extension
 			window.addEventListener('message', event => {
 				const msg = event.data;
-				if (msg.command === 'update') {
-					// replace data
+				if (msg && msg.command === 'update') {
+					// future: handle updates to the outlines; for now noop
 				}
 			});
 		</script>
