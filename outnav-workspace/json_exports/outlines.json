@@ -1,0 +1,219 @@
+{
+  "document": {
+    "title": "Outlines.md",
+    "level": 0,
+    "children": [
+      {
+        "title": "EARS patterns definitions",
+        "level": 1,
+        "children": [
+          {
+            "title": "Generic",
+            "level": 2,
+            "children": [
+              {
+                "title": "While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Ubiquitous",
+            "level": 2,
+            "children": [
+              {
+                "title": "The <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "State driven",
+            "level": 2,
+            "children": [
+              {
+                "title": "While <precondition(s)>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Event driven",
+            "level": 2,
+            "children": [
+              {
+                "title": "When <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Optional feature",
+            "level": 2,
+            "children": [
+              {
+                "title": "Where <feature_is_included>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Unwanted behavior",
+            "level": 2,
+            "children": [
+              {
+                "title": "If <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Complex",
+            "level": 2,
+            "children": [
+              {
+                "title": "While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "vscode-outnav",
+        "level": 1,
+        "children": [
+          {
+            "title": "Mental models",
+            "level": 2,
+            "children": [
+              {
+                "title": "AI agent",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "npm dependencies and initialization",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "The Extension shall be initialized using \"npm install --global yo generator-code; yo code; npm install katex\"",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Systems",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Commands",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "vscode-outnav.startOutlineNavigator",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the Outline Webview",
+                                "level": 7,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Webviews",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "For any Webview",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "Image rendering",
+                                "level": 7,
+                                "children": [
+                                  {
+                                    "title": "The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.",
+                                    "level": 8,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "For Outline Webview",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "EARS",
+                                "level": 7,
+                                "children": [
+                                  {
+                                    "title": "When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds..",
+                                    "level": 8,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "Keyboard shortcuts",
+                                "level": 7,
+                                "children": [
+                                  {
+                                    "title": "While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the Outline Webview is opened, when the `=`/`-` keys are pressed, the title replacing frequency shall decrease/increase",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase",
+                                    "level": 8,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

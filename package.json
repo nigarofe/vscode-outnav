@@ -9,13 +9,18 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-outnav.helloWorld",
         "title": "Hello World"
+      }
+      ,
+      {
+        "command": "vscode-outnav.startOutlineNavigator",
+        "title": "Start Outline Navigator"
       }
     ]
   },
