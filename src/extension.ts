@@ -133,7 +133,7 @@ function openOutlineWebview(context: vscode.ExtensionContext, jsonUri: vscode.Ur
 
 		// handle messages from webview (if any)
 		panel.webview.onDidReceiveMessage(async msg => {
-			if (!msg || !msg.command) return;
+			if (!msg || !msg.command) { return; }
 			if (msg.command === 'close') { panel.dispose(); }
 			else if (msg.command === 'open_webpage' && msg.url) {
 				// open external URL
@@ -176,7 +176,12 @@ function openOutlineWebview(context: vscode.ExtensionContext, jsonUri: vscode.Ur
 			.sibling:hover { background:rgba(0,0,0,0.03); color:var(--fg); }
 			.sibling.current { font-weight:600; color:var(--fg); cursor:default; }
 			img.outline-image { max-width:78vw; max-height:58vh; margin:0.8rem auto 0.2rem; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.08); display:block; }
-			.footer { margin-top:0.6rem; font-size:0.85rem; color:var(--muted); text-align:center; }
+			.footer { margin-top:0.6rem; font-size:0.85rem; color:var(--muted); text-align:center; position:relative; }
+			/* action hints are absolutely positioned and fade in/out to avoid layout shifts */
+			#action-hints { position:absolute; left:0; right:0; top:100%; margin-top:6px; display:flex; justify-content:center; pointer-events:none; opacity:0; }
+			#action-hints.visible { opacity:1; pointer-events:auto; }
+			.hint { display:inline-block; margin:0 0.18rem; padding:0.12rem 0.32rem; background:rgba(0,0,0,0.03); border-radius:6px; }
+			.hint-key { font-weight:700; margin-right:0.22rem; color:var(--accent); }
 			.controls { display:inline-block; padding:0.28rem 0.6rem; background:rgba(0,0,0,0.03); border-radius:999px; }
 			@media (max-width:600px) { .container { padding:0.8rem; } #title { font-size:1.4rem; } }
 		</style>
@@ -193,7 +198,10 @@ function openOutlineWebview(context: vscode.ExtensionContext, jsonUri: vscode.Ur
 				<div id="siblings-below" class="siblings" aria-hidden="true"></div>
 				<img id="outline-image" class="outline-image" style="display:none" />
 			</div>
-			<div class="footer"> <span class="controls">Space: play/pause • Esc: close • =/- speed • A/D level • J/L prev/next</span></div>
+			<div class="footer">
+				<div class="controls">Space: play/pause • Esc: close • =/- speed • A/D level • J/L prev/next</div>
+				<div id="action-hints" aria-live="polite"></div>
+			</div>
 		</div>
 	<script>
 		const vscode = acquireVsCodeApi();
@@ -267,6 +275,25 @@ function openOutlineWebview(context: vscode.ExtensionContext, jsonUri: vscode.Ur
 					if (!a || !a.type) return;
 					if (a.key) { actionKeyMap[String(a.key).toUpperCase()] = a; }
 				});
+			}
+
+			// render action hints UI
+			const hintsEl = document.getElementById('action-hints');
+			if (hintsEl) {
+				hintsEl.innerHTML = '';
+				const keys = Object.keys(actionKeyMap || {});
+				if (keys.length) {
+					keys.forEach(k => {
+						const a = actionKeyMap[k];
+						const span = document.createElement('span');
+						span.className = 'hint';
+						span.innerHTML = '<span class="hint-key">' + k + '</span><span class="hint-desc">' + (a.type || '') + (a.param ? ' → ' + a.param : '') + '</span>';
+						hintsEl.appendChild(span);
+					});
+					hintsEl.classList.add('visible');
+				} else {
+					hintsEl.classList.remove('visible');
+				}
 			}
 
 			// siblings
