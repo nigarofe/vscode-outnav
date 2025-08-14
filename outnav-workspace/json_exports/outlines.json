@@ -209,6 +209,11 @@
                                     "title": "While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase",
                                     "level": 8,
                                     "children": []
+                                  },
+                                  {
+                                    "title": "While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next",
+                                    "level": 8,
+                                    "children": []
                                   }
                                 ]
                               }

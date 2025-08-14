@@ -242,6 +242,12 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 					const sel = currentNode.children && currentNode.children[idx % (currentNode.children.length||1)];
 					if (sel) { levelStack.push(sel); currentNode = sel; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); }
 				}
+				else if (e.key.toLowerCase() === 'j') { // previous title
+					if (titles && titles.length) { idx = (idx - 1 + titles.length) % titles.length; renderTitle(); }
+				}
+				else if (e.key.toLowerCase() === 'l') { // next title
+					if (titles && titles.length) { idx = (idx + 1) % titles.length; renderTitle(); }
+				}
 			});
 
 			// listen for messages from extension

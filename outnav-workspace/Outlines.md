@@ -39,4 +39,5 @@ vscode-outnav
                             While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close
                             While the Outline Webview is opened, when the `=`/`-` keys are pressed, the title replacing frequency shall decrease/increase
                             While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase
+                            While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next
 
