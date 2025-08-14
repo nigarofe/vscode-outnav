@@ -183,6 +183,16 @@
                                     "title": "The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).",
                                     "level": 8,
                                     "children": []
+                                  },
+                                  {
+                                    "title": "The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.",
+                                    "level": 8,
+                                    "children": []
                                   }
                                 ]
                               },
@@ -226,6 +236,27 @@
                 ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "title": "Matérias UFMG",
+        "level": 1,
+        "children": [
+          {
+            "title": "Análise Estrutural",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "Mecânica dos Fluidos",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "Equações Diferenciais A",
+            "level": 2,
+            "children": []
           }
         ]
       }

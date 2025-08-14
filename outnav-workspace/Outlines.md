@@ -34,6 +34,8 @@ vscode-outnav
                             While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.
                             The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.
                             The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).
+                            The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.
+                            The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.
                         Keyboard shortcuts
                             While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing
                             While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close
@@ -41,3 +43,9 @@ vscode-outnav
                             While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase
                             While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next
 
+Matérias UFMG
+    Análise Estrutural
+    Mecânica dos Fluidos
+    Seleção de materiais
+    Equações Diferenciais A
+    

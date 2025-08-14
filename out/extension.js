@@ -140,13 +140,19 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 			.crumb { cursor:pointer; color: #0366d6; margin: 0 0.35rem; }
 			.crumb:hover { text-decoration: underline; }
 			.crumb-current { font-weight: 600; color: #000; cursor: default; }
-			#title { font-size: 2.1rem; text-align:center; padding:1.6rem 1rem 1rem 1rem; }
+				#title { font-size: 2.1rem; text-align:center; padding:1.6rem 1rem 1rem 1rem; }
+				#siblings-above, #siblings-below { max-width: 80%; text-align:center; color:#666; }
+				.sibling { display:block; font-size:0.95rem; cursor:pointer; opacity:0.9; padding:0.08rem 0; }
+				.sibling:hover { text-decoration: underline; opacity:1; }
+				.sibling.current { font-weight:500; color:#000; opacity:1; cursor:default; }
 			img { max-width: 60vw; max-height: 60vh; display:block; margin: 0.5rem auto; }
 		</style>
 	</head>
 	<body>
-		<nav id="breadcrumb">(loading)</nav>
-		<div id="title">(loading)</div>
+			<nav id="breadcrumb">(loading)</nav>
+			<div id="siblings-above"></div>
+			<div id="title">(loading)</div>
+			<div id="siblings-below"></div>
 		<script>
 			const vscode = acquireVsCodeApi();
 			const workspaceRoot = ${JSON.stringify(workspaceRoot || '')};
@@ -158,8 +164,10 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 			let idx = 0;
 			let intervalMs = 2000;
 			let playing = true;
-			const titleEl = document.getElementById('title');
-			const breadcrumbEl = document.getElementById('breadcrumb');
+				const titleEl = document.getElementById('title');
+				const breadcrumbEl = document.getElementById('breadcrumb');
+				const siblingsAboveEl = document.getElementById('siblings-above');
+				const siblingsBelowEl = document.getElementById('siblings-below');
 
 			function renderBreadcrumbs() {
 				// show full stack as breadcrumbs (root ... current)
@@ -179,10 +187,14 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 				});
 			}
 
-			function renderTitle() {
-				renderBreadcrumbs();
-				if (!titles || titles.length===0) { titleEl.innerText = currentNode.title || '(empty)'; return; }
-				const raw = titles[idx % titles.length];
+				function stripImages(text) {
+					return text ? text.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim() : text;
+				}
+
+				function renderTitle() {
+					renderBreadcrumbs();
+					if (!titles || titles.length===0) { titleEl.innerText = currentNode.title || '(empty)'; siblingsAboveEl.innerHTML = ''; siblingsBelowEl.innerHTML = ''; return; }
+					const raw = titles[idx % titles.length];
 				const imgMatch = raw.match(/!\[[^\]]*\]\(([^)]+)\)/);
 				if (imgMatch) {
 					const src = imgMatch[1];
@@ -194,7 +206,7 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 							resolved = 'file://' + src;
 						}
 					}
-					titleEl.innerHTML = raw.replace(imgMatch[0], '') + '<br>';
+						titleEl.innerHTML = raw.replace(imgMatch[0], '') + '<br>';
 					const existing = document.querySelectorAll('img');
 					existing.forEach(e=>e.remove());
 					const im = document.createElement('img');
@@ -205,6 +217,25 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 					const existing = document.querySelectorAll('img');
 					existing.forEach(e=>e.remove());
 				}
+
+					// render siblings above (items before current) and below (items after current)
+					siblingsAboveEl.innerHTML = '';
+					siblingsBelowEl.innerHTML = '';
+					titles.forEach((t, i) => {
+						const displayText = stripImages(t) || '(untitled)';
+						const span = document.createElement('span');
+						span.className = 'sibling' + (i === (idx % titles.length) ? ' current' : '');
+						span.textContent = displayText;
+						span.dataset.i = String(i);
+						span.addEventListener('click', (ev) => {
+							const ii = parseInt(span.dataset.i, 10);
+							if (isNaN(ii)) return;
+							idx = ii;
+							renderTitle();
+						});
+						if (i < (idx % titles.length)) siblingsAboveEl.appendChild(span);
+						else if (i > (idx % titles.length)) siblingsBelowEl.appendChild(span);
+					});
 			}
 
 			function tick() {
