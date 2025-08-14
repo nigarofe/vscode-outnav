@@ -98,8 +98,39 @@ function parseOutlineMarkdown(markdown, sourceName = 'Outlines.md') {
         const indentMatch = line.match(/^[ \t]*/);
         const indent = indentMatch ? indentMatch[0] : '';
         const level = Math.floor(indent.replace(/\t/g, '    ').length / 4) + 1;
-        const title = line.trim();
+        let title = line.trim();
+        // extract action annotations from title
+        const actions = [];
+        // link-style: [action:TYPE key:K](PARAM)
+        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        let m;
+        while ((m = linkRegex.exec(title)) !== null) {
+            const inner = m[1];
+            const param = m[2];
+            const actionMatch = inner.match(/action:([^\s]+)/i);
+            if (actionMatch) {
+                const type = actionMatch[1];
+                const keyMatch = inner.match(/key:([^\s]+)/i);
+                const key = keyMatch ? keyMatch[1] : undefined;
+                actions.push({ type, param, key });
+                // remove this annotation from title text
+                title = title.replace(m[0], '').trim();
+                linkRegex.lastIndex = 0;
+            }
+        }
+        // angle-bracket style: <type(param)>
+        const angleRegex = /<([a-z_]+)\(([^)]+)\)>/gi;
+        while ((m = angleRegex.exec(title)) !== null) {
+            const type = m[1];
+            const param = m[2];
+            actions.push({ type, param });
+            title = title.replace(m[0], '').trim();
+            angleRegex.lastIndex = 0;
+        }
         const node = { title, level, children: [] };
+        if (actions.length) {
+            node.actions = actions;
+        }
         // find parent
         while (stack.length && stack[stack.length - 1].level >= level) {
             stack.pop();
@@ -120,9 +151,28 @@ function openOutlineWebview(context, jsonUri, outlines, workspaceRootPath) {
     const data = JSON.stringify(doc);
     panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, data, workspaceRootPath);
     // handle messages from webview (if any)
-    panel.webview.onDidReceiveMessage(msg => {
-        if (msg && msg.command === 'close') {
+    panel.webview.onDidReceiveMessage(async (msg) => {
+        if (!msg || !msg.command)
+            return;
+        if (msg.command === 'close') {
             panel.dispose();
+        }
+        else if (msg.command === 'open_webpage' && msg.url) {
+            // open external URL
+            try {
+                await vscode.env.openExternal(vscode.Uri.parse(msg.url));
+            }
+            catch (e) {
+                console.error('Failed to open url', msg.url, e);
+            }
+        }
+        else if (msg.command === 'run_command' && msg.name) {
+            try {
+                await vscode.commands.executeCommand(msg.name);
+            }
+            catch (e) {
+                console.error('Failed to run command', msg.name, e);
+            }
         }
     });
 }
@@ -183,10 +233,11 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 
 		let currentNode = data.document;
 		let levelStack = [currentNode];
-		let titles = (currentNode.children || []).map(n=>n.title);
+		let children = (currentNode.children || []);
 		let idx = 0;
 		let intervalMs = 2000;
 		let playing = true;
+		let actionKeyMap = {}; // maps uppercase key -> action object for current title
 
 		const titleEl = document.getElementById('title');
 		const breadcrumbEl = document.getElementById('breadcrumb');
@@ -217,11 +268,14 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 
 		function renderTitle() {
 			renderBreadcrumbs();
-			if (!titles || titles.length===0) {
-				showTitleText(currentNode.title || '(empty)', animate);
-				siblingsAboveEl.innerHTML = ''; siblingsBelowEl.innerHTML = ''; imgEl.style.display='none'; return;
+			if (!children || children.length===0) {
+				showTitleText(currentNode.title || '(empty)');
+				siblingsAboveEl.innerHTML = ''; siblingsBelowEl.innerHTML = ''; imgEl.style.display='none';
+				actionKeyMap = {};
+				return;
 			}
-			const raw = titles[idx % titles.length];
+			const current = children[idx % children.length];
+			const raw = current.title || '';
 			const imgMatch = raw.match(/!\[[^\]]*\]\(([^)]+)\)/);
 			if (imgMatch) {
 				const src = imgMatch[1];
@@ -237,22 +291,32 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 				showTitleText(raw);
 			}
 
+			// build action map for this title
+			actionKeyMap = {};
+			if (current.actions && Array.isArray(current.actions)) {
+				current.actions.forEach(a => {
+					if (!a || !a.type) return;
+					if (a.key) { actionKeyMap[String(a.key).toUpperCase()] = a; }
+				});
+			}
+
 			// siblings
 			siblingsAboveEl.innerHTML = '';
 			siblingsBelowEl.innerHTML = '';
-			titles.forEach((t, i) => {
-				const displayText = stripImages(t) || '(untitled)';
+			children.forEach((node, i) => {
+				const t = node.title || '(untitled)';
+				const displayText = stripImages(t);
 				const span = document.createElement('div');
-				span.className = 'sibling' + (i === (idx % titles.length) ? ' current' : '');
+				span.className = 'sibling' + (i === (idx % children.length) ? ' current' : '');
 				span.textContent = displayText;
 				span.dataset.i = String(i);
 				span.addEventListener('click', () => { const ii = parseInt(span.dataset.i, 10); if (isNaN(ii)) return; idx = ii; renderTitle(); });
-				if (i < (idx % titles.length)) siblingsAboveEl.appendChild(span);
-				else if (i > (idx % titles.length)) siblingsBelowEl.appendChild(span);
+				if (i < (idx % children.length)) siblingsAboveEl.appendChild(span);
+				else if (i > (idx % children.length)) siblingsBelowEl.appendChild(span);
 			});
 		}
 
-		function tick() { if (!playing) return; idx = (idx+1) % (titles.length || 1); renderTitle(); }
+		function tick() { if (!playing) return; idx = (idx+1) % (children.length || 1); renderTitle(); }
 
 		let timer = setInterval(tick, intervalMs);
 		renderTitle();
@@ -260,7 +324,7 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 		// breadcrumb click
 		breadcrumbEl.addEventListener('click', (ev) => {
 			const target = ev.target; if (!target || !target.dataset) return; const i = parseInt(target.dataset.idx, 10); if (isNaN(i)) return;
-			levelStack = levelStack.slice(0, i+1); currentNode = levelStack[levelStack.length - 1]; titles = (currentNode.children || []).map(n=>n.title); idx = 0; renderTitle();
+			levelStack = levelStack.slice(0, i+1); currentNode = levelStack[levelStack.length - 1]; children = (currentNode.children || []); idx = 0; renderTitle();
 		});
 
 		window.addEventListener('keydown', e=>{
@@ -268,10 +332,24 @@ function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
 			else if (e.key === 'Escape') { vscode.postMessage({ command: 'close' }); }
 			else if (e.key === '=') { intervalMs = Math.max(200, intervalMs - 200); clearInterval(timer); timer = setInterval(tick, intervalMs); }
 			else if (e.key === '-') { intervalMs = intervalMs + 200; clearInterval(timer); timer = setInterval(tick, intervalMs); }
-			else if (e.key.toLowerCase() === 'a') { if (levelStack.length>1) { levelStack.pop(); currentNode = levelStack[levelStack.length-1]; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); } }
-			else if (e.key.toLowerCase() === 'd') { const sel = currentNode.children && currentNode.children[idx % (currentNode.children.length||1)]; if (sel) { levelStack.push(sel); currentNode = sel; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); } }
-			else if (e.key.toLowerCase() === 'j') { if (titles && titles.length) { idx = (idx - 1 + titles.length) % titles.length; renderTitle(); } }
-			else if (e.key.toLowerCase() === 'l') { if (titles && titles.length) { idx = (idx + 1) % titles.length; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'a') { if (levelStack.length>1) { levelStack.pop(); currentNode = levelStack[levelStack.length-1]; children = (currentNode.children||[]); idx = 0; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'd') { const sel = currentNode.children && currentNode.children[idx % (currentNode.children.length||1)]; if (sel) { levelStack.push(sel); currentNode = sel; children = (currentNode.children||[]); idx = 0; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'j') { if (children && children.length) { idx = (idx - 1 + children.length) % children.length; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'l') { if (children && children.length) { idx = (idx + 1) % children.length; renderTitle(); } }
+			else {
+				// map single-character keys to actions for current title
+				const key = (e.key || '').toString();
+				if (key && key.length === 1) {
+					const action = actionKeyMap[key.toUpperCase()];
+					if (action) {
+						if (action.type === 'open_webpage' && action.param) {
+							vscode.postMessage({ command: 'open_webpage', url: action.param });
+						} else if (action.type === 'run_command' && action.param) {
+							vscode.postMessage({ command: 'run_command', name: action.param });
+						}
+					}
+				}
+			}
 		});
 
 		window.addEventListener('message', event => { const msg = event.data; if (msg && msg.command === 'update') { /* noop for now */ } });

@@ -38,9 +38,15 @@
                 "level": 3,
                 "children": [
                   {
-                    "title": "While <precondition(s)>, the <system_name> shall <system_response>",
+                    "title": "While , the <system_name> shall <system_response>",
                     "level": 4,
-                    "children": []
+                    "children": [],
+                    "actions": [
+                      {
+                        "type": "precondition",
+                        "param": "s"
+                      }
+                    ]
                   }
                 ]
               },
@@ -82,9 +88,15 @@
                 "level": 3,
                 "children": [
                   {
-                    "title": "While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>",
+                    "title": "While , when <trigger>, the <system_name> shall <system_response>",
                     "level": 4,
-                    "children": []
+                    "children": [],
+                    "actions": [
+                      {
+                        "type": "precondition",
+                        "param": "s"
+                      }
+                    ]
                   }
                 ]
               }
@@ -165,7 +177,7 @@
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "EARS",
+                                    "title": "General",
                                     "level": 8,
                                     "children": [
                                       {
@@ -195,6 +207,39 @@
                                       },
                                       {
                                         "title": "The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.",
+                                        "level": 9,
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "title": "Title Actions",
+                                    "level": 8,
+                                    "children": [
+                                      {
+                                        "title": "The Outline Webview shall support associating actions with titles using a standardized annotation format in Outlines.md.",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title",
+                                        "level": 9,
+                                        "children": [],
+                                        "actions": [
+                                          {
+                                            "type": "open_webpage",
+                                            "param": "https://example.com",
+                                            "key": "O"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "title": "While a title is displayed, when the specified key is pressed, the Outline Webview shall execute the associated action.",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "If multiple actions are annotated for a title, each action shall be mapped to its specified key.",
                                         "level": 9,
                                         "children": []
                                       }
@@ -242,6 +287,13 @@
                 ]
               }
             ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "open_webpage",
+            "param": "https://example.com",
+            "key": "O"
           }
         ]
       },
@@ -293,7 +345,7 @@
                     "level": 4,
                     "children": [
                       {
-                        "title": "Quantities",
+                        "title": "Quantities and units",
                         "level": 5,
                         "children": [
                           {
@@ -314,6 +366,43 @@
                           },
                           {
                             "title": "Laminar",
+                            "level": 6,
+                            "children": []
+                          }
+                        ],
+                        "actions": [
+                          {
+                            "type": "open_webpage",
+                            "param": "https://en.wikipedia.org/wiki/Laminar_flow"
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Types of Non-Newtonian Fluids",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "Shear-thickening",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Shear-thinning",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Thixotropic",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Rheopectic",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Bingham plastics",
                             "level": 6,
                             "children": []
                           }

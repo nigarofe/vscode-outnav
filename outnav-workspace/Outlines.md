@@ -1,4 +1,4 @@
-Software development
+Software development [action:open_webpage key:O](https://example.com)
     EARS patterns definitions
         Generic
             While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>
