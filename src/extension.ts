@@ -115,160 +115,147 @@ function openOutlineWebview(context: vscode.ExtensionContext, jsonUri: vscode.Ur
 		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource} file: https: data:; script-src 'unsafe-inline' ${webview.cspSource}; style-src 'unsafe-inline' ${webview.cspSource};">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-			body { font-family: sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; position:relative; }
-			#breadcrumb { position: absolute; top: 0.8rem; left: 1rem; right: 1rem; text-align:center; font-size:0.95rem; color:#333; }
-			.crumb { cursor:pointer; color: #0366d6; margin: 0 0.35rem; }
-			.crumb:hover { text-decoration: underline; }
-			.crumb-current { font-weight: 600; color: #000; cursor: default; }
-				#title { font-size: 2.1rem; text-align:center; padding:1.6rem 1rem 1rem 1rem; }
-				#siblings-above, #siblings-below { max-width: 80%; text-align:center; color:#666; }
-				.sibling { display:block; font-size:0.95rem; cursor:pointer; opacity:0.9; padding:0.08rem 0; }
-				.sibling:hover { text-decoration: underline; opacity:1; }
-				.sibling.current { font-weight:500; color:#000; opacity:1; cursor:default; }
-			img { max-width: 60vw; max-height: 60vh; display:block; margin: 0.5rem auto; }
+			:root {
+				--bg: var(--vscode-editor-background, #f6f8fa);
+				--card: var(--vscode-sideBar-background, #ffffff);
+				--muted: var(--vscode-descriptionForeground, #6b6b6b);
+				--accent: var(--vscode-textLink-foreground, #0066cc);
+				--fg: var(--vscode-editor-foreground, #24292e);
+			}
+			html,body { height:100%; margin:0; }
+			body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent); color:var(--fg); display:flex; align-items:center; justify-content:center; padding:2rem; box-sizing:border-box; }
+			.container { width:100%; max-width:980px; background:var(--card); border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.08); padding:1.2rem 1.6rem; position:relative; box-sizing:border-box; }
+			.header { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+			#breadcrumb { font-size:0.9rem; color:var(--muted); text-align:left; }
+			.crumb { cursor:pointer; color:var(--accent); margin-right:0.5rem; padding:0.18rem 0.4rem; border-radius:6px; }
+			.crumb:hover { background:rgba(0,0,0,0.03); text-decoration:none; }
+			.crumb-current { font-weight:600; color:var(--fg); cursor:default; background:transparent; }
+			.main { display:flex; flex-direction:column; align-items:center; padding:1rem 0.5rem; }
+			#title { font-size:1.9rem; line-height:1.15; text-align:center; padding:0.8rem 0.6rem; min-height:3.6rem; }
+			.siblings { width:100%; display:flex; flex-direction:column; align-items:center; gap:0.15rem; color:var(--muted); }
+			.sibling { font-size:0.95rem; cursor:pointer; padding:0.18rem 0.25rem; border-radius:6px; opacity:0.95; }
+			.sibling:hover { background:rgba(0,0,0,0.03); color:var(--fg); }
+			.sibling.current { font-weight:600; color:var(--fg); cursor:default; }
+			img.outline-image { max-width:78vw; max-height:58vh; margin:0.8rem auto 0.2rem; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.08); display:block; }
+			.footer { margin-top:0.6rem; font-size:0.85rem; color:var(--muted); text-align:center; }
+			.controls { display:inline-block; padding:0.28rem 0.6rem; background:rgba(0,0,0,0.03); border-radius:999px; }
+			@media (max-width:600px) { .container { padding:0.8rem; } #title { font-size:1.4rem; } }
 		</style>
 	</head>
 	<body>
-			<nav id="breadcrumb">(loading)</nav>
-			<div id="siblings-above"></div>
-			<div id="title">(loading)</div>
-			<div id="siblings-below"></div>
-		<script>
-			const vscode = acquireVsCodeApi();
-			const workspaceRoot = ${JSON.stringify(workspaceRoot || '')};
-			const data = ${dataJson};
+		<div class="container">
+			<div class="header">
+				<nav id="breadcrumb">(loading)</nav>
+				<div style="font-size:0.9rem;color:var(--muted)">Outline Navigator</div>
+			</div>
+			<div class="main">
+				<div id="siblings-above" class="siblings" aria-hidden="true"></div>
+				<div id="title">(loading)</div>
+				<div id="siblings-below" class="siblings" aria-hidden="true"></div>
+				<img id="outline-image" class="outline-image" style="display:none" />
+			</div>
+			<div class="footer"> <span class="controls">Space: play/pause • Esc: close • =/- speed • A/D level • J/L prev/next</span></div>
+		</div>
+	<script>
+		const vscode = acquireVsCodeApi();
+		const workspaceRoot = ${JSON.stringify(workspaceRoot || '')};
+		const data = ${dataJson};
 
-			let currentNode = data.document;
-			let levelStack = [currentNode];
-			let titles = (currentNode.children || []).map(n=>n.title);
-			let idx = 0;
-			let intervalMs = 2000;
-			let playing = true;
-				const titleEl = document.getElementById('title');
-				const breadcrumbEl = document.getElementById('breadcrumb');
-				const siblingsAboveEl = document.getElementById('siblings-above');
-				const siblingsBelowEl = document.getElementById('siblings-below');
+		let currentNode = data.document;
+		let levelStack = [currentNode];
+		let titles = (currentNode.children || []).map(n=>n.title);
+		let idx = 0;
+		let intervalMs = 2000;
+		let playing = true;
 
-			function renderBreadcrumbs() {
-				// show full stack as breadcrumbs (root ... current)
-				breadcrumbEl.innerHTML = '';
-				levelStack.forEach((n, i) => {
-					const span = document.createElement('span');
-					span.textContent = n.title || '(untitled)';
-					span.dataset.idx = String(i);
-					span.className = (i === levelStack.length - 1) ? 'crumb-current' : 'crumb';
-					breadcrumbEl.appendChild(span);
-					if (i < levelStack.length - 1) {
-						const sep = document.createElement('span');
-						sep.textContent = ' › ';
-						sep.style.color = '#666';
-						breadcrumbEl.appendChild(sep);
-					}
-				});
-			}
+		const titleEl = document.getElementById('title');
+		const breadcrumbEl = document.getElementById('breadcrumb');
+		const siblingsAboveEl = document.getElementById('siblings-above');
+		const siblingsBelowEl = document.getElementById('siblings-below');
+		const imgEl = document.getElementById('outline-image');
 
-				function stripImages(text) {
-					return text ? text.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim() : text;
-				}
-
-				function renderTitle() {
-					renderBreadcrumbs();
-					if (!titles || titles.length===0) { titleEl.innerText = currentNode.title || '(empty)'; siblingsAboveEl.innerHTML = ''; siblingsBelowEl.innerHTML = ''; return; }
-					const raw = titles[idx % titles.length];
-				const imgMatch = raw.match(/!\[[^\]]*\]\(([^)]+)\)/);
-				if (imgMatch) {
-					const src = imgMatch[1];
-					let resolved = src;
-					if (!src.startsWith('http') && !src.startsWith('file:')) {
-						if (workspaceRoot) {
-							resolved = 'file://' + (workspaceRoot + '/' + src).replace(/\\\\/g, '/');
-						} else {
-							resolved = 'file://' + src;
-						}
-					}
-						titleEl.innerHTML = raw.replace(imgMatch[0], '') + '<br>';
-					const existing = document.querySelectorAll('img');
-					existing.forEach(e=>e.remove());
-					const im = document.createElement('img');
-					im.src = resolved;
-					document.body.appendChild(im);
-				} else {
-					titleEl.innerText = raw;
-					const existing = document.querySelectorAll('img');
-					existing.forEach(e=>e.remove());
-				}
-
-					// render siblings above (items before current) and below (items after current)
-					siblingsAboveEl.innerHTML = '';
-					siblingsBelowEl.innerHTML = '';
-					titles.forEach((t, i) => {
-						const displayText = stripImages(t) || '(untitled)';
-						const span = document.createElement('span');
-						span.className = 'sibling' + (i === (idx % titles.length) ? ' current' : '');
-						span.textContent = displayText;
-						span.dataset.i = String(i);
-						span.addEventListener('click', (ev) => {
-							const ii = parseInt(span.dataset.i, 10);
-							if (isNaN(ii)) return;
-							idx = ii;
-							renderTitle();
-						});
-						if (i < (idx % titles.length)) siblingsAboveEl.appendChild(span);
-						else if (i > (idx % titles.length)) siblingsBelowEl.appendChild(span);
-					});
-			}
-
-			function tick() {
-				if (!playing) return;
-				idx = (idx+1) % (titles.length || 1);
-				renderTitle();
-			}
-
-			let timer = setInterval(tick, intervalMs);
-			renderTitle();
-
-			// breadcrumb click: navigate to that level
-			breadcrumbEl.addEventListener('click', (ev) => {
-				const target = ev.target;
-				if (!target || !target.dataset) return;
-				const i = parseInt(target.dataset.idx, 10);
-				if (isNaN(i)) return;
-				// navigate to selected level
-				levelStack = levelStack.slice(0, i+1);
-				currentNode = levelStack[levelStack.length - 1];
-				titles = (currentNode.children || []).map(n=>n.title);
-				idx = 0;
-				renderTitle();
-			});
-
-			window.addEventListener('keydown', e=>{
-				if (e.code === 'Space') { playing = !playing; }
-				else if (e.key === 'Escape') { vscode.postMessage({ command: 'close' }); }
-				else if (e.key === '=') { intervalMs = Math.max(200, intervalMs - 200); clearInterval(timer); timer = setInterval(tick, intervalMs); }
-				else if (e.key === '-') { intervalMs = intervalMs + 200; clearInterval(timer); timer = setInterval(tick, intervalMs); }
-				else if (e.key.toLowerCase() === 'a') { // go up a level
-					if (levelStack.length>1) { levelStack.pop(); currentNode = levelStack[levelStack.length-1]; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); }
-				}
-				else if (e.key.toLowerCase() === 'd') { // go down a level: pick current title's node if exists
-					const sel = currentNode.children && currentNode.children[idx % (currentNode.children.length||1)];
-					if (sel) { levelStack.push(sel); currentNode = sel; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); }
-				}
-				else if (e.key.toLowerCase() === 'j') { // previous title
-					if (titles && titles.length) { idx = (idx - 1 + titles.length) % titles.length; renderTitle(); }
-				}
-				else if (e.key.toLowerCase() === 'l') { // next title
-					if (titles && titles.length) { idx = (idx + 1) % titles.length; renderTitle(); }
+		function renderBreadcrumbs() {
+			breadcrumbEl.innerHTML = '';
+			levelStack.forEach((n, i) => {
+				const span = document.createElement('span');
+				span.textContent = n.title || '(untitled)';
+				span.dataset.idx = String(i);
+				span.className = (i === levelStack.length - 1) ? 'crumb-current' : 'crumb';
+				breadcrumbEl.appendChild(span);
+				if (i < levelStack.length - 1) {
+					const sep = document.createElement('span'); sep.textContent = ' › '; sep.style.color = 'var(--muted)'; breadcrumbEl.appendChild(sep);
 				}
 			});
+		}
 
-			// listen for messages from extension
-			window.addEventListener('message', event => {
-				const msg = event.data;
-				if (msg && msg.command === 'update') {
-					// future: handle updates to the outlines; for now noop
+		function stripImages(text) { return text ? text.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim() : text; }
+
+		function showTitleText(raw) {
+			// instant swap (no animation)
+			titleEl.innerText = stripImages(raw) || '(untitled)';
+		}
+
+		function renderTitle() {
+			renderBreadcrumbs();
+			if (!titles || titles.length===0) {
+				showTitleText(currentNode.title || '(empty)', animate);
+				siblingsAboveEl.innerHTML = ''; siblingsBelowEl.innerHTML = ''; imgEl.style.display='none'; return;
+			}
+			const raw = titles[idx % titles.length];
+			const imgMatch = raw.match(/!\[[^\]]*\]\(([^)]+)\)/);
+			if (imgMatch) {
+				const src = imgMatch[1];
+				let resolved = src;
+				if (!src.startsWith('http') && !src.startsWith('file:')) {
+					if (workspaceRoot) { resolved = 'file://' + (workspaceRoot + '/' + src).replace(/\\\\/g, '/'); }
+					else { resolved = 'file://' + src; }
 				}
+				imgEl.src = resolved; imgEl.style.display = 'block';
+				showTitleText(raw.replace(imgMatch[0], ''));
+			} else {
+				imgEl.style.display='none';
+				showTitleText(raw);
+			}
+
+			// siblings
+			siblingsAboveEl.innerHTML = '';
+			siblingsBelowEl.innerHTML = '';
+			titles.forEach((t, i) => {
+				const displayText = stripImages(t) || '(untitled)';
+				const span = document.createElement('div');
+				span.className = 'sibling' + (i === (idx % titles.length) ? ' current' : '');
+				span.textContent = displayText;
+				span.dataset.i = String(i);
+				span.addEventListener('click', () => { const ii = parseInt(span.dataset.i, 10); if (isNaN(ii)) return; idx = ii; renderTitle(); });
+				if (i < (idx % titles.length)) siblingsAboveEl.appendChild(span);
+				else if (i > (idx % titles.length)) siblingsBelowEl.appendChild(span);
 			});
-		</script>
+		}
+
+		function tick() { if (!playing) return; idx = (idx+1) % (titles.length || 1); renderTitle(); }
+
+		let timer = setInterval(tick, intervalMs);
+		renderTitle();
+
+		// breadcrumb click
+		breadcrumbEl.addEventListener('click', (ev) => {
+			const target = ev.target; if (!target || !target.dataset) return; const i = parseInt(target.dataset.idx, 10); if (isNaN(i)) return;
+			levelStack = levelStack.slice(0, i+1); currentNode = levelStack[levelStack.length - 1]; titles = (currentNode.children || []).map(n=>n.title); idx = 0; renderTitle();
+		});
+
+		window.addEventListener('keydown', e=>{
+			if (e.code === 'Space') { playing = !playing; }
+			else if (e.key === 'Escape') { vscode.postMessage({ command: 'close' }); }
+			else if (e.key === '=') { intervalMs = Math.max(200, intervalMs - 200); clearInterval(timer); timer = setInterval(tick, intervalMs); }
+			else if (e.key === '-') { intervalMs = intervalMs + 200; clearInterval(timer); timer = setInterval(tick, intervalMs); }
+			else if (e.key.toLowerCase() === 'a') { if (levelStack.length>1) { levelStack.pop(); currentNode = levelStack[levelStack.length-1]; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'd') { const sel = currentNode.children && currentNode.children[idx % (currentNode.children.length||1)]; if (sel) { levelStack.push(sel); currentNode = sel; titles = (currentNode.children||[]).map(n=>n.title); idx = 0; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'j') { if (titles && titles.length) { idx = (idx - 1 + titles.length) % titles.length; renderTitle(); } }
+			else if (e.key.toLowerCase() === 'l') { if (titles && titles.length) { idx = (idx + 1) % titles.length; renderTitle(); } }
+		});
+
+		window.addEventListener('message', event => { const msg = event.data; if (msg && msg.command === 'update') { /* noop for now */ } });
+	</script>
 	</body>
 	</html>`;
 	}
