@@ -4,151 +4,134 @@
     "level": 0,
     "children": [
       {
-        "title": "EARS patterns definitions",
+        "title": "Software development",
         "level": 1,
         "children": [
           {
-            "title": "Generic",
+            "title": "EARS patterns definitions",
             "level": 2,
             "children": [
               {
-                "title": "While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Ubiquitous",
-            "level": 2,
-            "children": [
-              {
-                "title": "The <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "State driven",
-            "level": 2,
-            "children": [
-              {
-                "title": "While <precondition(s)>, the <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Event driven",
-            "level": 2,
-            "children": [
-              {
-                "title": "When <trigger>, the <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Optional feature",
-            "level": 2,
-            "children": [
-              {
-                "title": "Where <feature_is_included>, the <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Unwanted behavior",
-            "level": 2,
-            "children": [
-              {
-                "title": "If <trigger>, the <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          },
-          {
-            "title": "Complex",
-            "level": 2,
-            "children": [
-              {
-                "title": "While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>",
-                "level": 3,
-                "children": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "title": "vscode-outnav",
-        "level": 1,
-        "children": [
-          {
-            "title": "Mental models",
-            "level": 2,
-            "children": [
-              {
-                "title": "AI agent",
+                "title": "Generic",
                 "level": 3,
                 "children": [
                   {
-                    "title": "npm dependencies and initialization",
+                    "title": "While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>",
                     "level": 4,
-                    "children": [
-                      {
-                        "title": "The Extension shall be initialized using \"npm install --global yo generator-code; yo code; npm install katex\"",
-                        "level": 5,
-                        "children": []
-                      }
-                    ]
-                  },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Ubiquitous",
+                "level": 3,
+                "children": [
                   {
-                    "title": "Systems",
+                    "title": "The <system_name> shall <system_response>",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "State driven",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "While <precondition(s)>, the <system_name> shall <system_response>",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Event driven",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "When <trigger>, the <system_name> shall <system_response>",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Optional feature",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Where <feature_is_included>, the <system_name> shall <system_response>",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Unwanted behavior",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "If <trigger>, the <system_name> shall <system_response>",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Complex",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "vscode-outnav",
+            "level": 2,
+            "children": [
+              {
+                "title": "Mental models",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "AI agent",
                     "level": 4,
                     "children": [
                       {
-                        "title": "Commands",
+                        "title": "npm dependencies and initialization",
                         "level": 5,
                         "children": [
                           {
-                            "title": "vscode-outnav.startOutlineNavigator",
+                            "title": "The Extension shall be initialized using \"npm install --global yo generator-code; yo code; npm install katex\"",
                             "level": 6,
-                            "children": [
-                              {
-                                "title": "When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json",
-                                "level": 7,
-                                "children": []
-                              },
-                              {
-                                "title": "When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the Outline Webview",
-                                "level": 7,
-                                "children": []
-                              }
-                            ]
+                            "children": []
                           }
                         ]
                       },
                       {
-                        "title": "Webviews",
+                        "title": "Systems",
                         "level": 5,
                         "children": [
                           {
-                            "title": "For any Webview",
+                            "title": "Commands",
                             "level": 6,
                             "children": [
                               {
-                                "title": "Image rendering",
+                                "title": "vscode-outnav.startOutlineNavigator",
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.",
+                                    "title": "When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the Outline Webview",
                                     "level": 8,
                                     "children": []
                                   }
@@ -157,73 +140,96 @@
                             ]
                           },
                           {
-                            "title": "For Outline Webview",
+                            "title": "Webviews",
                             "level": 6,
                             "children": [
                               {
-                                "title": "EARS",
+                                "title": "For any Webview",
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json",
+                                    "title": "Image rendering",
                                     "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.",
-                                    "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.",
-                                    "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).",
-                                    "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.",
-                                    "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.",
-                                    "level": 8,
-                                    "children": []
+                                    "children": [
+                                      {
+                                        "title": "The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.",
+                                        "level": 9,
+                                        "children": []
+                                      }
+                                    ]
                                   }
                                 ]
                               },
                               {
-                                "title": "Keyboard shortcuts",
+                                "title": "For Outline Webview",
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing",
+                                    "title": "EARS",
                                     "level": 8,
-                                    "children": []
+                                    "children": [
+                                      {
+                                        "title": "When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.",
+                                        "level": 9,
+                                        "children": []
+                                      }
+                                    ]
                                   },
                                   {
-                                    "title": "While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close",
+                                    "title": "Keyboard shortcuts",
                                     "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "While the Outline Webview is opened, when the `=`/`-` keys are pressed, the title replacing frequency shall decrease/increase",
-                                    "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase",
-                                    "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next",
-                                    "level": 8,
-                                    "children": []
+                                    "children": [
+                                      {
+                                        "title": "While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "While the Outline Webview is opened, when the `=`/`-` keys are pressed, the title replacing frequency shall decrease/increase",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next",
+                                        "level": 9,
+                                        "children": []
+                                      }
+                                    ]
                                   }
                                 ]
                               }
@@ -240,28 +246,595 @@
         ]
       },
       {
+        "title": "Learning by questions",
+        "level": 1,
+        "children": [
+          {
+            "title": "Show reference materials",
+            "level": 2,
+            "children": [
+              {
+                "title": "Mathematics",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Algebra",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Linear Algebra",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Geometry",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Differential Equation",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Calculus",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Engineering",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "[Fluid Mechanics](Premises.md#fluid-mechanics)",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Continuum Mechanics",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Por que o Tensor Tensão é simétrico",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Tensor Tensão vs Tensor Deformação",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Nome das variáveis e tensores mais utilizados em Mecânica dos sólidos",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Definição coeficiente de Poisson",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Ângulos diretores e cossenos diretores",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Relação entre estresse e pressão",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Classical Mechanics",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Movimento sub-amortecido",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Show questions",
+            "level": 2,
+            "children": [
+              {
+                "title": "Order by PMG-X desc",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Order by DSLA",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Order by question number",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
         "title": "Matérias UFMG",
         "level": 1,
         "children": [
           {
-            "title": "Análise Estrutural",
+            "title": "EMA091 Mecânica dos Fluidos",
+            "level": 2,
+            "children": [
+              {
+                "title": "Conteúdos",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Livro Introdução à Mecânica dos Fluidos (Fox)",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Capítulos",
+                        "level": 6,
+                        "children": [
+                          {
+                            "title": "1. INTRODUÇÃO",
+                            "level": 7,
+                            "children": []
+                          },
+                          {
+                            "title": "2. CONCEITOS FUNDAMENTAIS",
+                            "level": 7,
+                            "children": []
+                          },
+                          {
+                            "title": "3. ESTÁTICA DOS FLUIDOS",
+                            "level": 7,
+                            "children": []
+                          },
+                          {
+                            "title": "4. EQUAÇÕES BÁSICAS NA FORMA INTEGRAL PARA UM VOLUME DE CONTROLE",
+                            "level": 7,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Vídeos",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "EMA093 Processos de Fabricação por Usinagem",
             "level": 2,
             "children": []
           },
           {
-            "title": "Mecânica dos Fluidos",
+            "title": "EES039 Análise Estrutural",
             "level": 2,
             "children": []
           },
           {
-            "title": "Seleção de materiais",
+            "title": "EMC029 Seleção de materiais",
             "level": 2,
             "children": []
           },
           {
-            "title": "Equações Diferenciais A",
+            "title": "MAT015 Equações Diferenciais A",
             "level": 2,
             "children": []
+          }
+        ]
+      },
+      {
+        "title": "Employment",
+        "level": 1,
+        "children": [
+          {
+            "title": "Professional certifications",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "Internships",
+            "level": 2,
+            "children": [
+              {
+                "title": "Siemens",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Kot",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Public tender",
+            "level": 2,
+            "children": [
+              {
+                "title": "CBMMG",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "PMMG",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Great Mental Models book series",
+        "level": 1,
+        "children": [
+          {
+            "title": "General thinking concepts",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "Physics",
+            "level": 2,
+            "children": [
+              {
+                "title": "Relativity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Reciprocity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Thermodynamics",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Inertia",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Friction and viscosity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Velocity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Leverage",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Chemistry",
+            "level": 2,
+            "children": [
+              {
+                "title": "Activation energy",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Catalysts",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Alloying",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Biology",
+            "level": 2,
+            "children": [
+              {
+                "title": "Evolution part one: Natural selection and extinction",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Evolution part two: Adaptation rate and the Red Queen Effect",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Competition",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Ecosystem",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Niches",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Self-Preservation",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Replication",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Cooperation",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Systems",
+            "level": 2,
+            "children": [
+              {
+                "title": "Feedback loops",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Equilibrium",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Bottlenecks",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Scale",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Margin of safety",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Churn",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Algorithms",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Critical mass",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Emergence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Irreducibility",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "The law of diminishin returns",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Mathematics",
+            "level": 2,
+            "children": [
+              {
+                "title": "Compounding",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Sampling",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Randomness",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Regression to the mean",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Multiplying by zero",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Equivalence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Surface area",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Global and local maxima",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Economics",
+            "level": 2,
+            "children": [
+              {
+                "title": "Scarcity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Supply and demand",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Optimization",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Trade-offs",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Specialization",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Interdependence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Efficiency",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Debt",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Monooly and competition",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Creative destruction",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Gresham's law",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Bubbles",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Art",
+            "level": 2,
+            "children": [
+              {
+                "title": "Audience",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Genre",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Contrast",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Framing",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Rhytm",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Melody",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Representation",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Plot",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Character",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Setting",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Performance",
+                "level": 3,
+                "children": []
+              }
+            ]
           }
         ]
       }
