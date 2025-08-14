@@ -291,7 +291,35 @@
                   {
                     "title": "[Fluid Mechanics](Premises.md#fluid-mechanics)",
                     "level": 4,
-                    "children": []
+                    "children": [
+                      {
+                        "title": "Quantities",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "Reynolds number",
+                            "level": 6,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Types of flow",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "Turbulent",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Laminar",
+                            "level": 6,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "title": "Continuum Mechanics",
@@ -449,7 +477,18 @@
           {
             "title": "Professional certifications",
             "level": 2,
-            "children": []
+            "children": [
+              {
+                "title": "IELTS",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "TOELF",
+                "level": 3,
+                "children": []
+              }
+            ]
           },
           {
             "title": "Internships",
@@ -492,7 +531,53 @@
           {
             "title": "General thinking concepts",
             "level": 2,
-            "children": []
+            "children": [
+              {
+                "title": "The Map is not the Territory",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Circle of Competence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "First Principles Thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Thought Experiment",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Second-Order Thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Probabilistic Thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Inversion",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Occam's Razor",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Hanlon's Razor",
+                "level": 3,
+                "children": []
+              }
+            ]
           },
           {
             "title": "Physics",

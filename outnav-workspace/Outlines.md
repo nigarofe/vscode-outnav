@@ -29,13 +29,18 @@ Software development
                             Image rendering
                                 The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.
                         For Outline Webview
-                            EARS
+                            General
                                 When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
                                 While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.
                                 The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.
                                 The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).
                                 The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.
                                 The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.
+                            Title Actions
+                                The Outline Webview shall support associating actions with titles using a standardized annotation format in Outlines.md.
+                                The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title [action:open_webpage key:O](https://example.com)
+                                While a title is displayed, when the specified key is pressed, the Outline Webview shall execute the associated action.
+                                If multiple actions are annotated for a title, each action shall be mapped to its specified key.
                             Keyboard shortcuts
                                 While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing
                                 While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close
@@ -52,6 +57,17 @@ Learning by questions
             Calculus
         Engineering
             [Fluid Mechanics](Premises.md#fluid-mechanics)
+                Quantities and units
+                    Reynolds number
+                Types of flow <open_webpage(https://en.wikipedia.org/wiki/Laminar_flow)>
+                    Turbulent
+                    Laminar
+                Types of Non-Newtonian Fluids
+                    Shear-thickening
+                    Shear-thinning
+                    Thixotropic
+                    Rheopectic
+                    Bingham plastics
             Continuum Mechanics
                 Por que o Tensor Tensão é simétrico
                 Tensor Tensão vs Tensor Deformação
@@ -91,6 +107,15 @@ Employment
         PMMG
 The Great Mental Models book series
     General thinking concepts
+        The Map is not the Territory
+        Circle of Competence
+        First Principles Thinking
+        Thought Experiment
+        Second-Order Thinking
+        Probabilistic Thinking
+        Inversion
+        Occam's Razor
+        Hanlon's Razor
     Physics
         Relativity
         Reciprocity
