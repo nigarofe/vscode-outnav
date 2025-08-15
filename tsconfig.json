@@ -17,7 +17,6 @@
 
 	"exclude": [
 		"vscode-nav",
-		"outnav-workspace/vscode-nav",
-		"outnav-workspace/**/node_modules"
+		"**/node_modules"
 	]
 }

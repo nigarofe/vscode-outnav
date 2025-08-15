@@ -60,9 +60,9 @@ function activate(context) {
             vscode.window.showErrorMessage('No workspace folder is open.');
             return;
         }
-        // Paths
-        const outlinesMd = path.join(workspaceFolder.uri.fsPath, 'outnav-workspace', 'Outlines.md');
-        const outlinesJson = path.join(workspaceFolder.uri.fsPath, 'outnav-workspace', 'json_exports', 'outlines.json');
+        // Paths (assume workspace folder is the outnav-workspace root)
+        const outlinesMd = path.join(workspaceFolder.uri.fsPath, 'Outlines.md');
+        const outlinesJson = path.join(workspaceFolder.uri.fsPath, 'json_exports', 'outlines.json');
         try {
             const mdUri = vscode.Uri.file(outlinesMd);
             const mdBytes = await vscode.workspace.fs.readFile(mdUri);
@@ -142,9 +142,11 @@ function parseOutlineMarkdown(markdown, sourceName = 'Outlines.md') {
     return root;
 }
 function openOutlineWebview(context, jsonUri, outlines, workspaceRootPath) {
+    // prefer the opened workspace root as the local resource root so webview can load workspace files
+    const localRoots = workspaceRootPath ? [vscode.Uri.file(workspaceRootPath)] : [vscode.Uri.file(context.extensionPath)];
     const panel = vscode.window.createWebviewPanel('outlineNavigator', 'Outline Navigator', vscode.ViewColumn.One, {
         enableScripts: true,
-        localResourceRoots: [vscode.Uri.file(path.join(context.extensionPath, 'outnav-workspace'))]
+        localResourceRoots: localRoots
     });
     const doc = outlines || { document: { title: 'Empty', level: 0, children: [] } };
     // pass the JSON data into the webview
