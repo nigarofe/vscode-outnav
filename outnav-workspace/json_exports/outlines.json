@@ -1,6 +1,6 @@
 {
   "document": {
-    "title": "Outlines.md",
+    "title": "root",
     "level": 0,
     "children": [
       {
@@ -38,15 +38,9 @@
                 "level": 3,
                 "children": [
                   {
-                    "title": "While , the <system_name> shall <system_response>",
+                    "title": "While <precondition(s)>, the <system_name> shall <system_response>",
                     "level": 4,
-                    "children": [],
-                    "actions": [
-                      {
-                        "type": "precondition",
-                        "param": "s"
-                      }
-                    ]
+                    "children": []
                   }
                 ]
               },
@@ -88,15 +82,9 @@
                 "level": 3,
                 "children": [
                   {
-                    "title": "While , when <trigger>, the <system_name> shall <system_response>",
+                    "title": "While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>",
                     "level": 4,
-                    "children": [],
-                    "actions": [
-                      {
-                        "type": "precondition",
-                        "param": "s"
-                      }
-                    ]
+                    "children": []
                   }
                 ]
               }
@@ -143,7 +131,7 @@
                                     "children": []
                                   },
                                   {
-                                    "title": "When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the Outline Webview",
+                                    "title": "When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the webview",
                                     "level": 8,
                                     "children": []
                                   }
@@ -152,19 +140,135 @@
                             ]
                           },
                           {
-                            "title": "Webviews",
+                            "title": "Markdown parsing",
                             "level": 6,
                             "children": [
                               {
-                                "title": "For any Webview",
+                                "title": "The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs or as groups of four spaces; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json",
+                                "level": 7,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "title": "General",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "The Extension shall assume that the user opened VS Code from the outnav-workspace folder",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "When the Extension finishes loading, the Extension shall automatically execute the command vscode-outnav.startOutlineNavigator",
+                                "level": 7,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "title": "Webview",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "General",
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "Image rendering",
+                                    "title": "The Extension shall have a single webview",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "When VS Code is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The top of the webview shall have a breadcrumb navigation",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The breadcrumb navigation shall be clickable providing a quick way to jump to that level",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the the webview is in focus, the breadcrumb navigation shall cycle through each title from the current navigation level sequentially every 1.0 seconds",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The breadcrumb navigation shall show all options for the current level in a dropdown-like control",
+                                    "level": 8,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "Title Actions",
+                                "level": 7,
+                                "children": [
+                                  {
+                                    "title": "The webview shall support associating actions with titles using a standardized annotation format in Outlines.md.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title",
+                                    "level": 8,
+                                    "children": [],
+                                    "actions": [
+                                      {
+                                        "type": "open_webpage",
+                                        "param": "https://example.com",
+                                        "key": "O"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "title": "While a title is displayed, when the specified key is pressed, the webview shall execute the associated action.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "If multiple actions are annotated for a title, each action shall be mapped to its specified key.",
+                                    "level": 8,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "Keyboard shortcuts",
+                                "level": 7,
+                                "children": [
+                                  {
+                                    "title": "While the webview is in focus, when the",
                                     "level": 8,
                                     "children": [
                                       {
-                                        "title": "The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.",
+                                        "title": "`Space` key is pressed, the webview shall pause/play the title cycling",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "`Esc` key is pressed, the webview tab shall close",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "`=`/`-` keys are pressed, the title cycling frequency shall decrease/increase",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "`A`/`D` keys are pressed, the title level shall decrease/increase",
+                                        "level": 9,
+                                        "children": []
+                                      },
+                                      {
+                                        "title": "`J`/`L` keys are pressed, the title shall change to previous/next",
                                         "level": 9,
                                         "children": []
                                       }
@@ -173,108 +277,13 @@
                                 ]
                               },
                               {
-                                "title": "For Outline Webview",
+                                "title": "Image rendering",
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "General",
+                                    "title": "The Extension shall render any images referenced in a heading using standard Markdown syntax (!), resolving the image path relative to the active workspace root.",
                                     "level": 8,
-                                    "children": [
-                                      {
-                                        "title": "When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.",
-                                        "level": 9,
-                                        "children": []
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "title": "Title Actions",
-                                    "level": 8,
-                                    "children": [
-                                      {
-                                        "title": "The Outline Webview shall support associating actions with titles using a standardized annotation format in Outlines.md.",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title",
-                                        "level": 9,
-                                        "children": [],
-                                        "actions": [
-                                          {
-                                            "type": "open_webpage",
-                                            "param": "https://example.com",
-                                            "key": "O"
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "title": "While a title is displayed, when the specified key is pressed, the Outline Webview shall execute the associated action.",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "If multiple actions are annotated for a title, each action shall be mapped to its specified key.",
-                                        "level": 9,
-                                        "children": []
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "title": "Keyboard shortcuts",
-                                    "level": 8,
-                                    "children": [
-                                      {
-                                        "title": "While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "While the Outline Webview is opened, when the `=`/`-` keys are pressed, the title replacing frequency shall decrease/increase",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase",
-                                        "level": 9,
-                                        "children": []
-                                      },
-                                      {
-                                        "title": "While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next",
-                                        "level": 9,
-                                        "children": []
-                                      }
-                                    ]
+                                    "children": []
                                   }
                                 ]
                               }
@@ -341,7 +350,7 @@
                 "level": 3,
                 "children": [
                   {
-                    "title": "[Fluid Mechanics](Premises.md#fluid-mechanics)",
+                    "title": "",
                     "level": 4,
                     "children": [
                       {

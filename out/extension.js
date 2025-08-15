@@ -35,356 +35,275 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
 exports.deactivate = deactivate;
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = __importStar(require("vscode"));
+const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-function activate(context) {
-    // Use the console to output diagnostic information (console.log) and errors (console.error)
-    // This line of code will only be executed once when your extension is activated
-    console.log('Congratulations, your extension "vscode-outnav" is now active!');
-    // The command has been defined in the package.json file
-    // Now provide the implementation of the command with registerCommand
-    // The commandId parameter must match the command field in package.json
-    // keep existing helloWorld command
-    const hello = vscode.commands.registerCommand('vscode-outnav.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World from vscode-outnav!');
-    });
-    context.subscriptions.push(hello);
-    // New command: startOutlineNavigator
-    const startCmd = vscode.commands.registerCommand('vscode-outnav.startOutlineNavigator', async () => {
-        const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-        if (!workspaceFolder) {
-            vscode.window.showErrorMessage('No workspace folder is open.');
-            return;
-        }
-        // Paths (assume workspace folder is the outnav-workspace root)
-        const outlinesMd = path.join(workspaceFolder.uri.fsPath, 'Outlines.md');
-        const outlinesJson = path.join(workspaceFolder.uri.fsPath, 'json_exports', 'outlines.json');
-        try {
-            const mdUri = vscode.Uri.file(outlinesMd);
-            const mdBytes = await vscode.workspace.fs.readFile(mdUri);
-            const md = Buffer.from(mdBytes).toString('utf8');
-            const parsed = parseOutlineMarkdown(md, path.basename(outlinesMd));
-            // ensure output directory exists
-            const outDir = path.dirname(outlinesJson);
-            await vscode.workspace.fs.createDirectory(vscode.Uri.file(outDir));
-            await vscode.workspace.fs.writeFile(vscode.Uri.file(outlinesJson), Buffer.from(JSON.stringify({ document: parsed }, null, 2), 'utf8'));
-            // Open the Outline Webview and pass the parsed JSON
-            openOutlineWebview(context, vscode.Uri.file(outlinesJson), { document: parsed }, workspaceFolder.uri.fsPath);
-        }
-        catch (err) {
-            console.error(err);
-            vscode.window.showErrorMessage('Failed to parse Outlines.md: ' + String(err));
-        }
-    });
-    context.subscriptions.push(startCmd);
-}
-// This method is called when your extension is deactivated
-function deactivate() { }
-// Parse simple indented outline Markdown into a tree matching OutlineNode
-function parseOutlineMarkdown(markdown, sourceName = 'Outlines.md') {
-    const lines = markdown.split(/\r?\n/);
-    const root = { title: sourceName, level: 0, children: [] };
+function parseOutlines(content) {
+    const root = { title: 'root', level: 0, children: [] };
     const stack = [root];
-    for (const raw of lines) {
-        const line = raw.replace(/\s+$/, '');
-        if (!line.trim()) {
+    const lines = content.split(/\r?\n/);
+    for (let raw of lines) {
+        const line = raw.replace(/\t/g, '    ');
+        if (!/\S/.test(line)) {
             continue;
         }
-        // leading tabs or spaces define level; treat 4 spaces or 1 tab as one indent
-        const indentMatch = line.match(/^[ \t]*/);
-        const indent = indentMatch ? indentMatch[0] : '';
-        const level = Math.floor(indent.replace(/\t/g, '    ').length / 4) + 1;
+        // count leading spaces (4 spaces == one level)
+        const leading = line.match(/^\s*/)?.[0] ?? '';
+        const level = Math.floor(leading.replace(/\t/g, '    ').length / 4) + 1;
+        // extract title and optional action annotations like [action:open_webpage key:O](https://...)
         let title = line.trim();
-        // extract action annotations from title
         const actions = [];
-        // link-style: [action:TYPE key:K](PARAM)
-        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        // find annotations of form [action:TYPE key:K](PARAM)
+        const annRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
         let m;
-        while ((m = linkRegex.exec(title)) !== null) {
-            const inner = m[1];
+        while ((m = annRegex.exec(title)) !== null) {
+            const meta = m[1];
             const param = m[2];
-            const actionMatch = inner.match(/action:([^\s]+)/i);
-            if (actionMatch) {
-                const type = actionMatch[1];
-                const keyMatch = inner.match(/key:([^\s]+)/i);
-                const key = keyMatch ? keyMatch[1] : undefined;
-                actions.push({ type, param, key });
-                // remove this annotation from title text
-                title = title.replace(m[0], '').trim();
-                linkRegex.lastIndex = 0;
+            const typeMatch = meta.match(/action:([^\s]+)/);
+            const keyMatch = meta.match(/key:([^\s]+)/);
+            if (typeMatch) {
+                actions.push({ type: typeMatch[1], param, key: keyMatch ? keyMatch[1] : undefined });
             }
         }
-        // angle-bracket style: <type(param)>
-        const angleRegex = /<([a-z_]+)\(([^)]+)\)>/gi;
-        while ((m = angleRegex.exec(title)) !== null) {
-            const type = m[1];
-            const param = m[2];
-            actions.push({ type, param });
-            title = title.replace(m[0], '').trim();
-            angleRegex.lastIndex = 0;
-        }
+        // remove annotations from title for display
+        title = title.replace(annRegex, '').trim();
         const node = { title, level, children: [] };
         if (actions.length) {
             node.actions = actions;
         }
-        // find parent
+        // find parent based on level
         while (stack.length && stack[stack.length - 1].level >= level) {
             stack.pop();
         }
-        const parent = stack[stack.length - 1] || root;
+        const parent = stack[stack.length - 1];
+        parent.children = parent.children || [];
         parent.children.push(node);
         stack.push(node);
     }
     return root;
 }
-function openOutlineWebview(context, jsonUri, outlines, workspaceRootPath) {
-    // prefer the opened workspace root as the local resource root so webview can load workspace files
-    const localRoots = workspaceRootPath ? [vscode.Uri.file(workspaceRootPath)] : [vscode.Uri.file(context.extensionPath)];
-    const panel = vscode.window.createWebviewPanel('outlineNavigator', 'Outline Navigator', vscode.ViewColumn.One, {
-        enableScripts: true,
-        localResourceRoots: localRoots
-    });
-    const doc = outlines || { document: { title: 'Empty', level: 0, children: [] } };
-    // pass the JSON data into the webview
-    const data = JSON.stringify(doc);
-    panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, data, workspaceRootPath);
-    // handle messages from webview (if any)
-    panel.webview.onDidReceiveMessage(async (msg) => {
-        if (!msg || !msg.command) {
+function activate(context) {
+    console.log('vscode-outnav activating');
+    const disposable = vscode.commands.registerCommand('vscode-outnav.startOutlineNavigator', async () => {
+        const workspaceFolders = vscode.workspace.workspaceFolders;
+        if (!workspaceFolders || workspaceFolders.length === 0) {
+            vscode.window.showErrorMessage('Please open the outnav-workspace folder in VS Code before starting the navigator.');
             return;
         }
-        if (msg.command === 'close') {
-            panel.dispose();
+        const root = workspaceFolders[0].uri.fsPath;
+        // locate Outlines.md robustly: handle cases where the workspace root may already be the outnav-workspace
+        function findOutlines(start) {
+            const candidates = [
+                path.join(start, 'Outlines.md'),
+                path.join(start, 'outnav-workspace', 'Outlines.md'),
+                path.join(start, '..', 'outnav-workspace', 'Outlines.md')
+            ];
+            for (const c of candidates) {
+                if (fs.existsSync(c)) {
+                    return c;
+                }
+            }
+            // shallow recursive search up to depth 3
+            function searchDir(dir, depth) {
+                if (depth <= 0) {
+                    return null;
+                }
+                try {
+                    const items = fs.readdirSync(dir);
+                    for (const it of items) {
+                        const p = path.join(dir, it);
+                        try {
+                            const stat = fs.statSync(p);
+                            if (stat.isFile() && it.toLowerCase() === 'outlines.md') {
+                                return p;
+                            }
+                            if (stat.isDirectory()) {
+                                const found = searchDir(p, depth - 1);
+                                if (found) {
+                                    return found;
+                                }
+                            }
+                        }
+                        catch (e) { /* ignore */ }
+                    }
+                }
+                catch (e) { /* ignore */ }
+                return null;
+            }
+            return searchDir(start, 3);
         }
-        else if (msg.command === 'open_webpage' && msg.url) {
-            // open external URL
-            try {
-                await vscode.env.openExternal(vscode.Uri.parse(msg.url));
-            }
-            catch (e) {
-                console.error('Failed to open url', msg.url, e);
-            }
+        const outlinesMd = findOutlines(root);
+        if (!outlinesMd) {
+            vscode.window.showErrorMessage('Could not find Outlines.md under workspace (' + root + ').');
+            return;
         }
-        else if (msg.command === 'run_command' && msg.name) {
-            try {
-                await vscode.commands.executeCommand(msg.name);
+        const outlinesDir = path.dirname(outlinesMd);
+        const exportsDir = path.join(outlinesDir, 'json_exports');
+        const outlinesJson = path.join(exportsDir, 'outlines.json');
+        try {
+            const content = fs.readFileSync(outlinesMd, 'utf8');
+            const parsed = parseOutlines(content);
+            if (!fs.existsSync(exportsDir)) {
+                fs.mkdirSync(exportsDir, { recursive: true });
             }
-            catch (e) {
-                console.error('Failed to run command', msg.name, e);
-            }
+            fs.writeFileSync(outlinesJson, JSON.stringify({ document: parsed }, null, 2), 'utf8');
+            vscode.window.showInformationMessage('Parsed Outlines.md to json_exports/outlines.json');
+            // open webview
+            const panel = vscode.window.createWebviewPanel('outnav', 'Outline Navigator', vscode.ViewColumn.One, {
+                enableScripts: true,
+                localResourceRoots: [vscode.Uri.file(root)]
+            });
+            const data = JSON.stringify(parsed);
+            panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, data);
+            // handle messages from webview
+            panel.webview.onDidReceiveMessage(msg => {
+                if (msg.command === 'openUrl' && msg.url) {
+                    vscode.env.openExternal(vscode.Uri.parse(msg.url));
+                }
+                else if (msg.command === 'close') {
+                    panel.dispose();
+                }
+            });
+        }
+        catch (err) {
+            vscode.window.showErrorMessage('Error parsing Outlines.md: ' + err.message);
         }
     });
+    context.subscriptions.push(disposable);
+    // auto-run when extension activates
+    vscode.commands.executeCommand('vscode-outnav.startOutlineNavigator');
 }
-function getWebviewHtml(webview, extensionUri, dataJson, workspaceRoot) {
-    // script will handle EARS behaviour, cycling titles, keyboard controls and image rendering via markdown
+function deactivate() { }
+function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function getWebviewHtml(webview, extensionUri, dataJson) {
+    // UI: breadcrumb + a dropdown/select that lists every option at the current level.
+    // Keeps keyboard shortcuts and actions. Double-clicking or Enter/D will descend into the selected item.
     return `<!doctype html>
-	<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource} file: https: data:; script-src 'unsafe-inline' ${webview.cspSource}; style-src 'unsafe-inline' ${webview.cspSource};">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			:root {
-				--bg: var(--vscode-editor-background, #f6f8fa);
-				--card: var(--vscode-sideBar-background, #ffffff);
-				--muted: var(--vscode-descriptionForeground, #6b6b6b);
-				--accent: var(--vscode-textLink-foreground, #0066cc);
-				--fg: var(--vscode-editor-foreground, #24292e);
-			}
-			html,body { height:100%; margin:0; }
-			body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg, rgba(0,0,0,0.02), transparent); color:var(--fg); display:flex; align-items:center; justify-content:center; padding:2rem; box-sizing:border-box; }
-			.container { width:100%; max-width:980px; background:var(--card); border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.08); padding:1.2rem 1.6rem; position:relative; box-sizing:border-box; }
-			.header { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-			#breadcrumb { font-size:0.9rem; color:var(--muted); text-align:left; }
-			.crumb { cursor:pointer; color:var(--accent); margin-right:0.5rem; padding:0.18rem 0.4rem; border-radius:6px; }
-			.crumb:hover { background:rgba(0,0,0,0.03); text-decoration:none; }
-			.crumb-current { font-weight:600; color:var(--fg); cursor:default; background:transparent; }
-			.main { display:flex; flex-direction:column; align-items:center; padding:1rem 0.5rem; }
-			#title { font-size:1.9rem; line-height:1.15; text-align:center; padding:0.8rem 0.6rem; min-height:3.6rem; }
-			.siblings { width:100%; display:flex; flex-direction:column; align-items:center; gap:0.15rem; color:var(--muted); }
-			.sibling { font-size:0.95rem; cursor:pointer; padding:0.18rem 0.25rem; border-radius:6px; opacity:0.95; }
-			.sibling:hover { background:rgba(0,0,0,0.03); color:var(--fg); }
-			.sibling.current { font-weight:600; color:var(--fg); cursor:default; }
-			img.outline-image { max-width:78vw; max-height:58vh; margin:0.8rem auto 0.2rem; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.08); display:block; }
-			.footer { margin-top:0.6rem; font-size:0.85rem; color:var(--muted); text-align:center; position:relative; }
-			/* action hints are absolutely positioned and fade in/out to avoid layout shifts */
-			#action-hints { position:absolute; left:0; right:0; top:100%; margin-top:6px; display:flex; justify-content:center; pointer-events:none; opacity:0; }
-			#action-hints.visible { opacity:1; pointer-events:auto; }
-			.hint { display:inline-block; margin:0 0.18rem; padding:0.12rem 0.32rem; background:rgba(0,0,0,0.03); border-radius:6px; }
-			.hint-key { font-weight:700; margin-right:0.22rem; color:var(--accent); }
-			.controls { display:inline-block; padding:0.28rem 0.6rem; background:rgba(0,0,0,0.03); border-radius:999px; }
-			@media (max-width:600px) { .container { padding:0.8rem; } #title { font-size:1.4rem; } }
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="header">
-				<nav id="breadcrumb">(loading)</nav>
-				<div style="font-size:0.9rem;color:var(--muted)">Outline Navigator</div>
-			</div>
-			<div class="main">
-				<div id="siblings-above" class="siblings" aria-hidden="true"></div>
-				<div id="title">(loading)</div>
-				<div id="siblings-below" class="siblings" aria-hidden="true"></div>
-				<img id="outline-image" class="outline-image" style="display:none" />
-			</div>
-			<div class="footer">
-				<div class="controls">Space: play/pause • Esc: close • =/- speed • A/D level • J/L prev/next</div>
-				<div id="action-hints" aria-live="polite"></div>
-			</div>
-		</div>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: data: https: http:; script-src 'unsafe-inline' 'unsafe-eval'; style-src 'unsafe-inline'"> 
+	<style>
+		body { font-family: sans-serif; padding: 10px }
+		#breadcrumb { margin-bottom: 8px }
+		#controls { margin-top: 10px; color: #666 }
+		#levelSelect { width: 100%; font-size: 18px; padding: 6px; box-sizing: border-box }
+		#actions { margin-top: 8px; font-size: 14px; color: #007acc }
+		.empty { color: #999; font-style: italic }
+	</style>
+</head>
+<body>
+	<div id="breadcrumb"></div>
+	<select id="levelSelect" size="6" aria-label="Options at current level"></select>
+	<div id="actions"></div>
+	<div id="controls">Space=play/pause Esc=close J/L=prev/next A/D=level -/= speed</div>
+
 	<script>
-		const vscode = acquireVsCodeApi();
-		const workspaceRoot = ${JSON.stringify(workspaceRoot || '')};
-		const data = ${dataJson};
+		const root = ${dataJson};
+		let currentLevelNode = root;
+		let levelStack = [root];
+		function nodesAtCurrentLevel() { return (currentLevelNode.children || []).map(n => n); }
 
-		let currentNode = data.document;
-		let levelStack = [currentNode];
-		let children = (currentNode.children || []);
-		let idx = 0;
-		let intervalMs = 2000;
-		let playing = true;
-		let actionKeyMap = {}; // maps uppercase key -> action object for current title
+		let index = 0;
+		let paused = false;
+		let interval = 1000;
+		let timer = null;
 
-		const titleEl = document.getElementById('title');
-		const breadcrumbEl = document.getElementById('breadcrumb');
-		const siblingsAboveEl = document.getElementById('siblings-above');
-		const siblingsBelowEl = document.getElementById('siblings-below');
-		const imgEl = document.getElementById('outline-image');
+		const selectEl = document.getElementById('levelSelect');
+		const actionsEl = document.getElementById('actions');
 
-		function renderBreadcrumbs() {
-			breadcrumbEl.innerHTML = '';
-			levelStack.forEach((n, i) => {
-				const span = document.createElement('span');
-				span.textContent = n.title || '(untitled)';
-				span.dataset.idx = String(i);
-				span.className = (i === levelStack.length - 1) ? 'crumb-current' : 'crumb';
-				breadcrumbEl.appendChild(span);
-				if (i < levelStack.length - 1) {
-					const sep = document.createElement('span'); sep.textContent = ' › '; sep.style.color = 'var(--muted)'; breadcrumbEl.appendChild(sep);
-				}
-			});
-		}
+		function render() {
+			const bc = levelStack.map(function(n){ return n.title; }).slice(1).map(function(t,i){ return '<a href="#" data-idx="'+i+'">'+escape(t)+'</a>'; }).join(' / ');
+			document.getElementById('breadcrumb').innerHTML = bc || '(root)';
 
-		function stripImages(text) { return text ? text.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim() : text; }
-
-		function showTitleText(raw) {
-			// instant swap (no animation)
-			titleEl.innerText = stripImages(raw) || '(untitled)';
-		}
-
-		function renderTitle() {
-			renderBreadcrumbs();
-			if (!children || children.length===0) {
-				showTitleText(currentNode.title || '(empty)');
-				siblingsAboveEl.innerHTML = ''; siblingsBelowEl.innerHTML = ''; imgEl.style.display='none';
-				actionKeyMap = {};
+			const nodes = nodesAtCurrentLevel();
+			// build options list
+			selectEl.innerHTML = '';
+			if(!nodes.length){
+				const opt = document.createElement('option'); opt.text = '(empty)'; opt.className = 'empty'; selectEl.add(opt);
+				actionsEl.innerHTML = '';
 				return;
 			}
-			const current = children[idx % children.length];
-			const raw = current.title || '';
-			const imgMatch = raw.match(/!\[[^\]]*\]\(([^)]+)\)/);
-			if (imgMatch) {
-				const src = imgMatch[1];
-				let resolved = src;
-				if (!src.startsWith('http') && !src.startsWith('file:')) {
-					if (workspaceRoot) { resolved = 'file://' + (workspaceRoot + '/' + src).replace(/\\\\/g, '/'); }
-					else { resolved = 'file://' + src; }
-				}
-				imgEl.src = resolved; imgEl.style.display = 'block';
-				showTitleText(raw.replace(imgMatch[0], ''));
-			} else {
-				imgEl.style.display='none';
-				showTitleText(raw);
-			}
 
-			// build action map for this title
-			actionKeyMap = {};
-			if (current.actions && Array.isArray(current.actions)) {
-				current.actions.forEach(a => {
-					if (!a || !a.type) return;
-					if (a.key) { actionKeyMap[String(a.key).toUpperCase()] = a; }
-				});
-			}
-
-			// render action hints UI
-			const hintsEl = document.getElementById('action-hints');
-			if (hintsEl) {
-				hintsEl.innerHTML = '';
-				const keys = Object.keys(actionKeyMap || {});
-				if (keys.length) {
-					keys.forEach(k => {
-						const a = actionKeyMap[k];
-						const span = document.createElement('span');
-						span.className = 'hint';
-						span.innerHTML = '<span class="hint-key">' + k + '</span><span class="hint-desc">' + (a.type || '') + (a.param ? ' → ' + a.param : '') + '</span>';
-						hintsEl.appendChild(span);
-					});
-					hintsEl.classList.add('visible');
-				} else {
-					hintsEl.classList.remove('visible');
-				}
-			}
-
-			// siblings
-			siblingsAboveEl.innerHTML = '';
-			siblingsBelowEl.innerHTML = '';
-			children.forEach((node, i) => {
-				const t = node.title || '(untitled)';
-				const displayText = stripImages(t);
-				const span = document.createElement('div');
-				span.className = 'sibling' + (i === (idx % children.length) ? ' current' : '');
-				span.textContent = displayText;
-				span.dataset.i = String(i);
-				span.addEventListener('click', () => { const ii = parseInt(span.dataset.i, 10); if (isNaN(ii)) return; idx = ii; renderTitle(); });
-				if (i < (idx % children.length)) siblingsAboveEl.appendChild(span);
-				else if (i > (idx % children.length)) siblingsBelowEl.appendChild(span);
+			nodes.forEach((n, i) => {
+				const opt = document.createElement('option');
+				opt.value = String(i);
+				opt.text = n.title || '(untitled)';
+				selectEl.add(opt);
 			});
+
+			// normalize index
+			index = ((index % nodes.length) + nodes.length) % nodes.length;
+			selectEl.selectedIndex = index;
+
+			// render actions for selected
+			const sel = nodes[index];
+			if(sel && sel.actions){
+				actionsEl.innerHTML = sel.actions.map(function(a){ return '[' + (a.key || '') + ' - ' + a.type + ']'; }).join(' ');
+			} else {
+				actionsEl.innerHTML = '';
+			}
 		}
 
-		function tick() { if (!playing) return; idx = (idx+1) % (children.length || 1); renderTitle(); }
+		function escape(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-		let timer = setInterval(tick, intervalMs);
-		renderTitle();
+		function startTimer(){ stopTimer(); timer = setInterval(()=>{ if(!paused){ next(); } }, interval); }
+		function stopTimer(){ if(timer) { clearInterval(timer); timer = null; } }
 
-		// breadcrumb click
-		breadcrumbEl.addEventListener('click', (ev) => {
-			const target = ev.target; if (!target || !target.dataset) return; const i = parseInt(target.dataset.idx, 10); if (isNaN(i)) return;
-			levelStack = levelStack.slice(0, i+1); currentNode = levelStack[levelStack.length - 1]; children = (currentNode.children || []); idx = 0; renderTitle();
+		function next(){ const nodes = nodesAtCurrentLevel(); if(nodes.length){ index = (index+1) % nodes.length; render(); }}
+		function prev(){ const nodes = nodesAtCurrentLevel(); if(nodes.length){ index = (index-1 + nodes.length) % nodes.length; render(); }}
+
+		// change selection via mouse
+		selectEl.addEventListener('change', (e)=>{
+			index = selectEl.selectedIndex;
+			render();
 		});
 
-		window.addEventListener('keydown', e=>{
-			if (e.code === 'Space') { playing = !playing; }
-			else if (e.key === 'Escape') { vscode.postMessage({ command: 'close' }); }
-			else if (e.key === '=') { intervalMs = Math.max(200, intervalMs - 200); clearInterval(timer); timer = setInterval(tick, intervalMs); }
-			else if (e.key === '-') { intervalMs = intervalMs + 200; clearInterval(timer); timer = setInterval(tick, intervalMs); }
-			else if (e.key.toLowerCase() === 'a') { if (levelStack.length>1) { levelStack.pop(); currentNode = levelStack[levelStack.length-1]; children = (currentNode.children||[]); idx = 0; renderTitle(); } }
-			else if (e.key.toLowerCase() === 'd') { const sel = currentNode.children && currentNode.children[idx % (currentNode.children.length||1)]; if (sel) { levelStack.push(sel); currentNode = sel; children = (currentNode.children||[]); idx = 0; renderTitle(); } }
-			else if (e.key.toLowerCase() === 'j') { if (children && children.length) { idx = (idx - 1 + children.length) % children.length; renderTitle(); } }
-			else if (e.key.toLowerCase() === 'l') { if (children && children.length) { idx = (idx + 1) % children.length; renderTitle(); } }
-			else {
-				// map single-character keys to actions for current title
-				const key = (e.key || '').toString();
-				if (key && key.length === 1) {
-					const action = actionKeyMap[key.toUpperCase()];
-					if (action) {
-						if (action.type === 'open_webpage' && action.param) {
-							vscode.postMessage({ command: 'open_webpage', url: action.param });
-						} else if (action.type === 'run_command' && action.param) {
-							vscode.postMessage({ command: 'run_command', name: action.param });
-						}
-					}
-				}
+		// double-click to go down
+		selectEl.addEventListener('dblclick', (e)=>{ goDown(); });
+
+		// keyboard handling
+		document.addEventListener('keydown', (e)=>{
+			const key = e.key.toUpperCase();
+			if(key === ' '){ paused = !paused; e.preventDefault(); }
+			else if(key === 'ESCAPE'){ vscodeClose(); }
+			else if(key === 'J'){ prev(); }
+			else if(key === 'L'){ next(); }
+			else if(key === 'A'){ // go up a level
+				if(levelStack.length>1){ levelStack.pop(); currentLevelNode = levelStack[levelStack.length-1]; index = 0; render(); }
 			}
+			else if(key === 'D' || key === 'ENTER'){ // go down into selected
+				goDown();
+			}
+			else if(key === '=' ){ interval = Math.max(100, interval - 200); restartTimer(); }
+			else if(key === '-' ){ interval = interval + 200; restartTimer(); }
+			else {
+				// check for action keys on current item
+				const nodes = nodesAtCurrentLevel();
+				if(nodes.length){ const sel = nodes[index % nodes.length]; if(sel.actions){ const act = sel.actions.find(a => (a.key||'').toUpperCase()===key); if(act){ if(act.type==='open_webpage'){ vscodeOpen(act.param); } else if(act.type==='run_command'){ vscodeExec(act.param); } } } }
+			}
+			render();
 		});
 
-		window.addEventListener('message', event => { const msg = event.data; if (msg && msg.command === 'update') { /* noop for now */ } });
+		function goDown(){ const nodes = nodesAtCurrentLevel(); if(!nodes.length) return; const sel = nodes[index % nodes.length]; if(sel && sel.children && sel.children.length){ levelStack.push(sel); currentLevelNode = sel; index = 0; render(); } }
+
+		function restartTimer(){ stopTimer(); startTimer(); }
+
+		function vscodeOpen(url){ window.parent.postMessage({ command: 'openUrl', url: url }, '*'); }
+		function vscodeExec(cmd){ window.parent.postMessage({ command: 'exec', cmd }, '*'); }
+		function vscodeClose(){ window.parent.postMessage({ command: 'close' }, '*'); }
+
+		// clickable breadcrumb
+		document.getElementById('breadcrumb').addEventListener('click', (ev)=>{
+			const a = ev.target; if(a && a.dataset && a.dataset.idx){ const idx = parseInt(a.dataset.idx); const target = levelStack[1+idx]; if(target){ levelStack = [root].concat(levelStack.slice(1,2+idx)); currentLevelNode = target; index = 0; render(); } }
+		});
+
+		// initial render
+		render(); startTimer();
 	</script>
-	</body>
-	</html>`;
+</body>
+</html>`;
 }
 //# sourceMappingURL=extension.js.map
