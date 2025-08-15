@@ -56,10 +56,10 @@ Learning by questions
             Differential Equation
             Calculus
         Engineering
-            [Fluid Mechanics](Premises.md#fluid-mechanics)
+            [Fluid Mechanics](Premises.md#fluid-mechanics) 
                 Quantities and units
-                    Reynolds number
-                Types of flow <open_webpage(https://en.wikipedia.org/wiki/Laminar_flow)>
+                    Reynolds number [action:open_webpage key:F](https://en.wikipedia.org/wiki/Reynolds_number)
+                Types of flow [action:open_webpage key:F](https://en.wikipedia.org/wiki/Laminar_flow)
                     Turbulent
                     Laminar
                 Types of Non-Newtonian Fluids

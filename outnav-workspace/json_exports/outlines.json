@@ -373,7 +373,8 @@
                         "actions": [
                           {
                             "type": "open_webpage",
-                            "param": "https://en.wikipedia.org/wiki/Laminar_flow"
+                            "param": "https://en.wikipedia.org/wiki/Laminar_flow",
+                            "key": "F"
                           }
                         ]
                       },
