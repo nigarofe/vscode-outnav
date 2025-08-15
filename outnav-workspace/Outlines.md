@@ -24,29 +24,27 @@ Software development [action:open_webpage key:O](https://example.com)
                         vscode-outnav.startOutlineNavigator
                             When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json
                             When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the Outline Webview
-                    Webviews
-                        For any Webview
-                            Image rendering
-                                The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.
-                        For Outline Webview
-                            General
-                                When the Outline Webview is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
-                                While the Outline Webview is active, the Extension shall display each title from the current navigation level sequentially, replacing the displayed title every 2 seconds.
-                                The Outline Webview shall display a breadcrumb navigation above the currently-displayed title that shows the hierarchy of parent titles.
-                                The breadcrumb navigation shall be clickable and shall navigate the Outline Webview to the selected level when a breadcrumb is activated (providing a quick way to jump to that level).
-                                The Outline Webview shall display all the sibling titles of the current item immediately above and below the currently displayed title, following their order, in a smaller visual style than the current title.
-                                The sibling titles above and below the currently displayed title shall be clickable to provide a quick way to jump to that level.
-                            Title Actions
-                                The Outline Webview shall support associating actions with titles using a standardized annotation format in Outlines.md.
-                                The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title [action:open_webpage key:O](https://example.com)
-                                While a title is displayed, when the specified key is pressed, the Outline Webview shall execute the associated action.
-                                If multiple actions are annotated for a title, each action shall be mapped to its specified key.
-                            Keyboard shortcuts
-                                While the Outline Webview is opened, when the `Space` key is pressed, the Outline Webview shall pause/play the title replacing
-                                While the Outline Webview is opened, when the `Esc` key is pressed, the Outline Webview shall close
-                                While the Outline Webview is opened, when the `=`/`-` keys are pressed, the title replacing frequency shall decrease/increase
-                                While the Outline Webview is opened, when the `A`/`D` keys are pressed, the title level shall decrease/increase
-                                While the Outline Webview is opened, when the `J`/`L` keys are pressed, the title shall change to previous/next
+                    Webview
+                        General
+                            The Extension shall have a single webview
+                            When VS Code is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
+                            The top of the webview shall have a breadcrumb navigation
+                            The breadcrumb navigation shall be clickable providing a quick way to jump to that level
+                            While the the webview is in focus, the breadcrumb navigation shall cycle through each title from the current navigation level sequentially every 2 seconds.
+                        Title Actions
+                            The Outline Webview shall support associating actions with titles using a standardized annotation format in Outlines.md.
+                            The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title [action:open_webpage key:O](https://example.com)
+                            While a title is displayed, when the specified key is pressed, the Outline Webview shall execute the associated action.
+                            If multiple actions are annotated for a title, each action shall be mapped to its specified key.
+                        Keyboard shortcuts
+                            While the webview is in focus, when the 
+                                `Space` key is pressed, the Outline Webview shall pause/play the title cycling
+                                `Esc` key is pressed, the webview tab shall close
+                                `=`/`-` keys are pressed, the title cycling frequency shall decrease/increase
+                                `A`/`D` keys are pressed, the title level shall decrease/increase
+                                `J`/`L` keys are pressed, the title shall change to previous/next
+                        Image rendering
+                            The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.
 Learning by questions
     Show reference materials
         Mathematics
