@@ -56,27 +56,34 @@ function getActiveEditor(editor) {
 }
 const fileWebviews = {
     "Outlines.txt": {
-        htmlFileName: "outlines.html",
-        panel: vscode.window.createWebviewPanel("outlines", "Outlines", vscode.ViewColumn.Two, {})
+        htmlFileName: "outlinesWebview.html",
+        scriptFileName: "outlinesWebview.js",
+        panel: vscode.window.createWebviewPanel("outlines", "Outlines", vscode.ViewColumn.Two, { enableScripts: true })
     },
     "Premises.md": {
-        htmlFileName: "premises.html",
-        panel: vscode.window.createWebviewPanel("premises", "Premises", vscode.ViewColumn.Two, {})
+        htmlFileName: "premisesWebview.html",
+        scriptFileName: "premisesWebview.js",
+        panel: vscode.window.createWebviewPanel("premises", "Premises", vscode.ViewColumn.Two, { enableScripts: true })
     },
     "Questions.md": {
-        htmlFileName: "questions.html",
-        panel: vscode.window.createWebviewPanel("questions", "Questions", vscode.ViewColumn.Two, {})
+        htmlFileName: "questionsWebview.html",
+        scriptFileName: "questionsWebview.js",
+        panel: vscode.window.createWebviewPanel("questions", "Questions", vscode.ViewColumn.Two, { enableScripts: true })
     }
 };
 async function openCorrespondingWebview(editor, context) {
     const fileName = getActiveEditor(editor);
     if (!fileName) {
-        console.log("No active editor to open webview");
+        // console.log("No active editor to open webview");
         return;
     }
     const mapping = fileWebviews[fileName];
     let htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
     let html = await fs_1.promises.readFile(htmlPath, 'utf8');
+    const scriptUri = mapping.panel.webview.asWebviewUri(vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', mapping.scriptFileName)));
+    const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src ${mapping.panel.webview.cspSource}; style-src ${mapping.panel.webview.cspSource} 'unsafe-inline';">`;
+    html = html.replace('%%SCRIPT_URI%%', scriptUri.toString())
+        .replace('%%CSP%%', csp);
     console.log(`Opening webview for: ${fileName}`);
     mapping.panel.reveal(vscode.ViewColumn.Beside, true);
     mapping.panel.webview.html = html;
