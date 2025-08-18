@@ -1,6 +1,4 @@
 EARS patterns definitions
-
-vscode-outnav - Requirements
 	Generic
 		While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>
 	Ubiquitous
@@ -16,6 +14,7 @@ vscode-outnav - Requirements
 	Complex
 		While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>
 
+vscode-outnav - Requirements
 	npm dependencies and initialization
 		The Extension shall be initialized using "npm install --global yo generator-code; yo code; npm install katex; npm install bootstrap;"
 	Commands
