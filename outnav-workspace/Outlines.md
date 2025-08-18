@@ -39,7 +39,6 @@ Software development {"action":"display_image","src":"media/2025-08-18.png","alt
                 While the dropdown text is cycling, when the user hovers over or clicks the dropdown control, the Breadcrumb Component shall immediately pause the cycling.
                 Clicking the dropdown button shall toggle the sibling list open/closed (the webview should implement a lightweight toggle so Bootstrap JS is not required).
                 Selecting a sibling from the dropdown shall navigate to that sibling, update the main content area, reset the dropdown text to the selected title, and hide the dropdown.
-                When the webview loses focus or a navigation occurs, the Breadcrumb Component shall reset the dropdown's displayed text to the title of the current page.
             Main content
                 The webview shall have a single main content area that is visually distinct from the breadcrumb navigation and shall occupy the majority of the webview space
                 When the breadcrumb selection changes, the Extension shall update the main content area within to reflect the new selection
@@ -97,7 +96,7 @@ Learning by questions
             Classical Mechanics
                 Movimento sub-amortecido
     Show questions
-        Questions about Outlines.md
+        Questions about Outlines.md {"action":"generate_outline_question"}
         Order by PMG-X desc
         Order by DSLA
         Order by question number
