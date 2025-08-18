@@ -1,4 +1,4 @@
-Software development [action:open_webpage key:O](https://example.com)
+Software development {"action":"display_image","src":"media/2025-08-18.png","alt":"Diagram","width":400}
     EARS patterns definitions
         Generic
             While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>
@@ -22,9 +22,9 @@ Software development [action:open_webpage key:O](https://example.com)
                 Systems
                     Commands
                         vscode-outnav.startOutlineNavigator
-                            When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json
-                            When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the webview
-                        vsvode-outnav.startOutlineQuestions
+                            When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse Outlines.md to /json_exports/outlines.json according to /json_exports/outlines_schema.json
+                            When the Outlines.md has been sucessfully parsed, the Extension shall open the webview
+                        // vsvode-outnav.startOutlineQuestions
                             When the command vscode-outnav.startOutlineQuestions is executed, the Extension shall 
                     Markdown parsing
                         The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs or as groups of four spaces; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json
@@ -34,10 +34,14 @@ Software development [action:open_webpage key:O](https://example.com)
                         General
                             The Extension shall provide a single webview
                             When VS Code is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
+                            The webview shall use Bootstrap
                         Breadcrumb navigation
-                            The top of the webview shall have a clickable breadcrumb navigation providing a quick way to jump to that level
-                            While the the webview is in focus, the breadcrumb navigation shall cycle through each title from the current navigation level sequentially every 1.0 seconds
-                            The breadcrumb navigation shall show all options for the current level in a dropdown-like control
+                            The Breadcrumb Component shall display a horizontal list of links representing the user's navigation path from the homepage.
+                            The Breadcrumb Component shall render the final item in the path as a dropdown control.
+                            The Breadcrumb Component shall populate the dropdown control with a list of all sibling pages of the current page.
+                            While the webview is in focus, the Breadcrumb Component shall sequentially cycle the displayed text of the dropdown control through each sibling page title every 1.0 second.
+                            While the dropdown text is cycling, when the user hovers over or clicks the dropdown control, the Breadcrumb Component shall immediately pause the cycling.
+                            When the webview loses focus or a navigation occurs, the Breadcrumb Component shall reset the dropdown's displayed text to the title of the current page.
                         Main content
                             The webview shall have a single main content area that is visually distinct from the breadcrumb navigation and shall occupy the majority of the webview space
                             When the breadcrumb selection changes, the Extension shall update the main content area within to reflect the new selection

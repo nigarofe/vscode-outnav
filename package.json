@@ -9,15 +9,13 @@
   "categories": [
     "Other"
   ],
-  
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-outnav.helloWorld",
         "title": "Hello World"
-      }
-      ,
+      },
       {
         "command": "vscode-outnav.startOutlineNavigator",
         "title": "Start Outline Navigator"
@@ -44,6 +42,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "bootstrap": "^5.3.7",
     "katex": "^0.16.22"
   }
 }

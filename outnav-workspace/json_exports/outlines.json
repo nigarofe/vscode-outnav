@@ -126,12 +126,17 @@
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json",
+                                    "title": "When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse Outlines.md to /json_exports/outlines.json according to /json_exports/outlines_schema.json",
                                     "level": 8,
                                     "children": []
                                   },
                                   {
-                                    "title": "When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the webview",
+                                    "title": "When the Outlines.md has been sucessfully parsed, the Extension shall open the webview",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "When the command vscode-outnav.startOutlineQuestions is executed, the Extension shall",
                                     "level": 8,
                                     "children": []
                                   }
@@ -158,7 +163,7 @@
                                 "title": "The Extension shall assume that the user opened VS Code from the outnav-workspace folder",
                                 "level": 7,
                                 "children": []
-                              },
+                              }
                             ]
                           },
                           {
@@ -170,7 +175,7 @@
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "The Extension shall have a single webview",
+                                    "title": "The Extension shall provide a single webview",
                                     "level": 8,
                                     "children": []
                                   },
@@ -180,12 +185,18 @@
                                     "children": []
                                   },
                                   {
-                                    "title": "The top of the webview shall have a breadcrumb navigation",
+                                    "title": "The webview shall use Bootstrap",
                                     "level": 8,
                                     "children": []
-                                  },
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "Breadcrumb navigation",
+                                "level": 7,
+                                "children": [
                                   {
-                                    "title": "The breadcrumb navigation shall be clickable providing a quick way to jump to that level",
+                                    "title": "The top of the webview shall have a clickable breadcrumb navigation providing a quick way to jump to that level",
                                     "level": 8,
                                     "children": []
                                   },
@@ -202,35 +213,67 @@
                                 ]
                               },
                               {
-                                "title": "Title Actions",
+                                "title": "Main content",
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "The webview shall support associating actions with titles using a standardized annotation format in Outlines.md.",
+                                    "title": "The webview shall have a single main content area that is visually distinct from the breadcrumb navigation and shall occupy the majority of the webview space",
                                     "level": 8,
                                     "children": []
                                   },
                                   {
-                                    "title": "The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title",
+                                    "title": "When the breadcrumb selection changes, the Extension shall update the main content area within to reflect the new selection",
                                     "level": 8,
-                                    "children": [],
-                                    "actions": [
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The main content area shall support multiple content renderers",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "The Extension shall choose the renderer of the main content based on the selected title's annotations",
+                                    "level": 8,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "title": "Title annotations",
+                                "level": 7,
+                                "children": [
+                                  {
+                                    "title": "Annotation format: trailing JSON object. Example:",
+                                    "level": 8,
+                                    "children": [
                                       {
-                                        "type": "open_webpage",
-                                        "param": "https://example.com",
-                                        "key": "O"
+                                        "title": "Diagram",
+                                        "level": 9,
+                                        "children": [],
+                                        "annotations": {
+                                          "action": "display_image",
+                                          "src": "images/2025-08-18.png",
+                                          "alt": "Diagram",
+                                          "width": 400
+                                        }
                                       }
                                     ]
                                   },
                                   {
-                                    "title": "While a title is displayed, when the specified key is pressed, the webview shall execute the associated action.",
+                                    "title": "Web link example:",
                                     "level": 8,
-                                    "children": []
-                                  },
-                                  {
-                                    "title": "If multiple actions are annotated for a title, each action shall be mapped to its specified key.",
-                                    "level": 8,
-                                    "children": []
+                                    "children": [
+                                      {
+                                        "title": "Open docs",
+                                        "level": 9,
+                                        "children": [],
+                                        "annotations": {
+                                          "action": "open_webpage",
+                                          "url": "https://example.com",
+                                          "key": "O"
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               },
@@ -270,17 +313,6 @@
                                     ]
                                   }
                                 ]
-                              },
-                              {
-                                "title": "Image rendering",
-                                "level": 7,
-                                "children": [
-                                  {
-                                    "title": "The Extension shall render any images referenced in a heading using standard Markdown syntax (!), resolving the image path relative to the active workspace root.",
-                                    "level": 8,
-                                    "children": []
-                                  }
-                                ]
                               }
                             ]
                           }
@@ -293,13 +325,12 @@
             ]
           }
         ],
-        "actions": [
-          {
-            "type": "open_webpage",
-            "param": "https://example.com",
-            "key": "O"
-          }
-        ]
+        "annotations": {
+          "action": "display_image",
+          "src": "media/2025-08-18.png",
+          "alt": "Diagram",
+          "width": 400
+        }
       },
       {
         "title": "Learning by questions",
@@ -513,28 +544,34 @@
                     "level": 4,
                     "children": [
                       {
-                        "title": "Capítulos",
-                        "level": 6,
+                        "title": "(empty)",
+                        "level": 5,
                         "children": [
                           {
-                            "title": "1. INTRODUÇÃO",
-                            "level": 7,
-                            "children": []
-                          },
-                          {
-                            "title": "2. CONCEITOS FUNDAMENTAIS",
-                            "level": 7,
-                            "children": []
-                          },
-                          {
-                            "title": "3. ESTÁTICA DOS FLUIDOS",
-                            "level": 7,
-                            "children": []
-                          },
-                          {
-                            "title": "4. EQUAÇÕES BÁSICAS NA FORMA INTEGRAL PARA UM VOLUME DE CONTROLE",
-                            "level": 7,
-                            "children": []
+                            "title": "Capítulos",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "1. INTRODUÇÃO",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "2. CONCEITOS FUNDAMENTAIS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "3. ESTÁTICA DOS FLUIDOS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "4. EQUAÇÕES BÁSICAS NA FORMA INTEGRAL PARA UM VOLUME DE CONTROLE",
+                                "level": 7,
+                                "children": []
+                              }
+                            ]
                           }
                         ]
                       }
