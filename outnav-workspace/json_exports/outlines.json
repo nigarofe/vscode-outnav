@@ -159,11 +159,6 @@
                                 "level": 7,
                                 "children": []
                               },
-                              {
-                                "title": "When the Extension finishes loading, the Extension shall automatically execute the command vscode-outnav.startOutlineNavigator",
-                                "level": 7,
-                                "children": []
-                              }
                             ]
                           },
                           {
@@ -350,7 +345,7 @@
                 "level": 3,
                 "children": [
                   {
-                    "title": "",
+                    "title": "Fluid Mechanics",
                     "level": 4,
                     "children": [
                       {

@@ -24,24 +24,30 @@ Software development [action:open_webpage key:O](https://example.com)
                         vscode-outnav.startOutlineNavigator
                             When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse outnav-workspace/Outlines.md to outnav-workspace/json_exports/outlines.json according to outnav-workspace/json_exports/outlines_schema.json
                             When the outnav-workspace/Outlines.md has been sucessfully parsed, the Extension shall open the webview
+                        vsvode-outnav.startOutlineQuestions
+                            When the command vscode-outnav.startOutlineQuestions is executed, the Extension shall 
                     Markdown parsing
                         The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs or as groups of four spaces; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json
                     General
                         The Extension shall assume that the user opened VS Code from the outnav-workspace folder
-                        When the Extension finishes loading, the Extension shall automatically execute the command vscode-outnav.startOutlineNavigator
                     Webview
                         General
-                            The Extension shall have a single webview
+                            The Extension shall provide a single webview
                             When VS Code is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
-                            The top of the webview shall have a breadcrumb navigation
-                            The breadcrumb navigation shall be clickable providing a quick way to jump to that level
+                        Breadcrumb navigation
+                            The top of the webview shall have a clickable breadcrumb navigation providing a quick way to jump to that level
                             While the the webview is in focus, the breadcrumb navigation shall cycle through each title from the current navigation level sequentially every 1.0 seconds
                             The breadcrumb navigation shall show all options for the current level in a dropdown-like control
-                        Title Actions
-                            The webview shall support associating actions with titles using a standardized annotation format in Outlines.md.
-                            The annotation format shall allow specifying the action type (e.g., open_webpage, run_command); The action parameter (e.g., URL, command name); The key that triggers the action (e.g., key:O); Example annotation: Title [action:open_webpage key:O](https://example.com)
-                            While a title is displayed, when the specified key is pressed, the webview shall execute the associated action.
-                            If multiple actions are annotated for a title, each action shall be mapped to its specified key.
+                        Main content
+                            The webview shall have a single main content area that is visually distinct from the breadcrumb navigation and shall occupy the majority of the webview space
+                            When the breadcrumb selection changes, the Extension shall update the main content area within to reflect the new selection
+                            The main content area shall support multiple content renderers
+                            The Extension shall choose the renderer of the main content based on the selected title's annotations 
+                        Title annotations 
+                            Annotation format: trailing JSON object. Example:
+                                Diagram {"action":"display_image","src":"images/2025-08-18.png","alt":"Diagram","width":400}
+                            Web link example:
+                                Open docs {"action":"open_webpage","url":"https://example.com","key":"O"}
                         Keyboard shortcuts
                             While the webview is in focus, when the 
                                 `Space` key is pressed, the webview shall pause/play the title cycling
@@ -49,8 +55,6 @@ Software development [action:open_webpage key:O](https://example.com)
                                 `=`/`-` keys are pressed, the title cycling frequency shall decrease/increase
                                 `A`/`D` keys are pressed, the title level shall decrease/increase
                                 `J`/`L` keys are pressed, the title shall change to previous/next
-                        Image rendering
-                            The Extension shall render any images referenced in a heading using standard Markdown syntax (![alt](src)), resolving the image path relative to the active workspace root.
 Learning by questions
     Show reference materials
         Mathematics
@@ -60,7 +64,7 @@ Learning by questions
             Differential Equation
             Calculus
         Engineering
-            [Fluid Mechanics](Premises.md#fluid-mechanics) 
+            Fluid Mechanics
                 Quantities and units
                     Reynolds number [action:open_webpage key:F](https://en.wikipedia.org/wiki/Reynolds_number)
                 Types of flow [action:open_webpage key:F](https://en.wikipedia.org/wiki/Laminar_flow)

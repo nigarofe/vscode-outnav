@@ -148,7 +148,7 @@ export function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(disposable);
 
 		// auto-run when extension activates
-		vscode.commands.executeCommand('vscode-outnav.startOutlineNavigator');
+		// (removed automatic execution to avoid launching the navigator on activation)
 }
 
 export function deactivate() {}
