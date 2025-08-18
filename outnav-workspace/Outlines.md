@@ -61,7 +61,6 @@ Software development {"action":"display_image","src":"media/2025-08-18.png","alt
             Keyboard shortcuts
                 While the webview is in focus, when the 
                     `Space` key is pressed, the webview shall pause/play the title cycling
-                    `Esc` key is pressed, the webview tab shall close
                     `=`/`-` keys are pressed, the title cycling frequency shall decrease/increase
                     `A`/`D` keys are pressed, the title level shall decrease/increase
                     `J`/`L` keys are pressed, the title shall change to previous/next
