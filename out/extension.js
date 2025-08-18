@@ -36,9 +36,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
 const vscode = __importStar(require("vscode"));
 const path = __importStar(require("path"));
+const fs_1 = require("fs");
 function activate(context) {
-    context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => getActiveEditor(editor)));
-    console.log(`Active file (name): ${getActiveEditor(vscode.window.activeTextEditor)}`);
+    context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => openCorrespondingWebview(editor, context)));
+    openCorrespondingWebview(vscode.window.activeTextEditor, context);
+    // console.log(`Active file (name): ${getActiveEditor(vscode.window.activeTextEditor)}`);
     console.log('Last line of activate()');
 }
 function getActiveEditor(editor) {
@@ -51,5 +53,32 @@ function getActiveEditor(editor) {
     else {
         return undefined;
     }
+}
+const fileWebviews = {
+    "Outlines.txt": {
+        htmlFileName: "outlines.html",
+        panel: vscode.window.createWebviewPanel("outlines", "Outlines", vscode.ViewColumn.Two, {})
+    },
+    "Premises.md": {
+        htmlFileName: "premises.html",
+        panel: vscode.window.createWebviewPanel("premises", "Premises", vscode.ViewColumn.Two, {})
+    },
+    "Questions.md": {
+        htmlFileName: "questions.html",
+        panel: vscode.window.createWebviewPanel("questions", "Questions", vscode.ViewColumn.Two, {})
+    }
+};
+async function openCorrespondingWebview(editor, context) {
+    const fileName = getActiveEditor(editor);
+    if (!fileName) {
+        console.log("No active editor to open webview");
+        return;
+    }
+    const mapping = fileWebviews[fileName];
+    let htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
+    let html = await fs_1.promises.readFile(htmlPath, 'utf8');
+    console.log(`Opening webview for: ${fileName}`);
+    mapping.panel.reveal(vscode.ViewColumn.Beside, true);
+    mapping.panel.webview.html = html;
 }
 //# sourceMappingURL=extension.js.map
