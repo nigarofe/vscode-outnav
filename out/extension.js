@@ -39,20 +39,23 @@ const path = __importStar(require("path"));
 const fs_1 = require("fs");
 function activate(context) {
     context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => openCorrespondingWebview(editor, context)));
+    // Send cursor line updates to the matching webview when the selection changes
+    context.subscriptions.push(vscode.window.onDidChangeTextEditorSelection(e => {
+        const editor = e.textEditor;
+        if (!editor || !editor.document) {
+            return;
+        }
+        const fileName = path.basename(editor.document.uri.fsPath);
+        const mapping = fileWebviews[fileName];
+        if (mapping && mapping.panel) {
+            const line = editor.selection.active.line + 1;
+            console.log(line);
+            mapping.panel.webview.postMessage({ type: 'cursorLine', line });
+        }
+    }));
     openCorrespondingWebview(vscode.window.activeTextEditor, context);
     // console.log(`Active file (name): ${getActiveEditor(vscode.window.activeTextEditor)}`);
     console.log('Last line of activate()');
-}
-function getActiveEditor(editor) {
-    if (editor && editor.document) {
-        const fullPath = editor.document.uri.fsPath;
-        const fileName = path.basename(fullPath);
-        // console.log(`Active file (name): ${fileName}`);
-        return `${fileName}`;
-    }
-    else {
-        return undefined;
-    }
 }
 const fileWebviews = {
     "Outlines.txt": {
@@ -87,5 +90,16 @@ async function openCorrespondingWebview(editor, context) {
     console.log(`Opening webview for: ${fileName}`);
     mapping.panel.reveal(vscode.ViewColumn.Beside, true);
     mapping.panel.webview.html = html;
+}
+function getActiveEditor(editor) {
+    if (editor && editor.document) {
+        const fullPath = editor.document.uri.fsPath;
+        const fileName = path.basename(fullPath);
+        // console.log(`Active file (name): ${fileName}`);
+        return `${fileName}`;
+    }
+    else {
+        return undefined;
+    }
 }
 //# sourceMappingURL=extension.js.map

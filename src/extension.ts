@@ -7,22 +7,33 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.onDidChangeActiveTextEditor(editor => openCorrespondingWebview(editor, context))
 	);
 
-	openCorrespondingWebview(vscode.window.activeTextEditor, context);
+	
+	// Send cursor line updates to the matching webview when the selection changes
+		context.subscriptions.push(
+			vscode.window.onDidChangeTextEditorSelection(e => {
+				const editor = e.textEditor;
+				if (!editor || !editor.document) {return;}
 
+				const fileName = path.basename(editor.document.uri.fsPath);
+				const mapping = fileWebviews[fileName];
+				if (mapping && mapping.panel) {
+					const line = editor.selection.active.line + 1;
+					console.log(line);
+					mapping.panel.webview.postMessage({ type: 'cursorLine', line });
+				}
+			})
+		);
+
+
+	
+	
+	
+	
+	openCorrespondingWebview(vscode.window.activeTextEditor, context);
 	// console.log(`Active file (name): ${getActiveEditor(vscode.window.activeTextEditor)}`);
 	console.log('Last line of activate()');
 }
 
-function getActiveEditor(editor?: vscode.TextEditor) {
-	if (editor && editor.document) {
-		const fullPath = editor.document.uri.fsPath;
-		const fileName = path.basename(fullPath);
-		// console.log(`Active file (name): ${fileName}`);
-		return `${fileName}`;
-	} else {
-		return undefined;
-	}
-}
 
 const fileWebviews: Record<string, { htmlFileName: string; scriptFileName:string; panel: vscode.WebviewPanel }> = {
 	"Outlines.txt": {
@@ -80,4 +91,15 @@ async function openCorrespondingWebview(editor: vscode.TextEditor | undefined, c
 	console.log(`Opening webview for: ${fileName}`);
 	mapping.panel.reveal(vscode.ViewColumn.Beside, true);
 	mapping.panel.webview.html = html;
+}
+
+function getActiveEditor(editor?: vscode.TextEditor) {
+	if (editor && editor.document) {
+		const fullPath = editor.document.uri.fsPath;
+		const fileName = path.basename(fullPath);
+		// console.log(`Active file (name): ${fileName}`);
+		return `${fileName}`;
+	} else {
+		return undefined;
+	}
 }
