@@ -18,18 +18,28 @@ vscode-outnav - Requirements
 	npm dependencies and initialization
 		The Extension shall be initialized using "npm install --global yo generator-code; yo code; npm install katex; npm install bootstrap;"
 	Commands
-		vscode-outnav.startOutlineNavigator
-			When the command vscode-outnav.startOutlineNavigator is executed, the Extension shall parse Outlines.md to /json_exports/outlines.json according to /json_exports/outlines_schema.json
-			When the Outlines.md has been sucessfully parsed, the Extension shall open the webview
+		The Extension shall have no commands
+	Webviews
+		The Extension shall evolve around the three text files in the outnav-workspace folder (Outlines.txt, Premises.md and Questions.md)
+		The Extension shall have three webviews, one for each main file.
+		When one of the three main files is open, the corresponding webview should appear.
+
+
+
+
+
+
+
+
+
 	Markdown parsing
-		The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs or as groups of four spaces; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json
+		The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json
 	General
 		The Extension shall assume that the user opened VS Code from the outnav-workspace folder
 	Webview
 		General
 			The Extension shall provide a single webview
 			When VS Code is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json
-			The webview shall use Bootstrap
 		Breadcrumb navigation
 			The Breadcrumb Component shall display a horizontal list of links representing the user's navigation path from the homepage.
 			The breadcrumb shall show only ancestor titles (not the currently-selected title) in the breadcrumb chain; the final/current title shall be rendered in the dropdown button to avoid duplication.
