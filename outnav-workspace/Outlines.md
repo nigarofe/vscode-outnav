@@ -76,8 +76,8 @@ Learning by questions
         Engineering
             Fluid Mechanics
                 Quantities and units
-                    Reynolds number [action:open_webpage key:F](https://en.wikipedia.org/wiki/Reynolds_number)
-                Types of flow [action:open_webpage key:F](https://en.wikipedia.org/wiki/Laminar_flow)
+                    Reynolds number {"action":"open_webpage","url":"https://en.wikipedia.org/wiki/Reynolds_number","key":"O"}
+                Types of flow {"action":"open_webpage","url":"https://en.wikipedia.org/wiki/Laminar_flow","key":"O"}
                     Turbulent
                     Laminar
                 Types of Non-Newtonian Fluids

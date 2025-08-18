@@ -441,8 +441,8 @@
                             "children": [],
                             "annotations": {
                               "action": "open_webpage",
-                              "key": "F",
-                              "url": "https://en.wikipedia.org/wiki/Reynolds_number"
+                              "url": "https://en.wikipedia.org/wiki/Reynolds_number",
+                              "key": "O"
                             }
                           }
                         ]
@@ -464,8 +464,8 @@
                         ],
                         "annotations": {
                           "action": "open_webpage",
-                          "key": "F",
-                          "url": "https://en.wikipedia.org/wiki/Laminar_flow"
+                          "url": "https://en.wikipedia.org/wiki/Laminar_flow",
+                          "key": "O"
                         }
                       },
                       {
