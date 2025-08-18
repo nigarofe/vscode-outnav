@@ -196,17 +196,32 @@
                                 "level": 7,
                                 "children": [
                                   {
-                                    "title": "The top of the webview shall have a clickable breadcrumb navigation providing a quick way to jump to that level",
+                                    "title": "The Breadcrumb Component shall display a horizontal list of links representing the user's navigation path from the homepage.",
                                     "level": 8,
                                     "children": []
                                   },
                                   {
-                                    "title": "While the the webview is in focus, the breadcrumb navigation shall cycle through each title from the current navigation level sequentially every 1.0 seconds",
+                                    "title": "The Breadcrumb Component shall render the final item in the path as a dropdown control.",
                                     "level": 8,
                                     "children": []
                                   },
                                   {
-                                    "title": "The breadcrumb navigation shall show all options for the current level in a dropdown-like control",
+                                    "title": "The Breadcrumb Component shall populate the dropdown control with a list of all sibling pages of the current page.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the webview is in focus, the Breadcrumb Component shall sequentially cycle the displayed text of the dropdown control through each sibling page title every 1.0 second.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "While the dropdown text is cycling, when the user hovers over or clicks the dropdown control, the Breadcrumb Component shall immediately pause the cycling.",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "When the webview loses focus or a navigation occurs, the Breadcrumb Component shall reset the dropdown's displayed text to the title of the current page.",
                                     "level": 8,
                                     "children": []
                                   }
@@ -233,6 +248,11 @@
                                   },
                                   {
                                     "title": "The Extension shall choose the renderer of the main content based on the selected title's annotations",
+                                    "level": 8,
+                                    "children": []
+                                  },
+                                  {
+                                    "title": "If there aren't any annotations on the title, the main content shall be empty",
                                     "level": 8,
                                     "children": []
                                   }
@@ -387,13 +407,11 @@
                             "title": "Reynolds number",
                             "level": 6,
                             "children": [],
-                            "actions": [
-                              {
-                                "type": "open_webpage",
-                                "param": "https://en.wikipedia.org/wiki/Reynolds_number",
-                                "key": "F"
-                              }
-                            ]
+                            "annotations": {
+                              "action": "open_webpage",
+                              "key": "F",
+                              "url": "https://en.wikipedia.org/wiki/Reynolds_number"
+                            }
                           }
                         ]
                       },
@@ -412,13 +430,11 @@
                             "children": []
                           }
                         ],
-                        "actions": [
-                          {
-                            "type": "open_webpage",
-                            "param": "https://en.wikipedia.org/wiki/Laminar_flow",
-                            "key": "F"
-                          }
-                        ]
+                        "annotations": {
+                          "action": "open_webpage",
+                          "key": "F",
+                          "url": "https://en.wikipedia.org/wiki/Laminar_flow"
+                        }
                       },
                       {
                         "title": "Types of Non-Newtonian Fluids",
@@ -544,34 +560,28 @@
                     "level": 4,
                     "children": [
                       {
-                        "title": "(empty)",
-                        "level": 5,
+                        "title": "Capítulos",
+                        "level": 6,
                         "children": [
                           {
-                            "title": "Capítulos",
-                            "level": 6,
-                            "children": [
-                              {
-                                "title": "1. INTRODUÇÃO",
-                                "level": 7,
-                                "children": []
-                              },
-                              {
-                                "title": "2. CONCEITOS FUNDAMENTAIS",
-                                "level": 7,
-                                "children": []
-                              },
-                              {
-                                "title": "3. ESTÁTICA DOS FLUIDOS",
-                                "level": 7,
-                                "children": []
-                              },
-                              {
-                                "title": "4. EQUAÇÕES BÁSICAS NA FORMA INTEGRAL PARA UM VOLUME DE CONTROLE",
-                                "level": 7,
-                                "children": []
-                              }
-                            ]
+                            "title": "1. INTRODUÇÃO",
+                            "level": 7,
+                            "children": []
+                          },
+                          {
+                            "title": "2. CONCEITOS FUNDAMENTAIS",
+                            "level": 7,
+                            "children": []
+                          },
+                          {
+                            "title": "3. ESTÁTICA DOS FLUIDOS",
+                            "level": 7,
+                            "children": []
+                          },
+                          {
+                            "title": "4. EQUAÇÕES BÁSICAS NA FORMA INTEGRAL PARA UM VOLUME DE CONTROLE",
+                            "level": 7,
+                            "children": []
                           }
                         ]
                       }

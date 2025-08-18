@@ -37,17 +37,22 @@ Software development {"action":"display_image","src":"media/2025-08-18.png","alt
                             The webview shall use Bootstrap
                         Breadcrumb navigation
                             The Breadcrumb Component shall display a horizontal list of links representing the user's navigation path from the homepage.
+                            The breadcrumb shall show only ancestor titles (not the currently-selected title) in the breadcrumb chain; the final/current title shall be rendered in the dropdown button to avoid duplication.
                             The Breadcrumb Component shall render the final item in the path as a dropdown control.
                             The Breadcrumb Component shall populate the dropdown control with a list of all sibling pages of the current page.
                             While the webview is in focus, the Breadcrumb Component shall sequentially cycle the displayed text of the dropdown control through each sibling page title every 1.0 second.
                             While the dropdown text is cycling, when the user hovers over or clicks the dropdown control, the Breadcrumb Component shall immediately pause the cycling.
+                            Clicking the dropdown button shall toggle the sibling list open/closed (the webview should implement a lightweight toggle so Bootstrap JS is not required).
+                            Selecting a sibling from the dropdown shall navigate to that sibling, update the main content area, reset the dropdown text to the selected title, and hide the dropdown.
                             When the webview loses focus or a navigation occurs, the Breadcrumb Component shall reset the dropdown's displayed text to the title of the current page.
+                            Any image annotations that reference local workspace files (for example `media/2025-08-18.png`) shall be converted to webview-accessible URIs by the Extension before being embedded into the webview to avoid access errors (net::ERR_ACCESS_DENIED).
                         Main content
                             The webview shall have a single main content area that is visually distinct from the breadcrumb navigation and shall occupy the majority of the webview space
                             When the breadcrumb selection changes, the Extension shall update the main content area within to reflect the new selection
                             The main content area shall support multiple content renderers
                             The Extension shall choose the renderer of the main content based on the selected title's annotations 
-                        Title annotations 
+                            If there aren't any annotations on the title, the main content shall be empty
+                        Title annotations
                             Annotation format: trailing JSON object. Example:
                                 Diagram {"action":"display_image","src":"images/2025-08-18.png","alt":"Diagram","width":400}
                             Web link example:

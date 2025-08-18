@@ -36,274 +36,456 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
 exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
-// Minimal Outlines.md -> outlines.json parser and webview implementation.
+const fs = __importStar(require("fs"));
+const path = __importStar(require("path"));
+let cachedOutline = null;
+let panel;
 function activate(context) {
+    // Determine workspace folder. Requirement: extension assumes user opened VS Code from the outnav-workspace folder.
+    // Fallback: if workspace root is not outnav-workspace, look for a subfolder named outnav-workspace.
+    const wf = (vscode.workspace.workspaceFolders && vscode.workspace.workspaceFolders[0]) || undefined;
+    const workspaceRoot = wf ? wf.uri.fsPath : undefined;
+    // Paths relative to workspace root
+    function outnavFolder() {
+        if (!workspaceRoot) {
+            return undefined;
+        }
+        const candidate = path.join(workspaceRoot, 'outnav-workspace');
+        if (fs.existsSync(candidate)) {
+            return candidate;
+        }
+        // maybe workspace is already the outnav-workspace folder
+        if (path.basename(workspaceRoot) === 'outnav-workspace') {
+            return workspaceRoot;
+        }
+        return workspaceRoot; // last resort
+    }
+    const outnav = outnavFolder();
+    // Read outlines.json on activation as required
+    if (outnav) {
+        const outlinesJsonPath = path.join(outnav, 'json_exports', 'outlines.json');
+        try {
+            if (fs.existsSync(outlinesJsonPath)) {
+                const txt = fs.readFileSync(outlinesJsonPath, 'utf8');
+                cachedOutline = JSON.parse(txt);
+            }
+        }
+        catch (e) {
+            // ignore
+            cachedOutline = null;
+        }
+    }
+    // Register command
     const disposable = vscode.commands.registerCommand('vscode-outnav.startOutlineNavigator', async () => {
-        const workspaceFolder = getOutnavWorkspace();
-        if (!workspaceFolder) {
-            vscode.window.showErrorMessage('Could not find workspace folder named "outnav-workspace".');
+        if (!outnav) {
+            vscode.window.showErrorMessage('Cannot find outnav-workspace folder in the workspace.');
             return;
         }
-        const mdUri = vscode.Uri.joinPath(workspaceFolder.uri, 'Outlines.md');
+        const mdPath = path.join(outnav, 'Outlines.md');
+        const jsonOutPath = path.join(outnav, 'json_exports', 'outlines.json');
         try {
-            const doc = await vscode.workspace.fs.readFile(mdUri);
-            const text = Buffer.from(doc).toString('utf8');
-            const json = parseOutlinesMd(text);
-            const jsonUri = vscode.Uri.joinPath(workspaceFolder.uri, 'json_exports', 'outlines.json');
-            await vscode.workspace.fs.writeFile(jsonUri, Buffer.from(JSON.stringify(json, null, 2), 'utf8'));
-            vscode.window.showInformationMessage('Outlines.md parsed to json_exports/outlines.json');
-            // Open webview
-            openOutlineWebview(context, json, workspaceFolder.uri);
+            const md = fs.readFileSync(mdPath, 'utf8');
+            const doc = parseOutlinesMarkdown(md);
+            const wrapper = { document: doc };
+            // ensure directory exists
+            const dir = path.dirname(jsonOutPath);
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+            }
+            fs.writeFileSync(jsonOutPath, JSON.stringify(wrapper, null, 2), 'utf8');
+            cachedOutline = wrapper;
+            // open webview
+            openWebview(context, cachedOutline, outnav);
         }
         catch (err) {
-            vscode.window.showErrorMessage('Failed to parse Outlines.md: ' + String(err));
+            vscode.window.showErrorMessage('Error parsing Outlines.md: ' + err.message);
         }
     });
     context.subscriptions.push(disposable);
-    // On activation, attempt to read outlines.json for use when webview opens later
-    (async () => {
-        const workspaceFolder = getOutnavWorkspace();
-        if (!workspaceFolder) {
-            return;
-        }
-        const jsonUri = vscode.Uri.joinPath(workspaceFolder.uri, 'json_exports', 'outlines.json');
-        try {
-            const bytes = await vscode.workspace.fs.readFile(jsonUri);
-            // keep a short-lived copy in extension context storage (not persisted across restarts)
-            context.workspaceState.update('outlinesJson', Buffer.from(bytes).toString('utf8'));
-        }
-        catch {
-            // ignore missing file
-        }
-    })();
 }
-function deactivate() { }
-function getOutnavWorkspace() {
-    const folders = vscode.workspace.workspaceFolders;
-    if (!folders || folders.length === 0) {
-        return undefined;
+function deactivate() {
+    if (panel) {
+        panel.dispose();
     }
-    // Prefer a folder named outnav-workspace
-    for (const f of folders) {
-        if (f.name === 'outnav-workspace' || f.uri.fsPath.endsWith('outnav-workspace')) {
-            return f;
-        }
-    }
-    // fallback to first
-    return folders[0];
 }
-function parseOutlinesMd(text) {
-    const lines = text.split(/\r?\n/);
+function parseOutlinesMarkdown(md) {
+    const lines = md.split(/\r?\n/);
     const root = { title: 'root', level: 0, children: [] };
     const stack = [root];
     for (let raw of lines) {
-        // skip fence blocks in case the file contains triple backticks
-        if (raw.trim().startsWith('```')) {
+        if (!raw) {
             continue;
         }
-        // ignore empty or comment lines
-        if (raw.trim() === '') {
+        // detect comment lines starting with // (possibly after indentation)
+        if (/^\s*\/\//.test(raw)) {
             continue;
         }
-        if (raw.trim().startsWith('//')) {
-            continue;
-        }
-        // determine indentation: count leading tabs, and groups of 4 spaces
-        const matchTabs = raw.match(/^\t+/);
-        let indentTabs = matchTabs ? matchTabs[0].length : 0;
-        const matchSpaces = raw.match(/^( +)/);
-        let indentSpaces = 0;
-        if (matchSpaces) {
-            indentSpaces = matchSpaces[0].length;
-            // if there are tabs and spaces we consider them additive
-        }
-        const indent = indentTabs + Math.floor(indentSpaces / 4);
-        const level = indent + 1; // root=0, top-level items are level 1
-        // trimmed content
-        let content = raw.replace(/^\s+/, '').replace(/\s+$/, '');
-        // ignore commented lines that start after indentation
-        if (content.startsWith('//')) {
-            continue;
-        }
-        const node = { title: '', level, children: [] };
-        // parse trailing JSON annotation like: Title {"action":"display_image",...}
-        const jsonTrailing = content.match(/(\{.*\})\s*$/);
-        if (jsonTrailing) {
-            const jsonPart = jsonTrailing[1];
-            try {
-                const ann = JSON.parse(jsonPart);
-                node.annotations = ann;
-                content = content.slice(0, content.length - jsonPart.length).trim();
-            }
-            catch {
-                // ignore parse errors; leave JSON in title
-            }
-        }
-        // parse markdown link-style annotation: [action:open_webpage key:O](https://example.com)
-        const linkTrailing = content.match(/\[([^\]]+)\]\(([^)]+)\)\s*$/);
-        if (linkTrailing) {
-            const meta = linkTrailing[1];
-            const url = linkTrailing[2];
-            const actionObj = {};
-            // meta is like "action:open_webpage key:O" -> parse key:value pairs
-            meta.split(/\s+/).forEach(p => {
-                const kv = p.split(':');
-                if (kv.length === 2) {
-                    actionObj[kv[0]] = kv[1];
+        // count leading tabs and spaces
+        const leadingMatch = raw.match(/^(\t+| +)?(.*)$/s);
+        let indent = 0;
+        if (leadingMatch) {
+            const leading = raw.match(/^(\t+)|( +)/);
+            if (leading) {
+                const t = leading[0];
+                if (t.indexOf('\t') >= 0) {
+                    indent = t.split('\t').length - 1 + 0;
                 }
-            });
-            const act = actionObj['action'] || 'open_webpage';
-            const key = actionObj['key'];
-            node.actions = [{ type: act, param: url, key }];
-            content = content.slice(0, content.length - linkTrailing[0].length).trim();
+                else {
+                    indent = Math.floor(t.length / 4);
+                }
+            }
+            else {
+                indent = 0;
+            }
         }
-        node.title = content;
-        // attach to correct parent
-        // ensure stack has entry for parent level
-        while (stack.length - 1 < level - 1) {
-            // fill missing intermediate parents with empty nodes
-            const filler = { title: '(empty)', level: stack.length, children: [] };
-            stack[stack.length - 1].children.push(filler);
-            stack.push(filler);
+        // compute level: 0 indent -> level 1
+        const level = indent + 1;
+        // extract content without leading whitespace
+        const content = raw.replace(/^\s+/, '').trim();
+        if (!content) {
+            continue;
         }
-        // pop back to parent at level-1
-        stack.splice(level);
-        const parent = stack[stack.length - 1];
+        const node = { title: content, level, children: [] };
+        // try parse trailing JSON annotation
+        const jsonMatch = content.match(/^(.*?)(\s*(\{[\s\S]*\}))\s*$/s);
+        if (jsonMatch) {
+            const t = jsonMatch[1].trim();
+            const js = jsonMatch[3];
+            try {
+                node.title = t;
+                node.annotations = JSON.parse(js);
+            }
+            catch (e) {
+                // ignore parse error
+            }
+        }
+        else {
+            // try bracket-style action [action:open_webpage key:F](url)
+            const bracket = content.match(/^(.*?)\s*\[([^\]]+)\]\(([^)]+)\)\s*$/s);
+            if (bracket) {
+                node.title = bracket[1].trim();
+                const inside = bracket[2];
+                const url = bracket[3];
+                const ann = {};
+                // parse tokens like action:open_webpage key:F
+                inside.split(/\s+/).forEach(token => {
+                    const kv = token.split(':');
+                    if (kv.length === 2) {
+                        ann[kv[0]] = kv[1];
+                    }
+                });
+                // map param url
+                if (ann['action'] && ann['action'] === 'open_webpage') {
+                    ann['url'] = url;
+                }
+                node.annotations = ann;
+            }
+        }
+        // attach node in stack
+        while (stack.length > 0 && stack[stack.length - 1].level >= level) {
+            stack.pop();
+        }
+        const parent = stack[stack.length - 1] || root;
         parent.children.push(node);
         stack.push(node);
     }
-    return { document: root };
+    return root;
 }
-function openOutlineWebview(context, json, workspaceRoot) {
-    const panel = vscode.window.createWebviewPanel('outnav', 'Outline Navigator', vscode.ViewColumn.One, {
+function openWebview(context, outlines, outnavPath) {
+    if (panel) {
+        panel.reveal(vscode.ViewColumn.One);
+        panel.webview.postMessage({ type: 'update', outlines });
+        return;
+    }
+    panel = vscode.window.createWebviewPanel('outnav', 'Outline Navigator', vscode.ViewColumn.One, {
         enableScripts: true,
-        localResourceRoots: [workspaceRoot]
+        localResourceRoots: [vscode.Uri.file(outnavPath)]
     });
-    const nonce = getNonce();
-    panel.webview.html = getWebviewContent(panel.webview, nonce);
-    // send data when ready
-    const sendData = () => panel.webview.postMessage({ type: 'initialData', data: json });
-    const disposables = [];
-    const out = vscode.window.createOutputChannel('Outnav Webview');
-    panel.webview.onDidReceiveMessage(async (message) => {
-        if (message.type === 'ready') {
-            sendData();
-            return;
-        }
-        if (message.type === 'openExternal' && message.url) {
+    panel.webview.html = getWebviewHtml(panel.webview, context.extensionUri, outlines, outnavPath);
+    panel.webview.onDidReceiveMessage(async (msg) => {
+        if (msg.command === 'openExternal' && msg.url) {
             try {
-                await vscode.env.openExternal(vscode.Uri.parse(message.url));
+                await vscode.env.openExternal(vscode.Uri.parse(msg.url));
             }
-            catch (err) {
-                vscode.window.showErrorMessage('Failed to open url: ' + String(err));
-            }
-            return;
+            catch (e) { }
         }
-        if (message.type === 'close') {
-            panel.dispose();
-            return;
+        else if (msg.command === 'close') {
+            panel?.dispose();
         }
-        if (message.type === 'webviewError') {
-            out.appendLine('[webview] ' + (message.message || 'error') + (message.stack ? '\n' + message.stack : ''));
-            out.show(true);
-            return;
-        }
-    }, null, disposables);
-    panel.onDidDispose(() => disposables.forEach(d => d.dispose()), null, context.subscriptions);
+    }, undefined, context.subscriptions);
+    panel.onDidDispose(() => { panel = undefined; }, null, context.subscriptions);
 }
-function getWebviewContent(webview, nonce) {
-    // Minimal UI: breadcrumb bar and main content. The webview will request initial data.
+function getWebviewHtml(webview, extensionUri, outlines, outnavPath) {
+    // Use Bootstrap CDN
+    const bootstrapCss = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+    // Make a copy of outlines where any local annotation.src is converted to a webview URI
+    function makeSafeForWebview(srcOutlines) {
+        if (!srcOutlines || !srcOutlines.document) {
+            return { document: { title: 'root', level: 0, children: [] } };
+        }
+        function cloneNode(n) {
+            const copy = { title: n.title, level: n.level, children: [] };
+            if (n.annotations) {
+                copy.annotations = Object.assign({}, n.annotations);
+                if (copy.annotations.src && typeof copy.annotations.src === 'string' && !/^https?:\/\//.test(copy.annotations.src)) {
+                    try {
+                        const abs = path.isAbsolute(copy.annotations.src) ? copy.annotations.src : path.join(outnavPath, copy.annotations.src);
+                        const uri = webview.asWebviewUri(vscode.Uri.file(abs));
+                        copy.annotations.src = uri.toString();
+                    }
+                    catch (e) {
+                        // leave original if conversion fails
+                    }
+                }
+            }
+            if (n.children && Array.isArray(n.children)) {
+                copy.children = n.children.map((c) => cloneNode(c));
+            }
+            return copy;
+        }
+        return { document: cloneNode(srcOutlines.document) };
+    }
+    const safeOutlines = makeSafeForWebview(outlines || { document: { title: 'root', level: 0, children: [] } });
+    const initialData = JSON.stringify(safeOutlines);
+    // Basic webview with breadcrumb, dropdown cycling siblings, and main content area
     return `<!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource} https:; script-src 'nonce-${nonce}' https:; style-src 'unsafe-inline' https: ${webview.cspSource};" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outline Navigator</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="${bootstrapCss}" rel="stylesheet">
   <style>
-    body{font-family: sans-serif;margin:0;height:100vh;display:flex;flex-direction:column}
-    #breadcrumbBar{padding:8px}
-    #main{flex:1;padding:16px;overflow:auto}
-    .title{font-size:1.2em;margin-bottom:8px}
-    .dropdown-menu{max-height:300px;overflow:auto}
+    body { padding: 8px; }
+    #breadcrumb { margin-bottom: 8px; }
+    #main { border: 1px solid #ddd; padding: 12px; min-height: 300px; }
+    .dropdown-toggle::after { margin-left: .5rem; }
   </style>
 </head>
 <body>
-  <nav id="breadcrumbBar" class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <ol id="crumbs" class="breadcrumb mb-0">
-        <!-- breadcrumbs populated here -->
-      </ol>
-      <div class="d-flex align-items-center">
-        <div class="dropdown me-3">
-          <button id="levelDropdownBtn" class="btn btn-secondary dropdown-toggle" type="button">Level 1</button>
-          <ul id="levelDropdownMenu" class="dropdown-menu dropdown-menu-end"></ul>
-        </div>
-        <div class="text-white">Interval: <span id="interval">1.0s</span></div>
-      </div>
-    </div>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#" data-path="">Home</a></li>
+      <li class="breadcrumb-item" id="level-crumb">/</li>
+      <li class="breadcrumb-item dropdown">
+        <a class="dropdown-toggle btn btn-sm btn-outline-secondary" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Current</a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dropdown-list"></ul>
+      </li>
+    </ol>
   </nav>
 
-  <div id="main" class="container-fluid"><div id="content">Loading…</div></div>
+  <div id="main">Select a page from the breadcrumb.</div>
 
-  <script nonce="${nonce}">
+  <script>
     const vscode = acquireVsCodeApi();
-    let data = null;
+    const data = ${initialData};
     let currentPath = [];
-    let level = 1;
-    let intervalMs = 1000;
-    let cycling = true;
+    let currentNode = data.document;
+    let cycleInterval = 1000;
     let cycleTimer = null;
+    let cycling = true;
+    let dropdownList = [];
+    let dropdownIndex = 0;
 
-    window.onerror = function(message, source, lineno, colno, error) { try { vscode.postMessage({ type: 'webviewError', message: String(message), source, lineno, colno, stack: error && error.stack }); } catch(e) {} return false; };
-    window.addEventListener('unhandledrejection', function(ev){ try { vscode.postMessage({ type: 'webviewError', message: 'UnhandledRejection', reason: String(ev.reason) }); } catch(e) {} });
+    function findNodeByPath(path) {
+      let node = data.document;
+      for (const idx of path) {
+        if (!node.children || node.children.length <= idx) return null;
+        node = node.children[idx];
+      }
+      return node;
+    }
 
-    window.addEventListener('message', e => { const msg = e.data; if (msg.type === 'initialData') { data = msg.data; render(); } });
-    function sendReady(){ vscode.postMessage({type:'ready'}); }
-    sendReady();
+    function renderBreadcrumb() {
+      // show current path as chain of titles and populate dropdown with siblings of last level
+      const levelCrumb = document.getElementById('level-crumb');
+      // map indexes in currentPath to node titles (show only ancestors in the breadcrumb;
+      // the final/current title is rendered in the dropdown button to avoid duplication)
+      const titles = [];
+      let node = data.document;
+      for (let idx of currentPath) {
+        if (!node.children || node.children.length <= idx) break;
+        node = node.children[idx];
+        titles.push(node.title);
+      }
+      const ancestors = titles.length > 0 ? titles.slice(0, -1) : [];
+      levelCrumb.textContent = ancestors.length ? ancestors.join(' > ') : '/';
+      const dropdown = document.getElementById('dropdown-list');
+      dropdown.innerHTML = '';
+      const parent = findNodeByPath(currentPath.slice(0, -1)) || data.document;
+      dropdownList = parent.children || [];
+      dropdownList.forEach((n, i) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.className = 'dropdown-item';
+        a.href = '#';
+        a.textContent = n.title;
+        a.addEventListener('click', (e) => { e.preventDefault(); selectSibling(i); pauseCycle(); });
+        li.appendChild(a);
+        dropdown.appendChild(li);
+      });
+  // set dropdown button text to the current node's title (avoid duplicating it in the breadcrumb)
+  const btn = document.getElementById('dropdownMenuLink');
+  btn.textContent = (currentNode && currentNode.title) ? currentNode.title : (dropdownList[0]?.title || 'Current');
 
-    function safeGetNodeByPath(path){ if (!data || !data.document) return null; let node = data.document; for (let idx of path) { if (!node.children || typeof node.children[idx] === 'undefined') return null; node = node.children[idx]; } return node; }
-    function getCurrentNodes() { const parent = safeGetNodeByPath(currentPath); if (!parent) return (data && data.document && data.document.children) ? data.document.children : []; return parent.children || []; }
+      // hover/click pause behavior and custom toggle so Bootstrap JS isn't required
+      const btnEl = document.getElementById('dropdownMenuLink');
+      btnEl.onmouseenter = pauseCycle;
+      // toggle dropdown visibility manually
+      btnEl.addEventListener('click', (ev) => { ev.preventDefault(); pauseCycle(); toggleDropdown(); });
+      // ensure dropdown is hidden when rendered
+      hideDropdown();
+    }
 
-    function render(){ try{ if (!data) return; renderBreadcrumb(); renderMain(); restartCycling(); } catch (err) { vscode.postMessage({ type: 'webviewError', message: 'render error', stack: err && err.stack }); } }
+    function selectSibling(index) {
+      if (currentPath.length===0) return;
+      currentPath[currentPath.length-1] = index;
+      currentNode = findNodeByPath(currentPath) || currentNode;
+      renderMain();
+      resetDropdownText();
+      hideDropdown();
+    }
 
-    function renderBreadcrumb(){ const crumbs = document.getElementById('crumbs'); crumbs.innerHTML = ''; let node = data && data.document; addBreadcrumbItem('root', 0); for (let i=0;i<currentPath.length;i++){ const idx = currentPath[i]; if (!node || !node.children || typeof node.children[idx] === 'undefined') break; node = node.children[idx]; addBreadcrumbItem(node.title || '(untitled)', i+1); } updateDropdownLabel(); }
+    function resetDropdownText() {
+      const btn = document.getElementById('dropdownMenuLink');
+      btn.textContent = currentNode.title;
+    }
 
-    function addBreadcrumbItem(title, depth){ const li = document.createElement('li'); li.className = 'breadcrumb-item'; const a = document.createElement('a'); a.href='#'; a.textContent = title; a.onclick = (e)=>{ e.preventDefault(); currentPath = currentPath.slice(0, depth); level = depth; render(); }; li.appendChild(a); document.getElementById('crumbs').appendChild(li); }
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdown-list');
+      const parent = dropdown.parentElement;
+      const isOpen = dropdown.classList.contains('show');
+      if (isOpen) {
+        dropdown.classList.remove('show');
+        parent.classList.remove('show');
+        btnSetExpanded(false);
+      } else {
+        dropdown.classList.add('show');
+        parent.classList.add('show');
+        btnSetExpanded(true);
+      }
+    }
 
-    function updateDropdownLabel(){ document.getElementById('levelDropdownBtn').textContent = 'Level ' + level; populateDropdown(); }
+    function hideDropdown() {
+      const dropdown = document.getElementById('dropdown-list');
+      const parent = dropdown.parentElement;
+      dropdown.classList.remove('show');
+      parent.classList.remove('show');
+      btnSetExpanded(false);
+    }
 
-    function populateDropdown(){ try{ const menu = document.getElementById('levelDropdownMenu'); menu.innerHTML = ''; const nodes = getCurrentNodes() || []; if (nodes.length===0){ const li=document.createElement('li'); li.className='dropdown-item disabled'; li.textContent='(no items)'; menu.appendChild(li); return; } nodes.forEach((n,i)=>{ const li=document.createElement('li'); const a=document.createElement('a'); a.className='dropdown-item'; a.href='#'; a.textContent = n.title || '(untitled)'; a.onclick = (ev)=>{ ev.preventDefault(); currentPath.push(i); level++; render(); hideDropdown(); }; li.appendChild(a); menu.appendChild(li); }); } catch(err){ vscode.postMessage({type:'webviewError', message:'populateDropdown error', stack: err && err.stack}); } }
+    function btnSetExpanded(v) {
+      const btn = document.getElementById('dropdownMenuLink');
+      btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    }
 
-    function hideDropdown(){ const menu=document.getElementById('levelDropdownMenu'); menu.classList.remove('show'); }
-    function showDropdown(){ const menu=document.getElementById('levelDropdownMenu'); menu.classList.add('show'); }
-    document.getElementById('levelDropdownBtn').addEventListener('click', ()=>{ const menu=document.getElementById('levelDropdownMenu'); if (menu.classList.contains('show')) hideDropdown(); else showDropdown(); });
+    // close dropdown when clicking outside
+    document.addEventListener('click', (ev) => {
+      const btn = document.getElementById('dropdownMenuLink');
+      const dropdown = document.getElementById('dropdown-list');
+      if (!btn.contains(ev.target) && !dropdown.contains(ev.target)) {
+        hideDropdown();
+      }
+    });
 
-    function renderMain(){ try{ const content = document.getElementById('content'); const nodes = getCurrentNodes(); content.innerHTML = ''; const title = document.createElement('div'); title.className='title'; title.textContent = (nodes && nodes.length)? nodes[0].title : '(no items)'; content.appendChild(title); const sel = nodes && nodes[0]; if (sel && sel.actions){ sel.actions.forEach(a=>{ const btn = document.createElement('button'); btn.className='btn btn-primary me-2'; btn.textContent = a.type + (a.key? ' ['+a.key+']':''); btn.onclick = ()=> { if (a.type==='open_webpage') vscode.postMessage({type:'openExternal', url: a.param}); }; content.appendChild(btn); }); } if (sel && sel.annotations && sel.annotations.action==='display_image' && sel.annotations.src){ const img = document.createElement('img'); img.src = sel.annotations.src; img.alt = sel.annotations.alt || ''; img.style.maxWidth = '100%'; if (sel.annotations.width) img.style.width = sel.annotations.width + 'px'; content.appendChild(document.createElement('hr')); content.appendChild(img); } } catch (err) { vscode.postMessage({ type: 'webviewError', message: 'renderMain error', stack: err && err.stack }); } }
+    function renderMain() {
+      const main = document.getElementById('main');
+      // Requirement: if there aren't any annotations on the title, the main content shall be empty
+      if (!currentNode.annotations) {
+        main.innerHTML = '';
+        return;
+      }
 
-    function restartCycling(){ stopCycling(); if (!cycling) return; cycleTimer = setInterval(()=>{ cycleOnce(); }, intervalMs); }
-    function stopCycling(){ if (cycleTimer) { clearInterval(cycleTimer); cycleTimer = null; } }
+      main.innerHTML = '';
+      const h = document.createElement('h4');
+      h.textContent = currentNode.title;
+      main.appendChild(h);
 
-    function cycleOnce(){ try{ const nodes = getCurrentNodes(); if (!nodes || nodes.length===0) return; if (currentPath.length===0){ currentPath[0] = (currentPath[0]||0) + 1; } else { currentPath[currentPath.length-1] = (currentPath[currentPath.length-1]||0) + 1; } const parentPath = currentPath.slice(0, Math.max(0, currentPath.length-1)); const parent = safeGetNodeByPath(parentPath) || data.document; const lastIdx = currentPath.length? currentPath[currentPath.length-1] : 0; if ((parent.children || []).length && (lastIdx >= (parent.children||[]).length)) { currentPath[currentPath.length-1] = 0; } render(); } catch (err) { vscode.postMessage({ type: 'webviewError', message: 'cycleOnce error', stack: err && err.stack }); } }
+      const ann = currentNode.annotations;
+      if (ann) {
+        if (ann.action === 'display_image' && ann.src) {
+          const img = document.createElement('img');
+          // convert to webview resource
+          img.src = ann.src;
+          img.alt = ann.alt || ann.src;
+          if (ann.width) img.width = ann.width;
+          main.appendChild(img);
+        } else if (ann.action === 'open_webpage' && ann.url) {
+          const btn = document.createElement('button');
+          btn.className = 'btn btn-primary';
+          btn.textContent = 'Open link';
+          btn.onclick = () => { vscode.postMessage({ command: 'openExternal', url: ann.url }); };
+          main.appendChild(btn);
+        }
+      }
 
-    window.addEventListener('keydown', (ev)=>{ try{ if (ev.key === ' ') { cycling = !cycling; if (cycling) restartCycling(); else stopCycling(); ev.preventDefault(); } if (ev.key === 'Escape') { vscode.postMessage({type:'close'}); } if (ev.key === '=') { intervalMs = Math.max(100, intervalMs - 200); document.getElementById('interval').textContent = (intervalMs/1000).toFixed(1)+'s'; restartCycling(); } if (ev.key === '-') { intervalMs = intervalMs + 200; document.getElementById('interval').textContent = (intervalMs/1000).toFixed(1)+'s'; restartCycling(); } if (ev.key === 'a' || ev.key === 'A') { if (level>1) { level--; currentPath.pop(); render(); } } if (ev.key === 'd' || ev.key === 'D') { const nodes = getCurrentNodes(); if (nodes && nodes.length>0) { currentPath.push(0); level++; render(); } } if (ev.key === 'j' || ev.key === 'J') { if (currentPath.length>0) { currentPath[currentPath.length-1] = Math.max(0, (currentPath[currentPath.length-1]||0)-1); render(); } } if (ev.key === 'l' || ev.key === 'L') { if (currentPath.length>0) { const pnodes=(function(){let n=data.document; for(let i=0;i<currentPath.length-1;i++){ n=n.children[currentPath[i]];} return n.children||[];})(); const idx=currentPath[currentPath.length-1]||0; if (idx+1 < pnodes.length) { currentPath[currentPath.length-1]=idx+1; render(); } } } } catch (err) { vscode.postMessage({ type: 'webviewError', message: 'keydown handler error', stack: err && err.stack }); } });
+      // children list is not part of main content per new requirement; do not render children here
+    }
 
-    window.addEventListener('focus', ()=>{ if (cycling) restartCycling(); });
-    window.addEventListener('blur', ()=>{ stopCycling(); });
+    function pauseCycle() {
+      cycling = false;
+      if (cycleTimer) { clearInterval(cycleTimer); cycleTimer = null; }
+    }
 
-    window.vscode_injected = { render };
+    function resumeCycle() {
+      if (cycleTimer) clearInterval(cycleTimer);
+      cycling = true;
+      cycleTimer = setInterval(() => {
+        if (!dropdownList || dropdownList.length===0) return;
+        dropdownIndex = (dropdownIndex + 1) % dropdownList.length;
+        const btn = document.getElementById('dropdownMenuLink');
+        btn.textContent = dropdownList[dropdownIndex].title;
+      }, cycleInterval);
+    }
+
+    function togglePlay() {
+      if (cycling) pauseCycle(); else resumeCycle();
+    }
+
+    // keyboard controls
+    window.addEventListener('keydown', (e) => {
+      if (e.key === ' ') { e.preventDefault(); togglePlay(); }
+      else if (e.key === 'Escape') { vscode.postMessage({ command: 'close' }); }
+      else if (e.key === '=') { cycleInterval = Math.min(10000, cycleInterval + 250); if (cycling) resumeCycle(); }
+      else if (e.key === '-') { cycleInterval = Math.max(100, cycleInterval - 250); if (cycling) resumeCycle(); }
+      else if (e.key === 'A' || e.key === 'a') { // go up a level
+        if (currentPath.length>0) { currentPath.pop(); currentNode = findNodeByPath(currentPath) || data.document; renderBreadcrumb(); renderMain(); }
+      }
+      else if (e.key === 'D' || e.key === 'd') { // go down to first child
+        if (currentNode.children && currentNode.children.length) { currentPath.push(0); currentNode = currentNode.children[0]; renderBreadcrumb(); renderMain(); }
+      }
+      else if (e.key === 'J' || e.key === 'j') { // prev sibling
+        if (currentPath.length>0) {
+          const idx = currentPath[currentPath.length-1];
+          if (idx>0) { currentPath[currentPath.length-1] = idx-1; currentNode = findNodeByPath(currentPath); renderBreadcrumb(); renderMain(); }
+        }
+      }
+      else if (e.key === 'L' || e.key === 'l') { // next sibling
+        if (currentPath.length>0) {
+          const idx = currentPath[currentPath.length-1];
+          const parent = findNodeByPath(currentPath.slice(0, -1)) || data.document;
+          if (parent.children && idx < parent.children.length-1) { currentPath[currentPath.length-1] = idx+1; currentNode = findNodeByPath(currentPath); renderBreadcrumb(); renderMain(); }
+        }
+      }
+    });
+
+    // initialize
+    // default to first top-level child
+    if (data.document.children && data.document.children.length) {
+      currentPath = [0];
+      currentNode = data.document.children[0];
+    } else { currentPath = []; currentNode = data.document; }
+    renderBreadcrumb(); renderMain();
+    resumeCycle();
+
+    // messages from extension
+    window.addEventListener('message', event => {
+      const msg = event.data;
+      if (msg.type === 'update') {
+        // not implemented: could update data
+      }
+    });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>`;
-}
-function getNonce() {
-    let text = '';
-    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (let i = 0; i < 32; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return text;
 }
 //# sourceMappingURL=extension.js.map
