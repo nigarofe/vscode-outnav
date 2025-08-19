@@ -9,11 +9,27 @@ export function generateMessageForOutlines(editor: vscode.TextEditor){
         const currentLineNumber = editor.selection.active.line + 1;
         const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
         const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
+        
+        const payload = {
+            currentLineNumber,
+            currentLineContent,
+            currentIndentationLevel,
+            parents: getParents(editor, currentIndentationLevel),
+            simblings: getSimblings(editor, currentIndentationLevel),
+        };
 
-        const parents: string[] = [];
-        if (currentIndentationLevel > 0) {
-            let targetIndent = currentIndentationLevel - 1;
-            let searchIndex = editor.selection.active.line - 1;
+        console.log(`Cursor update: ${JSON.stringify(payload)}`);
+
+        mapping.panel.webview.postMessage({ type: 'cursorUpdate', payload });
+    }
+}
+
+function getParents(editor: vscode.TextEditor, currentIndentationLevel: number) {
+    const parents: string[] = [];
+    if (currentIndentationLevel > 0) {
+        let targetIndent = currentIndentationLevel - 1;
+        let searchIndex = editor.selection.active.line - 1;
+
 
             while (targetIndent >= 0 && searchIndex >= 0) {
                 let found = false;
@@ -32,16 +48,43 @@ export function generateMessageForOutlines(editor: vscode.TextEditor){
                 if (!found) {break;};
             }
         }
+       return parents;
+}
 
-        const payload = {
-            currentLineNumber,
-            currentLineContent,
-            currentIndentationLevel,
-            parents
-        };
+function getSimblings(editor: vscode.TextEditor, currentIndentationLevel: number) {
+    const simblings: string[] = [];
+    const currentLine = editor.selection.active.line;
 
-        console.log(`Cursor update: ${JSON.stringify(payload)}`);
+    // Look upward for earlier siblings until we hit the first parent (indentation < current)
+    for (let i = currentLine - 1; i >= 0; i--) {
+        const line = editor.document.lineAt(i);
+        if (line.text.trim().length === 0) { continue; }
+        const lineIndentationLevel = (line.text.match(/\t/g) || []).length;
 
-        mapping.panel.webview.postMessage({ type: 'cursorUpdate', payload });
+        if (lineIndentationLevel === currentIndentationLevel) {
+            simblings.unshift(line.text);
+        } else if (lineIndentationLevel < currentIndentationLevel) {
+            break;
+        }
     }
+
+    // Look downward for later siblings (original behavior)
+    for (let i = currentLine + 1; i < editor.document.lineCount; i++) {
+        const line = editor.document.lineAt(i);
+        const lineIndentationLevel = (line.text.match(/\t/g) || []).length;
+
+        if (lineIndentationLevel === currentIndentationLevel) {
+            simblings.push(line.text);
+        } else if (lineIndentationLevel < currentIndentationLevel) {
+            break;
+        }
+    }
+
+    // remove empty/whitespace-only simblings in-place
+    for (let i = simblings.length - 1; i >= 0; i--) {
+        if (simblings[i].trim().length === 0) {
+            simblings.splice(i, 1);
+        }
+    }
+    return simblings;
 }
