@@ -7,7 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.window.onDidChangeActiveTextEditor(editor => {
 			if (editor) {
-				openCorrespondingWebview(editor, context, getActiveFileName(editor));
+				openCorrespondingWebview(context, getActiveFileName(editor));
 			}
 		}),
 	);
@@ -63,7 +63,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// );
 
 	if(vscode.window.activeTextEditor){
-		openCorrespondingWebview(vscode.window.activeTextEditor, context, getActiveFileName(vscode.window.activeTextEditor));
+		openCorrespondingWebview(context, getActiveFileName(vscode.window.activeTextEditor));
 	}
 	
 	console.log('Last line of activate()');

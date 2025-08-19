@@ -40,7 +40,7 @@ const sharedHtmlProvider_1 = require("./webviews/sharedHtmlProvider");
 function activate(context) {
     context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => {
         if (editor) {
-            (0, sharedHtmlProvider_1.openCorrespondingWebview)(editor, context, getActiveFileName(editor));
+            (0, sharedHtmlProvider_1.openCorrespondingWebview)(context, getActiveFileName(editor));
         }
     }));
     // Send cursor line updates to the matching webview when the selection changes
@@ -87,7 +87,7 @@ function activate(context) {
     // 	})
     // );
     if (vscode.window.activeTextEditor) {
-        (0, sharedHtmlProvider_1.openCorrespondingWebview)(vscode.window.activeTextEditor, context, getActiveFileName(vscode.window.activeTextEditor));
+        (0, sharedHtmlProvider_1.openCorrespondingWebview)(context, getActiveFileName(vscode.window.activeTextEditor));
     }
     console.log('Last line of activate()');
 }
