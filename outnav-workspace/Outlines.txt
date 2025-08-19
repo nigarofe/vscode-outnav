@@ -76,7 +76,6 @@ vscode-outnav - Requirements
 				`J`/`L` keys are pressed, the title shall change to previous/next
 
 Learning by questions
-
 	Show reference materials
 		Mathematics
 			Algebra

@@ -1,8 +1,11 @@
-const lineEl = document.getElementById("line-number");
+const lineNumberEl = document.getElementById("line-number");
+const lineContentEl = document.getElementById("line-content");
 
 window.addEventListener("message", (event) => {
+    console.log("Received message in outlinesWebview.js:", event.data);
     if (event.data.type === "cursorLine") {
-        console.log(`Received event: ${JSON.stringify(event.data)}`);
-        lineEl.textContent = event.data.line.toString();
+        lineNumberEl.textContent = event.data.line.toString();
+    } else if (event.data.type === "lineContent") {
+        lineContentEl.textContent = event.data.lineContent;
     }
 });

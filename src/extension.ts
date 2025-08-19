@@ -18,8 +18,10 @@ export function activate(context: vscode.ExtensionContext) {
 				const mapping = fileWebviews[fileName];
 				if (mapping && mapping.panel) {
 					const line = editor.selection.active.line + 1;
-					console.log(line);
+					const lineContent = editor.document.lineAt(editor.selection.active.line).text;
+					console.log(`Cursor line: ${line}, Content: ${lineContent}`);
 					mapping.panel.webview.postMessage({ type: 'cursorLine', line });
+					mapping.panel.webview.postMessage({ type: 'lineContent', lineContent});
 				}
 			})
 		);
