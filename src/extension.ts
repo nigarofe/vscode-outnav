@@ -44,20 +44,21 @@ export function activate(context: vscode.ExtensionContext) {
 						}
 					}
 
-					console.log(`Cursor line: ${currentLineNumber}, Content: ${currentLineContent}, Indentation: ${currentIndentationLevel}, Parents: ${JSON.stringify(parents)}`);
+					const payload = {
+						currentLineNumber,
+						currentLineContent,
+						currentIndentationLevel,
+						parents
+					};
 
-					mapping.panel.webview.postMessage({ type: 'currentLineNumber', currentLineNumber });
-					mapping.panel.webview.postMessage({ type: 'currentLineContent', currentLineContent});
-					mapping.panel.webview.postMessage({ type: 'currentIndentationLevel', currentIndentationLevel});
-					mapping.panel.webview.postMessage({ type: 'parents', parents });		
+					console.log(`Cursor update: ${JSON.stringify(payload)}`);
+
+					mapping.panel.webview.postMessage({ type: 'cursorUpdate', payload });
 				}
 			})
 		);
 
 
-	
-	
-	
 	
 	openCorrespondingWebview(vscode.window.activeTextEditor, context);
 	// console.log(`Active file (name): ${getActiveEditor(vscode.window.activeTextEditor)}`);
@@ -65,36 +66,24 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 
-const fileWebviews: Record<string, { htmlFileName: string; scriptFileName:string; panel: vscode.WebviewPanel }> = {
+const fileWebviews: Record<string, { htmlFileName: string; scriptFileName:string; title: string ; panel: vscode.WebviewPanel | undefined }> = {
 	"Outlines.txt": {
 		htmlFileName: "outlinesWebview.html",
 		scriptFileName: "outlinesWebview.js",
-		panel: vscode.window.createWebviewPanel(
-			"outlines",
-			"Outlines",
-			vscode.ViewColumn.Two,
-			{ enableScripts: true }
-		)
+		title: "Outlines",
+		panel: undefined
 	},
 	"Premises.md": {
 		htmlFileName: "premisesWebview.html",
 		scriptFileName: "premisesWebview.js",
-		panel: vscode.window.createWebviewPanel(
-			"premises",
-			"Premises",
-			vscode.ViewColumn.Two,
-			{ enableScripts: true }
-		)
+		title: "Premises",
+		panel: undefined
 	},
 	"Questions.md": {
 		htmlFileName: "questionsWebview.html",
 		scriptFileName: "questionsWebview.js",
-		panel: vscode.window.createWebviewPanel(
-			"questions",
-			"Questions",
-			vscode.ViewColumn.Two,
-			{ enableScripts: true }
-		)
+		title: "Questions",
+		panel: undefined
 	}
 };
 
@@ -106,6 +95,19 @@ async function openCorrespondingWebview(editor: vscode.TextEditor | undefined, c
 	}
 	
 	const mapping = fileWebviews[fileName];
+	
+	if (!mapping.panel) {
+        mapping.panel = vscode.window.createWebviewPanel(
+            fileName,
+            mapping.title,
+            vscode.ViewColumn.Two,
+            { enableScripts: true }
+        );
+
+        // Clear the reference when disposed so it can be recreated later
+        mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
+    }
+
 	let htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
 	let html = await fs.readFile(htmlPath, 'utf8');
 
@@ -117,9 +119,9 @@ async function openCorrespondingWebview(editor: vscode.TextEditor | undefined, c
 
 	html = html.replace('%%SCRIPT_URI%%', scriptUri.toString())
 				.replace('%%CSP%%', csp);
-
 	console.log(`Opening webview for: ${fileName}`);
-	mapping.panel.reveal(vscode.ViewColumn.Beside, true);
+
+	mapping.panel.reveal(mapping.panel.viewColumn, true);
 	mapping.panel.webview.html = html;
 }
 
