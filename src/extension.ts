@@ -20,25 +20,36 @@ export function activate(context: vscode.ExtensionContext) {
 					const currentLineNumber = editor.selection.active.line + 1;
 					const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
 					const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
-					let parentLine: string | undefined = undefined;
 
+					const parents: string[] = [];
 					if (currentIndentationLevel > 0) {
-						for (let i = editor.selection.active.line - 1; i >= 0; i--) {
-							const candidate = editor.document.lineAt(i).text;
-							const candidateIndent = (candidate.match(/\t/g) || []).length;
-							if (candidateIndent === currentIndentationLevel - 1) {
-								parentLine = candidate;
-								break;
+						let targetIndent = currentIndentationLevel - 1;
+						let searchIndex = editor.selection.active.line - 1;
+
+						while (targetIndent >= 0 && searchIndex >= 0) {
+							let found = false;
+							for (let i = searchIndex; i >= 0; i--) {
+								const candidate = editor.document.lineAt(i).text;
+								if (candidate.trim().length === 0) {continue;};
+								const candidateIndent = (candidate.match(/\t/g) || []).length;
+								if (candidateIndent === targetIndent) {
+									parents.unshift(candidate);
+									searchIndex = i - 1;
+									targetIndent--;
+									found = true;
+									break;
+								}
 							}
+							if (!found) {break;};
 						}
 					}
 
-					console.log(`Cursor line: ${currentLineNumber}, Content: ${currentLineContent}, Indentation: ${currentIndentationLevel}, Parent: ${parentLine}`);
+					console.log(`Cursor line: ${currentLineNumber}, Content: ${currentLineContent}, Indentation: ${currentIndentationLevel}, Parents: ${JSON.stringify(parents)}`);
 
 					mapping.panel.webview.postMessage({ type: 'currentLineNumber', currentLineNumber });
 					mapping.panel.webview.postMessage({ type: 'currentLineContent', currentLineContent});
 					mapping.panel.webview.postMessage({ type: 'currentIndentationLevel', currentIndentationLevel});
-					mapping.panel.webview.postMessage({ type: 'parentLine', parentLine});
+					mapping.panel.webview.postMessage({ type: 'parents', parents });		
 				}
 			})
 		);
