@@ -38,29 +38,38 @@ export async function openCorrespondingWebview(context: vscode.ExtensionContext,
         mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
     }
 
-    mapping.panel.webview.html = await getHtmlForWebview(fileName, context);
+    mapping.panel.webview.html = await getHtmlForWebview(context, fileName);
 	mapping.panel.reveal(mapping.panel.viewColumn, true);
 }
 
-async function getHtmlForWebview(fileName: string, context: vscode.ExtensionContext) {
+async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: string) {
 	const mapping = possibleWebviews[fileName];
 
 	const htmlHeadPath = path.join(context.extensionPath, "src", "webviews", "sharedHead.html");
 	let html = await fs.readFile(htmlHeadPath, 'utf8');
 
-	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
-    const jsPath = path.join(context.extensionPath, "src", "webviews", mapping.scriptFileName);
-
-	html += await fs.readFile(htmlPath, 'utf8');
-
 	if(!mapping.panel){return "No mapping panel";};
-	const scriptUri = mapping.panel.webview.asWebviewUri(vscode.Uri.file(jsPath));
-	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src ${mapping.panel.webview.cspSource}; style-src ${mapping.panel.webview.cspSource} 'unsafe-inline';">`;
 
-	html = html.replace('%%SCRIPT_URI%%', scriptUri.toString()).replace('%%CSP%%', csp);
+	const nonce = getNonce();
+	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${mapping.panel.webview.cspSource}; style-src ${mapping.panel.webview.cspSource} 'unsafe-inline';">`;
+	html = html.replace('%%CSP%%', csp);
 
-	if(fileName === "Outlines.txt"){
-		
-	}
+	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
+	html += await fs.readFile(htmlPath, 'utf8');
+	html = html.replace('%%NONCE%%', nonce);
+	
+	html += '</html>';
 	return html;
+}
+
+
+
+
+
+
+function getNonce() { 
+	let text = '';
+	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	for (let i = 0; i < 32; i++) { text += possible.charAt(Math.floor(Math.random() * possible.length)); }
+	return text;
 }
