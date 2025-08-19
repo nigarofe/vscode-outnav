@@ -1,9 +1,8 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
-import { get } from "http";
 
-const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName:string; title: string ; panel: vscode.WebviewPanel | undefined }> = {
+export const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName:string; title: string ; panel: vscode.WebviewPanel | undefined }> = {
 	"Outlines.txt": {
 		htmlFileName: "outlinesWebview.html",
 		scriptFileName: "outlinesWebview.js",
@@ -57,7 +56,7 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
 	html += await fs.readFile(htmlPath, 'utf8');
 	html = html.replace('%%NONCE%%', nonce);
-	
+
 	html += '</html>';
 	return html;
 }
