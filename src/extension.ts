@@ -17,11 +17,28 @@ export function activate(context: vscode.ExtensionContext) {
 				const fileName = path.basename(editor.document.uri.fsPath);
 				const mapping = fileWebviews[fileName];
 				if (mapping && mapping.panel) {
-					const line = editor.selection.active.line + 1;
-					const lineContent = editor.document.lineAt(editor.selection.active.line).text;
-					console.log(`Cursor line: ${line}, Content: ${lineContent}`);
-					mapping.panel.webview.postMessage({ type: 'cursorLine', line });
-					mapping.panel.webview.postMessage({ type: 'lineContent', lineContent});
+					const currentLineNumber = editor.selection.active.line + 1;
+					const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
+					const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
+					let parentLine: string | undefined = undefined;
+
+					if (currentIndentationLevel > 0) {
+						for (let i = editor.selection.active.line - 1; i >= 0; i--) {
+							const candidate = editor.document.lineAt(i).text;
+							const candidateIndent = (candidate.match(/\t/g) || []).length;
+							if (candidateIndent === currentIndentationLevel - 1) {
+								parentLine = candidate;
+								break;
+							}
+						}
+					}
+
+					console.log(`Cursor line: ${currentLineNumber}, Content: ${currentLineContent}, Indentation: ${currentIndentationLevel}, Parent: ${parentLine}`);
+
+					mapping.panel.webview.postMessage({ type: 'currentLineNumber', currentLineNumber });
+					mapping.panel.webview.postMessage({ type: 'currentLineContent', currentLineContent});
+					mapping.panel.webview.postMessage({ type: 'currentIndentationLevel', currentIndentationLevel});
+					mapping.panel.webview.postMessage({ type: 'parentLine', parentLine});
 				}
 			})
 		);
