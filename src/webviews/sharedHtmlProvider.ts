@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
 
-export const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName:string; title: string ; panel: vscode.WebviewPanel | undefined }> = {
+export const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName: string; title: string ; panel: vscode.WebviewPanel | undefined }> = {
 	"Outlines.txt": {
 		htmlFileName: "outlinesWebview.html",
 		scriptFileName: "outlinesWebview.js",
@@ -51,8 +51,23 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	if(!mapping.panel){return "No mapping panel";};
 
 	const nonce = getNonce();
-	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${mapping.panel.webview.cspSource}; style-src ${mapping.panel.webview.cspSource} 'unsafe-inline';">`;
+	// create webview-safe URIs for resources
+	const webview = mapping.panel.webview;
+	const bootstrapCssOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.min.css'));
+	const bootstrapJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'bootstrap', 'dist', 'js', 'bootstrap.esm.js'));
+
+	const bootstrapCssUri = webview.asWebviewUri(bootstrapCssOnDisk).toString();
+	const bootstrapJsUri = webview.asWebviewUri(bootstrapJsOnDisk).toString();
+	const scriptOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', mapping.scriptFileName));
+	const scriptUri = webview.asWebviewUri(scriptOnDisk).toString();
+
+	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline';">`;
 	html = html.replace('%%CSP%%', csp);
+
+	// replace resource placeholders in the head template
+	html = html.replace('%%BOOTSTRAP_CSS_URI%%', bootstrapCssUri);
+	html = html.replace('%%BOOTSTRAP_JS_URI%%', bootstrapJsUri);
+	html = html.replace('%%SCRIPT_URI%%', `<script type=\"module\" nonce=\"${nonce}\" src=\"${scriptUri}\"></script>`);
 
 	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
 	html += await fs.readFile(htmlPath, 'utf8');

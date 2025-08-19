@@ -18,7 +18,7 @@ export function generateMessageForOutlines(editor: vscode.TextEditor){
             simblings: getSimblings(editor, currentIndentationLevel),
         };
 
-        console.log(`Cursor update: ${JSON.stringify(payload)}`);
+        // console.log(`Cursor update: ${JSON.stringify(payload)}`);
 
         mapping.panel.webview.postMessage({ type: 'cursorUpdate', payload });
     }
