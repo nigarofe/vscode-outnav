@@ -34,10 +34,11 @@ export async function openCorrespondingWebview(context: vscode.ExtensionContext,
             vscode.ViewColumn.Two,
             { enableScripts: true }
         );
+		mapping.panel.webview.html = await getHtmlForWebview(context, fileName);
+
         mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
     }
-
-    mapping.panel.webview.html = await getHtmlForWebview(context, fileName);
+    
 	mapping.panel.reveal(mapping.panel.viewColumn, true);
 }
 
