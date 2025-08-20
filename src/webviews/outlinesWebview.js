@@ -11,7 +11,7 @@ window.addEventListener("message", (event) => {
         currentItemEl.textContent = event.data.payload.currentLineContent;
 
         indentationOrderingExerciseEl.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
-        const raw = JSON.stringify(event.data.payload.indentationOrderingExercise, null, 2).replace(/[\[\]"]/g, '');
+        const raw = JSON.stringify(event.data.payload.indentationOrderingExercise, null, 2).replace(/[\[\]",]/g, '');
         indentationOrderingExerciseEl.textContent = raw.split('\n').map(line => line.trim()).join('\n');
     }
 });
