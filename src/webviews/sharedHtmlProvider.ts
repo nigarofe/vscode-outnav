@@ -31,7 +31,7 @@ export async function openCorrespondingWebview(context: vscode.ExtensionContext,
         mapping.panel = vscode.window.createWebviewPanel(
             fileName,
             mapping.title,
-            vscode.ViewColumn.Two,
+            { viewColumn: vscode.ViewColumn.Two , preserveFocus: true },
             { enableScripts: true }
         );
 		mapping.panel.webview.html = await getHtmlForWebview(context, fileName);

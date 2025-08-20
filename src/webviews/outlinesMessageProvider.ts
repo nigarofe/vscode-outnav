@@ -17,12 +17,44 @@ export function generateMessageForOutlines(editor: vscode.TextEditor){
             currentIndentationLevel,
             parents: getParents(editor, currentIndentationLevel),
             simblings: getSimblings(editor, currentIndentationLevel),
+            selectedLines: getSelectedLines(editor),
+            indentationOrderingExercise: getIndentationOrderingExercise(editor)
         };
 
         // console.log(`Cursor update: ${JSON.stringify(payload)}`);
 
         mapping.panel.webview.postMessage({ type: 'cursorUpdate', payload });
     }
+}
+
+function getIndentationOrderingExercise(editor: vscode.TextEditor) {
+    const lines = getSelectedLines(editor);
+    
+    const processed = lines
+        .map(line => line.replace(/\t/g, ''))
+        .filter(line => line.trim().length > 0);
+
+    // Fisher–Yates shuffle
+    for (let i = processed.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = processed[i];
+        processed[i] = processed[j];
+        processed[j] = tmp;
+    }
+
+    return processed;
+}
+
+function getSelectedLines(editor: vscode.TextEditor) {
+    const selectedLines: string[] = [];
+    const startLine = editor.selection.start.line;
+    const endLine = editor.selection.end.line;
+
+    for (let i = startLine; i <= endLine; i++) {
+        selectedLines.push(editor.document.lineAt(i).text);
+    }
+
+    return selectedLines;
 }
 
 function getParents(editor: vscode.TextEditor, currentIndentationLevel: number) {
