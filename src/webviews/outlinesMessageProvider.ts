@@ -12,6 +12,7 @@ export function generateMessageForOutlines(editor: vscode.TextEditor){
         
         const payload = {
             currentLineNumber,
+            selectedRange: editor.selection,
             currentLineContent,
             currentIndentationLevel,
             parents: getParents(editor, currentIndentationLevel),

@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
 		openCorrespondingWebview(context, getActiveFileName(vscode.window.activeTextEditor));
 	}
 	
-	console.log('Last line of activate()');
+	vscode.window.showInformationMessage('Last line of activate() reached');
 }
 
 function getActiveFileName(editor: vscode.TextEditor) {
