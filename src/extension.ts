@@ -5,7 +5,7 @@ import { generateMessageForOutlines } from "./webviews/outlinesMessageProvider";
 import { generateMessageForPremises } from "./webviews/premisesMessageProvider";
 import { generateMessageForQuestions } from "./webviews/questionsMessageProvider";
 import { possibleWebviews } from './webviews/sharedHtmlProvider';
-import {parseQuestionsToJson} from './parsers/questionsToJson';
+import { parseQuestionsToJson } from './parsers/questionsToJson';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.window.showInformationMessage('Last line of activate() reached');
 }
 
-function generateMessageForWebview(e: vscode.TextEditor) {
+async function generateMessageForWebview(e: vscode.TextEditor) {
 	const activeFileName = getActiveFileName(e);
 	let mapping = possibleWebviews[activeFileName];
 	if (!mapping || !mapping.panel) return;
@@ -45,13 +45,13 @@ function generateMessageForWebview(e: vscode.TextEditor) {
 	let payload: {} = {};
 	switch (activeFileName) {
 		case 'Outlines.txt':
-			payload = generateMessageForOutlines(e);
+			payload = await generateMessageForOutlines(e);
 			break;
 		case 'Premises.md':
-			payload = generateMessageForPremises(e);
+			payload = await generateMessageForPremises(e);
 			break;
 		case 'Questions.md':
-			payload = generateMessageForQuestions(e);
+			payload = await generateMessageForQuestions(e);
 			break;
 		default:
 			// leave payload as empty object
