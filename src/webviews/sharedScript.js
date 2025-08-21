@@ -21,8 +21,22 @@ window.markdownToHtml = function markdownToHtml(markdown) {
         typographer: true
     });
 
-    let html = md.render(String(markdown));
-    html = html.replace(/<hr\s*\/?>/gi, '<vscode-divider></vscode-divider>');
+    const mathBlocks = [];
+    const PLACEHOLDER_PREFIX = '%%KATEX_MATH_BLOCK_';
+
+    const protectedMarkdown = String(markdown).replace(/(\$\$[\s\S]*?\$\$)|(\$[^\n][\s\S]*?\$)/g, (match) => {
+        const idx = mathBlocks.length;
+        mathBlocks.push(match);
+        return `${PLACEHOLDER_PREFIX}${idx}%%`;
+    });
+
+    let html = md.render(protectedMarkdown);
+
+    html = html.replace(new RegExp(PLACEHOLDER_PREFIX + "(\\d+)%%", 'g'), (m, idx) => {
+        return mathBlocks[Number(idx)];
+    });
+
+    html = html.replace(/<hr\s*\/?\s*>/gi, '<vscode-divider></vscode-divider>');
 
     return html;
 };
