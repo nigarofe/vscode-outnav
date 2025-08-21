@@ -5,7 +5,7 @@
       "discipline": "Electromagnetism",
       "source": "An old dusty book",
       "description": "This is a question description",
-      "proposition": "**This is the q1 proposition**\n\n```snippet:newtons-law\n$\\oiint$ Esse é um exemplo de snippet\n\n$$\\sin \\alpha$$\n\nLinha nova\n```\n\n![](images/ps11.png)",
+      "proposition": "teste\n\n$$\n\\sin\n$$\n\n\n**This is the q1 proposition**\n\n```snippet:newtons-law\n$\\oiint$ Esse é um exemplo de snippet\n\n$$\\sin \\alpha$$\n\nLinha nova\n```\n\n![](images/ps11.png)",
       "step_by_step": "{{newtons-law}}\n{{this-snippet-is-from-premises}}",
       "answer": "a\nthis is the q1 a",
       "tags": [
@@ -4645,6 +4645,6 @@
       }
     }
   ],
-  "lastUpdated": "2025-08-21T18:36:57.728Z",
+  "lastUpdated": "2025-08-21T18:54:31.447Z",
   "totalQuestions": 127
 }

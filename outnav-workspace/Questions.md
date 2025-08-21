@@ -16,6 +16,13 @@
 
 ## Proposition
 
+teste
+
+$$
+\sin
+$$
+
+
 **This is the q1 proposition**
 
 ```snippet:newtons-law
