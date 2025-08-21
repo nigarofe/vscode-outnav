@@ -1,31 +1,22 @@
 <body>
-  <div class="container py-3">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <div class="d-flex justify-content-between align-items-start mb-2">
-          <h3 class="card-title mb-0">Outlines</h3>
-        </div>
+  <h3>Outlines</h3>
 
-        <p class="mb-1">
-          <small class="text-muted" id="parentsBreadcrumb"></small>
-          <span class="ms-2 fw-bold" id="currentItem"></span>
-        </p>
+  <p>
+    <span id="parentsBreadcrumb"></span>
+    <span id="currentItem"></span>
+  </p>
 
-        <hr>
+  <vscode-divider></vscode-divider>
 
-        <h2>Indentation Ordering Exercise</h2>
-        <p class="text-muted mb-3">
-          <small>The idea of this exercise is to help the student build a clear mental structure of the subject by
-            practicing how to organize and order related ideas.</small>
-        </p>
-        <pre id="indentationOrderingExercise" class="bg-light border rounded p-3 small mb-0"
-          style="white-space:pre-wrap; max-height:40vh; overflow:auto;"></pre>
+  <h2>Indentation Ordering Exercise</h2>
+  <small>The idea of this exercise is to help the student build a clear mental structure of the subject by
+    practicing how to organize and order related ideas.</small>
 
-        <hr>
+  <pre id="indentationOrderingExercise"></pre>
 
-        <pre id="outlinesWebviewJSON" class="bg-light border rounded p-3 small mb-0"
-          style="white-space:pre-wrap; max-height:40vh; overflow:auto;"></pre>
-      </div>
-    </div>
-  </div>
+
+  <vscode-divider></vscode-divider>
+
+
+  <pre id="outlinesWebviewJSON"></pre>
 </body>
