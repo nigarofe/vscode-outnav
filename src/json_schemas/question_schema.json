@@ -24,7 +24,7 @@
           "proposition": {
             "type": "string"
           },
-          "step-by-step": {
+          "step_by_step": {
             "type": "string"
           },
           "answer": {

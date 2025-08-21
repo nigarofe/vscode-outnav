@@ -19,7 +19,6 @@ interface SpacedRepetitionMetrics {
     totalAttempts: number;
     successes: number;
     failures: number;
-    successRate: number;
     lastAttempt?: string;
     nextReviewDate?: string;
 }
@@ -30,7 +29,7 @@ interface QuestionSchema {
     source: string;
     description: string;
     proposition: string;
-    'step-by-step': string;
+    step_by_step: string;
     answer: string;
     tags: string[];
     attempts?: Array<{ datetime: string; code: number }>;
@@ -101,7 +100,7 @@ export async function parseQuestionsToJson(): Promise<string> {
             source: metadata.source || '',
             description: metadata.description || '',
             proposition,
-            'step-by-step': stepByStep,
+            step_by_step: stepByStep,
             answer,
             tags: metadata.tags || []
         };
@@ -203,13 +202,11 @@ function calculateSpacedRepetitionMetrics(attempts: AttemptEntry[]): SpacedRepet
     const totalAttempts = attempts.length;
     const successes = attempts.filter(a => a.result === 1).length;
     const failures = attempts.filter(a => a.result === 0).length;
-    const successRate = totalAttempts > 0 ? (successes / totalAttempts) * 100 : 0;
     const lastAttempt = attempts.length > 0 ? attempts[attempts.length - 1].timestamp : undefined;
     return {
         totalAttempts,
         successes,
         failures,
-        successRate: Math.round(successRate * 100) / 100,
         lastAttempt,
     };
 }
