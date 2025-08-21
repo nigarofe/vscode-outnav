@@ -18,7 +18,7 @@ window.addEventListener("message", (event) => {
 
     const currentQuestion = questions.find((q) => q && q.number === currentQuestionNumber);
     questionPropositionElement.textContent = currentQuestion.proposition;
-    questionStepByStepElement.textContent = currentQuestion.stepByStep;
+    questionStepByStepElement.textContent = currentQuestion.step_by_step;
     questionAnswerElement.textContent = currentQuestion.answer;
     questionNumberElement.textContent = currentQuestionNumber;
 

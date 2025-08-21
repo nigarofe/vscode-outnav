@@ -5,7 +5,7 @@
       "discipline": "Electromagnetism",
       "source": "An old dusty book",
       "description": "This is a question description",
-      "proposition": "teste\n\n$$\n\\sin\n$$\n\n\n**This is the q1 proposition**\n\n```snippet:newtons-law\n$\\oiint$ Esse é um exemplo de snippet\n\n$$\\sin \\alpha$$\n\nLinha nova\n```\n\n![](images/ps11.png)",
+      "proposition": "**This is the q1 proposition**\n\n```snippet:newtons-law\n$\\oiint$ Esse é um exemplo de snippet\n\n$$\\sin \\alpha$$\n\nLinha nova\n```\n\n![](images/ps11.png)",
       "step_by_step": "{{newtons-law}}\n{{this-snippet-is-from-premises}}",
       "answer": "a\nthis is the q1 a",
       "tags": [
@@ -4625,6 +4625,139 @@
     },
     {
       "number": 135,
+      "discipline": "EMA091 Mecânica dos fluidos",
+      "source": "aula02 MecFlu.pdf - Aula 2025-08-18",
+      "description": "Um caminhão parte do Rio de Janeiro",
+      "proposition": "A capacidade máxima de fornecimento de potência de um motor de combustão interna decresce com a altitude, devido ao fato de a massa específica do ar e, consequentemente, a vazão mássica de ar decrescerem com a altitude. Um caminhão parte do Rio de Janeiro (elevação de 0 metros) em um dia em que a temperatura e a pressão barométrica  são, respectivamente, de 40°C e 1 atm. O caminhão viaja para Belo Horizonte (elevação de aproximadamente 800 metros), em que a temperatura é de 27°C. Determinar a pressão barométrica em Belo Horizonte e a variação percentual na massa específica do ar. \n\nConstante de Gás Específica para o Ar = 286,9 J/kg·K",
+      "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$p = \\rho RT$$\n\n$$p = p_0 \\left( \\frac{T}{T_0} \\right)^{\\frac{g}{mR}} \\quad \\quad m = \\left| \\frac{\\Delta T}{\\Delta z} \\right|= \\left|\\frac{T - T_0}{z - z_0}\\right|$$\n\n- m = módulo da taxa de variação de temperatura\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. O ar se comporta como gás ideal\n3. Temperatura varia linearmente com altura\n\n\n### Cálculos\n\n$$p = p_0 \\left( \\frac{T}{T_0} \\right)^{\\frac{g}{mR}}$$\n\n---\n\n$$m = \\left| \\frac{\\Delta T}{\\Delta z} \\right| = \\left|\\frac{T - T_0}{z - z_0}\\right| = \\left|\\frac{(273,15 + 40) - (273,15 + 27)}{800 - 0}\\right| = 0,01625 \\, K/m$$\n\n$$\\frac{g}{mR} = \\frac{9,81}{0,01625 \\cdot 286,9} = 2,104$$\n\n---\n\n$$p = p_0 \\left( \\frac{T}{T_0} \\right)^{\\frac{g}{mR}} = 1 \\left(\\frac{273,15 + 27}{273,15 + 40}\\right)^{2,104} = 0,916\\, atm$$\n\n\n$$\\Delta \\rho \\% =\\frac{\\rho - \\rho_0}{\\rho_0} = \\frac{\\rho}{\\rho_0} - 1 = \\frac{p}{p_0}\\frac{T_0}{T} - 1 = $$\n\n$$ = \\frac{0,916}{1} \\cdot \\left(\\frac{273,15 + 40}{273,15 + 27} \\right) - 1 = -0,0443 $$",
+      "answer": "$$p = 0,916 \\, \\text{atm}$$\n\n$$\\Delta \\rho \\%  = -4,43 \\, \\%$$",
+      "tags": [],
+      "attempts": [
+        {
+          "datetime": "2025-08-20T18:31:52Z",
+          "code": 0
+        }
+      ],
+      "calculated_metrics": {
+        "DSLA": 1,
+        "LaMI": "W/H",
+        "PMG_D": 1,
+        "PMG_X": "W/H",
+        "total_attempts": 1,
+        "memory_attempts": 0,
+        "help_attempts": 1,
+        "attempts_summary": "1;0;1",
+        "last_attempt": "2025-08-20T18:31:52Z",
+        "PMG-X_cell_color": "#FFDDC1"
+      }
+    },
+    {
+      "number": 136,
+      "discipline": "EMA091 Mecânica dos fluidos",
+      "source": "2025-08-20 Exercícios Estática - 01",
+      "description": "1 - Cubo imerso",
+      "proposition": "Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\\rho_{\\text{água}}=1000$ kg/m$^3$, carvalho $\\rho_{\\text{carvalho}}=770$ kg/m$^3$, e óleo $\\rho_{\\text{óleo}}=800$ kg/m$^3$.\n\n\n![](images/q136-1.svg)",
+      "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$\\vec F = - \\int \\rho \\, d\\, \\vec A$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Densidade dos fluidos constantes\n\n\n### Cálculos\n![](images/q136-2.svg)\n\nSendo \n- $h_0$ a altura na superfície do óleo\n- $h_1$ a altura na altura entre o óleo entra em contato com a água\n- $h_2$ a altura na face superior do cubo\n- $h_3$ a altura na face inferior do cubo\n---\n- $F_2$ a pressão da coluna de fluido na face superior do cubo \n- $F_3$ a pressão da coluna de fluido na face inferior\n- W o peso do cubo\n- T a tração do tirante no cubo\n---\n\n$$\\frac{dp}{dh} = \\rho g$$\n\n$$dp = \\rho g dh$$\n\n$$\\int_{p_{0}=p_{atm}}^{p_3} dp = \\int_{h_0}^{h_3} \\rho g dh = \\int_{h_0}^{h_1} \\rho_{óleo} g dh + \\int_{h_1}^{h_3} \\rho_{água} g dh$$\n\n$$p_3 - p_{atm} = \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$p_3 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,7 - 1,5)$$\n\n$$= 124844 N/m^2$$\n\n---\n\n$$p_2 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_2 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,4 - 1,5)$$\n\n$$= 121901 N/m^2$$\n\n---\n\n$$\\vec{F} = - \\int \\rho d\\vec{A}$$\n\n$$F_3 = p_3 \\int dA = 124844 \\cdot 0,3^2 = 11235,96 N$$\n\n$$F_2 = p_2 \\int dA = 121901 \\cdot 0,3^2 = 10971,09 N$$\n\n$$W = \\rho_{carvalho} g V = 770 \\cdot 9,81 \\cdot 0,3^3 = 203,95 N$$\n\n$$\\sum F_y = 0 = F_3 - F_2 - W - T$$\n\n$$T = F_3 - F_2 - W$$\n\n$$T = 11235,96 - 10971,09 - 203,95 = 60,92 N$$\n\n\n### Método 2: usando empuxo\n$$E = \\rho_{\\text{água}} \\cdot g \\cdot V_{\\text{cubo}}$$\n\n$$E = 1000 \\frac{\\text{kg}}{\\text{m}^3} \\cdot 9,81 \\frac{\\text{m}}{\\text{s}^2} \\cdot (0,3 \\text{ m})^3$$\n\n$$E = 1000 \\cdot 9,81 \\cdot 0,027 = 264,87 \\text{ N}$$\n\n---\n\n$$E - W - T = 0$$\n\n$$T = E - W$$\n\n$$T = 264,87 \\text{ N} - 203,95 \\text{ N} = 60,92 \\text{ N}$$",
+      "answer": "$$F_3 = 11235,96 N$$\n\n$$T = 60,92 N$$",
+      "tags": [],
+      "attempts": [
+        {
+          "datetime": "2025-08-20T19:50:54Z",
+          "code": 0
+        }
+      ],
+      "calculated_metrics": {
+        "DSLA": 1,
+        "LaMI": "W/H",
+        "PMG_D": 1,
+        "PMG_X": "W/H",
+        "total_attempts": 1,
+        "memory_attempts": 0,
+        "help_attempts": 1,
+        "attempts_summary": "1;0;1",
+        "last_attempt": "2025-08-20T19:50:54Z",
+        "PMG-X_cell_color": "#FFDDC1"
+      }
+    },
+    {
+      "number": 137,
+      "discipline": "EMA091 Mecânica dos fluidos",
+      "source": "2025-08-20 Exercícios Estática - 01",
+      "description": "2 - Manômetro de dois fluidos",
+      "proposition": "Considere o manômetro de dois fluidos mostrado na Figura P.2. Calcule a diferença de pressão aplicada nos dois recipientes. O SG do Tetracloreto de carbono é 1,595.\n\n\n![](images/q137.png)",
+      "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Por simetria, todas as pressões existentes fora da região definida por h se anulam\n\n\n### Cálculos\n---\n**Observação quando pensar nos sinais**\n\nDeterminemos o sentido y positivo para cima.\nSe a integral for definida como $\\int_{p1}^{p2}$, lê-se integral de p1 a p2. Ou seja, iremos partir do ponto onde ocorre a pressão 1 até o ponto onde ocorre a pressão 2.\n\nA abordagem de \"caminhar\" pelo manômetro partindo da pressão 1 até a 2 é a maneira padrão de resolver este tipo de problema.Coloque o lápis onde está definido a pressão 1 e ande, pelo mesmo caminho que os fluidos passam, até onde está a pressão 2.\n\nOs limites das integrais devem sempre seguir a direção desse caminho. Falando de outra forma: o limite inferior da integral sempre deve estar antes do limite superior da integral no que diz respeito à esse caminho que definimos\n\n---\n\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$dp = -\\rho g dz$$\n\n$$\\int_{p_1}^{p_2} dp = \\int_0^{-h} -\\rho_{agua} g \\,dz + \\int_{-h}^0 -\\rho_{CCl_4} g \\,dz$$\n\n$$p_2 - p_1 = -\\rho_{agua} g (-h) - \\rho_{CCl_4} g [0 - (-h)]$$\n\n$$= \\rho_{agua} g h - \\rho_{CCl_4} g h$$\n\n$$= g h (\\rho_{agua} - \\rho_{CCl_4})$$\n\n$$= 9,81 \\cdot 10,2 \\cdot 10^{-3} (1000-1595)$$\n\n$$= -59,53 \\text{ Pa}$$\n\n---\n\n$$\\rho_{CCl_4} = SG \\times \\rho_{\\text{água}} = 1,595 \\times 1000 = 1595 \\text{ kg/m}^3$$\n\n---\n\n\n### Método 2 (Mais complicado, porém interessante para aplicação dos sinais)\nDesconsiderando que \"por simetria, todas as pressões existentes fora da região definida por h se anulam\"\n\nConsideração adicional (opcional): A pressão exercida pela coluna de gás é irrelevante por sua densidade ser muito menor que a do fluido manométrico (também poderia ser considerado que a pressão exercida pela coluna de gás do lado esquerdo anula a do direito)\n\nAdicionemos um comprimento \"d\" que é a distância entre o limite superior da água e o limite superior de \"h\".\n\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$dp = -\\rho g dz$$\n\n$$\\int_{p_1}^{p_2} dp = \\int_{0}^{-(d+h)} -\\rho_{\\text{água}} g dz + \\int_{-(d+h)}^{-d} -\\rho_{CCl4} g dz + \\int_{-d}^{0} -\\rho_{\\text{água}} g dz$$\n\n$$p_2 - p_1 = -\\rho_{\\text{água}} g [-(d+h) - 0] - \\rho_{CCl4} g [(-d) - (-(d+h))] - \\rho_{\\text{água}} g [0 - (-d)]$$\n\n$$p_2 - p_1 = -\\rho_{\\text{água}} g (-d-h) - \\rho_{CCl4} g h - \\rho_{\\text{água}} d$$\n\n$$p_2 - p_1 = +\\rho_{\\text{água}} g d + \\rho_{\\text{água}} g h - \\rho_{CCl4} g h - \\rho_{\\text{água}} d$$\n\n$$p_2 - p_1 = \\rho_{\\text{água}} g h - \\rho_{CCl4} g h$$\n\n$$p_2 - p_1 = 1000 \\cdot 9.81 \\cdot 10 \\cdot 10^{-3} - 1595 \\cdot 9.81 \\cdot 10 \\cdot 2 \\cdot 10^{-3}$$\n\n$$p_2 - p_1 = 9.81 \\cdot 10 \\cdot 2 \\cdot 10^{-3}(1000 - 1595) = -59.53 \\ \\text{Pa}$$",
+      "answer": "$$p_1-p_2 = 59,53 \\text{ Pa}$$",
+      "tags": [],
+      "attempts": [
+        {
+          "datetime": "2025-08-20T22:26:22Z",
+          "code": 0
+        }
+      ],
+      "calculated_metrics": {
+        "DSLA": 1,
+        "LaMI": "W/H",
+        "PMG_D": 1,
+        "PMG_X": "W/H",
+        "total_attempts": 1,
+        "memory_attempts": 0,
+        "help_attempts": 1,
+        "attempts_summary": "1;0;1",
+        "last_attempt": "2025-08-20T22:26:22Z",
+        "PMG-X_cell_color": "#FFDDC1"
+      }
+    },
+    {
+      "number": 138,
+      "discipline": "EMA091 Mecânica dos fluidos",
+      "source": "2025-08-20 Exercícios Estática - 01",
+      "description": "4 - Tanque com ar, gasolina e glicerina",
+      "proposition": "Água flui ao longo de um tubo inclinado de $30^{\\circ}$ em relação à horizontal conforme mostrado. A diferença de pressão $p_A - p_B$ é causada parcialmente pela gravidade e parcialmente pelo atrito. Calcule a diferença de pressão se $L=1,5$ m e $h=0,15$ m.\n\n![](images/q138.png)",
+      "step_by_step": "### Fórmulas\n\t$$\\frac{dp}{dz} = -\\rho g$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Por simetria, todas as pressões existentes fora da região definida por h e pela direferença de altura $z_{AB}$ se anulam\n\n\n### Cálculos\n$$\\sin(30°) = \\frac{z_{AB}}{L}$$\n\n$$z_{AB} = L \\sin(30°) = 1,5 \\cdot 0,5 = 0,75m$$\n\n---\n\nSendo x o comprimento entre a altura B e a superfície água-mercúrio na coluna direita\n\n---\n\n$$\\frac{dP}{dz} = -\\rho g$$\n\n$$dP = -\\rho g dz$$\n\n$$\\int_{p_a}^{p_b} dP = \\int_0^{-z_{AB}} -\\rho_{\\text{água}} g dz + \\int_{-x}^{-x-h} -\\rho_{\\text{água}} g dz + \\int_{-x-h}^{-x} -\\rho_{\\text{Hg}} g dz$$\n\n$$p_b-p_a = -\\rho_{\\text{água}}g(-z_{AB}) - \\rho_{\\text{água}}g[(-x-h)-(-x)] - \\rho_{\\text{Hg}}g[(-x)-(-x-h)]$$\n\n$$ = \\rho_{\\text{água}}g(z_{AB}) + \\rho_{\\text{água}}gh - \\rho_{\\text{Hg}}gh$$\n\n$$= \\rho_{\\text{água}}g(z_{AB}) + (\\rho_{\\text{água}} - \\rho_{\\text{Hg}})gh$$\n\n$$= (1000 \\cdot 9.81 \\cdot 0.75) + (1000 - 13550) \\cdot 9.81 \\cdot 0.15$$\n\n$$ = 7357.5 - 18467.32 = \\textbf{-11109,82 Pa}$$",
+      "answer": "$$p_a - p_b = 11,11 \\, kPa$$",
+      "tags": [],
+      "attempts": [
+        {
+          "datetime": "2025-08-20T23:27:29Z",
+          "code": 0
+        }
+      ],
+      "calculated_metrics": {
+        "DSLA": 1,
+        "LaMI": "W/H",
+        "PMG_D": 1,
+        "PMG_X": "W/H",
+        "total_attempts": 1,
+        "memory_attempts": 0,
+        "help_attempts": 1,
+        "attempts_summary": "1;0;1",
+        "last_attempt": "2025-08-20T23:27:29Z",
+        "PMG-X_cell_color": "#FFDDC1"
+      }
+    },
+    {
+      "number": 139,
+      "discipline": "EMA091 Mecânica dos fluidos",
+      "source": "2025-08-20 Exercícios Estática - 01",
+      "description": "1 - Cubo imerso",
+      "proposition": "Na Figura P.4, o manômetro \"A\" lê a pressão de 1,5 kPa. Todos os fluidos estão a $20^{\\circ}$C e os pesos específicos ($\\gamma=\\rho g$) dos mesmos são: $\\gamma_{\\text{ar}}=12$ N/m$^3$, $\\gamma_{\\text{gasolina}}=6670$ N/m$^3$, $\\gamma_{\\text{glicerina}}=12360$ N/m$^3$. Determinar as alturas (em metros) dos líquidos nos tubos abertos B e C.\n\n![](images/q139-1.png)",
+      "step_by_step": "![](images/q139-2.svg)",
+      "answer": "",
+      "tags": [],
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG_D": 0,
+        "PMG_X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
+    },
+    {
+      "number": 140,
       "discipline": "",
       "source": "",
       "description": "",
@@ -4645,6 +4778,6 @@
       }
     }
   ],
-  "lastUpdated": "2025-08-21T18:54:31.447Z",
-  "totalQuestions": 127
+  "lastUpdated": "2025-08-21T19:03:27.699Z",
+  "totalQuestions": 132
 }
