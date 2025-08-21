@@ -1,107 +1,50 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
+import { possibleWebviews } from "../webviews-config";
 
-export const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName: string; title: string; panel: vscode.WebviewPanel | undefined }> = {
-	"Outlines.txt": {
-		htmlFileName: "outlinesWebview.html",
-		scriptFileName: "outlinesWebview.js",
-		title: "Outlines",
-		panel: undefined
-	},
-	"Premises.md": {
-		htmlFileName: "premisesWebview.html",
-		scriptFileName: "premisesWebview.js",
-		title: "Premises",
-		panel: undefined
-	},
-	"Questions.md": {
-		htmlFileName: "questionsWebview.html",
-		scriptFileName: "questionsWebview.js",
-		title: "Questions",
-		panel: undefined
-	}
-};
-
-export async function openCorrespondingWebview(context: vscode.ExtensionContext, fileName: string) {
-	// console.log(`Opening webview for: ${fileName}`);
-	const mapping = possibleWebviews[fileName];
-
-	if (!mapping.panel) {
-		mapping.panel = vscode.window.createWebviewPanel(
-			fileName,
-			mapping.title,
-			{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
-			{ enableScripts: true }
-		);
-		mapping.panel.webview.html = await getHtmlForWebview(context, fileName);
-
-		mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
-	}
-
-	mapping.panel.reveal(mapping.panel.viewColumn, true);
-}
-
-async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: string) {
-	const mapping = possibleWebviews[fileName];
-
-	const htmlHeadPath = path.join(context.extensionPath, "src", "webviews", "sharedHead.html");
-	let html = await fs.readFile(htmlHeadPath, 'utf8');
-
+export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebviews[keyof typeof possibleWebviews]): Promise<string> {
 	if (!mapping.panel) { return "No mapping panel"; };
 
-	const nonce = getNonce();
-	// create webview-safe URIs for resources
+	const uri = vscode.Uri.file;
+	const vscodeElementsJsOnDisk = uri(path.join(ep, 'node_modules', '@vscode-elements/', 'elements', 'dist', 'bundled.js'));
+	const katexJsOnDisk = uri(path.join(ep, 'node_modules', 'katex', 'dist', 'katex.min.js'));
+	const katexCssOnDisk = uri(path.join(ep, 'node_modules', 'katex', 'dist', 'katex.min.css'));
+	const katexAutoRenderOnDisk = uri(path.join(ep, 'node_modules', 'katex', 'dist', 'contrib', 'auto-render.min.js'));
+	const markdownItOnDisk = uri(path.join(ep, 'node_modules', 'markdown-it', 'dist', 'markdown-it.min.js'));
+	const sharedScriptJs = uri(path.join(ep, 'src', 'webviews', 'sharedScript.js'));
+	const scriptOnDisk = uri(path.join(ep, 'src', 'webviews', mapping.scriptFileName));
+	const htmlHeadPath = path.join(ep, "src", "webviews", "sharedHead.html");
+	const htmlPath = path.join(ep, "src", "webviews", mapping.htmlFileName);
+
 	const webview = mapping.panel.webview;
-
-	const vscodeElementsJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', '@vscode-elements/', 'elements', 'dist', 'bundled.js'));
 	const vscodeElementsJsUri = webview.asWebviewUri(vscodeElementsJsOnDisk).toString();
-
-	const katexJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist', 'katex.min.js'));
 	const katexJsUri = webview.asWebviewUri(katexJsOnDisk).toString();
-
-	const katexCssOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist', 'katex.min.css'));
 	const katexCssUri = webview.asWebviewUri(katexCssOnDisk).toString();
-
-	// KaTeX auto-render extension provides renderMathInElement
-	const katexAutoRenderOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist', 'contrib', 'auto-render.min.js'));
 	const katexAutoRenderUri = webview.asWebviewUri(katexAutoRenderOnDisk).toString();
-
-	// markdown-it is a dependency; load its browser bundle from node_modules so window.markdownit is available
-	const markdownItOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'markdown-it', 'dist', 'markdown-it.min.js'));
 	const markdownItUri = webview.asWebviewUri(markdownItOnDisk).toString();
-
-	const sharedScriptJs = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', 'sharedScript.js'));
 	const sharedScriptJsUri = webview.asWebviewUri(sharedScriptJs).toString();
-
-	const scriptOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', mapping.scriptFileName));
 	const scriptUri = webview.asWebviewUri(scriptOnDisk).toString();
 
-	// Allow fonts from the webview's resource origin so KaTeX's bundled font files can be loaded.
-	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; font-src ${webview.cspSource};">`;
-	html = html.replace('%%CSP%%', csp);
+	const nonce = getNonce();
+	let html = await fs.readFile(htmlHeadPath, 'utf8');
+	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-%%NONCE%%' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; font-src ${webview.cspSource};">`;
+	html = html
+		.replace('%%CSP%%', csp)
+		.replace('%%TOOLKIT_JS_URI%%', vscodeElementsJsUri)
+		.replace('%%KATEX_JS_URI%%', katexJsUri)
+		.replace('%%KATEX_CSS_URI%%', katexCssUri)
+		.replace('%%KATEX_AUTO_RENDER_URI%%', katexAutoRenderUri)
+		.replace('%%MARKDOWNIT_JS_URI%%', markdownItUri)
+		.replace('%%SHARED_SCRIPT_URI%%', sharedScriptJsUri)
+		.replace('%%SCRIPT_URI%%', `<script type="module" nonce=%%NONCE%% src="${scriptUri}"></script>`);
 
-	// replace resource placeholders in the head template
-	html = html.replace('%%TOOLKIT_JS_URI%%', vscodeElementsJsUri);
-	html = html.replace('%%KATEX_JS_URI%%', katexJsUri);
-	html = html.replace('%%KATEX_CSS_URI%%', katexCssUri);
-	html = html.replace('%%KATEX_AUTO_RENDER_URI%%', katexAutoRenderUri);
-	html = html.replace('%%MARKDOWNIT_JS_URI%%', markdownItUri);
-	html = html.replace('%%SHARED_SCRIPT_URI%%', sharedScriptJsUri);
-	html = html.replace('%%SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${scriptUri}"></script>`);
-
-	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
 	html += await fs.readFile(htmlPath, 'utf8');
 	html = html.replace('%%NONCE%%', nonce);
-
 	html += '</html>';
+
 	return html;
 }
-
-
-
-
-
 
 function getNonce() {
 	let text = '';

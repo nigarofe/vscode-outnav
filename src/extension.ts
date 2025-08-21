@@ -1,48 +1,57 @@
 import * as vscode from "vscode";
 import * as path from "path";
-import { openCorrespondingWebview } from "./webviews/sharedHtmlProvider";
+import { getHtmlForWebview } from "./webviews/sharedHtmlProvider";
 import { generateMessageForOutlines } from "./webviews/outlinesMessageProvider";
 import { generateMessageForPremises } from "./webviews/premisesMessageProvider";
 import { generateMessageForQuestions } from "./webviews/questionsMessageProvider";
-import { possibleWebviews } from './webviews/sharedHtmlProvider';
 import { parseQuestionsToJson } from './parsers/questionsToJson';
+import { possibleWebviews } from "./webviews-config";
 
-export function activate(context: vscode.ExtensionContext) {
-	context.subscriptions.push(
-		vscode.window.onDidChangeActiveTextEditor(e => {
-			if (!e) return;
-			openCorrespondingWebview(context, getActiveFileName(e));
-		}),
-	);
-
-	context.subscriptions.push(
-		vscode.window.onDidChangeTextEditorSelection(e => {
-			generateMessageForWebview(e.textEditor);
-		})
-	);
-
-	context.subscriptions.push(
-		vscode.workspace.onDidSaveTextDocument(async e => {
-			await parseQuestionsToJson();
-			// console.log("Document saved:", e);
-			if (vscode.window.activeTextEditor) {
-				// console.log("Active text editor found, generating message for webview.");
-				generateMessageForWebview(vscode.window.activeTextEditor);
-			}
-		})
-	);
-
-	// Initialization
+export function activate(c: vscode.ExtensionContext) {
 	const e = vscode.window.activeTextEditor;
 	if (e) {
-		openCorrespondingWebview(context, getActiveFileName(e));
-		generateMessageForWebview(e);
+		ensureWebviewForEditor(c, e);
+		updateWebview(e);
 	}
 
-	vscode.window.showInformationMessage('Last line of activate() reached');
+	c.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(e => {
+		if (!e) return;
+		ensureWebviewForEditor(c, e);
+	}));
+
+	c.subscriptions.push(vscode.window.onDidChangeTextEditorSelection(e => {
+		updateWebview(e.textEditor);
+	}));
+
+	c.subscriptions.push(vscode.workspace.onDidSaveTextDocument(async () => {
+		await parseQuestionsToJson();
+		const e = vscode.window.activeTextEditor;
+		if (e) updateWebview(e);
+	}));
+
+	vscode.window.showInformationMessage('Extension Fully Loaded');
 }
 
-async function generateMessageForWebview(e: vscode.TextEditor) {
+async function ensureWebviewForEditor(c: vscode.ExtensionContext, e: vscode.TextEditor) {
+	const activeFileName = getActiveFileName(e);
+	const mapping = possibleWebviews[activeFileName];
+
+	if (!mapping.panel) {
+		mapping.panel = vscode.window.createWebviewPanel(
+			activeFileName,
+			mapping.title,
+			{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
+			{ enableScripts: true }
+		);
+		mapping.panel.webview.html = await getHtmlForWebview(c.extensionPath, mapping);
+
+		mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
+	}
+
+	mapping.panel.reveal(mapping.panel.viewColumn, true);
+}
+
+async function updateWebview(e: vscode.TextEditor) {
 	const activeFileName = getActiveFileName(e);
 	let mapping = possibleWebviews[activeFileName];
 	if (!mapping || !mapping.panel) return;
@@ -59,15 +68,13 @@ async function generateMessageForWebview(e: vscode.TextEditor) {
 			payload = await generateMessageForQuestions(e);
 			break;
 		default:
-			// leave payload as empty object
 			break;
 	}
-	mapping.panel.webview.postMessage({ type: 'onDidChangeTextEditorSelection', payload: payload });
+	mapping.panel.webview.postMessage({ payload: payload });
 }
 
 function getActiveFileName(e: vscode.TextEditor) {
 	const fullPath = e.document.uri.fsPath;
 	const fileName = path.basename(fullPath);
-	// console.log(`Active file (name): ${fileName}`);
-	return `${fileName}`;
+	return fileName;
 }

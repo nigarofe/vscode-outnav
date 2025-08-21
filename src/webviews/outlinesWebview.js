@@ -5,17 +5,15 @@ window.addEventListener('DOMContentLoaded', () => {
     const indentationOrderingExerciseEl = document.getElementById("indentationOrderingExercise");
 
     window.addEventListener("message", (event) => {
-        if (event.data.type === "onDidChangeTextEditorSelection") {
-            if (!outlinesWebviewJSONel || !parentsBreadcrumbEl || !currentItemEl || !indentationOrderingExerciseEl) { return; }
+        if (!outlinesWebviewJSONel || !parentsBreadcrumbEl || !currentItemEl || !indentationOrderingExerciseEl) { return; }
 
-            outlinesWebviewJSONel.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
-            outlinesWebviewJSONel.textContent = JSON.stringify(event.data.payload, null, 2);
-            parentsBreadcrumbEl.textContent = event.data.payload.parents.join(" > ") + " > ";
-            currentItemEl.textContent = event.data.payload.currentLineContent;
+        outlinesWebviewJSONel.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
+        outlinesWebviewJSONel.textContent = JSON.stringify(event.data.payload, null, 2);
+        parentsBreadcrumbEl.textContent = event.data.payload.parents.join(" > ") + " > ";
+        currentItemEl.textContent = event.data.payload.currentLineContent;
 
-            indentationOrderingExerciseEl.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
-            const raw = JSON.stringify(event.data.payload.indentationOrderingExercise, null, 2).replace(/[\[\]",]/g, '');
-            indentationOrderingExerciseEl.textContent = raw.split('\n').map(line => line.trim()).join('\n');
-        }
+        indentationOrderingExerciseEl.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
+        const raw = JSON.stringify(event.data.payload.indentationOrderingExercise, null, 2).replace(/[\[\]",]/g, '');
+        indentationOrderingExerciseEl.textContent = raw.split('\n').map(line => line.trim()).join('\n');
     });
 });
