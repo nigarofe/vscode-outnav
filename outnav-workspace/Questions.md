@@ -20,6 +20,10 @@
 
 **This is the q1 proposition**
 
+Cê tá doido 
+
+### T
+
 ```snippet:newtons-law
 $\oiint$ Esse é um exemplo de snippet
 

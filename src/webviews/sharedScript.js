@@ -13,3 +13,9 @@ window.renderKatex = function renderKatex() {
         throwOnError: false
     });
 };
+
+window.markdownToHtml = function markdownToHtml(markdown) {
+    let html = markdown.replace(/^\s*---\s*$/gm, '<vscode-divider></vscode-divider>');
+
+    return html;
+};

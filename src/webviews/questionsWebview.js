@@ -17,10 +17,11 @@ window.addEventListener("message", (event) => {
     // console.log("Current question number:", currentQuestionNumber);
 
     const currentQuestion = questions.find((q) => q && q.number === currentQuestionNumber);
-    questionPropositionElement.textContent = currentQuestion.proposition;
-    questionStepByStepElement.textContent = currentQuestion.step_by_step;
-    questionAnswerElement.textContent = currentQuestion.answer;
-    questionNumberElement.textContent = currentQuestionNumber;
+    // markdownToHtml returns HTML (e.g. <vscode-divider>), insert as HTML so elements render
+    questionPropositionElement.innerHTML = markdownToHtml(currentQuestion.proposition);
+    questionStepByStepElement.innerHTML = markdownToHtml(currentQuestion.step_by_step);
+    questionAnswerElement.innerHTML = markdownToHtml(currentQuestion.answer);
+    questionNumberElement.innerHTML = markdownToHtml(currentQuestionNumber);
 
     renderKatex();
 });
