@@ -1,15 +1,15 @@
 import * as vscode from 'vscode';
 import * as path from "path";
-import {possibleWebviews} from './sharedHtmlProvider';
+import { possibleWebviews } from './sharedHtmlProvider';
 
-export function generateMessageForOutlines(editor: vscode.TextEditor){
+export function generateMessageForOutlines(editor: vscode.TextEditor) {
     const fileName = path.basename(editor.document.uri.fsPath);
     const mapping = possibleWebviews[fileName];
     if (mapping && mapping.panel) {
         const currentLineNumber = editor.selection.active.line + 1;
         const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
         const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
-        
+
         const payload = {
             currentLineNumber,
             selectedRange: editor.selection,
@@ -29,7 +29,7 @@ export function generateMessageForOutlines(editor: vscode.TextEditor){
 
 function getIndentationOrderingExercise(editor: vscode.TextEditor) {
     const lines = getSelectedLines(editor);
-    
+
     const processed = lines
         .map(line => line.replace(/\t/g, ''))
         .filter(line => line.trim().length > 0);
@@ -64,24 +64,24 @@ function getParents(editor: vscode.TextEditor, currentIndentationLevel: number) 
         let searchIndex = editor.selection.active.line - 1;
 
 
-            while (targetIndent >= 0 && searchIndex >= 0) {
-                let found = false;
-                for (let i = searchIndex; i >= 0; i--) {
-                    const candidate = editor.document.lineAt(i).text;
-                    if (candidate.trim().length === 0) {continue;};
-                    const candidateIndent = (candidate.match(/\t/g) || []).length;
-                    if (candidateIndent === targetIndent) {
-                        parents.unshift(candidate);
-                        searchIndex = i - 1;
-                        targetIndent--;
-                        found = true;
-                        break;
-                    }
+        while (targetIndent >= 0 && searchIndex >= 0) {
+            let found = false;
+            for (let i = searchIndex; i >= 0; i--) {
+                const candidate = editor.document.lineAt(i).text;
+                if (candidate.trim().length === 0) { continue; };
+                const candidateIndent = (candidate.match(/\t/g) || []).length;
+                if (candidateIndent === targetIndent) {
+                    parents.unshift(candidate);
+                    searchIndex = i - 1;
+                    targetIndent--;
+                    found = true;
+                    break;
                 }
-                if (!found) {break;};
             }
+            if (!found) { break; };
         }
-       return parents;
+    }
+    return parents;
 }
 
 function getSimblings(editor: vscode.TextEditor, currentIndentationLevel: number) {
