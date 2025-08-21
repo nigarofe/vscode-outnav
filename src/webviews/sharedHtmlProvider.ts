@@ -57,15 +57,28 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	const vscodeElementsJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', '@vscode-elements/', 'elements', 'dist', 'bundled.js'));
 	const vscodeElementsJsUri = webview.asWebviewUri(vscodeElementsJsOnDisk).toString();
 
+	const katexJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist', 'katex.min.js'));
+	const katexJsUri = webview.asWebviewUri(katexJsOnDisk).toString();
+
+	const katexCssOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist', 'katex.min.css'));
+	const katexCssUri = webview.asWebviewUri(katexCssOnDisk).toString();
+
+	const sharedScriptJs = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', 'sharedScript.js'));
+	const sharedScriptJsUri = webview.asWebviewUri(sharedScriptJs).toString();
+
 	const scriptOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', mapping.scriptFileName));
 	const scriptUri = webview.asWebviewUri(scriptOnDisk).toString();
 
-	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline';">`;
+	// Allow fonts from the webview's resource origin so KaTeX's bundled font files can be loaded.
+	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; font-src ${webview.cspSource};">`;
 	html = html.replace('%%CSP%%', csp);
 
 	// replace resource placeholders in the head template
 	html = html.replace('%%TOOLKIT_JS_URI%%', vscodeElementsJsUri);
-	html = html.replace('%%SCRIPT_URI%%', `<script type=\"module\" nonce=\"${nonce}\" src=\"${scriptUri}\"></script>`);
+	html = html.replace('%%KATEX_JS_URI%%', katexJsUri);
+	html = html.replace('%%KATEX_CSS_URI%%', katexCssUri);
+	html = html.replace('%%SHARED_SCRIPT_URI%%', sharedScriptJsUri);
+	html = html.replace('%%SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${scriptUri}"></script>`);
 
 	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
 	html += await fs.readFile(htmlPath, 'utf8');
