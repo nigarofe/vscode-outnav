@@ -8,7 +8,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 2,
@@ -18,7 +35,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 3,
@@ -28,7 +62,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 4,
@@ -38,7 +89,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 5,
@@ -48,7 +116,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 6,
@@ -58,7 +143,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 7,
@@ -68,7 +170,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 8,
@@ -78,7 +197,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 9,
@@ -88,7 +224,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 10,
@@ -98,7 +251,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 11,
@@ -108,7 +278,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 12,
@@ -118,7 +305,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 13,
@@ -128,7 +332,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 14,
@@ -138,7 +359,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 15,
@@ -148,7 +386,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 16,
@@ -158,7 +413,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 17,
@@ -168,7 +440,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 18,
@@ -178,7 +467,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 19,
@@ -188,7 +494,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 20,
@@ -198,7 +521,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 21,
@@ -208,7 +548,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 22,
@@ -218,7 +575,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 23,
@@ -228,7 +602,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 24,
@@ -238,7 +629,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 25,
@@ -248,7 +656,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 26,
@@ -258,7 +683,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 27,
@@ -268,7 +710,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 28,
@@ -278,7 +737,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 29,
@@ -288,7 +764,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 30,
@@ -298,7 +791,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 31,
@@ -308,7 +818,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 32,
@@ -318,7 +845,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 33,
@@ -328,7 +872,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 34,
@@ -338,7 +899,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 35,
@@ -348,7 +926,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 36,
@@ -358,7 +953,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 37,
@@ -368,7 +980,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 38,
@@ -378,7 +1007,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 39,
@@ -388,7 +1034,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 40,
@@ -398,7 +1061,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 41,
@@ -408,7 +1088,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 42,
@@ -418,7 +1115,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 43,
@@ -428,7 +1142,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 44,
@@ -438,7 +1169,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 45,
@@ -448,7 +1196,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 46,
@@ -458,7 +1223,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 47,
@@ -468,7 +1250,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 48,
@@ -478,7 +1277,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 49,
@@ -488,7 +1304,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 50,
@@ -498,7 +1331,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 51,
@@ -508,7 +1358,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 52,
@@ -518,7 +1385,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 53,
@@ -528,7 +1412,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 54,
@@ -538,7 +1439,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 55,
@@ -548,7 +1466,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 56,
@@ -558,7 +1493,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 57,
@@ -568,7 +1520,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 58,
@@ -578,7 +1547,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 59,
@@ -588,7 +1574,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 60,
@@ -598,7 +1601,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 61,
@@ -608,7 +1628,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 62,
@@ -618,7 +1655,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 63,
@@ -628,7 +1682,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 64,
@@ -638,7 +1709,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 65,
@@ -648,7 +1736,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 66,
@@ -658,7 +1763,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 67,
@@ -668,7 +1790,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 69,
@@ -678,7 +1817,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 72,
@@ -688,7 +1844,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 73,
@@ -698,7 +1871,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 74,
@@ -708,7 +1898,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 75,
@@ -718,7 +1925,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 76,
@@ -728,7 +1952,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 77,
@@ -738,7 +1979,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 78,
@@ -748,7 +2006,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 79,
@@ -758,7 +2033,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 80,
@@ -768,7 +2060,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 81,
@@ -778,7 +2087,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 82,
@@ -788,7 +2114,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 83,
@@ -798,7 +2141,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 84,
@@ -808,7 +2168,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 85,
@@ -818,7 +2195,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 88,
@@ -828,7 +2222,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 90,
@@ -838,7 +2249,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 91,
@@ -848,7 +2276,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 92,
@@ -858,7 +2303,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 93,
@@ -868,7 +2330,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 94,
@@ -878,7 +2357,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 95,
@@ -888,7 +2384,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 96,
@@ -898,7 +2411,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 97,
@@ -908,7 +2438,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 98,
@@ -918,7 +2465,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 99,
@@ -928,7 +2492,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 100,
@@ -938,7 +2519,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 101,
@@ -948,7 +2546,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 102,
@@ -958,7 +2573,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 103,
@@ -968,7 +2600,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 104,
@@ -978,7 +2627,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 105,
@@ -988,7 +2654,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 106,
@@ -998,7 +2681,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 107,
@@ -1008,7 +2708,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 108,
@@ -1018,7 +2735,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 109,
@@ -1028,7 +2762,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 110,
@@ -1038,7 +2789,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 111,
@@ -1048,7 +2816,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 112,
@@ -1058,7 +2843,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 115,
@@ -1068,7 +2870,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 116,
@@ -1078,7 +2897,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 117,
@@ -1088,7 +2924,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 118,
@@ -1098,7 +2951,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 119,
@@ -1108,7 +2978,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 120,
@@ -1118,7 +3005,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 121,
@@ -1128,7 +3032,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 122,
@@ -1138,7 +3059,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 123,
@@ -1148,7 +3086,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 124,
@@ -1158,7 +3113,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 125,
@@ -1168,7 +3140,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 126,
@@ -1178,7 +3167,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 127,
@@ -1188,7 +3194,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 128,
@@ -1198,7 +3221,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 129,
@@ -1208,7 +3248,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 130,
@@ -1218,7 +3275,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 131,
@@ -1228,7 +3302,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 132,
@@ -1238,7 +3329,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 133,
@@ -1248,7 +3356,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 134,
@@ -1258,7 +3383,24 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     },
     {
       "number": 135,
@@ -1268,7 +3410,26 @@
       "proposition": "",
       "step-by-step": "",
       "answer": "",
-      "tags": []
+      "tags": [],
+      "spacedRepetitionMetrics": {
+        "totalAttempts": 0,
+        "successes": 0,
+        "failures": 0,
+        "successRate": 0
+      },
+      "calculated_metrics": {
+        "DSLA": 0,
+        "LaMI": 0,
+        "PMG-D": 0,
+        "PMG-X": "NA",
+        "total_attempts": 0,
+        "memory_attempts": 0,
+        "help_attempts": 0,
+        "attempts_summary": "0;0;0",
+        "PMG-X_cell_color": "#F0F0F0"
+      }
     }
-  ]
+  ],
+  "lastUpdated": "2025-08-21T17:02:46.827Z",
+  "totalQuestions": 127
 }
