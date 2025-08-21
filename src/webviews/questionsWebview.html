@@ -1,9 +1,7 @@
 <body>
   <div class="container">
     <div class="app-card bg-white p-3 p-lg-4">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <h4 class="m-0">Question Viewer</h4>
-      </div>
+      <!-- title removed to maximize vertical space -->
 
       <div class="layout-split">
         <div>
@@ -110,12 +108,31 @@
   body {
     background: #f6f8fb;
     color: #212529;
-    padding: 1.5rem;
+    padding: 0;
+    margin: 0;
   }
 
   .app-card {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(22, 38, 84, 0.06);
+    /* remove internal padding provided by utility classes to maximize area */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* make container and cards full-width and remove extra spacing */
+  .container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .card.app-card {
+    padding: 0;
+  }
+
+  .card.app-card .card-body {
+    padding: 0;
   }
 
   .section-title {
@@ -125,15 +142,72 @@
   }
 
   .tab-pane>.card+.card {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .recommended-list .list-group-item {
     border-left: 3px solid #0b57d0;
   }
 
+  /* segmented full-width tab style */
+  .nav.nav-pills {
+    display: flex;
+    gap: 0;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .nav.nav-pills .nav-item {
+    flex: 1 1 0;
+  }
+
   .nav-pills .nav-link {
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.6rem 0;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #495057;
+    font-weight: 500;
+    border-right: 1px solid #e6e9ef;
+    transition: background-color 0.12s ease, color 0.12s ease;
+    text-decoration: none;
+  }
+
+  .nav-pills .nav-link:last-child {
+    border-right: none;
+  }
+
+  .nav-pills .nav-link:hover {
+    background: rgba(11, 87, 208, 0.04);
+    color: #0b57d0;
+  }
+
+  .nav-pills .nav-link:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .nav-pills .nav-link.active {
+    background: #ffffff;
+    color: #0b57d0;
+    font-weight: 600;
+    position: relative;
+  }
+
+  /* visually connect the tab bar to the content area */
+  .tab-content {
+    border: 1px solid #e6e9ef;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 0.5rem;
+    background: #ffffff;
   }
 
   @media (min-width: 992px) {
