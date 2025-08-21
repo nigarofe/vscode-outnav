@@ -70,13 +70,13 @@
                 "description": "Latest Memory Interval. The number of days between the most recent memory-based attempt and the previous attempt.",
                 "unit": "days"
               },
-              "PMG-D": {
+              "PMG_D": {
                 "type": "integer",
                 "descriptive_name": "Potential Memory Gain (Days)",
                 "description": "Potential Memory Gain (Days). The estimated improvement in the Latest Memory Interval, in days, if the next attempt is successful.",
                 "unit": "days"
               },
-              "PMG-X": {
+              "PMG_X": {
                 "type": "number",
                 "descriptive_name": "Potential Memory Gain Multiplier",
                 "description": "Potential Memory Gain Multiplier. How much the Latest Memory Interval will increase if the next attempt is successful. Calculated by dividing the PMG-D by LaMI",

@@ -33,7 +33,6 @@ interface QuestionSchema {
     answer: string;
     tags: string[];
     attempts?: Array<{ datetime: string; code: number }>;
-    spacedRepetitionMetrics?: SpacedRepetitionMetrics;
     calculated_metrics?: Record<string, any>;
 }
 
@@ -107,19 +106,20 @@ export async function parseQuestionsToJson(): Promise<string> {
 
         if (attempts.length) questionObj.attempts = attempts.map(a => ({ datetime: a.timestamp, code: a.result }));
 
-        // Calculate spaced repetition metrics and additional calculated metrics
+        // Calculate spaced repetition metrics and merge them into calculated_metrics
         const spaced = calculateSpacedRepetitionMetrics(attempts);
-        questionObj.spacedRepetitionMetrics = spaced;
-
         questionObj.calculated_metrics = {
             DSLA: calculateDaysSinceLastAttempt(attempts),
             LaMI: calculateLatestMemoryInterval(attempts),
-            'PMG-D': calculatePotentialMemoryGainDays(attempts),
-            'PMG-X': calculatePotentialMemoryGainMultiplier(attempts),
+            PMG_D: calculatePotentialMemoryGainDays(attempts),
+            PMG_X: calculatePotentialMemoryGainMultiplier(attempts),
+            // merged spaced repetition fields (snake_case keys for JSON schema compatibility)
             total_attempts: spaced.totalAttempts,
             memory_attempts: spaced.successes,
             help_attempts: spaced.failures,
-            attempts_summary: `${spaced.totalAttempts};${spaced.successes};${spaced.failures}`
+            attempts_summary: `${spaced.totalAttempts};${spaced.successes};${spaced.failures}`,
+            last_attempt: spaced.lastAttempt,
+            next_review_date: spaced.nextReviewDate
         };
 
         questions.push(questionObj);

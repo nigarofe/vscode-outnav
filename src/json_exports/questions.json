@@ -35,21 +35,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-02T16:55:31Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 56,
-        "PMG-D": 24,
-        "PMG-X": 1.43,
+        "PMG_D": 24,
+        "PMG_X": 1.43,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-02T16:55:31Z",
         "PMG-X_cell_color": "hsl(94, 100%, 75%)"
       }
     },
@@ -84,21 +79,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-05-19T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 94,
         "LaMI": 71,
-        "PMG-D": 23,
-        "PMG-X": 1.32,
+        "PMG_D": 23,
+        "PMG_X": 1.32,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-05-19T06:00:00Z",
         "PMG-X_cell_color": "hsl(96, 100%, 75%)"
       }
     },
@@ -125,21 +115,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 2,
-        "failures": 1,
-        "lastAttempt": "2025-04-17T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 126,
         "LaMI": 83,
-        "PMG-D": 43,
-        "PMG-X": 1.52,
+        "PMG_D": 43,
+        "PMG_X": 1.52,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
+        "last_attempt": "2025-04-17T06:00:00Z",
         "PMG-X_cell_color": "hsl(92, 100%, 75%)"
       }
     },
@@ -208,21 +193,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 13,
-        "successes": 9,
-        "failures": 4,
-        "lastAttempt": "2025-08-13T14:17:15Z"
-      },
       "calculated_metrics": {
         "DSLA": 8,
         "LaMI": 56,
-        "PMG-D": -48,
-        "PMG-X": 0.14,
+        "PMG_D": -48,
+        "PMG_X": 0.14,
         "total_attempts": 13,
         "memory_attempts": 9,
         "help_attempts": 4,
         "attempts_summary": "13;9;4",
+        "last_attempt": "2025-08-13T14:17:15Z",
         "PMG-X_cell_color": "hsl(120, 100%, 75%)"
       }
     },
@@ -249,21 +229,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 2,
-        "failures": 1,
-        "lastAttempt": "2025-04-17T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 126,
         "LaMI": 83,
-        "PMG-D": 43,
-        "PMG-X": 1.52,
+        "PMG_D": 43,
+        "PMG_X": 1.52,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
+        "last_attempt": "2025-04-17T06:00:00Z",
         "PMG-X_cell_color": "hsl(92, 100%, 75%)"
       }
     },
@@ -332,21 +307,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 13,
-        "successes": 7,
-        "failures": 6,
-        "lastAttempt": "2025-06-21T16:00:33Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 46,
-        "PMG-D": 15,
-        "PMG-X": 1.33,
+        "PMG_D": 15,
+        "PMG_X": 1.33,
         "total_attempts": 13,
         "memory_attempts": 7,
         "help_attempts": 6,
         "attempts_summary": "13;7;6",
+        "last_attempt": "2025-06-21T16:00:33Z",
         "PMG-X_cell_color": "hsl(96, 100%, 75%)"
       }
     },
@@ -373,21 +343,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 1,
-        "failures": 2,
-        "lastAttempt": "2025-05-19T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 94,
         "LaMI": 102,
-        "PMG-D": -8,
-        "PMG-X": 0.92,
+        "PMG_D": -8,
+        "PMG_X": 0.92,
         "total_attempts": 3,
         "memory_attempts": 1,
         "help_attempts": 2,
         "attempts_summary": "3;1;2",
+        "last_attempt": "2025-05-19T06:00:00Z",
         "PMG-X_cell_color": "hsl(104, 100%, 75%)"
       }
     },
@@ -414,21 +379,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 2,
-        "failures": 1,
-        "lastAttempt": "2025-06-01T02:00:59Z"
-      },
       "calculated_metrics": {
         "DSLA": 82,
         "LaMI": 114,
-        "PMG-D": -32,
-        "PMG-X": 0.72,
+        "PMG_D": -32,
+        "PMG_X": 0.72,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
+        "last_attempt": "2025-06-01T02:00:59Z",
         "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
@@ -451,21 +411,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-01T02:15:36Z"
-      },
       "calculated_metrics": {
         "DSLA": 82,
         "LaMI": 194,
-        "PMG-D": -112,
-        "PMG-X": 0.42,
+        "PMG_D": -112,
+        "PMG_X": 0.42,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-01T02:15:36Z",
         "PMG-X_cell_color": "hsl(114, 100%, 75%)"
       }
     },
@@ -488,21 +443,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-02T17:03:26Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 196,
-        "PMG-D": -116,
-        "PMG-X": 0.41,
+        "PMG_D": -116,
+        "PMG_X": 0.41,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-02T17:03:26Z",
         "PMG-X_cell_color": "hsl(114, 100%, 75%)"
       }
     },
@@ -521,21 +471,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2024-11-18T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 276,
         "LaMI": "W/H",
-        "PMG-D": 276,
-        "PMG-X": "W/H",
+        "PMG_D": 276,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2024-11-18T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -590,21 +535,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 10,
-        "successes": 6,
-        "failures": 4,
-        "lastAttempt": "2025-06-02T17:36:10Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 28,
-        "PMG-D": 52,
-        "PMG-X": 2.86,
+        "PMG_D": 52,
+        "PMG_X": 2.86,
         "total_attempts": 10,
         "memory_attempts": 6,
         "help_attempts": 4,
         "attempts_summary": "10;6;4",
+        "last_attempt": "2025-06-02T17:36:10Z",
         "PMG-X_cell_color": "hsl(64, 100%, 75%)"
       }
     },
@@ -647,21 +587,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 7,
-        "successes": 4,
-        "failures": 3,
-        "lastAttempt": "2025-06-02T19:06:36Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 46,
-        "PMG-D": 34,
-        "PMG-X": 1.74,
+        "PMG_D": 34,
+        "PMG_X": 1.74,
         "total_attempts": 7,
         "memory_attempts": 4,
         "help_attempts": 3,
         "attempts_summary": "7;4;3",
+        "last_attempt": "2025-06-02T19:06:36Z",
         "PMG-X_cell_color": "hsl(87, 100%, 75%)"
       }
     },
@@ -702,21 +637,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-13T19:08:35Z"
-      },
       "calculated_metrics": {
         "DSLA": 69,
         "LaMI": 57,
-        "PMG-D": 12,
-        "PMG-X": 1.21,
+        "PMG_D": 12,
+        "PMG_X": 1.21,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-13T19:08:35Z",
         "PMG-X_cell_color": "hsl(98, 100%, 75%)"
       }
     },
@@ -757,21 +687,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 4,
-        "failures": 2,
-        "lastAttempt": "2025-06-12T13:23:28Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 56,
-        "PMG-D": 14,
-        "PMG-X": 1.25,
+        "PMG_D": 14,
+        "PMG_X": 1.25,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
+        "last_attempt": "2025-06-12T13:23:28Z",
         "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
@@ -798,21 +723,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 1,
-        "failures": 2,
-        "lastAttempt": "2025-06-04T16:31:17Z"
-      },
       "calculated_metrics": {
         "DSLA": 78,
         "LaMI": "W/H",
-        "PMG-D": 78,
-        "PMG-X": "W/H",
+        "PMG_D": 78,
+        "PMG_X": "W/H",
         "total_attempts": 3,
         "memory_attempts": 1,
         "help_attempts": 2,
         "attempts_summary": "3;1;2",
+        "last_attempt": "2025-06-04T16:31:17Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -857,21 +777,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 7,
-        "successes": 5,
-        "failures": 2,
-        "lastAttempt": "2025-06-20T16:44:10Z"
-      },
       "calculated_metrics": {
         "DSLA": 62,
         "LaMI": 45,
-        "PMG-D": 17,
-        "PMG-X": 1.38,
+        "PMG_D": 17,
+        "PMG_X": 1.38,
         "total_attempts": 7,
         "memory_attempts": 5,
         "help_attempts": 2,
         "attempts_summary": "7;5;2",
+        "last_attempt": "2025-06-20T16:44:10Z",
         "PMG-X_cell_color": "hsl(95, 100%, 75%)"
       }
     },
@@ -914,21 +829,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 7,
-        "successes": 5,
-        "failures": 2,
-        "lastAttempt": "2025-05-19T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 94,
         "LaMI": 42,
-        "PMG-D": 52,
-        "PMG-X": 2.24,
+        "PMG_D": 52,
+        "PMG_X": 2.24,
         "total_attempts": 7,
         "memory_attempts": 5,
         "help_attempts": 2,
         "attempts_summary": "7;5;2",
+        "last_attempt": "2025-05-19T06:00:00Z",
         "PMG-X_cell_color": "hsl(77, 100%, 75%)"
       }
     },
@@ -975,21 +885,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 8,
-        "successes": 6,
-        "failures": 2,
-        "lastAttempt": "2025-06-04T15:55:04Z"
-      },
       "calculated_metrics": {
         "DSLA": 78,
         "LaMI": 35,
-        "PMG-D": 43,
-        "PMG-X": 2.23,
+        "PMG_D": 43,
+        "PMG_X": 2.23,
         "total_attempts": 8,
         "memory_attempts": 6,
         "help_attempts": 2,
         "attempts_summary": "8;6;2",
+        "last_attempt": "2025-06-04T15:55:04Z",
         "PMG-X_cell_color": "hsl(77, 100%, 75%)"
       }
     },
@@ -1034,21 +939,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 7,
-        "successes": 5,
-        "failures": 2,
-        "lastAttempt": "2025-06-21T15:40:35Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 56,
-        "PMG-D": 5,
-        "PMG-X": 1.09,
+        "PMG_D": 5,
+        "PMG_X": 1.09,
         "total_attempts": 7,
         "memory_attempts": 5,
         "help_attempts": 2,
         "attempts_summary": "7;5;2",
+        "last_attempt": "2025-06-21T15:40:35Z",
         "PMG-X_cell_color": "hsl(101, 100%, 75%)"
       }
     },
@@ -1085,21 +985,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 3,
-        "failures": 2,
-        "lastAttempt": "2025-06-30T18:49:32Z"
-      },
       "calculated_metrics": {
         "DSLA": 52,
         "LaMI": "W/H",
-        "PMG-D": 52,
-        "PMG-X": "W/H",
+        "PMG_D": 52,
+        "PMG_X": "W/H",
         "total_attempts": 5,
         "memory_attempts": 3,
         "help_attempts": 2,
         "attempts_summary": "5;3;2",
+        "last_attempt": "2025-06-30T18:49:32Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -1136,21 +1031,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-30T18:54:11Z"
-      },
       "calculated_metrics": {
         "DSLA": 52,
         "LaMI": 69,
-        "PMG-D": -17,
-        "PMG-X": 0.75,
+        "PMG_D": -17,
+        "PMG_X": 0.75,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-30T18:54:11Z",
         "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
@@ -1187,21 +1077,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-07-02T20:56:28Z"
-      },
       "calculated_metrics": {
         "DSLA": 50,
         "LaMI": 67,
-        "PMG-D": -17,
-        "PMG-X": 0.75,
+        "PMG_D": -17,
+        "PMG_X": 0.75,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-07-02T20:56:28Z",
         "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
@@ -1256,21 +1141,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 10,
-        "successes": 8,
-        "failures": 2,
-        "lastAttempt": "2025-06-02T16:15:32Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 41,
-        "PMG-D": 39,
-        "PMG-X": 1.95,
+        "PMG_D": 39,
+        "PMG_X": 1.95,
         "total_attempts": 10,
         "memory_attempts": 8,
         "help_attempts": 2,
         "attempts_summary": "10;8;2",
+        "last_attempt": "2025-06-02T16:15:32Z",
         "PMG-X_cell_color": "hsl(83, 100%, 75%)"
       }
     },
@@ -1317,21 +1197,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 8,
-        "successes": 4,
-        "failures": 4,
-        "lastAttempt": "2025-06-02T16:24:49Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 34,
-        "PMG-D": 46,
-        "PMG-X": 2.35,
+        "PMG_D": 46,
+        "PMG_X": 2.35,
         "total_attempts": 8,
         "memory_attempts": 4,
         "help_attempts": 4,
         "attempts_summary": "8;4;4",
+        "last_attempt": "2025-06-02T16:24:49Z",
         "PMG-X_cell_color": "hsl(75, 100%, 75%)"
       }
     },
@@ -1396,21 +1271,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 12,
-        "successes": 6,
-        "failures": 6,
-        "lastAttempt": "2025-07-11T15:42:16Z"
-      },
       "calculated_metrics": {
         "DSLA": 41,
         "LaMI": "W/H",
-        "PMG-D": 41,
-        "PMG-X": "W/H",
+        "PMG_D": 41,
+        "PMG_X": "W/H",
         "total_attempts": 12,
         "memory_attempts": 6,
         "help_attempts": 6,
         "attempts_summary": "12;6;6",
+        "last_attempt": "2025-07-11T15:42:16Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -1437,21 +1307,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 2,
-        "failures": 1,
-        "lastAttempt": "2025-04-07T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 136,
         "LaMI": 91,
-        "PMG-D": 45,
-        "PMG-X": 1.49,
+        "PMG_D": 45,
+        "PMG_X": 1.49,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
+        "last_attempt": "2025-04-07T06:00:00Z",
         "PMG-X_cell_color": "hsl(92, 100%, 75%)"
       }
     },
@@ -1494,21 +1359,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 7,
-        "successes": 2,
-        "failures": 5,
-        "lastAttempt": "2025-06-02T16:50:16Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 27,
-        "PMG-D": 53,
-        "PMG-X": 2.96,
+        "PMG_D": 53,
+        "PMG_X": 2.96,
         "total_attempts": 7,
         "memory_attempts": 2,
         "help_attempts": 5,
         "attempts_summary": "7;2;5",
+        "last_attempt": "2025-06-02T16:50:16Z",
         "PMG-X_cell_color": "hsl(62, 100%, 75%)"
       }
     },
@@ -1567,21 +1427,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 11,
-        "successes": 6,
-        "failures": 5,
-        "lastAttempt": "2025-06-02T16:45:20Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 27,
-        "PMG-D": 53,
-        "PMG-X": 2.96,
+        "PMG_D": 53,
+        "PMG_X": 2.96,
         "total_attempts": 11,
         "memory_attempts": 6,
         "help_attempts": 5,
         "attempts_summary": "11;6;5",
+        "last_attempt": "2025-06-02T16:45:20Z",
         "PMG-X_cell_color": "hsl(62, 100%, 75%)"
       }
     },
@@ -1612,21 +1467,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 1,
-        "failures": 3,
-        "lastAttempt": "2025-06-02T17:26:22Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": "W/H",
-        "PMG-D": 80,
-        "PMG-X": "W/H",
+        "PMG_D": 80,
+        "PMG_X": "W/H",
         "total_attempts": 4,
         "memory_attempts": 1,
         "help_attempts": 3,
         "attempts_summary": "4;1;3",
+        "last_attempt": "2025-06-02T17:26:22Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -1653,21 +1503,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 2,
-        "failures": 1,
-        "lastAttempt": "2025-04-07T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 136,
         "LaMI": 83,
-        "PMG-D": 53,
-        "PMG-X": 1.64,
+        "PMG_D": 53,
+        "PMG_X": 1.64,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
+        "last_attempt": "2025-04-07T06:00:00Z",
         "PMG-X_cell_color": "hsl(89, 100%, 75%)"
       }
     },
@@ -1708,21 +1553,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 4,
-        "failures": 2,
-        "lastAttempt": "2025-06-21T16:16:33Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 56,
-        "PMG-D": 5,
-        "PMG-X": 1.09,
+        "PMG_D": 5,
+        "PMG_X": 1.09,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
+        "last_attempt": "2025-06-21T16:16:33Z",
         "PMG-X_cell_color": "hsl(101, 100%, 75%)"
       }
     },
@@ -1759,21 +1599,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-21T16:10:13Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 56,
-        "PMG-D": 5,
-        "PMG-X": 1.09,
+        "PMG_D": 5,
+        "PMG_X": 1.09,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-21T16:10:13Z",
         "PMG-X_cell_color": "hsl(101, 100%, 75%)"
       }
     },
@@ -1828,21 +1663,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 10,
-        "successes": 6,
-        "failures": 4,
-        "lastAttempt": "2025-06-02T16:27:47Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 10,
         "memory_attempts": 6,
         "help_attempts": 4,
         "attempts_summary": "10;6;4",
+        "last_attempt": "2025-06-02T16:27:47Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -1889,21 +1719,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 8,
-        "successes": 6,
-        "failures": 2,
-        "lastAttempt": "2025-06-02T16:27:48Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 8,
         "memory_attempts": 6,
         "help_attempts": 2,
         "attempts_summary": "8;6;2",
+        "last_attempt": "2025-06-02T16:27:48Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -1940,21 +1765,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-13T18:12:36Z"
-      },
       "calculated_metrics": {
         "DSLA": 69,
         "LaMI": 51,
-        "PMG-D": 18,
-        "PMG-X": 1.35,
+        "PMG_D": 18,
+        "PMG_X": 1.35,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-13T18:12:36Z",
         "PMG-X_cell_color": "hsl(95, 100%, 75%)"
       }
     },
@@ -1985,21 +1805,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 3,
-        "failures": 1,
-        "lastAttempt": "2025-06-13T18:44:18Z"
-      },
       "calculated_metrics": {
         "DSLA": 69,
         "LaMI": 51,
-        "PMG-D": 18,
-        "PMG-X": 1.35,
+        "PMG_D": 18,
+        "PMG_X": 1.35,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
+        "last_attempt": "2025-06-13T18:44:18Z",
         "PMG-X_cell_color": "hsl(95, 100%, 75%)"
       }
     },
@@ -2030,21 +1845,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 3,
-        "failures": 1,
-        "lastAttempt": "2025-06-13T18:57:58Z"
-      },
       "calculated_metrics": {
         "DSLA": 69,
         "LaMI": 51,
-        "PMG-D": 18,
-        "PMG-X": 1.35,
+        "PMG_D": 18,
+        "PMG_X": 1.35,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
+        "last_attempt": "2025-06-13T18:57:58Z",
         "PMG-X_cell_color": "hsl(95, 100%, 75%)"
       }
     },
@@ -2071,21 +1881,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 1,
-        "failures": 2,
-        "lastAttempt": "2025-04-23T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 120,
         "LaMI": "W/H",
-        "PMG-D": 120,
-        "PMG-X": "W/H",
+        "PMG_D": 120,
+        "PMG_X": "W/H",
         "total_attempts": 3,
         "memory_attempts": 1,
         "help_attempts": 2,
         "attempts_summary": "3;1;2",
+        "last_attempt": "2025-04-23T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2124,21 +1929,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-02T19:30:37Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-02T19:30:37Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -2177,21 +1977,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 4,
-        "failures": 2,
-        "lastAttempt": "2025-06-02T19:34:40Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
+        "last_attempt": "2025-06-02T19:34:40Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -2230,21 +2025,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-02T19:51:06Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-02T19:51:06Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -2283,21 +2073,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-02T20:06:48Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-02T20:06:48Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -2332,21 +2117,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-02T20:28:28Z"
-      },
       "calculated_metrics": {
         "DSLA": 80,
         "LaMI": 40,
-        "PMG-D": 40,
-        "PMG-X": 2,
+        "PMG_D": 40,
+        "PMG_X": 2,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-02T20:28:28Z",
         "PMG-X_cell_color": "hsl(82, 100%, 75%)"
       }
     },
@@ -2381,21 +2161,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-03T19:18:31Z"
-      },
       "calculated_metrics": {
         "DSLA": 79,
         "LaMI": 38,
-        "PMG-D": 41,
-        "PMG-X": 2.08,
+        "PMG_D": 41,
+        "PMG_X": 2.08,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-03T19:18:31Z",
         "PMG-X_cell_color": "hsl(80, 100%, 75%)"
       }
     },
@@ -2430,21 +2205,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-03T19:39:42Z"
-      },
       "calculated_metrics": {
         "DSLA": 79,
         "LaMI": 38,
-        "PMG-D": 41,
-        "PMG-X": 2.08,
+        "PMG_D": 41,
+        "PMG_X": 2.08,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-03T19:39:42Z",
         "PMG-X_cell_color": "hsl(80, 100%, 75%)"
       }
     },
@@ -2475,21 +2245,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 1,
-        "failures": 3,
-        "lastAttempt": "2025-06-03T19:46:43Z"
-      },
       "calculated_metrics": {
         "DSLA": 79,
         "LaMI": "W/H",
-        "PMG-D": 79,
-        "PMG-X": "W/H",
+        "PMG_D": 79,
+        "PMG_X": "W/H",
         "total_attempts": 4,
         "memory_attempts": 1,
         "help_attempts": 3,
         "attempts_summary": "4;1;3",
+        "last_attempt": "2025-06-03T19:46:43Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2524,21 +2289,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 4,
-        "failures": 1,
-        "lastAttempt": "2025-06-03T20:42:23Z"
-      },
       "calculated_metrics": {
         "DSLA": 79,
         "LaMI": 41,
-        "PMG-D": 38,
-        "PMG-X": 1.93,
+        "PMG_D": 38,
+        "PMG_X": 1.93,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
+        "last_attempt": "2025-06-03T20:42:23Z",
         "PMG-X_cell_color": "hsl(83, 100%, 75%)"
       }
     },
@@ -2569,21 +2329,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 3,
-        "failures": 1,
-        "lastAttempt": "2025-06-03T21:05:26Z"
-      },
       "calculated_metrics": {
         "DSLA": 79,
         "LaMI": 41,
-        "PMG-D": 38,
-        "PMG-X": 1.93,
+        "PMG_D": 38,
+        "PMG_X": 1.93,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
+        "last_attempt": "2025-06-03T21:05:26Z",
         "PMG-X_cell_color": "hsl(83, 100%, 75%)"
       }
     },
@@ -2606,21 +2361,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 0,
-        "failures": 2,
-        "lastAttempt": "2025-04-02T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 141,
         "LaMI": "W/H",
-        "PMG-D": 141,
-        "PMG-X": "W/H",
+        "PMG_D": 141,
+        "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
         "help_attempts": 2,
         "attempts_summary": "2;0;2",
+        "last_attempt": "2025-04-02T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2643,21 +2393,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 0,
-        "failures": 2,
-        "lastAttempt": "2025-04-02T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 141,
         "LaMI": "W/H",
-        "PMG-D": 141,
-        "PMG-X": "W/H",
+        "PMG_D": 141,
+        "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
         "help_attempts": 2,
         "attempts_summary": "2;0;2",
+        "last_attempt": "2025-04-02T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2688,21 +2433,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 1,
-        "failures": 3,
-        "lastAttempt": "2025-04-23T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 120,
         "LaMI": "W/H",
-        "PMG-D": 120,
-        "PMG-X": "W/H",
+        "PMG_D": 120,
+        "PMG_X": "W/H",
         "total_attempts": 4,
         "memory_attempts": 1,
         "help_attempts": 3,
         "attempts_summary": "4;1;3",
+        "last_attempt": "2025-04-23T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2729,21 +2469,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 3,
-        "successes": 0,
-        "failures": 3,
-        "lastAttempt": "2025-04-07T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 136,
         "LaMI": "W/H",
-        "PMG-D": 136,
-        "PMG-X": "W/H",
+        "PMG_D": 136,
+        "PMG_X": "W/H",
         "total_attempts": 3,
         "memory_attempts": 0,
         "help_attempts": 3,
         "attempts_summary": "3;0;3",
+        "last_attempt": "2025-04-07T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2766,21 +2501,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 0,
-        "failures": 2,
-        "lastAttempt": "2025-04-07T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 136,
         "LaMI": "W/H",
-        "PMG-D": 136,
-        "PMG-X": "W/H",
+        "PMG_D": 136,
+        "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
         "help_attempts": 2,
         "attempts_summary": "2;0;2",
+        "last_attempt": "2025-04-07T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2793,16 +2523,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -2819,16 +2544,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -2845,16 +2565,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -2871,16 +2586,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -2897,16 +2607,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -2929,21 +2634,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-04-09T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 134,
         "LaMI": "W/H",
-        "PMG-D": 134,
-        "PMG-X": "W/H",
+        "PMG_D": 134,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-04-09T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2962,21 +2662,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-04-09T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 134,
         "LaMI": "W/H",
-        "PMG-D": 134,
-        "PMG-X": "W/H",
+        "PMG_D": 134,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-04-09T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -2995,21 +2690,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-04-09T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 134,
         "LaMI": "W/H",
-        "PMG-D": 134,
-        "PMG-X": "W/H",
+        "PMG_D": 134,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-04-09T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -3028,21 +2718,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-04-10T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 133,
         "LaMI": "W/H",
-        "PMG-D": 133,
-        "PMG-X": "W/H",
+        "PMG_D": 133,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-04-10T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -3061,21 +2746,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-04-10T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 133,
         "LaMI": "W/H",
-        "PMG-D": 133,
-        "PMG-X": "W/H",
+        "PMG_D": 133,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-04-10T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -3094,21 +2774,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-04-10T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 133,
         "LaMI": "W/H",
-        "PMG-D": 133,
-        "PMG-X": "W/H",
+        "PMG_D": 133,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-04-10T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -3133,21 +2808,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-11T21:26:52Z"
-      },
       "calculated_metrics": {
         "DSLA": 71,
         "LaMI": 55,
-        "PMG-D": 16,
-        "PMG-X": 1.29,
+        "PMG_D": 16,
+        "PMG_X": 1.29,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-11T21:26:52Z",
         "PMG-X_cell_color": "hsl(96, 100%, 75%)"
       }
     },
@@ -3172,21 +2842,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-11T21:45:04Z"
-      },
       "calculated_metrics": {
         "DSLA": 71,
         "LaMI": 55,
-        "PMG-D": 16,
-        "PMG-X": 1.29,
+        "PMG_D": 16,
+        "PMG_X": 1.29,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-11T21:45:04Z",
         "PMG-X_cell_color": "hsl(96, 100%, 75%)"
       }
     },
@@ -3199,16 +2864,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3253,21 +2913,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-11T22:09:21Z"
-      },
       "calculated_metrics": {
         "DSLA": 71,
         "LaMI": 23,
-        "PMG-D": 48,
-        "PMG-X": 3.09,
+        "PMG_D": 48,
+        "PMG_X": 3.09,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-11T22:09:21Z",
         "PMG-X_cell_color": "hsl(60, 100%, 75%)"
       }
     },
@@ -3308,21 +2963,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 6,
-        "failures": 0,
-        "lastAttempt": "2025-06-12T13:18:59Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 24,
-        "PMG-D": 46,
-        "PMG-X": 2.92,
+        "PMG_D": 46,
+        "PMG_X": 2.92,
         "total_attempts": 6,
         "memory_attempts": 6,
         "help_attempts": 0,
         "attempts_summary": "6;6;0",
+        "last_attempt": "2025-06-12T13:18:59Z",
         "PMG-X_cell_color": "hsl(63, 100%, 75%)"
       }
     },
@@ -3363,21 +3013,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-12T19:39:44Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 24,
-        "PMG-D": 46,
-        "PMG-X": 2.92,
+        "PMG_D": 46,
+        "PMG_X": 2.92,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-12T19:39:44Z",
         "PMG-X_cell_color": "hsl(63, 100%, 75%)"
       }
     },
@@ -3418,21 +3063,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 6,
-        "failures": 0,
-        "lastAttempt": "2025-06-12T19:45:45Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 24,
-        "PMG-D": 46,
-        "PMG-X": 2.92,
+        "PMG_D": 46,
+        "PMG_X": 2.92,
         "total_attempts": 6,
         "memory_attempts": 6,
         "help_attempts": 0,
         "attempts_summary": "6;6;0",
+        "last_attempt": "2025-06-12T19:45:45Z",
         "PMG-X_cell_color": "hsl(63, 100%, 75%)"
       }
     },
@@ -3473,21 +3113,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-12T19:52:47Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 24,
-        "PMG-D": 46,
-        "PMG-X": 2.92,
+        "PMG_D": 46,
+        "PMG_X": 2.92,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-12T19:52:47Z",
         "PMG-X_cell_color": "hsl(63, 100%, 75%)"
       }
     },
@@ -3528,21 +3163,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-12T20:19:08Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 24,
-        "PMG-D": 46,
-        "PMG-X": 2.92,
+        "PMG_D": 46,
+        "PMG_X": 2.92,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-12T20:19:08Z",
         "PMG-X_cell_color": "hsl(63, 100%, 75%)"
       }
     },
@@ -3583,21 +3213,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-06-12T20:24:04Z"
-      },
       "calculated_metrics": {
         "DSLA": 70,
         "LaMI": 24,
-        "PMG-D": 46,
-        "PMG-X": 2.92,
+        "PMG_D": 46,
+        "PMG_X": 2.92,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-06-12T20:24:04Z",
         "PMG-X_cell_color": "hsl(63, 100%, 75%)"
       }
     },
@@ -3610,16 +3235,11 @@
       "step_by_step": "$\\textbf{Resolução:}$ A equação é linear homogênea com coeficientes constantes. A equação característica é\n$$\nr^6 + 2r^4 + r^2 = r^2(r^2 + 1)^2 = 0.\n$$\n\nAs raízes são $r_1 = 0$, $r_2 = i$ e $r_3 = -i$, todas de multiplicidade 2.\n\nPara a raiz $r_1 = 0$, uma parte da solução geral é\n$$\ny_1(x) = c_1 e^{0x} + c_2 x e^{0x} = c_1 + c_2 x\n$$\n\ne para as raízes complexas $r_2 = i$ e $r_3 = -i$, uma segunda parte da solução geral é\n$$\ny_2(x) = c_3 e^{0x} \\cos x + c_4 e^{0x} \\sin x + x(c_5 e^{0x} \\cos x + c_6 e^{0x} \\sin x)\n$$\n$$\n= c_3 \\cos x + c_4 \\sin x + x(c_5 \\cos x + c_6 \\sin x).\n$$\n\nA solução geral da EDO é dada por\n$$\ny(x) = y_1(x) + y_2(x)\n$$\n$$\n= c_1 + c_2 x + (c_3 + c_5 x) \\cos x + (c_4 + c_6 x) \\sin x.\n$$",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3636,16 +3256,11 @@
       "step_by_step": "Se $P(0) \\neq 0$: supõe-se $y_p = A_0 + A_1 x + \\dots + A_m x^m$\n\n$\\textbf{Resposta:}$ Uma solução particular da EDO é\n$$\ny_p(x) = \\frac{3}{4}x - \\frac{1}{16}.\n$$",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3662,16 +3277,11 @@
       "step_by_step": "Se $f$ é uma função exponencial da forma\n$$\nf(x) = ae^{\\beta x},\n$$\nadmitimos que uma solução particular é da forma\n$$\ny_p(x) = Ae^{\\beta x}.\n$$\n\n$\\textbf{Resposta:}$ Uma solução particular da EDO é\n$$\ny_p(x) = \\frac{2}{5} e^{3x}.\n$$",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3688,16 +3298,11 @@
       "step_by_step": "$\\textbf{Resposta:}$ Solução: $y_h = C_1 e^{-x} + C_2 e^{-4x}$\n\nA solução particular $y_p = Ae^{-4x}$ não deve funcionar, pois $-4$ é raiz da equação característica.\n\nSupõe, então, $y_p = A x e^{-4x}$, que derivando e substituindo na EDO, obtém-se $A = -\\frac{5}{3}$.\n\n$$\ny = C_1 e^{-x} + C_2 e^{-4x} - \\frac{5}{3} x e^{-4x}\n$$",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3714,16 +3319,11 @@
       "step_by_step": "",
       "answer": "$$\ny_p(x) = -\\frac{5}{13} \\cos x + \\frac{1}{13} \\sin x.\n$$",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3740,16 +3340,11 @@
       "step_by_step": "Como $P(2) \\neq 0$, $y_p = (A_0 + A_1 x) e^{2x}$. Deriva e substitui na EDO:\n\n$$\nA_0 = \\frac{7}{24}, \\quad A_1 = -\\frac{1}{12}\n$$\n\n$$\ny_p = \\left( \\frac{7}{24} - \\frac{1}{12}x \\right) e^{2x}\n$$",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3766,16 +3361,11 @@
       "step_by_step": "",
       "answer": "A solução geral $y(x) = y_h(x) + y_p(x)$ é\n\n$$\ny(x) = c_1 e^{-3x} + c_2 e^{2x} + \\left( -\\frac{5}{13}x + \\frac{18}{169} \\right) \\cos(x) + \\left( \\frac{1}{13}x + \\frac{77}{169} \\right) \\sin(x).\n$$",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -3812,21 +3402,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 3,
-        "failures": 1,
-        "lastAttempt": "2025-06-30T18:24:20Z"
-      },
       "calculated_metrics": {
         "DSLA": 52,
         "LaMI": 29,
-        "PMG-D": 23,
-        "PMG-X": 1.79,
+        "PMG_D": 23,
+        "PMG_X": 1.79,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
+        "last_attempt": "2025-06-30T18:24:20Z",
         "PMG-X_cell_color": "hsl(86, 100%, 75%)"
       }
     },
@@ -3845,21 +3430,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 1,
-        "failures": 0,
-        "lastAttempt": "2025-05-08T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 105,
         "LaMI": "SA",
-        "PMG-D": 105,
-        "PMG-X": "SA",
+        "PMG_D": 105,
+        "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
         "help_attempts": 0,
         "attempts_summary": "1;1;0",
+        "last_attempt": "2025-05-08T06:00:00Z",
         "PMG-X_cell_color": "#E6E0F8"
       }
     },
@@ -3878,21 +3458,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 1,
-        "failures": 0,
-        "lastAttempt": "2025-05-08T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 105,
         "LaMI": "SA",
-        "PMG-D": 105,
-        "PMG-X": "SA",
+        "PMG_D": 105,
+        "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
         "help_attempts": 0,
         "attempts_summary": "1;1;0",
+        "last_attempt": "2025-05-08T06:00:00Z",
         "PMG-X_cell_color": "#E6E0F8"
       }
     },
@@ -3925,21 +3500,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 4,
-        "failures": 0,
-        "lastAttempt": "2025-06-30T18:27:26Z"
-      },
       "calculated_metrics": {
         "DSLA": 52,
         "LaMI": 29,
-        "PMG-D": 23,
-        "PMG-X": 1.79,
+        "PMG_D": 23,
+        "PMG_X": 1.79,
         "total_attempts": 4,
         "memory_attempts": 4,
         "help_attempts": 0,
         "attempts_summary": "4;4;0",
+        "last_attempt": "2025-06-30T18:27:26Z",
         "PMG-X_cell_color": "hsl(86, 100%, 75%)"
       }
     },
@@ -3958,21 +3528,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 1,
-        "failures": 0,
-        "lastAttempt": "2025-05-12T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 101,
         "LaMI": "SA",
-        "PMG-D": 101,
-        "PMG-X": "SA",
+        "PMG_D": 101,
+        "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
         "help_attempts": 0,
         "attempts_summary": "1;1;0",
+        "last_attempt": "2025-05-12T06:00:00Z",
         "PMG-X_cell_color": "#E6E0F8"
       }
     },
@@ -3991,21 +3556,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 1,
-        "failures": 0,
-        "lastAttempt": "2025-05-12T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 101,
         "LaMI": "SA",
-        "PMG-D": 101,
-        "PMG-X": "SA",
+        "PMG_D": 101,
+        "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
         "help_attempts": 0,
         "attempts_summary": "1;1;0",
+        "last_attempt": "2025-05-12T06:00:00Z",
         "PMG-X_cell_color": "#E6E0F8"
       }
     },
@@ -4028,21 +3588,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 0,
-        "failures": 2,
-        "lastAttempt": "2025-05-15T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 98,
         "LaMI": "W/H",
-        "PMG-D": 98,
-        "PMG-X": "W/H",
+        "PMG_D": 98,
+        "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
         "help_attempts": 2,
         "attempts_summary": "2;0;2",
+        "last_attempt": "2025-05-15T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4084,21 +3639,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 4,
-        "failures": 2,
-        "lastAttempt": "2025-06-28T19:25:12Z"
-      },
       "calculated_metrics": {
         "DSLA": 54,
         "LaMI": 11,
-        "PMG-D": 43,
-        "PMG-X": 4.91,
+        "PMG_D": 43,
+        "PMG_X": 4.91,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
+        "last_attempt": "2025-06-28T19:25:12Z",
         "PMG-X_cell_color": "hsl(22, 100%, 75%)"
       }
     },
@@ -4111,16 +3661,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4137,16 +3682,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4163,16 +3703,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4189,16 +3724,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4215,16 +3745,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4241,16 +3766,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4267,16 +3787,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4293,16 +3808,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4319,16 +3829,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4351,21 +3856,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-05-12T06:00:00Z"
-      },
       "calculated_metrics": {
         "DSLA": 101,
         "LaMI": "W/H",
-        "PMG-D": 101,
-        "PMG-X": "W/H",
+        "PMG_D": 101,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-05-12T06:00:00Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4391,21 +3891,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-21T16:53:50Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 16,
-        "PMG-D": 45,
-        "PMG-X": 3.81,
+        "PMG_D": 45,
+        "PMG_X": 3.81,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-21T16:53:50Z",
         "PMG-X_cell_color": "hsl(45, 100%, 75%)"
       }
     },
@@ -4430,21 +3925,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-21T18:03:55Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 15,
-        "PMG-D": 46,
-        "PMG-X": 4.07,
+        "PMG_D": 46,
+        "PMG_X": 4.07,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-21T18:03:55Z",
         "PMG-X_cell_color": "hsl(40, 100%, 75%)"
       }
     },
@@ -4469,21 +3959,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-06-21T19:05:55Z"
-      },
       "calculated_metrics": {
         "DSLA": 61,
         "LaMI": 15,
-        "PMG-D": 46,
-        "PMG-X": 4.07,
+        "PMG_D": 46,
+        "PMG_X": 4.07,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-06-21T19:05:55Z",
         "PMG-X_cell_color": "hsl(40, 100%, 75%)"
       }
     },
@@ -4505,21 +3990,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-07-02T19:25:43Z"
-      },
       "calculated_metrics": {
         "DSLA": 50,
         "LaMI": "W/H",
-        "PMG-D": 50,
-        "PMG-X": "W/H",
+        "PMG_D": 50,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-07-02T19:25:43Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4540,21 +4020,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-07-03T16:21:37Z"
-      },
       "calculated_metrics": {
         "DSLA": 49,
         "LaMI": "W/H",
-        "PMG-D": 49,
-        "PMG-X": "W/H",
+        "PMG_D": 49,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-07-03T16:21:37Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4575,21 +4050,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-07-03T17:49:44Z"
-      },
       "calculated_metrics": {
         "DSLA": 49,
         "LaMI": "W/H",
-        "PMG-D": 49,
-        "PMG-X": "W/H",
+        "PMG_D": 49,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-07-03T17:49:44Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4627,21 +4097,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 5,
-        "successes": 5,
-        "failures": 0,
-        "lastAttempt": "2025-06-30T17:05:55Z"
-      },
       "calculated_metrics": {
         "DSLA": 52,
         "LaMI": 13,
-        "PMG-D": 39,
-        "PMG-X": 4,
+        "PMG_D": 39,
+        "PMG_X": 4,
         "total_attempts": 5,
         "memory_attempts": 5,
         "help_attempts": 0,
         "attempts_summary": "5;5;0",
+        "last_attempt": "2025-06-30T17:05:55Z",
         "PMG-X_cell_color": "hsl(41, 100%, 75%)"
       }
     },
@@ -4684,21 +4149,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 6,
-        "successes": 5,
-        "failures": 1,
-        "lastAttempt": "2025-08-13T18:07:33Z"
-      },
       "calculated_metrics": {
         "DSLA": 8,
         "LaMI": 45,
-        "PMG-D": -37,
-        "PMG-X": 0.18,
+        "PMG_D": -37,
+        "PMG_X": 0.18,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
+        "last_attempt": "2025-08-13T18:07:33Z",
         "PMG-X_cell_color": "hsl(119, 100%, 75%)"
       }
     },
@@ -4711,16 +4171,11 @@
       "step_by_step": "$$\\vec r(r,\\theta)=\\begin{cases}\nx = r\\cos\\theta\\\\\ny = r\\sin\\theta\\\\\nz = r\n\\end{cases}$$\n$$\\vec r_r = (\\cos\\theta,\\ \\sin\\theta,\\ 1),\\quad \\vec r_\\theta = (-r\\sin\\theta,\\ r\\cos\\theta,\\ 0)$$\n$$\\vec r_r\\times \\vec r_\\theta = (-r\\cos\\theta,\\,-r\\sin\\theta,\\,r)$$\n$$|| \\vec r_r\\times \\vec r_\\theta || = \\sqrt{2}\\,r$$\n$$\\iint_{S} x\\,y\\,z\\,dS = \\iint_{[0,1]\\times[0,2\\pi]} (r\\cos\\theta)(r\\sin\\theta)(r)(\\sqrt2\\,r)\\,dr\\,d\\theta$$\n$$= \\sqrt2\\int_{0}^{2\\pi}\\int_{0}^{1} r^4\\cos\\theta\\sin\\theta\\,dr\\,d\\theta$$\n$$= \\sqrt2\\biggl(\\int_{0}^{1}r^4\\,dr\\biggr)\\biggl(\\int_{0}^{2\\pi}\\cos\\theta\\sin\\theta\\,d\\theta\\biggr)$$\n$$= \\frac{\\sqrt2}{5}\\int_{0}^{2\\pi}\\cos\\theta\\sin\\theta\\,d\\theta = 0$$",
       "answer": "$$0$$",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4737,16 +4192,11 @@
       "step_by_step": "$$\\vec r(\\theta,\\phi): x = \\sin\\phi\\cos\\theta \\quad y = \\sin\\phi\\sin\\theta \\quad z = \\cos\\phi $$\n$$\\theta\\in[0,2\\pi] \\quad \\phi\\in[0,\\pi]$$\n$$\\vec r_\\theta = \\frac{\\partial\\vec r}{\\partial\\theta} = (-\\sin\\phi\\sin\\theta,\\; \\sin\\phi\\cos\\theta,\\;0)$$\n$$\\vec r_\\phi = \\frac{\\partial\\vec r}{\\partial\\phi} = (\\cos\\phi\\cos\\theta,\\;\\cos\\phi\\sin\\theta,\\;-\\sin\\phi)$$\n$$\n\\vec r_\\theta \\times \\vec r_\\phi\n= (\\sin^2\\phi\\cos\\theta,\\;\\sin^2\\phi\\sin\\theta,\\;\\sin\\phi\\cos\\phi).\n$$\n$$F(\\vec r(\\theta,\\phi)) = (0,0,\\cos\\phi)$$\n$$\nF(\\vec r(\\theta,\\phi)) \\cdot \\bigl(\\vec r_\\theta\\times\\vec r_\\phi\\bigr)\n= \\cos^2\\phi\\,\\sin\\phi.\n$$\n$$\n\\iint_S \\mathbf F \\cdot d\\mathbf S\n= \\int_0^{2\\pi}\\!\\!\\int_0^\\pi \\cos^2\\phi\\,\\sin\\phi\\,d\\phi\\,d\\theta\n= 2\\pi \\int_0^\\pi \\cos^2\\phi\\,\\sin\\phi\\,d\\phi\n= \\frac{4\\pi}{3}\n$$",
       "answer": "$$\\frac{4\\pi}{3}$$",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4776,21 +4226,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 0,
-        "failures": 2,
-        "lastAttempt": "2025-06-25T16:11:29Z"
-      },
       "calculated_metrics": {
         "DSLA": 57,
         "LaMI": "W/H",
-        "PMG-D": 57,
-        "PMG-X": "W/H",
+        "PMG_D": 57,
+        "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
         "help_attempts": 2,
         "attempts_summary": "2;0;2",
+        "last_attempt": "2025-06-25T16:11:29Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4806,16 +4251,11 @@
         "ps19",
         "ps28"
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4853,21 +4293,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 4,
-        "successes": 3,
-        "failures": 1,
-        "lastAttempt": "2025-08-13T15:08:51Z"
-      },
       "calculated_metrics": {
         "DSLA": 8,
         "LaMI": 36,
-        "PMG-D": -28,
-        "PMG-X": 0.22,
+        "PMG_D": -28,
+        "PMG_X": 0.22,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
+        "last_attempt": "2025-08-13T15:08:51Z",
         "PMG-X_cell_color": "hsl(118, 100%, 75%)"
       }
     },
@@ -4882,16 +4317,11 @@
       "tags": [
         "ps33"
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4916,21 +4346,16 @@
           "code": 0
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 1,
-        "successes": 0,
-        "failures": 1,
-        "lastAttempt": "2025-07-03T22:36:39Z"
-      },
       "calculated_metrics": {
         "DSLA": 49,
         "LaMI": "W/H",
-        "PMG-D": 49,
-        "PMG-X": "W/H",
+        "PMG_D": 49,
+        "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
         "help_attempts": 1,
         "attempts_summary": "1;0;1",
+        "last_attempt": "2025-07-03T22:36:39Z",
         "PMG-X_cell_color": "#FFDDC1"
       }
     },
@@ -4943,16 +4368,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4969,16 +4389,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -4995,16 +4410,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5021,16 +4431,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5047,16 +4452,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5073,16 +4473,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5099,16 +4494,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5135,21 +4525,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-08-13T15:49:12Z"
-      },
       "calculated_metrics": {
         "DSLA": 8,
         "LaMI": 11,
-        "PMG-D": -3,
-        "PMG-X": 0.73,
+        "PMG_D": -3,
+        "PMG_X": 0.73,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-08-13T15:49:12Z",
         "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
@@ -5172,21 +4557,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-08-13T22:20:26Z"
-      },
       "calculated_metrics": {
         "DSLA": 8,
         "LaMI": 11,
-        "PMG-D": -3,
-        "PMG-X": 0.73,
+        "PMG_D": -3,
+        "PMG_X": 0.73,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-08-13T22:20:26Z",
         "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
@@ -5209,21 +4589,16 @@
           "code": 1
         }
       ],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 2,
-        "successes": 1,
-        "failures": 1,
-        "lastAttempt": "2025-08-15T13:03:05Z"
-      },
       "calculated_metrics": {
         "DSLA": 6,
         "LaMI": 1,
-        "PMG-D": 5,
-        "PMG-X": 6,
+        "PMG_D": 5,
+        "PMG_X": 6,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
+        "last_attempt": "2025-08-15T13:03:05Z",
         "PMG-X_cell_color": "hsl(0, 100%, 75%)"
       }
     },
@@ -5236,16 +4611,11 @@
       "step_by_step": "$$v = \\frac{1 \\, \\text{N} \\cdot 1 \\, \\text{m}}{1 \\, \\text{m}^2 \\cdot 0,001 \\, \\text{N s/m}^2}$$",
       "answer": "a) $\\mu = 0,00065 \\, N·s/m²$\nb) $\\nu = 7,386 \\cdot 10⁻⁷ m²/s$\nc) $\\tau_\\text{superior} = 0,65 N/m²$\nd) $\\tau_\\text{inferior} = 0,65 Pa$\ne) Na placa superior: para a esquerda (sentido contrário ao movimento). Na placa inferior: para a direita (sentido do movimento do fluido).",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5262,16 +4632,11 @@
       "step_by_step": "",
       "answer": "",
       "tags": [],
-      "spacedRepetitionMetrics": {
-        "totalAttempts": 0,
-        "successes": 0,
-        "failures": 0
-      },
       "calculated_metrics": {
         "DSLA": 0,
         "LaMI": 0,
-        "PMG-D": 0,
-        "PMG-X": "NA",
+        "PMG_D": 0,
+        "PMG_X": "NA",
         "total_attempts": 0,
         "memory_attempts": 0,
         "help_attempts": 0,
@@ -5280,6 +4645,6 @@
       }
     }
   ],
-  "lastUpdated": "2025-08-21T17:10:15.849Z",
+  "lastUpdated": "2025-08-21T17:17:45.525Z",
   "totalQuestions": 127
 }
