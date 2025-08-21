@@ -22,8 +22,13 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	context.subscriptions.push(
-		vscode.workspace.onDidChangeTextDocument(e => {
-			parseQuestionsToJson();
+		vscode.workspace.onDidSaveTextDocument(async e => {
+			await parseQuestionsToJson();
+			// console.log("Document saved:", e);
+			if (vscode.window.activeTextEditor) {
+				// console.log("Active text editor found, generating message for webview.");
+				generateMessageForWebview(vscode.window.activeTextEditor);
+			}
 		})
 	);
 

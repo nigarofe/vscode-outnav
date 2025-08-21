@@ -4,7 +4,7 @@ const questionStepByStepElement = document.getElementById('questionStepByStep');
 const questionAnswerElement = document.getElementById('questionAnswer');
 
 window.addEventListener("message", (event) => {
-    // console.log("Received message in questionsWebview:", event.data);
+    console.log("Received message in questionsWebview:", event.data);
 
     if (!event.data.payload.currentQuestionNumber) {
         questionNumberElement.textContent = '?';
