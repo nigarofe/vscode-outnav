@@ -51,24 +51,40 @@ export async function parseQuestionsToJson(): Promise<string> {
 
     const raw = await fs.readFile(mdPath, 'utf8');
 
-    // Find each question block: header '# Question <n>' followed by its content
-    const questionRe = /^#\s+Question\s+(\d+)\s*\n([\s\S]*?)(?=(?:\n#\s+Question\s+\d+)|$)/gm;
+    // Robustly split the markdown file into question blocks by header positions
+    const headerRe = /^#\s+Question\s+(\d+)/gm;
+    const headers: Array<{ num: number; start: number; headerEnd: number }> = [];
+    let hm: RegExpExecArray | null;
+    while ((hm = headerRe.exec(raw)) !== null) {
+        headers.push({ num: parseInt(hm[1], 10), start: hm.index, headerEnd: headerRe.lastIndex });
+    }
+
     const questions: QuestionSchema[] = [];
-    let m: RegExpExecArray | null;
 
-    while ((m = questionRe.exec(raw)) !== null) {
-        const num = parseInt(m[1], 10);
-        const body = m[2].trim();
+    for (let i = 0; i < headers.length; i++) {
+        const h = headers[i];
+        const blockStart = h.headerEnd;
+        const blockEnd = i + 1 < headers.length ? headers[i + 1].start : raw.length;
+        const body = raw.slice(blockStart, blockEnd).trim();
 
-        // Split sections by '## <Section>' headings
-        const sectionRe = /##\s+([^\n]+)\n([\s\S]*?)(?=(?:\n##\s+[^\n]+)|$)/gm;
+        // Extract sections by scanning lines for '## ' headings
         const sections: Record<string, string> = {};
-        let s: RegExpExecArray | null;
-        while ((s = sectionRe.exec(body)) !== null) {
-            const key = s[1].trim();
-            const val = s[2].trim();
-            sections[key] = val;
+        const lines = body.split(/\r?\n/);
+        let currentKey: string | null = null;
+        let buf: string[] = [];
+        for (const line of lines) {
+            const headingMatch = line.match(/^##\s+(.+)$/);
+            if (headingMatch) {
+                if (currentKey) {
+                    sections[currentKey] = buf.join('\n').trim();
+                }
+                currentKey = headingMatch[1].trim();
+                buf = [];
+            } else {
+                if (currentKey) buf.push(line);
+            }
         }
+        if (currentKey) sections[currentKey] = buf.join('\n').trim();
 
         const proposition = sections['Proposition'] || '';
         const stepByStep = sections['Step-by-step'] || sections['Step-by-step '] || '';
@@ -80,7 +96,7 @@ export async function parseQuestionsToJson(): Promise<string> {
         const attempts = parseAttempts(sections['Attempts'] || '');
 
         const questionObj: QuestionSchema = {
-            number: num,
+            number: h.num,
             discipline: metadata.discipline || '',
             source: metadata.source || '',
             description: metadata.description || '',
@@ -189,35 +205,13 @@ function calculateSpacedRepetitionMetrics(attempts: AttemptEntry[]): SpacedRepet
     const failures = attempts.filter(a => a.result === 0).length;
     const successRate = totalAttempts > 0 ? (successes / totalAttempts) * 100 : 0;
     const lastAttempt = attempts.length > 0 ? attempts[attempts.length - 1].timestamp : undefined;
-    const nextReviewDate = calculateNextReviewDate(attempts);
     return {
         totalAttempts,
         successes,
         failures,
         successRate: Math.round(successRate * 100) / 100,
         lastAttempt,
-        nextReviewDate
     };
-}
-
-function calculateNextReviewDate(attempts: AttemptEntry[]): string | undefined {
-    if (attempts.length === 0) return undefined;
-    const lastAttempt = attempts[attempts.length - 1];
-    const lastAttemptDate = new Date(lastAttempt.timestamp);
-    let intervalDays = 1;
-    if (lastAttempt.result === 1) {
-        let consecutiveSuccesses = 0;
-        for (let i = attempts.length - 1; i >= 0 && attempts[i].result === 1; i--) {
-            consecutiveSuccesses++;
-        }
-        const intervals = [1, 2, 4, 7, 12, 20, 33, 54, 88, 143];
-        intervalDays = intervals[Math.min(consecutiveSuccesses - 1, intervals.length - 1)] || 143;
-    } else {
-        intervalDays = 1;
-    }
-    const next = new Date(lastAttemptDate);
-    next.setDate(next.getDate() + intervalDays);
-    return next.toISOString();
 }
 
 function calculateDaysSinceLastAttempt(attempts: AttemptEntry[]): number {
