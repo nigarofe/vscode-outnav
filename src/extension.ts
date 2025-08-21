@@ -5,6 +5,7 @@ import { generateMessageForOutlines } from "./webviews/outlinesMessageProvider";
 import { generateMessageForPremises } from "./webviews/premisesMessageProvider";
 import { generateMessageForQuestions } from "./webviews/questionsMessageProvider";
 import { possibleWebviews } from './webviews/sharedHtmlProvider';
+import {parseQuestionsToJson} from './parsers/questionsToJson';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
@@ -17,6 +18,12 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.window.onDidChangeTextEditorSelection(e => {
 			generateMessageForWebview(e.textEditor);
+		})
+	);
+
+	context.subscriptions.push(
+		vscode.workspace.onDidChangeTextDocument(e => {
+			parseQuestionsToJson();
 		})
 	);
 
