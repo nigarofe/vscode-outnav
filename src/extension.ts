@@ -30,13 +30,18 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function generateMessageForWebview(editor: vscode.TextEditor, activeFileName: string) {
+	let mapping = possibleWebviews[activeFileName];
+	if (!mapping || !mapping.panel) return;
+
+	let payload: {} = {};
 	if (activeFileName === 'Outlines.txt') {
-		generateMessageForOutlines(editor, possibleWebviews[activeFileName]);
+		payload = generateMessageForOutlines(editor);
 	} else if (activeFileName === 'Premises.md') {
-		generateMessageForPremises(editor, possibleWebviews[activeFileName]);
+		payload = generateMessageForPremises(editor);
 	} else if (activeFileName === 'Questions.md') {
-		generateMessageForQuestions(editor, possibleWebviews[activeFileName]);
+		payload = generateMessageForQuestions(editor);
 	}
+	mapping.panel.webview.postMessage({ type: 'onDidChangeTextEditorSelection', payload: payload });
 }
 
 function getActiveFileName(editor: vscode.TextEditor) {

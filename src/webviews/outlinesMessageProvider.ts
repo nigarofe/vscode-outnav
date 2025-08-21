@@ -1,27 +1,22 @@
 import * as vscode from 'vscode';
-import { possibleWebviews } from './sharedHtmlProvider';
 
-export function generateMessageForOutlines(editor: vscode.TextEditor, mapping: typeof possibleWebviews[string]) {
-    if (mapping && mapping.panel) {
-        const currentLineNumber = editor.selection.active.line + 1;
-        const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
-        const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
+export function generateMessageForOutlines(editor: vscode.TextEditor) {
+    const currentLineNumber = editor.selection.active.line + 1;
+    const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
+    const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
 
-        const payload = {
-            currentLineNumber,
-            selectedRange: editor.selection,
-            currentLineContent,
-            currentIndentationLevel,
-            parents: getParents(editor, currentIndentationLevel),
-            simblings: getSimblings(editor, currentIndentationLevel),
-            selectedLines: getSelectedLines(editor),
-            indentationOrderingExercise: getIndentationOrderingExercise(editor)
-        };
+    const payload = {
+        currentLineNumber,
+        selectedRange: editor.selection,
+        currentLineContent,
+        currentIndentationLevel,
+        parents: getParents(editor, currentIndentationLevel),
+        simblings: getSimblings(editor, currentIndentationLevel),
+        selectedLines: getSelectedLines(editor),
+        indentationOrderingExercise: getIndentationOrderingExercise(editor)
+    };
 
-        // console.log(`Cursor update: ${JSON.stringify(payload)}`);
-
-        mapping.panel.webview.postMessage({ type: 'cursorUpdate', payload });
-    }
+    return payload;
 }
 
 function getIndentationOrderingExercise(editor: vscode.TextEditor) {

@@ -4,7 +4,7 @@ const currentItemEl = document.getElementById("currentItem");
 const indentationOrderingExerciseEl = document.getElementById("indentationOrderingExercise");
 
 window.addEventListener("message", (event) => {
-    if (event.data.type === "cursorUpdate") {
+    if (event.data.type === "onDidChangeTextEditorSelection") {
         outlinesWebviewJSONel.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
         outlinesWebviewJSONel.textContent = JSON.stringify(event.data.payload, null, 2);
         parentsBreadcrumbEl.textContent = event.data.payload.parents.join(" > ") + " > ";
