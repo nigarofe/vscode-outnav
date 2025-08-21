@@ -16,36 +16,45 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		vscode.window.onDidChangeTextEditorSelection(e => {
-			generateMessageForWebview(e.textEditor, getActiveFileName(e.textEditor));
+			generateMessageForWebview(e.textEditor);
 		})
 	);
 
 	// Initialization
-	if (vscode.window.activeTextEditor) {
-		openCorrespondingWebview(context, getActiveFileName(vscode.window.activeTextEditor));
-		generateMessageForWebview(vscode.window.activeTextEditor, getActiveFileName(vscode.window.activeTextEditor));
+	const e = vscode.window.activeTextEditor;
+	if (e) {
+		openCorrespondingWebview(context, getActiveFileName(e));
+		generateMessageForWebview(e);
 	}
 
 	vscode.window.showInformationMessage('Last line of activate() reached');
 }
 
-function generateMessageForWebview(editor: vscode.TextEditor, activeFileName: string) {
+function generateMessageForWebview(e: vscode.TextEditor) {
+	const activeFileName = getActiveFileName(e);
 	let mapping = possibleWebviews[activeFileName];
 	if (!mapping || !mapping.panel) return;
 
 	let payload: {} = {};
-	if (activeFileName === 'Outlines.txt') {
-		payload = generateMessageForOutlines(editor);
-	} else if (activeFileName === 'Premises.md') {
-		payload = generateMessageForPremises(editor);
-	} else if (activeFileName === 'Questions.md') {
-		payload = generateMessageForQuestions(editor);
+	switch (activeFileName) {
+		case 'Outlines.txt':
+			payload = generateMessageForOutlines(e);
+			break;
+		case 'Premises.md':
+			payload = generateMessageForPremises(e);
+			break;
+		case 'Questions.md':
+			payload = generateMessageForQuestions(e);
+			break;
+		default:
+			// leave payload as empty object
+			break;
 	}
 	mapping.panel.webview.postMessage({ type: 'onDidChangeTextEditorSelection', payload: payload });
 }
 
-function getActiveFileName(editor: vscode.TextEditor) {
-	const fullPath = editor.document.uri.fsPath;
+function getActiveFileName(e: vscode.TextEditor) {
+	const fullPath = e.document.uri.fsPath;
 	const fileName = path.basename(fullPath);
 	// console.log(`Active file (name): ${fileName}`);
 	return `${fileName}`;
