@@ -4,6 +4,7 @@ import { openCorrespondingWebview } from "./webviews/sharedHtmlProvider";
 import { generateMessageForOutlines } from "./webviews/outlinesMessageProvider";
 import { generateMessageForPremises } from "./webviews/premisesMessageProvider";
 import { generateMessageForQuestions } from "./webviews/questionsMessageProvider";
+import { possibleWebviews } from './webviews/sharedHtmlProvider';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
@@ -30,11 +31,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 function generateMessageForWebview(editor: vscode.TextEditor, activeFileName: string) {
 	if (activeFileName === 'Outlines.txt') {
-		generateMessageForOutlines(editor);
+		generateMessageForOutlines(editor, possibleWebviews[activeFileName]);
 	} else if (activeFileName === 'Premises.md') {
-		generateMessageForPremises(editor);
+		generateMessageForPremises(editor, possibleWebviews[activeFileName]);
 	} else if (activeFileName === 'Questions.md') {
-		generateMessageForQuestions(editor);
+		generateMessageForQuestions(editor, possibleWebviews[activeFileName]);
 	}
 }
 

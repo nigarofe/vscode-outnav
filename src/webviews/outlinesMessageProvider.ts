@@ -1,10 +1,7 @@
 import * as vscode from 'vscode';
-import * as path from "path";
 import { possibleWebviews } from './sharedHtmlProvider';
 
-export function generateMessageForOutlines(editor: vscode.TextEditor) {
-    const fileName = path.basename(editor.document.uri.fsPath);
-    const mapping = possibleWebviews[fileName];
+export function generateMessageForOutlines(editor: vscode.TextEditor, mapping: typeof possibleWebviews[string]) {
     if (mapping && mapping.panel) {
         const currentLineNumber = editor.selection.active.line + 1;
         const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
