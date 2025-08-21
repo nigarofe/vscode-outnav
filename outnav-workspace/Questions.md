@@ -172,7 +172,6 @@ $$y(0) = 5$$
 
 ## Step-by-step
 
-
 ## Answer
 
 $$y = 2 + 3e^{4x}$$
