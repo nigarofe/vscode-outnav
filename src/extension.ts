@@ -1,20 +1,18 @@
 import * as vscode from "vscode";
 import * as path from "path";
-import { openCorrespondingWebview, possibleWebviews } from "./webviews/sharedHtmlProvider";
+import { openCorrespondingWebview } from "./webviews/sharedHtmlProvider";
 import { generateMessageForOutlines } from "./webviews/outlinesMessageProvider";
 import { generateMessageForPremises } from "./webviews/premisesMessageProvider";
 import { generateMessageForQuestions } from "./webviews/questionsMessageProvider";
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
-		vscode.window.onDidChangeActiveTextEditor(editor => {
-			if (editor) {
-				openCorrespondingWebview(context, getActiveFileName(editor));
-			}
+		vscode.window.onDidChangeActiveTextEditor(e => {
+			if (!e) return;
+			openCorrespondingWebview(context, getActiveFileName(e));
 		}),
 	);
 
-	// Send cursor line updates to the matching webview when the selection changes
 	context.subscriptions.push(
 		vscode.window.onDidChangeTextEditorSelection(e => {
 			generateMessageForWebview(e.textEditor, getActiveFileName(e.textEditor));
