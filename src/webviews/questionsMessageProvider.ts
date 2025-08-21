@@ -1,10 +1,12 @@
 import * as vscode from 'vscode';
+import { promises as fs } from 'fs';
 
 export function generateMessageForQuestions(editor: vscode.TextEditor) {
     let payload = {
         currentQuestion: getCurrentQuestion(editor)
     }
 
+    loadQuestionsFromJson();
 
     return payload;
 }
@@ -25,4 +27,16 @@ function getCurrentQuestion(editor: vscode.TextEditor): any {
     }
 
     return null;
+}
+
+async function loadQuestionsFromJson() {
+    const questionsJsonPath = 'C:\\Users\\Nicholas\\vscode-outnav\\src\\json_exports\\questions.json';
+    try {
+        const data = await fs.readFile(questionsJsonPath, { encoding: 'utf8' });
+        const questions = JSON.parse(data);
+        return questions;
+    } catch (err) {
+        console.error('Failed to load questions.json', err);
+        return null;
+    }
 }
