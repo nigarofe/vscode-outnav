@@ -21,5 +21,7 @@ window.addEventListener("message", (event) => {
     questionStepByStepElement.textContent = currentQuestion.stepByStep;
     questionAnswerElement.textContent = currentQuestion.answer;
     questionNumberElement.textContent = currentQuestionNumber;
+
+    renderKatex();
 });
 

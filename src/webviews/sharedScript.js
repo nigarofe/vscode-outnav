@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+// expose renderKatex on the global window so other module scripts can call it
+window.renderKatex = function renderKatex() {
     renderMathInElement(document.body, {
         // customised options
         // • auto-render specific keys, e.g.:
@@ -11,4 +12,4 @@ document.addEventListener("DOMContentLoaded", function () {
         // • rendering keys, e.g.:
         throwOnError: false
     });
-});
+};
