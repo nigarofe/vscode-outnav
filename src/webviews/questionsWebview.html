@@ -1,220 +1,71 @@
 <body>
-  <div class="container">
-    <div class="app-card bg-white p-3 p-lg-4">
-      <!-- title removed to maximize vertical space -->
+  <vscode-tabs>
+    <vscode-tab-header slot="header">Question viewer</vscode-tab-header>
+    <vscode-tab-panel>
 
-      <div class="layout-split">
-        <div>
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-viewer-tab" data-bs-toggle="pill" data-bs-target="#pills-viewer"
-                type="button" role="tab" aria-controls="pills-viewer" aria-selected="true">
-                Viewer
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-reco-tab" data-bs-toggle="pill" data-bs-target="#pills-reco"
-                type="button" role="tab" aria-controls="pills-reco" aria-selected="false">
-                Recommended
-              </button>
-            </li>
-          </ul>
+      <h1>Question 42</h1>
 
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-viewer" role="tabpanel" aria-labelledby="pills-viewer-tab">
-              <div class="card app-card p-3 mb-3">
-                <div class="card-body p-0">
-                  <div class="section-title mb-2">Proposition</div>
-                  <p class="mb-0">Here is the proposition content.</p>
-                </div>
-              </div>
+      <h2>Proposition</h2>
+      <p>
+        Água flui ao longo de um tubo inclinado de $30^{\circ}$ em relação à horizontal conforme mostrado. A diferença
+        de pressão $p_A - p_B$ é causada parcialmente pela gravidade e parcialmente pelo atrito. Calcule a diferença de
+        pressão se $L=1,5$ m e $h=0,15$ m.
+      </p>
+      <vscode-divider></vscode-divider>
 
-              <div class="card app-card p-3 mb-3">
-                <div class="card-body p-0">
-                  <div class="section-title mb-2">Step-by-step</div>
-                  <p class="mb-0">Here is the step-by-step content.</p>
-                </div>
-              </div>
+      <h2>Step-by-step</h2>
+      <p>
+        ### Fórmulas
+        $$\frac{dp}{dz} = -\rho g$$
 
-              <div class="card app-card p-3">
-                <div class="card-body p-0">
-                  <div class="section-title mb-2">Answer</div>
-                  <p class="mb-0">Here is the answer content.</p>
-                </div>
-              </div>
-              <aside class="mt-3 mt-lg-0">
-                <div class="card app-card p-3">
-                  <div class="card-body p-0">
-                    <div class="section-title mb-2">Details</div>
-                    <dl class="row mb-0">
-                      <dt class="col-5 text-muted">Difficulty</dt>
-                      <dd class="col-7">Intermediate</dd>
 
-                      <dt class="col-5 text-muted">Estimated time</dt>
-                      <dd class="col-7">12 min</dd>
+        ### Considerações necessárias para resolver o problema com as fórmulas acima
+        1. Fluido estático
+        2. Por simetria, todas as pressões existentes fora da região definida por h e pela direferença de altura
+        $z_{AB}$ se anulam
 
-                      <dt class="col-5 text-muted">Tags</dt>
-                      <dd class="col-7">
-                        <span class="badge bg-light text-dark me-1">logic</span><span
-                          class="badge bg-light text-dark">math</span>
-                      </dd>
-                    </dl>
-                  </div>
-                </div>
-              </aside>
-            </div>
 
-            <div class="tab-pane fade" id="pills-reco" role="tabpanel" aria-labelledby="pills-reco-tab">
-              <div class="card app-card p-3">
-                <div class="card-body p-0">
-                  <div class="section-title mb-2">Recommended for you</div>
-                  <div class="recommended-list mt-2">
-                    <ul class="list-group">
-                      <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div>
-                          <div class="fw-bold">Question 42</div>
-                          <small class="text-muted">Why is 42 the answer to everything?</small>
-                        </div>
-                        <div class="text-end">
-                          <button class="btn btn-sm btn-outline-primary">
-                            Open
-                          </button>
-                        </div>
-                      </li>
-                      <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div>
-                          <div class="fw-bold">Question 7</div>
-                          <small class="text-muted">A simpler practice problem</small>
-                        </div>
-                        <div class="text-end">
-                          <button class="btn btn-sm btn-outline-primary">
-                            Open
-                          </button>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        ### Cálculos
+        $$\sin(30°) = \frac{z_{AB}}{L}$$
+
+        $$z_{AB} = L \sin(30°) = 1,5 \cdot 0,5 = 0,75m$$
+
+        ---
+
+        Sendo x o comprimento entre a altura B e a superfície água-mercúrio na coluna direita
+
+        ---
+
+        $$\frac{dP}{dz} = -\rho g$$
+
+        $$dP = -\rho g dz$$
+
+        $$\int_{p_a}^{p_b} dP = \int_0^{-z_{AB}} -\rho_{\text{água}} g dz + \int_{-x}^{-x-h} -\rho_{\text{água}} g dz +
+        \int_{-x-h}^{-x} -\rho_{\text{Hg}} g dz$$
+
+        $$p_b-p_a = -\rho_{\text{água}}g(-z_{AB}) - \rho_{\text{água}}g[(-x-h)-(-x)] - \rho_{\text{Hg}}g[(-x)-(-x-h)]$$
+
+        $$ = \rho_{\text{água}}g(z_{AB}) + \rho_{\text{água}}gh - \rho_{\text{Hg}}gh$$
+
+        $$= \rho_{\text{água}}g(z_{AB}) + (\rho_{\text{água}} - \rho_{\text{Hg}})gh$$
+
+        $$= (1000 \cdot 9.81 \cdot 0.75) + (1000 - 13550) \cdot 9.81 \cdot 0.15$$
+
+        $$ = 7357.5 - 18467.32 = \textbf{-11109,82 Pa}$$
+      </p>
+      <vscode-divider></vscode-divider>
+
+      <h2>Answer</h2>
+      <p>
+        $$p_a - p_b = 11,11 \, kPa$$
+      </p>
+      <vscode-divider></vscode-divider>
+
+    </vscode-tab-panel>
+
+    <vscode-tab-header slot="header">Recommendations</vscode-tab-header>
+    <vscode-tab-panel>
+        Do question x,y,z
+    </vscode-tab-panel>
+  </vscode-tabs>
 </body>
-
-<style>
-  body {
-    background: #f6f8fb;
-    color: #212529;
-    padding: 0;
-    margin: 0;
-  }
-
-  .app-card {
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(22, 38, 84, 0.06);
-    /* remove internal padding provided by utility classes to maximize area */
-    padding: 0;
-    margin: 0;
-  }
-
-  /* make container and cards full-width and remove extra spacing */
-  .container {
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .card.app-card {
-    padding: 0;
-  }
-
-  .card.app-card .card-body {
-    padding: 0;
-  }
-
-  .section-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #0b57d0;
-  }
-
-  .tab-pane>.card+.card {
-    margin-top: 0.5rem;
-  }
-
-  .recommended-list .list-group-item {
-    border-left: 3px solid #0b57d0;
-  }
-
-  /* segmented full-width tab style */
-  .nav.nav-pills {
-    display: flex;
-    gap: 0;
-    border: 1px solid #e6e9ef;
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
-    background: #ffffff;
-    padding: 0;
-  }
-
-  .nav.nav-pills .nav-item {
-    flex: 1 1 0;
-  }
-
-  .nav-pills .nav-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0.6rem 0;
-    margin: 0;
-    border-radius: 0;
-    background: transparent;
-    color: #495057;
-    font-weight: 500;
-    border-right: 1px solid #e6e9ef;
-    transition: background-color 0.12s ease, color 0.12s ease;
-    text-decoration: none;
-  }
-
-  .nav-pills .nav-link:last-child {
-    border-right: none;
-  }
-
-  .nav-pills .nav-link:hover {
-    background: rgba(11, 87, 208, 0.04);
-    color: #0b57d0;
-  }
-
-  .nav-pills .nav-link:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  .nav-pills .nav-link.active {
-    background: #ffffff;
-    color: #0b57d0;
-    font-weight: 600;
-    position: relative;
-  }
-
-  /* visually connect the tab bar to the content area */
-  .tab-content {
-    border: 1px solid #e6e9ef;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    padding: 0.5rem;
-    background: #ffffff;
-  }
-
-  @media (min-width: 992px) {
-    .layout-split {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 1.25rem;
-    }
-  }
-</style>

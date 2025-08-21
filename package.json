@@ -10,7 +10,9 @@
     "Other"
   ],
   "main": "./out/extension.js",
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
     "commands": [
       {
@@ -39,7 +41,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "@vscode-elements/elements": "^2.2.0",
     "katex": "^0.16.22"
   }
 }

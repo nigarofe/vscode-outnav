@@ -1,13 +1,12 @@
-// Tab handler that mirrors the HTML's nav-pills + tab-pane structure
-// Works without Bootstrap's JS: finds nav links with data-bs-target and toggles
-// the corresponding .tab-pane elements (adds/removes `active` and `show`).
-const tabLinks = document.querySelectorAll('.nav-pills .nav-link');
+// Tab handler: uses data-target first (cleaner attribute name) and toggles tab panes
+// Works without Bootstrap's JS: finds nav links and toggles the corresponding .tab-pane elements
+const tabLinks = document.querySelectorAll('.nav-pills .nav-link, .nav-pills vscode-button.nav-link');
 const tabPanes = document.querySelectorAll('.tab-pane');
 
 function activateTab(link) {
     if (!link) { return; }
-    // data-bs-target is used in the HTML (eg. "#pills-viewer")
-    const targetSelector = link.dataset.bsTarget || link.getAttribute('data-bs-target') || link.dataset.target || link.getAttribute('data-target');
+    // prefer data-target, fall back to data-bs-target for compatibility
+    const targetSelector = link.dataset.target || link.getAttribute('data-target') || link.dataset.bsTarget || link.getAttribute('data-bs-target');
     const targetId = targetSelector && targetSelector.toString().startsWith('#') ? targetSelector.toString().slice(1) : targetSelector;
 
     tabLinks.forEach(l => {
@@ -24,7 +23,7 @@ function activateTab(link) {
 }
 
 document.addEventListener('click', (e) => {
-    const link = e.target.closest('.nav-pills .nav-link');
+    const link = e.target.closest('.nav-pills .nav-link, .nav-pills vscode-button.nav-link');
     if (!link) { return; }
     // Prevent default so hash doesn't jump in the webview
     e.preventDefault();

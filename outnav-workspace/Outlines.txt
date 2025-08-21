@@ -15,8 +15,6 @@ EARS patterns definitions
 		While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>
 
 vscode-outnav - Requirements
-	npm dependencies and initialization
-		The Extension shall be initialized using "npm install --global yo generator-code; yo code; npm install katex; npm install bootstrap;"
 	Commands
 		The Extension shall have no commands
 	Webviews

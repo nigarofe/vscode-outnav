@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
 
-export const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName: string; title: string ; panel: vscode.WebviewPanel | undefined }> = {
+export const possibleWebviews: Record<string, { htmlFileName: string; scriptFileName: string; title: string; panel: vscode.WebviewPanel | undefined }> = {
 	"Outlines.txt": {
 		htmlFileName: "outlinesWebview.html",
 		scriptFileName: "outlinesWebview.js",
@@ -25,20 +25,20 @@ export const possibleWebviews: Record<string, { htmlFileName: string; scriptFile
 
 export async function openCorrespondingWebview(context: vscode.ExtensionContext, fileName: string) {
 	// console.log(`Opening webview for: ${fileName}`);
-    const mapping = possibleWebviews[fileName];
-	
+	const mapping = possibleWebviews[fileName];
+
 	if (!mapping.panel) {
-        mapping.panel = vscode.window.createWebviewPanel(
-            fileName,
-            mapping.title,
-            { viewColumn: vscode.ViewColumn.Two , preserveFocus: true },
-            { enableScripts: true }
-        );
+		mapping.panel = vscode.window.createWebviewPanel(
+			fileName,
+			mapping.title,
+			{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
+			{ enableScripts: true }
+		);
 		mapping.panel.webview.html = await getHtmlForWebview(context, fileName);
 
-        mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
-    }
-    
+		mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
+	}
+
 	mapping.panel.reveal(mapping.panel.viewColumn, true);
 }
 
@@ -48,16 +48,15 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	const htmlHeadPath = path.join(context.extensionPath, "src", "webviews", "sharedHead.html");
 	let html = await fs.readFile(htmlHeadPath, 'utf8');
 
-	if(!mapping.panel){return "No mapping panel";};
+	if (!mapping.panel) { return "No mapping panel"; };
 
 	const nonce = getNonce();
 	// create webview-safe URIs for resources
 	const webview = mapping.panel.webview;
-	const bootstrapCssOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.min.css'));
-	const bootstrapJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'bootstrap', 'dist', 'js', 'bootstrap.esm.js'));
 
-	const bootstrapCssUri = webview.asWebviewUri(bootstrapCssOnDisk).toString();
-	const bootstrapJsUri = webview.asWebviewUri(bootstrapJsOnDisk).toString();
+	const vscodeElementsJsOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', '@vscode-elements/', 'elements', 'dist', 'bundled.js'));
+	const vscodeElementsJsUri = webview.asWebviewUri(vscodeElementsJsOnDisk).toString();
+
 	const scriptOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', mapping.scriptFileName));
 	const scriptUri = webview.asWebviewUri(scriptOnDisk).toString();
 
@@ -65,8 +64,7 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	html = html.replace('%%CSP%%', csp);
 
 	// replace resource placeholders in the head template
-	html = html.replace('%%BOOTSTRAP_CSS_URI%%', bootstrapCssUri);
-	html = html.replace('%%BOOTSTRAP_JS_URI%%', bootstrapJsUri);
+	html = html.replace('%%TOOLKIT_JS_URI%%', vscodeElementsJsUri);
 	html = html.replace('%%SCRIPT_URI%%', `<script type=\"module\" nonce=\"${nonce}\" src=\"${scriptUri}\"></script>`);
 
 	const htmlPath = path.join(context.extensionPath, "src", "webviews", mapping.htmlFileName);
@@ -82,7 +80,7 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 
 
 
-function getNonce() { 
+function getNonce() {
 	let text = '';
 	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 	for (let i = 0; i < 32; i++) { text += possible.charAt(Math.floor(Math.random() * possible.length)); }
