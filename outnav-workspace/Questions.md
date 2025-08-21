@@ -20,9 +20,17 @@
 
 **This is the q1 proposition**
 
+<button>this is a button</button>
+
 Cê tá doido 
 
-### T
+---
+
+---
+### Heading 3
+#### Heading 4
+*italic*
+
 
 ```snippet:newtons-law
 $\oiint$ Esse é um exemplo de snippet

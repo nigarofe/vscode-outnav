@@ -15,7 +15,14 @@ window.renderKatex = function renderKatex() {
 };
 
 window.markdownToHtml = function markdownToHtml(markdown) {
-    let html = markdown.replace(/^\s*---\s*$/gm, '<vscode-divider></vscode-divider>');
+    const md = window.markdownit({
+        html: true,        // allows raw HTML in markdown (use cautiously)
+        linkify: true,
+        typographer: true
+    });
+
+    let html = md.render(String(markdown));
+    html = html.replace(/<hr\s*\/?>/gi, '<vscode-divider></vscode-divider>');
 
     return html;
 };

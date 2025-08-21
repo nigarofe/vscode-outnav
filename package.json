@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "@vscode-elements/elements": "^2.2.0",
-    "katex": "^0.16.22"
+    "katex": "^0.16.22",
+    "markdown-it": "^14.1.0"
   }
 }

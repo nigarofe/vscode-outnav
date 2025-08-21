@@ -64,8 +64,12 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	const katexCssUri = webview.asWebviewUri(katexCssOnDisk).toString();
 
 	// KaTeX auto-render extension provides renderMathInElement
-	const katexAutoRenderOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist',  'contrib', 'auto-render.min.js'));
+	const katexAutoRenderOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'katex', 'dist', 'contrib', 'auto-render.min.js'));
 	const katexAutoRenderUri = webview.asWebviewUri(katexAutoRenderOnDisk).toString();
+
+	// markdown-it is a dependency; load its browser bundle from node_modules so window.markdownit is available
+	const markdownItOnDisk = vscode.Uri.file(path.join(context.extensionPath, 'node_modules', 'markdown-it', 'dist', 'markdown-it.min.js'));
+	const markdownItUri = webview.asWebviewUri(markdownItOnDisk).toString();
 
 	const sharedScriptJs = vscode.Uri.file(path.join(context.extensionPath, 'src', 'webviews', 'sharedScript.js'));
 	const sharedScriptJsUri = webview.asWebviewUri(sharedScriptJs).toString();
@@ -82,6 +86,7 @@ async function getHtmlForWebview(context: vscode.ExtensionContext, fileName: str
 	html = html.replace('%%KATEX_JS_URI%%', katexJsUri);
 	html = html.replace('%%KATEX_CSS_URI%%', katexCssUri);
 	html = html.replace('%%KATEX_AUTO_RENDER_URI%%', katexAutoRenderUri);
+	html = html.replace('%%MARKDOWNIT_JS_URI%%', markdownItUri);
 	html = html.replace('%%SHARED_SCRIPT_URI%%', sharedScriptJsUri);
 	html = html.replace('%%SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${scriptUri}"></script>`);
 
