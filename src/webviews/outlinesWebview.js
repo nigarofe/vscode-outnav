@@ -25,42 +25,74 @@ window.addEventListener('DOMContentLoaded', () => {
         // - payload.outlinesJson being an object with a `document` wrapper
         // - nodes with `title`, `level`, and `children`
         // Render node and return a nested <vscode-tree-item> element (or DocumentFragment)
+        // renderNode now returns { el, found } where `found` is true when the
+        // node or any descendant matches payload.currentLineContent. When found
+        // we set an `expanded` attribute on the created tree item so the tree
+        // will be expanded at that path.
         function renderNode(node) {
-            if (!node) return null;
+            if (!node) return { el: null, found: false };
 
             // If an array is provided, return a DocumentFragment with each child appended
             if (Array.isArray(node)) {
                 const frag = document.createDocumentFragment();
+                let anyFound = false;
                 node.forEach(n => {
-                    const el = renderNode(n);
+                    const { el, found } = renderNode(n);
                     if (el) frag.appendChild(el);
+                    if (found) anyFound = true;
                 });
-                return frag;
+                return { el: frag, found: anyFound };
             }
 
             // unwrap document wrapper if present
             if (node.document) return renderNode(node.document);
 
-            const title = node.title || node.text || '';
+            const title = (node.title || node.text || '').toString();
+            const current = (payload.currentLineContent || '').toString();
 
             // Create a tree item and nest children inside it (matches the example structure)
             const treeItem = document.createElement('vscode-tree-item');
             const countSuffix = (node.children && node.children.length) ? ' (' + node.children.length + ')' : '';
             treeItem.textContent = title + countSuffix;
 
+            // Render children and detect if any descendant matches
+            let descendantFound = false;
             if (node.children && node.children.length) {
                 node.children.forEach(child => {
-                    const childEl = renderNode(child);
-                    if (childEl) treeItem.appendChild(childEl);
+                    const { el, found } = renderNode(child);
+                    if (el) treeItem.appendChild(el);
+                    if (found) descendantFound = true;
                 });
             }
 
-            return treeItem;
+            // Determine if this node matches the current line. Use a few sensible
+            // matching heuristics: exact match, trimmed equality, or containment.
+            const matches = (title === current)
+                || (title.trim() === current.trim())
+                || (title.includes(current) && current.length > 0)
+                || (current.includes(title) && title.length > 0);
+
+            const found = matches || descendantFound;
+
+            // If found anywhere in this subtree, mark this tree item as `open`
+            // so ancestors are opened. For an exact match, also mark the item
+            // `selected` so it is visually highlighted by the component.
+            if (found) {
+                try { treeItem.setAttribute('open', ''); } catch (e) { }
+                try { treeItem.open = true; } catch (e) { }
+            }
+            if (matches) {
+                try { treeItem.setAttribute('selected', ''); } catch (e) { }
+                try { treeItem.setAttribute('aria-selected', 'true'); } catch (e) { }
+                try { treeItem.selected = true; } catch (e) { }
+            }
+
+            return { el: treeItem, found };
         }
 
         // Render whatever shape the payload provides and append it to the container
-        const rendered = renderNode(payload.outlinesJson);
-        if (rendered) outlinesTree.appendChild(rendered);
+        const renderedResult = renderNode(payload.outlinesJson);
+        if (renderedResult && renderedResult.el) outlinesTree.appendChild(renderedResult.el);
 
         siblingsTree.innerHTML = '';
         payload.siblings.forEach(element => {
