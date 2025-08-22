@@ -3,64 +3,52 @@ import * as path from "path";
 import { promises as fs } from "fs";
 import { possibleWebviews } from "../webviews-config";
 
-/**
- * Generates HTML for webviews with proper Content Security Policy and image URI handling.
- * 
- * This module solves the image loading issue in VS Code webviews by:
- * 1. Adding img-src to the Content Security Policy to allow image loading
- * 2. Scanning workspace directories for image files and creating URI mappings
- * 3. Injecting these mappings into the webview as window.imageUriMappings
- * 4. Using client-side JavaScript to convert relative image paths to webview URIs
- * 
- * The conversion happens in sharedScript.js during markdown-to-HTML processing.
- */
-
 export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebviews[keyof typeof possibleWebviews]): Promise<string> {
 	if (!mapping.panel) { return "No mapping panel"; };
-
-	const uri = vscode.Uri.file;
-	const vscodeElementsJsOnDisk = uri(path.join(ep, 'node_modules', '@vscode-elements/', 'elements', 'dist', 'bundled.js'));
-	const katexJsOnDisk = uri(path.join(ep, 'node_modules', 'katex', 'dist', 'katex.min.js'));
-	const katexCssOnDisk = uri(path.join(ep, 'node_modules', 'katex', 'dist', 'katex.min.css'));
-	const katexAutoRenderOnDisk = uri(path.join(ep, 'node_modules', 'katex', 'dist', 'contrib', 'auto-render.min.js'));
-	const markdownItOnDisk = uri(path.join(ep, 'node_modules', 'markdown-it', 'dist', 'markdown-it.min.js'));
-	const sharedScriptJs = uri(path.join(ep, 'src', 'webviews', 'sharedScript.js'));
-	const scriptOnDisk = uri(path.join(ep, 'src', 'webviews', mapping.scriptFileName));
-	const htmlHeadPath = path.join(ep, "src", "webviews", "sharedHead.html");
-	const htmlPath = path.join(ep, "src", "webviews", mapping.htmlFileName);
-
 	const webview = mapping.panel.webview;
-	const vscodeElementsJsUri = webview.asWebviewUri(vscodeElementsJsOnDisk).toString();
-	const katexJsUri = webview.asWebviewUri(katexJsOnDisk).toString();
-	const katexCssUri = webview.asWebviewUri(katexCssOnDisk).toString();
-	const katexAutoRenderUri = webview.asWebviewUri(katexAutoRenderOnDisk).toString();
-	const markdownItUri = webview.asWebviewUri(markdownItOnDisk).toString();
-	const sharedScriptJsUri = webview.asWebviewUri(sharedScriptJs).toString();
-	const scriptUri = webview.asWebviewUri(scriptOnDisk).toString();
 
-	// Generate image URI mappings for the workspace to convert relative paths to webview URIs
-	const imageUriMappings = await generateImageUriMappings(ep, webview);
+	const resources: { [key: string]: string } = {
+		// node_modules
+		katex: 'node_modules/katex/dist/katex.min.js',
+		katexCss: 'node_modules/katex/dist/katex.min.css',
+		katexAutoRender: 'node_modules/katex/dist/contrib/auto-render.min.js',
+		vscodeElements: 'node_modules/@vscode-elements/elements/dist/bundled.js',
+		markdownIt: 'node_modules/markdown-it/dist/markdown-it.min.js',
+
+		// shared
+		sharedHtmlHead: 'src/webviews/sharedHead.html',
+		sharedScript: 'src/webviews/sharedScript.js',
+
+		// custom
+		customHtml: `src/webviews/${mapping.htmlFileName}`,
+		customScript: `src/webviews/${mapping.scriptFileName}`
+	};
+
+	const webviewUris: { [key: string]: string } = {};
+	for (const [key, relativePath] of Object.entries(resources)) {
+		const absolutePath = path.join(ep, relativePath);
+		const uri = vscode.Uri.file(absolutePath);
+		webviewUris[key] = webview.asWebviewUri(uri).toString();
+	}
 
 	const nonce = getNonce();
-	let html = await fs.readFile(htmlHeadPath, 'utf8');
-
-	// Build Content Security Policy with image source support
+	const imageUriMappings = await generateImageUriMappings(ep, webview);
 	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; font-src ${webview.cspSource}; img-src ${webview.cspSource};">`;
 
-	// Replace all template placeholders with actual values
+	let html = await fs.readFile(path.join(ep, resources.sharedHtmlHead), 'utf8');
 	html = html
 		.replace('%%CSP%%', csp)
-		.replace('%%TOOLKIT_JS_URI%%', vscodeElementsJsUri)
-		.replace('%%KATEX_JS_URI%%', katexJsUri)
-		.replace('%%KATEX_CSS_URI%%', katexCssUri)
-		.replace('%%KATEX_AUTO_RENDER_URI%%', katexAutoRenderUri)
-		.replace('%%MARKDOWNIT_JS_URI%%', markdownItUri)
-		.replace('%%SHARED_SCRIPT_URI%%', sharedScriptJsUri)
-		.replace('%%SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${scriptUri}"></script>`)
+		.replace('%%TOOLKIT_JS_URI%%', webviewUris.vscodeElements.toString())
+		.replace('%%KATEX_JS_URI%%', webviewUris.katex.toString())
+		.replace('%%KATEX_CSS_URI%%', webviewUris.katexCss.toString())
+		.replace('%%KATEX_AUTO_RENDER_URI%%', webviewUris.katexAutoRender.toString())
+		.replace('%%MARKDOWNIT_JS_URI%%', webviewUris.markdownIt.toString())
+		.replace('%%SHARED_SCRIPT_URI%%', webviewUris.sharedScript.toString())
+		.replace('%%CUSTOM_SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${webviewUris.customScript}"></script>`)
 		.replace(/"%%IMAGE_URI_MAPPINGS%%"/g, JSON.stringify(imageUriMappings))
 		.replace(/%%NONCE%%/g, nonce);
 
-	html += await fs.readFile(htmlPath, 'utf8');
+	html += await fs.readFile(path.join(ep, resources.customHtml), 'utf8');
 	html += '</html>';
 
 	return html;
