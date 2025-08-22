@@ -42,10 +42,8 @@ interface OutFile {
 
 export async function parseQuestionsToJson(): Promise<string> {
     const mapping = possibleWebviews['Questions.md'];
-
     const raw = await fs.readFile(mapping.filePath, 'utf8');
 
-    // Robustly split the markdown file into question blocks by header positions
     const headerRe = /^#\s+Question\s+(\d+)/gm;
     const headers: Array<{ num: number; start: number; headerEnd: number }> = [];
     let hm: RegExpExecArray | null;
@@ -102,14 +100,12 @@ export async function parseQuestionsToJson(): Promise<string> {
 
         if (attempts.length) questionObj.attempts = attempts.map(a => ({ datetime: a.timestamp, code: a.result }));
 
-        // Calculate spaced repetition metrics and merge them into calculated_metrics
         const spaced = calculateSpacedRepetitionMetrics(attempts);
         questionObj.calculated_metrics = {
             DSLA: calculateDaysSinceLastAttempt(attempts),
             LaMI: calculateLatestMemoryInterval(attempts),
             PMG_D: calculatePotentialMemoryGainDays(attempts),
             PMG_X: calculatePotentialMemoryGainMultiplier(attempts),
-            // merged spaced repetition fields (snake_case keys for JSON schema compatibility)
             total_attempts: spaced.totalAttempts,
             memory_attempts: spaced.successes,
             help_attempts: spaced.failures,
