@@ -57,7 +57,7 @@ export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebv
 		.replace('%%MARKDOWNIT_JS_URI%%', markdownItUri)
 		.replace('%%SHARED_SCRIPT_URI%%', sharedScriptJsUri)
 		.replace('%%SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${scriptUri}"></script>`)
-		.replace(/%%IMAGE_URI_MAPPINGS%%/g, JSON.stringify(imageUriMappings))
+		.replace(/"%%IMAGE_URI_MAPPINGS%%"/g, JSON.stringify(imageUriMappings))
 		.replace(/%%NONCE%%/g, nonce);
 
 	html += await fs.readFile(htmlPath, 'utf8');

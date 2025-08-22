@@ -88,7 +88,7 @@ async function ensureWebviewForEditor(c: vscode.ExtensionContext, e: vscode.Text
 			activeFileName,
 			mapping.title,
 			{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
-			{ 
+			{
 				enableScripts: true,
 				localResourceRoots: [
 					vscode.Uri.file(path.join(c.extensionPath, 'node_modules')),
