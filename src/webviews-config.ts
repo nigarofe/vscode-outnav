@@ -1,11 +1,14 @@
 import * as vscode from "vscode";
+import * as path from "path";
 
 export const possibleWebviews: Record<string,
     {
-        htmlFileName: string; scriptFileName: string; title: string; panel: vscode.WebviewPanel | undefined,
+        filePath: string; jsonExportPath: string; htmlFileName: string; scriptFileName: string; title: string; panel: vscode.WebviewPanel | undefined,
         spacing: Record<string, number>, required_headings_regex: Record<string, RegExp>
     }> = {
     "Outlines.txt": {
+        filePath: path.resolve(__dirname, '..', 'outnav-workspace', 'Outlines.txt'),
+        jsonExportPath: path.resolve(__dirname, '..', 'src', 'json_exports', 'outlines.json'),
         htmlFileName: "outlinesWebview.html",
         scriptFileName: "outlinesWebview.js",
         title: "Outlines",
@@ -17,6 +20,8 @@ export const possibleWebviews: Record<string,
         required_headings_regex: {}
     },
     "Premises.md": {
+        filePath: path.resolve(__dirname, '..', 'outnav-workspace', 'Premises.md'),
+        jsonExportPath: path.resolve(__dirname, '..', 'src', 'json_exports', 'premises.json'),
         htmlFileName: "premisesWebview.html",
         scriptFileName: "premisesWebview.js",
         title: "Premises",
@@ -29,6 +34,8 @@ export const possibleWebviews: Record<string,
         required_headings_regex: {}
     },
     "Questions.md": {
+        filePath: path.resolve(__dirname, '..', 'outnav-workspace', 'Questions.md'),
+        jsonExportPath: path.resolve(__dirname, '..', 'src', 'json_exports', 'questions.json'),
         htmlFileName: "questionsWebview.html",
         scriptFileName: "questionsWebview.js",
         title: "Questions",

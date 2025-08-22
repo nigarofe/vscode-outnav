@@ -1,5 +1,5 @@
 import * as fs from 'fs/promises';
-import * as path from 'path';
+import { possibleWebviews } from '../webviews-config';
 
 interface AttemptEntry {
     timestamp: string;
@@ -41,12 +41,9 @@ interface OutFile {
 }
 
 export async function parseQuestionsToJson(): Promise<string> {
-    const mdPath = path.resolve(__dirname, '..', '..', 'outnav-workspace', 'Questions.md');
-    console.log(mdPath);
-    const outPath = path.resolve(__dirname, '..', '..', 'src', 'json_exports', 'questions.json');
-    console.log(outPath);
+    const mapping = possibleWebviews['Questions.md'];
 
-    const raw = await fs.readFile(mdPath, 'utf8');
+    const raw = await fs.readFile(mapping.filePath, 'utf8');
 
     // Robustly split the markdown file into question blocks by header positions
     const headerRe = /^#\s+Question\s+(\d+)/gm;
@@ -135,9 +132,9 @@ export async function parseQuestionsToJson(): Promise<string> {
 
     const out: OutFile = { questions, lastUpdated: new Date().toISOString(), totalQuestions: questions.length };
 
-    await fs.writeFile(outPath, JSON.stringify(out, null, 2), 'utf8');
+    await fs.writeFile(mapping.jsonExportPath, JSON.stringify(out, null, 2), 'utf8');
 
-    return outPath;
+    return mapping.jsonExportPath;
 }
 
 // --- Helper functions (ported/adapted from deprecated implementation) ---
