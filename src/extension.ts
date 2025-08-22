@@ -24,31 +24,33 @@ export function activate(c: vscode.ExtensionContext) {
 	}));
 
 	c.subscriptions.push(vscode.workspace.onDidSaveTextDocument(async () => {
-		await parseQuestionsToJson();
 		const e = vscode.window.activeTextEditor;
-		if (e) updateWebview(e);
+		if (e) {
+			await parseFileToJson(e);
+			updateWebview(e);
+		}
 	}));
 
 	vscode.window.showInformationMessage('Extension Fully Loaded');
 }
 
-async function ensureWebviewForEditor(c: vscode.ExtensionContext, e: vscode.TextEditor) {
+
+async function parseFileToJson(e: vscode.TextEditor) {
 	const activeFileName = getActiveFileName(e);
-	const mapping = possibleWebviews[activeFileName];
+	let mapping = possibleWebviews[activeFileName];
+	if (!mapping || !mapping.panel) return;
 
-	if (!mapping.panel) {
-		mapping.panel = vscode.window.createWebviewPanel(
-			activeFileName,
-			mapping.title,
-			{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
-			{ enableScripts: true }
-		);
-		mapping.panel.webview.html = await getHtmlForWebview(c.extensionPath, mapping);
-
-		mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
+	switch (activeFileName) {
+		case 'Outlines.txt':
+			break;
+		case 'Premises.md':
+			break;
+		case 'Questions.md':
+			await parseQuestionsToJson();
+			break;
+		default:
+			break;
 	}
-
-	mapping.panel.reveal(mapping.panel.viewColumn, true);
 }
 
 async function updateWebview(e: vscode.TextEditor) {
@@ -72,6 +74,27 @@ async function updateWebview(e: vscode.TextEditor) {
 	}
 	mapping.panel.webview.postMessage({ payload: payload });
 }
+
+
+async function ensureWebviewForEditor(c: vscode.ExtensionContext, e: vscode.TextEditor) {
+	const activeFileName = getActiveFileName(e);
+	const mapping = possibleWebviews[activeFileName];
+
+	if (!mapping.panel) {
+		mapping.panel = vscode.window.createWebviewPanel(
+			activeFileName,
+			mapping.title,
+			{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
+			{ enableScripts: true }
+		);
+		mapping.panel.webview.html = await getHtmlForWebview(c.extensionPath, mapping);
+
+		mapping.panel.onDidDispose(() => { mapping.panel = undefined; });
+	}
+
+	mapping.panel.reveal(mapping.panel.viewColumn, true);
+}
+
 
 function getActiveFileName(e: vscode.TextEditor) {
 	const fullPath = e.document.uri.fsPath;
