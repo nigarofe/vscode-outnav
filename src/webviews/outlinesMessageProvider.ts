@@ -11,7 +11,7 @@ export function generateMessageForOutlines(editor: vscode.TextEditor) {
         currentLineContent,
         currentIndentationLevel,
         parents: getParents(editor, currentIndentationLevel),
-        simblings: getSimblings(editor, currentIndentationLevel),
+        siblings: getSiblings(editor, currentIndentationLevel),
         selectedLines: getSelectedLines(editor),
         indentationOrderingExercise: getIndentationOrderingExercise(editor)
     };
@@ -76,8 +76,8 @@ function getParents(editor: vscode.TextEditor, currentIndentationLevel: number) 
     return parents;
 }
 
-function getSimblings(editor: vscode.TextEditor, currentIndentationLevel: number) {
-    const simblings: string[] = [];
+function getSiblings(editor: vscode.TextEditor, currentIndentationLevel: number) {
+    const siblings: string[] = [];
     const currentLine = editor.selection.active.line;
 
     // Look upward for earlier siblings until we hit the first parent (indentation < current)
@@ -87,7 +87,7 @@ function getSimblings(editor: vscode.TextEditor, currentIndentationLevel: number
         const lineIndentationLevel = (line.text.match(/\t/g) || []).length;
 
         if (lineIndentationLevel === currentIndentationLevel) {
-            simblings.unshift(line.text);
+            siblings.unshift(line.text);
         } else if (lineIndentationLevel < currentIndentationLevel) {
             break;
         }
@@ -99,17 +99,17 @@ function getSimblings(editor: vscode.TextEditor, currentIndentationLevel: number
         const lineIndentationLevel = (line.text.match(/\t/g) || []).length;
 
         if (lineIndentationLevel === currentIndentationLevel) {
-            simblings.push(line.text);
+            siblings.push(line.text);
         } else if (lineIndentationLevel < currentIndentationLevel) {
             break;
         }
     }
 
-    // remove empty/whitespace-only simblings in-place
-    for (let i = simblings.length - 1; i >= 0; i--) {
-        if (simblings[i].trim().length === 0) {
-            simblings.splice(i, 1);
+    // remove empty/whitespace-only siblings in-place
+    for (let i = siblings.length - 1; i >= 0; i--) {
+        if (siblings[i].trim().length === 0) {
+            siblings.splice(i, 1);
         }
     }
-    return simblings;
+    return siblings;
 }

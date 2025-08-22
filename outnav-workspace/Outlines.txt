@@ -23,13 +23,6 @@ vscode-outnav - Requirements
 		When one of the three main files is open, the corresponding webview should appear.
 
 
-
-
-
-
-
-
-
 	Markdown parsing
 		The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json
 	General
@@ -226,38 +219,20 @@ The Great Mental Models book series
 
 
 
-
-
-
-2025-08-19
-	There are some feelings that may seems like they are special somehow. One of these in particular is the feeling of apathy. It feels that there isn't even anything happening to even do anything about it.
-
-	The feeling that I'm not dealing well enough with internal affairs, being the ineficiency of the words I'm using; the instructions that I'm giving myself
-
-	I don't want these feelings, but I'm not going to get rid of them.
-
-	One of the reasons I don't want them is because they make my journey harder, however I put myself willingly to carry this additional weight to keep going on my journey.
 	
-	Here, one of the bags I'm carrying is just for you (umconfortable feelings)
-
-	Moving from something not because I'm finished, but because I'm stuck.
-
-	It helps, but it does not guarantee.
-	I doesn't help, but it does not impede.
 
 
-	Search for books that talk specifically about how to deal with thoughts about thoughts. For example, for those who try to optimize so much the instructions that they give to themselves that this actually can make harm
-
-
-
-Your problem is not your negative thoughts but first and foremost too much thinking
-It is impossible to think yourself to fewer ruminations.
-‘You cannot walk away from a door you are trying to hold closed.’ You cannot get away from a thought you are trying to hold on to
-It is not the scale of the problem that determines how long a person spends dwelling on it, but rather the person themselves who makes this evaluation.
-The problem does not lie in the fact that we have thoughts, and therefore the solution is not to repress them.
-‘Do all you can to do nothing.’ This means that the less you do with your thoughts, the better off you will be.
 
 Book Live More Think Less
+	Origin prompt
+		Search for books that talk specifically about how to deal with thoughts about thoughts. For example, for those who try to optimize so much the instructions that they give to themselves that this actually can make harm
+	Notes
+		Your problem is not your negative thoughts but first and foremost too much thinking
+		It is impossible to think yourself to fewer ruminations.
+		‘You cannot walk away from a door you are trying to hold closed.’ You cannot get away from a thought you are trying to hold on to
+		It is not the scale of the problem that determines how long a person spends dwelling on it, but rather the person themselves who makes this evaluation.
+		The problem does not lie in the fact that we have thoughts, and therefore the solution is not to repress them.
+		‘Do all you can to do nothing.’ This means that the less you do with your thoughts, the better off you will be.
 	S-REF model (Self-Regulatory Executive Function Model of Emotional Disorder) p19
 		1. Lower level: automatic thoughts and images
 		2. Middle level: strategies
