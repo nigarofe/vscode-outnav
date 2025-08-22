@@ -25,10 +25,10 @@ export async function parseOutlinesToJson() {
         const m = s.match(/^([\t ]*)/);
         if (!m) return 0;
         const indent = m[1] || '';
+        // The outlines format expresses indentation as tabs. Count tabs only.
+        // Mixing spaces and tabs can produce unexpected levels; prefer tabs per spec.
         const tabs = (indent.match(/\t/g) || []).length;
-        const spaces = (indent.match(/ /g) || []).length;
-        const spaceLevels = Math.floor(spaces / 4); // treat 4 spaces as one indent level
-        return tabs + spaceLevels;
+        return tabs;
     }
 
     for (const rawLine of lines) {
