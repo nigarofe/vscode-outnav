@@ -40,7 +40,7 @@ $$\sin \alpha$$
 Linha nova
 ```
 
-![](images/ps11.png)
+![](media/ps11.png)
 
 
 ## Step-by-step
@@ -2544,7 +2544,7 @@ b) O sistema está em equilíbrio quando $F_k = F_g$:
 - $\omega_2 = \sqrt{\frac{165}{2}} = 9,08\,\mathrm{rad/s}$
 - $A_2 = A_1 + \bigl(x_{\text{eq1}} - x_{\text{eq2}}\bigr) = 15 + (21,21 - 12,12) = 24,09\,\mathrm{cm}$
 
-![](images/q46.png)
+![](media/q46.png)
 
 
 ## Metadata
@@ -2610,7 +2610,7 @@ Você deseja determinar o momento de inércia de certa parte complicada de uma m
 - $T = 2\pi \sqrt{m/k}$
 - $T = 2\pi \sqrt{J/k}$
 
-![](images/q47.png)
+![](media/q47.png)
 
 
 ## Answer
@@ -2732,7 +2732,7 @@ Uma pequena esfera de massa $m$ está presa a uma barra de comprimento $L$ com u
 $$a = g \sin(\theta)$$
 $$v_{\max} = \sqrt{2\,m\,g\,L\,\bigl(1 - \cos(\theta)\bigr)}$$
 
-![](images/q49.png)
+![](media/q49.png)
 
 
 ## Metadata
@@ -2825,7 +2825,7 @@ c) Em termos de $F_{\max}$ e de $k$, qual é a amplitude para $\omega = \sqrt{k/
 	i) $b = 0{,}2\,\sqrt{k\,m}$ e 
 	ii) $b = 0{,}4\,\sqrt{k\,m}$? Compare seus resultados com a Figura 13.28.
 
-![](images/q51.png)
+![](media/q51.png)
 
 
 ## Step-by-step
@@ -4565,7 +4565,7 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $y$
 3. Represente em forma matricial
 4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$
 
-![](images/q88.png)
+![](media/q88.png)
 
 
 ## Step-by-step
@@ -4636,7 +4636,7 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $z$
 3. Represente em forma matricial
 4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$
 
-![](images/q88.png)
+![](media/q88.png)
 
 
 ## Step-by-step
@@ -4690,7 +4690,7 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $y$
 3. Represente em forma matricial
 4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$
 
-![](images/q91.png)
+![](media/q91.png)
 
 
 ## Step-by-step
@@ -5795,7 +5795,7 @@ Em um ponto na superfície de um sólido, os extensômetros da roseta retangular
 $$
 \varepsilon_A = 2\times10^{-6},\quad \varepsilon_B = 6\times10^{-6},\quad \varepsilon_C = -9\times10^{-6}.
 $$
-![](images/q110.png)
+![](media/q110.png)
 (Legenda: $\varepsilon_A$ no eixo X, $\varepsilon_C$ no eixo Y e $\varepsilon_B$ à 45°, entre o eixo X e Y)
 
 Dado
@@ -6747,7 +6747,7 @@ Faça o desenvolvimento da questão de duas formas:
 
 
 ### Círculo de Mohr
-![](images/q96.png)
+![](media/q96.png)
 
 >[!info] ![[ps11#^tensaoMedia]]
 
@@ -6778,7 +6778,7 @@ $$\hat{n}_{s_{2}} = (\cos\theta_{s1}, \sin\theta_{s1}) = (\cos(55.161^\circ), \s
 ---
 ou, de maneira simplificada
 
-![](images/q121.png)
+![](media/q121.png)
 
 
 ### Autovalores e autovetores
@@ -6912,7 +6912,7 @@ a) $\Delta T$ para que a dimensão $a$ não seja alterada.
 b) Variação $\Delta b$ da dimensão $b$ para a situação em que $a$ não seja alterada, com $\Delta T$ e $\sigma_{xx}$ atuando.
 
 Expresse os resultados em função de $\Delta T, \sigma_{xx}, E, \nu, a, b$ e $\alpha$
-![](images/q123.png)
+![](media/q123.png)
 
 
 ### Descrição da figura
@@ -7003,7 +7003,7 @@ c) Verifique se haverá escoamento do material da placa sabendo que $\sigma_{esc
 c.1) Critério de TRESCA
 c.2) Critério de Von Mises.
 
-![](images/q124.png)
+![](media/q124.png)
 
 
 ## Step-by-step
@@ -7046,7 +7046,7 @@ a) Componentes principais tensões.
 b) Componentes principais deformação.
 c) Deformação longitudinal na direção de $30^{\circ}$ (sentido anti-horário) com eixo $x$.
 
-![](images/q125.png)
+![](media/q125.png)
 
 
 ## Step-by-step
@@ -7089,7 +7089,7 @@ a) $\sigma_{yy}$ para que a dimensão "$b$" não altere.
 b) Variação $\Delta a$ da dimensão "$a$" na situação da letra (a).
 
 Expresse seus resultados em termos de $E, \nu, \sigma_{xx}, "a"$ e "$b"$. $\sigma_{xx}$ e $\sigma_{yy}$ são uniformemente distribuídas.
-![](images/q126.png)
+![](media/q126.png)
 
 
 ## Step-by-step
@@ -7218,7 +7218,7 @@ c) Verifique se haverá escoamento da placa.
 c.1) segundo TRESCA ($\tau_{escoamento} = 400 MPa$)
 c.2) Segundo Von MISES.
 
-![](images/q129.png)
+![](media/q129.png)
 
 
 ## Step-by-step
@@ -7575,7 +7575,7 @@ c) A tensão de cisalhamento na placa superior, em N/m2.
 d) A tensão de cisalhamento na placa inferior, em Pa.
 e) O sentido de cada tensão cisalhante calculada nas partes c) e d)
 
-![](images/q134.png)
+![](media/q134.png)
 
 
 ## Step-by-step
@@ -7720,7 +7720,7 @@ $$\vec F = - \int \rho \, d\, \vec A$$
 
 	
 ### Cálculos
-![](images/q136-2.svg)
+![](media/q136-2.svg)
 
 Sendo 
 - $h_0$ a altura na superfície do óleo
@@ -7828,7 +7828,7 @@ Tags
 Considere o manômetro de dois fluidos mostrado na Figura P.2. Calcule a diferença de pressão aplicada nos dois recipientes. O SG do Tetracloreto de carbono é 1,595.
 
 
-![](images/q137.png)
+![](media/q137.png)
 
 
 ## Step-by-step
@@ -7942,7 +7942,7 @@ Tags
 
 Água flui ao longo de um tubo inclinado de $30^{\circ}$ em relação à horizontal conforme mostrado. A diferença de pressão $p_A - p_B$ é causada parcialmente pela gravidade e parcialmente pelo atrito. Calcule a diferença de pressão se $L=1,5$ m e $h=0,15$ m.
 
-![](images/q138.png)
+![](media/q138.png)
 
 
 ## Step-by-step
@@ -8020,11 +8020,11 @@ Tags
 
 Na Figura P.4, o manômetro "A" lê a pressão de 1,5 kPa. Todos os fluidos estão a $20^{\circ}$C e os pesos específicos ($\gamma=\rho g$) dos mesmos são: $\gamma_{\text{ar}}=12$ N/m$^3$, $\gamma_{\text{gasolina}}=6670$ N/m$^3$, $\gamma_{\text{glicerina}}=12360$ N/m$^3$. Determinar as alturas (em metros) dos líquidos nos tubos abertos B e C.
 
-![](images/q139-1.png)
+![](media/q139-1.png)
 
 
 ## Step-by-step
-![](images/q139-2.svg)
+![](media/q139-2.svg)
 
 
 ## Answer
