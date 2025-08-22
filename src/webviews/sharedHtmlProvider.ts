@@ -38,13 +38,13 @@ export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebv
 	let html = await fs.readFile(path.join(ep, resources.sharedHtmlHead), 'utf8');
 	html = html
 		.replace('%%CSP%%', csp)
-		.replace('%%TOOLKIT_JS_URI%%', webviewUris.vscodeElements.toString())
-		.replace('%%KATEX_JS_URI%%', webviewUris.katex.toString())
-		.replace('%%KATEX_CSS_URI%%', webviewUris.katexCss.toString())
-		.replace('%%KATEX_AUTO_RENDER_URI%%', webviewUris.katexAutoRender.toString())
-		.replace('%%MARKDOWNIT_JS_URI%%', webviewUris.markdownIt.toString())
-		.replace('%%SHARED_SCRIPT_URI%%', webviewUris.sharedScript.toString())
-		.replace('%%CUSTOM_SCRIPT_URI%%', `<script type="module" nonce="${nonce}" src="${webviewUris.customScript}"></script>`)
+		.replace('%%TOOLKIT_JS_URI%%', webviewUris.vscodeElements)
+		.replace('%%KATEX_JS_URI%%', webviewUris.katex)
+		.replace('%%KATEX_CSS_URI%%', webviewUris.katexCss)
+		.replace('%%KATEX_AUTO_RENDER_URI%%', webviewUris.katexAutoRender)
+		.replace('%%MARKDOWNIT_JS_URI%%', webviewUris.markdownIt)
+		.replace('%%SHARED_SCRIPT_URI%%', webviewUris.sharedScript)
+		.replace('%%CUSTOM_SCRIPT_URI%%', webviewUris.customScript)
 		.replace(/"%%IMAGE_URI_MAPPINGS%%"/g, JSON.stringify(imageUriMappings))
 		.replace(/%%NONCE%%/g, nonce);
 
