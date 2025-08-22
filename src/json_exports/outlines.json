@@ -1,0 +1,1299 @@
+{
+  "document": {
+    "title": "Document",
+    "level": 0,
+    "children": [
+      {
+        "title": "EARS patterns definitions",
+        "level": 1,
+        "children": [
+          {
+            "title": "Generic",
+            "level": 2,
+            "children": [
+              {
+                "title": "While <optional_pre-condition>, when <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Ubiquitous",
+            "level": 2,
+            "children": [
+              {
+                "title": "The <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "State driven",
+            "level": 2,
+            "children": [
+              {
+                "title": "While <precondition(s)>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Event driven",
+            "level": 2,
+            "children": [
+              {
+                "title": "When <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Optional feature",
+            "level": 2,
+            "children": [
+              {
+                "title": "Where <feature_is_included>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Unwanted behavior",
+            "level": 2,
+            "children": [
+              {
+                "title": "If <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Complex",
+            "level": 2,
+            "children": [
+              {
+                "title": "While <precondition(s)>, when <trigger>, the <system_name> shall <system_response>",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "vscode-outnav - Requirements",
+        "level": 1,
+        "children": [
+          {
+            "title": "Commands",
+            "level": 2,
+            "children": [
+              {
+                "title": "The Extension shall have no commands",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Webviews",
+            "level": 2,
+            "children": [
+              {
+                "title": "The Extension shall evolve around the three text files in the outnav-workspace folder (Outlines.txt, Premises.md and Questions.md)",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "The Extension shall have three webviews, one for each main file.",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "When one of the three main files is open, the corresponding webview should appear.",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Markdown parsing",
+            "level": 2,
+            "children": [
+              {
+                "title": "The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "General",
+            "level": 2,
+            "children": [
+              {
+                "title": "The Extension shall assume that the user opened VS Code from the outnav-workspace folder",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Webview",
+            "level": 2,
+            "children": [
+              {
+                "title": "General",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "The Extension shall provide a single webview",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "When VS Code is opened, the Extension shall read the content of outnav-workspace/json_exports/outlines.json",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Breadcrumb navigation",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "The Breadcrumb Component shall display a horizontal list of links representing the user's navigation path from the homepage.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "The breadcrumb shall show only ancestor titles (not the currently-selected title) in the breadcrumb chain; the final/current title shall be rendered in the dropdown button to avoid duplication.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "The Breadcrumb Component shall render the final item in the path as a dropdown control.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "The Breadcrumb Component shall populate the dropdown control with a list of all sibling pages of the current page.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "While the webview is in focus, the Breadcrumb Component shall sequentially cycle the displayed text of the dropdown control through each sibling page title every 1.0 second.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "While the dropdown text is cycling, when the user hovers over or clicks the dropdown control, the Breadcrumb Component shall immediately pause the cycling.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Clicking the dropdown button shall toggle the sibling list open/closed (the webview should implement a lightweight toggle so Bootstrap JS is not required).",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Selecting a sibling from the dropdown shall navigate to that sibling, update the main content area, reset the dropdown text to the selected title, and hide the dropdown.",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Main content",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "The webview shall have a single main content area that is visually distinct from the breadcrumb navigation and shall occupy the majority of the webview space",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "When the breadcrumb selection changes, the Extension shall update the main content area within to reflect the new selection",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "The main content area shall support multiple content renderers",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "The Extension shall choose the renderer of the main content based on the selected title's annotations",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Any image annotations that reference local workspace files (for example `media/2025-08-18.png`) shall be converted to webview-accessible URIs by the Extension before being embedded into the webview to avoid access errors (net::ERR_ACCESS_DENIED).",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Title annotations",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "If there aren't any annotations on the title, the main content shall be empty",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Annotation format: trailing JSON object. Example:",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Diagram {\"action\":\"display_image\",\"src\":\"images/2025-08-18.png\",\"alt\":\"Diagram\",\"width\":400}",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Web link example:",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Open docs {\"action\":\"open_webpage\",\"url\":\"https://example.com\",\"key\":\"O\"}",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Outline Question generator example:",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Questions about Outlines.md {\"action\":\"generate_outline_question\"}",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Outline Question Generator",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "When a title with the annotation {\"action\":\"generate_outline_question\"} is selected, the Extension shall render the Outline Question Generator in the main content area.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "The Outline Question Generator shall have two modes: \"Level Identification\" and \"Outline Reconstruction\".",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "In \"Level Identification\" mode, the Extension shall display a randomly selected title from outlines.json and prompt the user to identify its correct level.",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "In \"Outline Reconstruction\" mode, the Extension shall display a set of titles from outlines.json and require the user to drag and drop them into their correct hierarchical positions.",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Keyboard shortcuts",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "While the webview is in focus, when the",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "`Space` key is pressed, the webview shall pause/play the title cycling",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "`=`/`-` keys are pressed, the title cycling frequency shall decrease/increase",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "`A`/`D` keys are pressed, the title level shall decrease/increase",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "`J`/`L` keys are pressed, the title shall change to previous/next",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Learning by questions",
+        "level": 1,
+        "children": [
+          {
+            "title": "Show reference materials",
+            "level": 2,
+            "children": [
+              {
+                "title": "Mathematics",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Algebra",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Linear Algebra",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Geometry",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Differential Equation",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Calculus",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "title": "Engineering",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Fluid Mechanics",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Quantities and units",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "Reynolds number {\"action\":\"open_webpage\",\"url\":\"https://en.wikipedia.org/wiki/Reynolds_number\",\"key\":\"O\"}",
+                            "level": 6,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Types of flow {\"action\":\"open_webpage\",\"url\":\"https://en.wikipedia.org/wiki/Laminar_flow\",\"key\":\"O\"}",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "Turbulent",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Laminar",
+                            "level": 6,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Types of Non-Newtonian Fluids",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "Shear-thickening",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Shear-thinning",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Thixotropic",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Rheopectic",
+                            "level": 6,
+                            "children": []
+                          },
+                          {
+                            "title": "Bingham plastics",
+                            "level": 6,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Continuum Mechanics",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Por que o Tensor Tensão é simétrico",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Tensor Tensão vs Tensor Deformação",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Nome das variáveis e tensores mais utilizados em Mecânica dos sólidos",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Definição coeficiente de Poisson",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Ângulos diretores e cossenos diretores",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Relação entre estresse e pressão",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Classical Mechanics",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Movimento sub-amortecido",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Show questions",
+            "level": 2,
+            "children": [
+              {
+                "title": "Questions about Outlines.md {\"action\":\"generate_outline_question\"}",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Order by PMG-X desc",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Order by DSLA",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Order by question number",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Matérias UFMG",
+        "level": 1,
+        "children": [
+          {
+            "title": "EMA091 Mecânica dos Fluidos",
+            "level": 2,
+            "children": [
+              {
+                "title": "Conteúdos",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Livro Introdução à Mecânica dos Fluidos (Fox)",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Capítulos",
+                        "level": 5,
+                        "children": [
+                          {
+                            "title": "INTRODUÇÃO",
+                            "level": 6,
+                            "children": [
+                              {
+                                "title": "CONCEITOS FUNDAMENTAIS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ESTÁTICA DOS FLUIDOS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "EQUAÇÕES BÁSICAS NA FORMA INTEGRAL PARA UM VOLUME DE CONTROLE",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "INTRODUÇÃO À ANÁLISE DIFERENCIAL DOS MOVIMENTOS DOS FLUIDOS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ESCOAMENTO INCOMPRESSÍVEL DE FLUIDOS NÃO VISCOSOS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ANÁLISE DIMENSIONAL E SEMELHANÇA",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ESCOAMENTO INTERNO VISCOSO E INCOMPRESSÍVEL",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ESCOAMENTO VISCOSO, INCOMPRESSÍVEL, EXTERNO",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "MÁQUINAS DE FLUXO",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ESCOAMENTO EM CANAIS ABERTOS",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "INTRODUÇÃO AO ESCOAMENTO COMPRESSÍVEL",
+                                "level": 7,
+                                "children": []
+                              },
+                              {
+                                "title": "ESCOAMENTO COMPRESSÍVEL",
+                                "level": 7,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Vídeos",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "EMA093 Processos de Fabricação por Usinagem",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "EES039 Análise Estrutural",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "EMC029 Seleção de materiais",
+            "level": 2,
+            "children": []
+          },
+          {
+            "title": "MAT015 Equações Diferenciais A",
+            "level": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "title": "Employment",
+        "level": 1,
+        "children": [
+          {
+            "title": "Professional certifications",
+            "level": 2,
+            "children": [
+              {
+                "title": "IELTS",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "TOELF",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Internships",
+            "level": 2,
+            "children": [
+              {
+                "title": "Siemens",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Kot",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Public tender",
+            "level": 2,
+            "children": [
+              {
+                "title": "CBMMG",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "PMMG",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "The Great Mental Models book series",
+        "level": 1,
+        "children": [
+          {
+            "title": "General thinking concepts",
+            "level": 2,
+            "children": [
+              {
+                "title": "The Map is not the Territory",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Circle of Competence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "First Principles Thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Thought Experiment",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Second-Order Thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Probabilistic Thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Inversion",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Occam's Razor",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Hanlon's Razor",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Physics",
+            "level": 2,
+            "children": [
+              {
+                "title": "Relativity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Reciprocity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Thermodynamics",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Inertia",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Friction and viscosity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Velocity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Leverage",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Chemistry",
+            "level": 2,
+            "children": [
+              {
+                "title": "Activation energy",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Catalysts",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Alloying",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Biology",
+            "level": 2,
+            "children": [
+              {
+                "title": "Evolution part one: Natural selection and extinction",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Evolution part two: Adaptation rate and the Red Queen Effect",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Competition",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Ecosystem",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Niches",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Self-Preservation",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Replication",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Cooperation",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Systems",
+            "level": 2,
+            "children": [
+              {
+                "title": "Feedback loops",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Equilibrium",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Bottlenecks",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Scale",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Margin of safety",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Churn",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Algorithms",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Critical mass",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Emergence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Irreducibility",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "The law of diminishin returns",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Mathematics",
+            "level": 2,
+            "children": [
+              {
+                "title": "Compounding",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Sampling",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Randomness",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Regression to the mean",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Multiplying by zero",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Equivalence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Surface area",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Global and local maxima",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Economics",
+            "level": 2,
+            "children": [
+              {
+                "title": "Scarcity",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Supply and demand",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Optimization",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Trade-offs",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Specialization",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Interdependence",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Efficiency",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Debt",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Monooly and competition",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Creative destruction",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Gresham's law",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Bubbles",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Art",
+            "level": 2,
+            "children": [
+              {
+                "title": "Audience",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Genre",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Contrast",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Framing",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Rhytm",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Melody",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Representation",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Plot",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Character",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Setting",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "Performance",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Book Live More Think Less",
+        "level": 1,
+        "children": [
+          {
+            "title": "Origin prompt",
+            "level": 2,
+            "children": [
+              {
+                "title": "Search for books that talk specifically about how to deal with thoughts about thoughts. For example, for those who try to optimize so much the instructions that they give to themselves that this actually can make harm",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Notes",
+            "level": 2,
+            "children": [
+              {
+                "title": "Your problem is not your negative thoughts but first and foremost too much thinking",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "It is impossible to think yourself to fewer ruminations.",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "‘You cannot walk away from a door you are trying to hold closed.’ You cannot get away from a thought you are trying to hold on to",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "It is not the scale of the problem that determines how long a person spends dwelling on it, but rather the person themselves who makes this evaluation.",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "The problem does not lie in the fact that we have thoughts, and therefore the solution is not to repress them.",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "‘Do all you can to do nothing.’ This means that the less you do with your thoughts, the better off you will be.",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "S-REF model (Self-Regulatory Executive Function Model of Emotional Disorder) p19",
+            "level": 2,
+            "children": [
+              {
+                "title": "1. Lower level: automatic thoughts and images",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "2. Middle level: strategies",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "3. Metacognitive beliefs level: assumptions about our thoughts and thought processes",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "CAS (Cognitive Attentional Syndrome) p24",
+            "level": 2,
+            "children": [
+              {
+                "title": "Strategies",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Rumination",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Worry",
+                    "level": 4,
+                    "children": []
+                  },
+                  {
+                    "title": "Monitoring behavior",
+                    "level": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Five metagcognitive beliefs p36",
+            "level": 2,
+            "children": [
+              {
+                "title": "A. I am not aware of my ruminations (lack of awareness)",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "B. My rumination in uncontrollable (without control)",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "C. I can't act without motivation (passivity)",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "D. If I ruminate, I can find solutions ans answers (usefulness)",
+                "level": 3,
+                "children": []
+              },
+              {
+                "title": "E. Depression is a biological disease that I can't influence (biology)",
+                "level": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Trigger thoughts pop into your head. Now you have a choice. What do you do? p61",
+            "level": 2,
+            "children": [
+              {
+                "title": "A. Deferral - Setting a rumination time.",
+                "level": 3,
+                "children": [
+                  {
+                    "title": "Ruminate and process - but for a set period of time, postponing thinking until that time.",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Before and after rumination time, I suggest that clients use methods B and C.",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "B. Controlling attention",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Move your focus to what is happening around you or to your activity",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "C. Be mindful but detached",
+                    "level": 4,
+                    "children": [
+                      {
+                        "title": "Let the thoughts be (detached mindfulness) p42",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Train of thought open it's doors: I can board it or not",
+                        "level": 5,
+                        "children": []
+                      },
+                      {
+                        "title": "Sushi conveyor belt: You can choose to reach for them or let them pass by.",
+                        "level": 5,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
