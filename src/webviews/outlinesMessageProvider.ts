@@ -160,9 +160,14 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
                 if (c && c.title && c.title.trim() !== title) siblings.push(c.title);
             }
 
+            if (siblings.length === 0) {
+                return ['No siblings found'];
+            }
             return siblings;
         }
     }
-
+    if (siblings.length === 0) {
+        return ['No siblings found'];
+    }
     return siblings;
 }
