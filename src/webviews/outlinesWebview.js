@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const parentsBreadcrumbEl = document.getElementById("parentsBreadcrumb");
     const currentItemEl = document.getElementById("currentItem");
     const indentationOrderingExerciseEl = document.getElementById("indentationOrderingExercise");
-    const siblingsEl = document.getElementById("siblings");
+    const siblingsTree = document.getElementById("siblingsTree");
 
     window.addEventListener("message", (event) => {
         const payload = event.data.payload;
@@ -17,7 +17,11 @@ window.addEventListener('DOMContentLoaded', () => {
         const raw = JSON.stringify(payload.indentationOrderingExercise, null, 2).replace(/[\[\]",]/g, '');
         indentationOrderingExerciseEl.textContent = raw.split('\n').map(line => line.trim()).join('\n');
 
-        siblingsEl.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
-        siblingsEl.textContent = payload.siblings.join('\n');
+        siblingsTree.innerHTML = '';
+        payload.siblings.forEach(element => {
+            const treeItem = document.createElement("vscode-tree-item");
+            treeItem.textContent = element;
+            siblingsTree.appendChild(treeItem);
+        });
     });
 });
