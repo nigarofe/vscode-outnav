@@ -31,5 +31,14 @@
     h3 {
       color: var(--vscode-statusBar-background);
     }
+    img {
+      display: block; /* centers when used with margin: auto */
+      margin: 1.25rem auto; /* vertical spacing and horizontal centering */
+      max-width: 100%; /* responsive to container width */
+      height: auto; /* preserve aspect ratio */
+      max-height: 60vh; /* prevent extremely tall images from overflowing */
+      border-radius: 12px; /* soft rounded corners */
+      border: 1px solid var(--vscode-statusBar-background);      
+    }
   </style>
 </head>
