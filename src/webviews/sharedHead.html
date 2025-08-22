@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title></title>
 
-  %%CSP%%
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'nonce-%%NONCE%%' %%WEBVIEW_CSP%%; style-src %%WEBVIEW_CSP%% 'unsafe-inline'; font-src %%WEBVIEW_CSP%%; img-src %%WEBVIEW_CSP%% data:;">
 
   <link rel="stylesheet" href="%%KATEX_CSS_URI%%">
   <script nonce="%%NONCE%%" src="%%KATEX_JS_URI%%"></script>

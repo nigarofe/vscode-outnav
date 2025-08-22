@@ -33,11 +33,10 @@ export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebv
 
 	const nonce = getNonce();
 	const imageUriMappings = await generateImageUriMappings(ep, webview);
-	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; font-src ${webview.cspSource}; img-src ${webview.cspSource};">`;
 
 	let html = await fs.readFile(path.join(ep, resources.sharedHtmlHead), 'utf8');
 	html = html
-		.replace('%%CSP%%', csp)
+		.replace(/%%WEBVIEW_CSP%%/g, webview.cspSource)
 		.replace('%%TOOLKIT_JS_URI%%', webviewUris.vscodeElements)
 		.replace('%%KATEX_JS_URI%%', webviewUris.katex)
 		.replace('%%KATEX_CSS_URI%%', webviewUris.katexCss)
