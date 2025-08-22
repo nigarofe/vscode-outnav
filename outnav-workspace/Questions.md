@@ -7702,7 +7702,7 @@ Tags
 Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\rho_{\text{água}}=1000$ kg/m$^3$, carvalho $\rho_{\text{carvalho}}=770$ kg/m$^3$, e óleo $\rho_{\text{óleo}}=800$ kg/m$^3$.
 
 
-![](images/q136-1.svg)
+![](media/2025-08-18.png)
 
 
 ## Step-by-step

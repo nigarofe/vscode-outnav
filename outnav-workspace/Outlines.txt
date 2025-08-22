@@ -21,8 +21,6 @@ vscode-outnav - Requirements
 		The Extension shall evolve around the three text files in the outnav-workspace folder (Outlines.txt, Premises.md and Questions.md)
 		The Extension shall have three webviews, one for each main file.
 		When one of the three main files is open, the corresponding webview should appear.
-
-
 	Markdown parsing
 		The Extension shall parse outline content from Outlines.md using an indented-outline format where indentation is expressed as tabs; the parser shall convert those headings into the JSON outline structure written to outlines.json following outlines_schema.json
 	General
@@ -101,7 +99,6 @@ Learning by questions
 		Order by PMG-X desc
 		Order by DSLA
 		Order by question number
-
 Matérias UFMG
 	EMA091 Mecânica dos Fluidos
 		Conteúdos
