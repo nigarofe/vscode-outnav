@@ -16,9 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!questionNumberElement || !questionPropositionElement || !questionStepByStepElement || !questionAnswerElement) { return; }
 
         const currentQuestionNumber = event.data.payload.currentQuestionNumber;
-        const questions = Object.values(event.data.payload.questions);
+        const questionsJson = Object.values(event.data.payload.questionsJson);
 
-        const currentQuestion = questions.find((q) => q && q.number === currentQuestionNumber);
+        const currentQuestion = questionsJson.find((q) => q && q.number === currentQuestionNumber);
         // markdownToHtml returns HTML (e.g. <vscode-divider>), insert as HTML so elements render
         // console.log(currentQuestion.proposition)
         // console.log(typeof currentQuestion.proposition)

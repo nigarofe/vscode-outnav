@@ -1,13 +1,12 @@
 import * as vscode from 'vscode';
 import { promises as fs } from 'fs';
+import { possibleWebviews } from '../webviews-config';
 
 export async function generateMessageForQuestions(editor: vscode.TextEditor) {
     let payload = {
         currentQuestionNumber: getCurrentQuestionNumber(editor),
-        questions: await loadQuestionsFromJson()
+        questionsJson: await readQuestionsJson()
     }
-
-    // console.log("Debug message avocado = " + payload.currentQuestionNumber);
     return payload;
 }
 
@@ -29,10 +28,10 @@ function getCurrentQuestionNumber(editor: vscode.TextEditor): any {
     return null;
 }
 
-async function loadQuestionsFromJson(): Promise<any[] | null> {
-    const questionsJsonPath = 'C:\\Users\\Nicholas\\vscode-outnav\\src\\json_exports\\questions.json';
+async function readQuestionsJson(): Promise<any[] | null> {
+    const mapping = possibleWebviews['Questions.md'];
     try {
-        const data = await fs.readFile(questionsJsonPath, { encoding: 'utf8' });
+        const data = await fs.readFile(mapping.jsonExportPath, { encoding: 'utf8' });
         const parsed = JSON.parse(data).questions;
         return parsed;
     } catch (err) {
