@@ -4656,7 +4656,7 @@
       "discipline": "EMA091 Mecânica dos fluidos",
       "source": "2025-08-20 Exercícios Estática - 01",
       "description": "1 - Cubo imerso",
-      "proposition": "Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\\rho_{\\text{água}}=1000$ kg/m$^3$, carvalho $\\rho_{\\text{carvalho}}=770$ kg/m$^3$, e óleo $\\rho_{\\text{óleo}}=800$ kg/m$^3$.\n\n\n![](images/q136-1.svg)",
+      "proposition": "Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\\rho_{\\text{água}}=1000$ kg/m$^3$, carvalho $\\rho_{\\text{carvalho}}=770$ kg/m$^3$, e óleo $\\rho_{\\text{óleo}}=800$ kg/m$^3$.\n\n\n![](media/q136-1.svg)",
       "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$\\vec F = - \\int \\rho \\, d\\, \\vec A$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Densidade dos fluidos constantes\n\n\t\n### Cálculos\n![](images/q136-2.svg)\n\nSendo \n- $h_0$ a altura na superfície do óleo\n- $h_1$ a altura na altura entre o óleo entra em contato com a água\n- $h_2$ a altura na face superior do cubo\n- $h_3$ a altura na face inferior do cubo\n---\n- $F_2$ a pressão da coluna de fluido na face superior do cubo \n- $F_3$ a pressão da coluna de fluido na face inferior\n- W o peso do cubo\n- T a tração do tirante no cubo\n---\n\n$$\\frac{dp}{dh} = \\rho g$$\n\n$$dp = \\rho g dh$$\n\n$$\\int_{p_{0}=p_{atm}}^{p_3} dp = \\int_{h_0}^{h_3} \\rho g dh = \\int_{h_0}^{h_1} \\rho_{óleo} g dh + \\int_{h_1}^{h_3} \\rho_{água} g dh$$\n\n$$p_3 - p_{atm} = \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$p_3 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,7 - 1,5)$$\n\n$$= 124844 N/m^2$$\n\n---\n\n$$p_2 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_2 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,4 - 1,5)$$\n\n$$= 121901 N/m^2$$\n\n---\n\n$$\\vec{F} = - \\int \\rho d\\vec{A}$$\n\n$$F_3 = p_3 \\int dA = 124844 \\cdot 0,3^2 = 11235,96 N$$\n\n$$F_2 = p_2 \\int dA = 121901 \\cdot 0,3^2 = 10971,09 N$$\n\n$$W = \\rho_{carvalho} g V = 770 \\cdot 9,81 \\cdot 0,3^3 = 203,95 N$$\n\n$$\\sum F_y = 0 = F_3 - F_2 - W - T$$\n\n$$T = F_3 - F_2 - W$$\n\n$$T = 11235,96 - 10971,09 - 203,95 = 60,92 N$$\n\n\n### Método 2: usando empuxo\n$$E = \\rho_{\\text{água}} \\cdot g \\cdot V_{\\text{cubo}}$$\n\n$$E = 1000 \\frac{\\text{kg}}{\\text{m}^3} \\cdot 9,81 \\frac{\\text{m}}{\\text{s}^2} \\cdot (0,3 \\text{ m})^3$$\n\n$$E = 1000 \\cdot 9,81 \\cdot 0,027 = 264,87 \\text{ N}$$\n\n---\n\n$$E - W - T = 0$$\n\n$$T = E - W$$\n\n$$T = 264,87 \\text{ N} - 203,95 \\text{ N} = 60,92 \\text{ N}$$",
       "answer": "$$F_3 = 11235,96 N$$\n\n$$T = 60,92 N$$",
       "tags": [],
@@ -4778,6 +4778,6 @@
       }
     }
   ],
-  "lastUpdated": "2025-08-22T19:57:37.270Z",
+  "lastUpdated": "2025-08-22T20:44:48.076Z",
   "totalQuestions": 132
 }

@@ -43,10 +43,10 @@ export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebv
 
 	const nonce = getNonce();
 	let html = await fs.readFile(htmlHeadPath, 'utf8');
-	
+
 	// Build Content Security Policy with image source support
 	const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}' ${webview.cspSource}; style-src ${webview.cspSource} 'unsafe-inline'; font-src ${webview.cspSource}; img-src ${webview.cspSource};">`;
-	
+
 	// Replace all template placeholders with actual values
 	html = html
 		.replace('%%CSP%%', csp)
@@ -73,20 +73,20 @@ function getNonce() {
 	return text;
 }
 
-async function generateImageUriMappings(extensionPath: string, webview: vscode.Webview): Promise<{[key: string]: string}> {
-	const mappings: {[key: string]: string} = {};
+async function generateImageUriMappings(extensionPath: string, webview: vscode.Webview): Promise<{ [key: string]: string }> {
+	const mappings: { [key: string]: string } = {};
 	const workspacePath = path.join(extensionPath, 'outnav-workspace');
-	
+
 	try {
 		// Scan for common image directories in the workspace
 		const imageDirs = ['media', 'images'];
-		
+
 		for (const imageDir of imageDirs) {
 			const imageDirPath = path.join(workspacePath, imageDir);
-			
+
 			try {
 				const files = await fs.readdir(imageDirPath);
-				
+
 				// Process each image file found in the directory
 				for (const file of files) {
 					if (file.match(/\.(png|jpg|jpeg|gif|svg|webp)$/i)) {
@@ -94,7 +94,7 @@ async function generateImageUriMappings(extensionPath: string, webview: vscode.W
 						const absolutePath = path.join(imageDirPath, file);
 						const imageUri = vscode.Uri.file(absolutePath);
 						const webviewUri = webview.asWebviewUri(imageUri).toString();
-						
+
 						// Map relative path to webview URI for client-side conversion
 						mappings[relativePath] = webviewUri;
 					}
@@ -106,6 +106,6 @@ async function generateImageUriMappings(extensionPath: string, webview: vscode.W
 	} catch (err) {
 		console.error('Error generating image URI mappings:', err);
 	}
-	
+
 	return mappings;
 }
