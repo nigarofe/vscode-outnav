@@ -1,11 +1,13 @@
 import * as vscode from "vscode";
 import * as path from "path";
+import { possibleWebviews } from "./webviews-config";
 import { getHtmlForWebview } from "./webviews/sharedHtmlProvider";
 import { generateMessageForOutlines } from "./webviews/outlinesMessageProvider";
 import { generateMessageForPremises } from "./webviews/premisesMessageProvider";
 import { generateMessageForQuestions } from "./webviews/questionsMessageProvider";
 import { parseQuestionsToJson } from './parsers/questionsToJson';
-import { possibleWebviews } from "./webviews-config";
+import { parseOutlinesToJson } from './parsers/outlinesToJson';
+
 
 export function activate(c: vscode.ExtensionContext) {
 	const e = vscode.window.activeTextEditor;
@@ -42,6 +44,7 @@ async function parseFileToJson(e: vscode.TextEditor) {
 
 	switch (activeFileName) {
 		case 'Outlines.txt':
+			await parseOutlinesToJson();
 			break;
 		case 'Premises.md':
 			break;

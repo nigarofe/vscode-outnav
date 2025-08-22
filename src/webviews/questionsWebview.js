@@ -20,8 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const currentQuestion = questions.find((q) => q && q.number === currentQuestionNumber);
         // markdownToHtml returns HTML (e.g. <vscode-divider>), insert as HTML so elements render
-        console.log(currentQuestion.proposition)
-        console.log(typeof currentQuestion.proposition)
+        // console.log(currentQuestion.proposition)
+        // console.log(typeof currentQuestion.proposition)
         questionPropositionElement.innerHTML = markdownToHtml(currentQuestion.proposition);
         questionStepByStepElement.innerHTML = markdownToHtml(currentQuestion.step_by_step);
         questionAnswerElement.innerHTML = markdownToHtml(currentQuestion.answer);

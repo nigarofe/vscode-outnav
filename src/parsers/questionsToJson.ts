@@ -42,8 +42,9 @@ interface OutFile {
 
 export async function parseQuestionsToJson(): Promise<string> {
     const mdPath = path.resolve(__dirname, '..', '..', 'outnav-workspace', 'Questions.md');
-    const outDir = path.resolve(__dirname, '..', '..', 'src', 'json_exports');
-    const outPath = path.join(outDir, 'questions.json');
+    console.log(mdPath);
+    const outPath = path.resolve(__dirname, '..', '..', 'src', 'json_exports', 'questions.json');
+    console.log(outPath);
 
     const raw = await fs.readFile(mdPath, 'utf8');
 
@@ -134,7 +135,6 @@ export async function parseQuestionsToJson(): Promise<string> {
 
     const out: OutFile = { questions, lastUpdated: new Date().toISOString(), totalQuestions: questions.length };
 
-    await fs.mkdir(outDir, { recursive: true });
     await fs.writeFile(outPath, JSON.stringify(out, null, 2), 'utf8');
 
     return outPath;
