@@ -59,14 +59,8 @@ async function createPanelForFile(filename: string): Promise<vscode.WebviewPanel
 		{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
 		{
 			enableScripts: true,
-			// localResourceRoots: [
-			// 	vscode.Uri.file(path.join(c.extensionPath, 'node_modules')),
-			// 	vscode.Uri.file(path.join(c.extensionPath, 'src')),
-			// 	vscode.Uri.file(path.join(c.extensionPath, 'outnav-workspace'))
-			// ]
 		}
 	);
-	// load the html asynchronously (getHtmlForWebview returns a Promise<string>)
 	panel.webview.html = await getHtmlForWebview(workspaceRoot, panel.webview, filename);
 
 	// when the panel is disposed, clear the cached promise so a new panel can be created later
