@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
-import { possibleWebviews } from '../vitalFilesRules';
 import { promises as fs } from 'fs';
+import { jsonExportsDir } from '../extension';
+import path from 'path';
 
 export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     const currentLineNumber = editor.selection.active.line + 1;
@@ -22,13 +23,13 @@ export async function generateMessageForOutlines(editor: vscode.TextEditor) {
         parents: getParents(outlinesJson, currentLineContent),
     };
 
+    console.log('Sent payload:', payload);
     return payload;
 }
 
 async function readOutlinesJson(): Promise<any[] | null> {
-    const mapping = possibleWebviews['Outlines.txt'];
     try {
-        const data = await fs.readFile(mapping.jsonExportPath, { encoding: 'utf8' });
+        const data = await fs.readFile(path.join(jsonExportsDir, 'outlines.json'), { encoding: 'utf8' });
         const parsed = JSON.parse(data).document;
         return parsed;
     } catch (err) {

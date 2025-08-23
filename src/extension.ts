@@ -8,16 +8,19 @@ export const jsonExportsDir = path.join(workspaceRoot, 'src', 'json_exports');
 // Questions.md
 import { generateMessageForQuestions } from "./webviews/questions";
 import { parseQuestionsToJson } from './parsers/questionsToJson';
-let questionsPanel = createPanelForFile('Questions.md');
+let questionsPanel: Promise<vscode.WebviewPanel> | null = null;
+
+
 
 // Outlines.md
 import { generateMessageForOutlines } from "./webviews/outlines";
 import { parseOutlinesToJson } from './parsers/outlinesToJson';
-let outlinesPanel = createPanelForFile('Outlines.md');
+let outlinesPanel: Promise<vscode.WebviewPanel> | null = null;
 
 // Premises.md
-let premisesPanel = createPanelForFile('Premises.md');
+let premisesPanel: Promise<vscode.WebviewPanel> | null = null;
 import { generateMessageForPremises } from "./webviews/premises";
+import { getHtmlForWebview } from "./webviews/sharedHtmlProvider";
 
 
 export function activate(c: vscode.ExtensionContext) {
@@ -47,9 +50,10 @@ export function activate(c: vscode.ExtensionContext) {
 	vscode.window.showInformationMessage('Extension Fully Loaded');
 }
 
-function createPanelForFile(filename: string): vscode.WebviewPanel {
+
+async function createPanelForFile(filename: string): Promise<vscode.WebviewPanel> {
 	const baseName = path.parse(filename).name;
-	return vscode.window.createWebviewPanel(
+	let panel = vscode.window.createWebviewPanel(
 		baseName,
 		baseName,
 		{ viewColumn: vscode.ViewColumn.Two, preserveFocus: true },
@@ -62,30 +66,47 @@ function createPanelForFile(filename: string): vscode.WebviewPanel {
 			// ]
 		}
 	);
+	// load the html asynchronously (getHtmlForWebview returns a Promise<string>)
+	panel.webview.html = await getHtmlForWebview(workspaceRoot, panel.webview, filename);
+
+	// when the panel is disposed, clear the cached promise so a new panel can be created later
+	panel.onDidDispose(() => {
+		const base = path.parse(filename).name + '.md';
+		switch (base) {
+			case 'Outlines.md': outlinesPanel = null; break;
+			case 'Questions.md': questionsPanel = null; break;
+			case 'Premises.md': premisesPanel = null; break;
+		}
+	});
+	return panel;
 }
 
-export function getPanelForFile(fileName: string): vscode.WebviewPanel {
+export async function getPanelForFile(fileName: string): Promise<vscode.WebviewPanel> {
 	switch (fileName) {
 		case 'Outlines.md':
-			return outlinesPanel;
+			if (!outlinesPanel) outlinesPanel = createPanelForFile('Outlines.md');
+			return await outlinesPanel;
 		case 'Premises.md':
-			return premisesPanel;
+			if (!premisesPanel) premisesPanel = createPanelForFile('Premises.md');
+			return await premisesPanel;
 		case 'Questions.md':
-			return questionsPanel;
+			if (!questionsPanel) questionsPanel = createPanelForFile('Questions.md');
+			return await questionsPanel;
 	}
 	return vscode.window.createWebviewPanel('none', 'Error', vscode.ViewColumn.Two, { enableScripts: true });
 }
 
 async function ensurePanelForCurrentFile(e: vscode.TextEditor) {
 	const currentFileName = getCurrentFileName(e);
-	const currentPanel = getPanelForFile(currentFileName);
-	if (currentPanel) currentPanel.reveal(currentPanel.viewColumn, true);
+	const currentPanel = await getPanelForFile(currentFileName);
+	if (currentPanel) await currentPanel.reveal(currentPanel.viewColumn, true);
 }
 
 async function sendPayloadToCurrentPanel(e: vscode.TextEditor) {
 	const currentFileName = getCurrentFileName(e);
-	const currentPanel = getPanelForFile(currentFileName);
-	const payload = getPayloadForCurrentPanel(e);
+	console.log('sending payload to current panel. Filename = ', currentFileName);
+	const currentPanel = await getPanelForFile(currentFileName);
+	const payload = await getPayloadForCurrentPanel(e);
 	currentPanel?.webview.postMessage({ payload: payload });
 }
 

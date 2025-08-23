@@ -4,30 +4,34 @@ window.addEventListener('DOMContentLoaded', () => {
     const questionStepByStepElement = document.getElementById('questionStepByStep');
     const questionAnswerElement = document.getElementById('questionAnswer');
 
-    window.addEventListener("message", (event) => {
-        // console.log("Received message in questionsWebview:", event.data);
+    if (!window.__outnav_message_handler_installed) {
+        const __outnav_message_handler = (event) => {
+            // console.log("Received message in questionsWebview:", event.data);
 
-        if (!event.data.payload.currentQuestionNumber) {
-            if (questionNumberElement) { questionNumberElement.textContent = '?'; }
-            console.log("No current question number available. Returned: " + event.data.payload.currentQuestionNumber);
-            return;
-        }
+            if (!event.data.payload.currentQuestionNumber) {
+                if (questionNumberElement) { questionNumberElement.textContent = '?'; }
+                console.log("No current question number available. Returned: " + event.data.payload.currentQuestionNumber);
+                return;
+            }
 
-        if (!questionNumberElement || !questionPropositionElement || !questionStepByStepElement || !questionAnswerElement) { return; }
+            if (!questionNumberElement || !questionPropositionElement || !questionStepByStepElement || !questionAnswerElement) { return; }
 
-        const currentQuestionNumber = event.data.payload.currentQuestionNumber;
-        const questionsJson = Object.values(event.data.payload.questionsJson);
+            const currentQuestionNumber = event.data.payload.currentQuestionNumber;
+            const questionsJson = Object.values(event.data.payload.questionsJson);
 
-        const currentQuestion = questionsJson.find((q) => q && q.number === currentQuestionNumber);
-        // markdownToHtml returns HTML (e.g. <vscode-divider>), insert as HTML so elements render
-        // console.log(currentQuestion.proposition)
-        // console.log(typeof currentQuestion.proposition)
-        questionPropositionElement.innerHTML = markdownToHtml(currentQuestion.proposition);
-        questionStepByStepElement.innerHTML = markdownToHtml(currentQuestion.step_by_step);
-        questionAnswerElement.innerHTML = markdownToHtml(currentQuestion.answer);
-        questionNumberElement.innerHTML = currentQuestionNumber;
+            const currentQuestion = questionsJson.find((q) => q && q.number === currentQuestionNumber);
+            // markdownToHtml returns HTML (e.g. <vscode-divider>), insert as HTML so elements render
+            // console.log(currentQuestion.proposition)
+            // console.log(typeof currentQuestion.proposition)
+            questionPropositionElement.innerHTML = markdownToHtml(currentQuestion.proposition);
+            questionStepByStepElement.innerHTML = markdownToHtml(currentQuestion.step_by_step);
+            questionAnswerElement.innerHTML = markdownToHtml(currentQuestion.answer);
+            questionNumberElement.innerHTML = currentQuestionNumber;
 
-        renderKatex();
-    });
+            renderKatex();
+        };
+        window.addEventListener("message", __outnav_message_handler);
+        window.__outnav_message_handler_installed = true;
+    }
 });
 

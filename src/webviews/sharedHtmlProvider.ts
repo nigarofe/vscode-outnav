@@ -1,11 +1,8 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
-import { getPanelForFile } from "../extension";
-
-export async function getHtmlForWebview(ep: string, currentFileName: string): Promise<string> {
-	const panel = getPanelForFile(currentFileName);
-	const webview = panel.webview;
+export async function getHtmlForWebview(ep: string, webview: vscode.Webview, currentFileName: string): Promise<string> {
+	// webview is provided by the caller to avoid circular imports with the extension module
 	const baseName = path.parse(currentFileName).name.toLowerCase();
 
 	const resources: { [key: string]: string } = {
@@ -48,6 +45,7 @@ export async function getHtmlForWebview(ep: string, currentFileName: string): Pr
 		.replace(/"%%IMAGE_URI_MAPPINGS%%"/g, JSON.stringify(imageUriMappings))
 		.replace(/%%NONCE%%/g, nonce);
 
+	console.log('trying path for html', path.join(ep, resources.customHtml));
 	html += await fs.readFile(path.join(ep, resources.customHtml), 'utf8');
 	html += '</html>';
 
