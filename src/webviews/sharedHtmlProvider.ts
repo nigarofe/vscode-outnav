@@ -1,11 +1,12 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
-import { possibleWebviews } from "../webviews-config";
+import { getPanelForFile } from "../extension";
 
-export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebviews[keyof typeof possibleWebviews]): Promise<string> {
-	if (!mapping.panel) { return "No mapping panel"; };
-	const webview = mapping.panel.webview;
+export async function getHtmlForWebview(ep: string, currentFileName: string): Promise<string> {
+	const panel = getPanelForFile(currentFileName);
+	const webview = panel.webview;
+	const baseName = path.parse(currentFileName).name.toLowerCase();
 
 	const resources: { [key: string]: string } = {
 		// node_modules
@@ -20,8 +21,8 @@ export async function getHtmlForWebview(ep: string, mapping: typeof possibleWebv
 		sharedScript: 'src/webviews/sharedScript.js',
 
 		// custom
-		customHtml: `src/webviews/${mapping.htmlFileName}`,
-		customScript: `src/webviews/${mapping.scriptFileName}`
+		customHtml: `src/webviews/${baseName}.html`,
+		customScript: `src/webviews/${baseName}.js`
 	};
 
 	const webviewUris: { [key: string]: string } = {};

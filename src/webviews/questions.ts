@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { promises as fs } from 'fs';
-import { possibleWebviews } from '../webviews-config';
+import * as path from "path";
+import { jsonExportsDir } from '../extension';
 
 export async function generateMessageForQuestions(editor: vscode.TextEditor) {
     let payload = {
@@ -29,9 +30,8 @@ function getCurrentQuestionNumber(editor: vscode.TextEditor): any {
 }
 
 async function readQuestionsJson(): Promise<any[] | null> {
-    const mapping = possibleWebviews['Questions.md'];
     try {
-        const data = await fs.readFile(mapping.jsonExportPath, { encoding: 'utf8' });
+        const data = await fs.readFile(path.join(jsonExportsDir, 'questions.json'), { encoding: 'utf8' });
         const parsed = JSON.parse(data).questions;
         return parsed;
     } catch (err) {

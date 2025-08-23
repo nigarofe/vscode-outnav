@@ -1,10 +1,9 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { possibleWebviews } from '../webviews-config';
+import { workspaceDir, jsonExportsDir } from '../extension';
 
 export async function parseOutlinesToJson() {
-    const mapping = possibleWebviews['Outlines.txt'];
-    const raw = await fs.readFile(mapping.filePath, 'utf8');
+    const raw = await fs.readFile(path.join(workspaceDir, 'Outlines.md'), 'utf8');
 
     // Split the outlines by lines and filter out empty lines
     const lines = raw.split(/\r?\n/).map(l => l.replace(/\r$/, ''))
@@ -55,8 +54,8 @@ export async function parseOutlinesToJson() {
 
     const out = { document: root };
 
-    await fs.mkdir(path.dirname(mapping.jsonExportPath), { recursive: true });
-    await fs.writeFile(mapping.jsonExportPath, JSON.stringify(out, null, 2), 'utf8');
+    await fs.mkdir(path.dirname(jsonExportsDir), { recursive: true });
+    await fs.writeFile(path.join(jsonExportsDir, 'outlines.json'), JSON.stringify(out, null, 2), 'utf8');
 
-    return mapping.jsonExportPath;
+    return path.join(jsonExportsDir, 'outlines.json');
 }

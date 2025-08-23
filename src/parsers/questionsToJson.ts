@@ -1,5 +1,6 @@
 import * as fs from 'fs/promises';
-import { possibleWebviews } from '../webviews-config';
+import { workspaceDir, jsonExportsDir } from '../extension';
+import * as path from 'path';
 
 interface AttemptEntry {
     timestamp: string;
@@ -41,8 +42,7 @@ interface OutFile {
 }
 
 export async function parseQuestionsToJson(): Promise<string> {
-    const mapping = possibleWebviews['Questions.md'];
-    const raw = await fs.readFile(mapping.filePath, 'utf8');
+    const raw = await fs.readFile(path.join(workspaceDir, 'Questions.md'), 'utf8');
 
     const headerRe = /^#\s+Question\s+(\d+)/gm;
     const headers: Array<{ num: number; start: number; headerEnd: number }> = [];
@@ -128,9 +128,9 @@ export async function parseQuestionsToJson(): Promise<string> {
 
     const out: OutFile = { questions, lastUpdated: new Date().toISOString(), totalQuestions: questions.length };
 
-    await fs.writeFile(mapping.jsonExportPath, JSON.stringify(out, null, 2), 'utf8');
+    await fs.writeFile(path.join(jsonExportsDir, 'questions.json'), JSON.stringify(out, null, 2), 'utf8');
 
-    return mapping.jsonExportPath;
+    return path.join(jsonExportsDir, 'questions.json');
 }
 
 // --- Helper functions (ported/adapted from deprecated implementation) ---

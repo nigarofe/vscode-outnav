@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { possibleWebviews } from '../webviews-config';
+import { possibleWebviews } from '../vitalFilesRules';
 import { promises as fs } from 'fs';
 
 export async function generateMessageForOutlines(editor: vscode.TextEditor) {
