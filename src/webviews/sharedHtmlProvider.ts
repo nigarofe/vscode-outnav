@@ -1,8 +1,8 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
+
 export async function getHtmlForWebview(ep: string, webview: vscode.Webview, currentFileName: string): Promise<string> {
-	// webview is provided by the caller to avoid circular imports with the extension module
 	const baseName = path.parse(currentFileName).name.toLowerCase();
 
 	const resources: { [key: string]: string } = {
@@ -52,13 +52,6 @@ export async function getHtmlForWebview(ep: string, webview: vscode.Webview, cur
 	return html;
 }
 
-function getNonce() {
-	let text = '';
-	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	for (let i = 0; i < 32; i++) { text += possible.charAt(Math.floor(Math.random() * possible.length)); }
-	return text;
-}
-
 async function generateImageUriMappings(extensionPath: string, webview: vscode.Webview): Promise<{ [key: string]: string }> {
 	const mappings: { [key: string]: string } = {};
 	const workspacePath = path.join(extensionPath, 'outnav-workspace');
@@ -94,4 +87,12 @@ async function generateImageUriMappings(extensionPath: string, webview: vscode.W
 	}
 
 	return mappings;
+}
+
+
+function getNonce() {
+	let text = '';
+	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	for (let i = 0; i < 32; i++) { text += possible.charAt(Math.floor(Math.random() * possible.length)); }
+	return text;
 }

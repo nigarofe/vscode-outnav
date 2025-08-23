@@ -1,14 +1,12 @@
 import * as vscode from 'vscode';
-import { promises as fs } from 'fs';
-import { jsonExportsDir } from '../extension';
-import path from 'path';
+import { readJson } from './readJson';
 
 export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     const currentLineNumber = editor.selection.active.line + 1;
     const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
     const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
 
-    const outlinesJson = await readOutlinesJson();
+    const outlinesJson = await readJson('outlines.json', 'document');
 
     const payload = {
         currentLineNumber,
@@ -27,16 +25,7 @@ export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     return payload;
 }
 
-async function readOutlinesJson(): Promise<any[] | null> {
-    try {
-        const data = await fs.readFile(path.join(jsonExportsDir, 'outlines.json'), { encoding: 'utf8' });
-        const parsed = JSON.parse(data).document;
-        return parsed;
-    } catch (err) {
-        console.error('Failed to load outlines.json', err);
-        return null;
-    }
-}
+// readJson handles loading outlines.json from the exports directory
 
 function getIndentationOrderingExercise(editor: vscode.TextEditor) {
     const lines = getSelectedLines(editor);

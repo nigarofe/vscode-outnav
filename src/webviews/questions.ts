@@ -1,12 +1,10 @@
 import * as vscode from 'vscode';
-import { promises as fs } from 'fs';
-import * as path from "path";
-import { jsonExportsDir } from '../extension';
+import { readJson } from './readJson';
 
 export async function generateMessageForQuestions(editor: vscode.TextEditor) {
     let payload = {
         currentQuestionNumber: getCurrentQuestionNumber(editor),
-        questionsJson: await readQuestionsJson()
+        questionsJson: await readJson('questions.json', 'questions')
     }
     return payload;
 }
@@ -29,13 +27,4 @@ function getCurrentQuestionNumber(editor: vscode.TextEditor): any {
     return null;
 }
 
-async function readQuestionsJson(): Promise<any[] | null> {
-    try {
-        const data = await fs.readFile(path.join(jsonExportsDir, 'questions.json'), { encoding: 'utf8' });
-        const parsed = JSON.parse(data).questions;
-        return parsed;
-    } catch (err) {
-        console.error('Failed to load questions.json', err);
-        return null;
-    }
-}
+// readJson handles loading questions.json from the exports directory
