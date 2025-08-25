@@ -123,17 +123,18 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
 
     const targetNorm = normalizeTitle(title);
 
-    function findPath(node: any, targetTitle: string, path: any[]): any[] | null {
+    function findPath(node: any, path: any[]): any[] | null {
         const newPath = path.concat(node);
         const nodeTitleNorm = node && node.title ? normalizeTitle(node.title) : '';
-        if (node && node.title && nodeTitleNorm === targetNorm && (node.level == null || node.level === expectedLevel || node.level === expectedLevel + 1)) {
+        // match by normalized title only (level will be used later for filtering)
+        if (node && node.title && nodeTitleNorm === targetNorm) {
             return newPath;
         }
 
         if (!node || !Array.isArray(node.children)) return null;
 
         for (const child of node.children) {
-            const found = findPath(child, targetTitle, newPath);
+            const found = findPath(child, newPath);
             if (found) return found;
         }
 
@@ -141,16 +142,25 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
     }
 
     for (const root of roots) {
-        const path = findPath(root, title, []);
+        const path = findPath(root, []);
         if (path) {
+            const targetNode = path[path.length - 1];
+            const targetLevel = (targetNode && (typeof targetNode.level === 'number')) ? targetNode.level : expectedLevel;
+
             // parent is previous element in the path (if any)
             const parent = path.length >= 2 ? path[path.length - 2] : null;
             // if parent is null the node is a top-level root; siblings are other roots
             const candidates = parent ? parent.children : roots;
-            if (!Array.isArray(candidates)) return siblings;
+            if (!Array.isArray(candidates)) return ['No siblings found'];
 
             for (const c of candidates) {
-                if (c && c.title && c.title.trim() !== title) siblings.push(c.title);
+                if (!c || !c.title) continue;
+                // only include nodes that are on the same level as the target node
+                const cLevel = (typeof c.level === 'number') ? c.level : null;
+                if (c.title.trim() === title) continue;
+                if (cLevel === null || cLevel === targetLevel) {
+                    siblings.push(c.title);
+                }
             }
 
             if (siblings.length === 0) {
@@ -159,8 +169,6 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
             return siblings;
         }
     }
-    if (siblings.length === 0) {
-        return ['No siblings found'];
-    }
-    return siblings;
+
+    return ['No siblings found'];
 }
