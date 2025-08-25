@@ -8,13 +8,6 @@
 
 
 
-
-
-
-
-
-
-
 # Question 1
 
 
@@ -82,9 +75,6 @@ Tags		Math; Science; Physics
 
 
 
-
-
-
 # Question 2
 
 
@@ -94,6 +84,8 @@ $$\frac{d^2}{dt^2} \left( e^{\gamma t} \right)$$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -128,19 +120,22 @@ Tags
 
 
 
-
-
-
 # Question 3
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -168,9 +163,6 @@ Tags
 
 
 
-
-
-
 # Question 4
 
 
@@ -185,6 +177,8 @@ $$y(0) = 5$$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -227,19 +221,22 @@ Tags		ps20
 
 
 
-
-
-
 # Question 5
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -255,9 +252,6 @@ Tags
 2024-11-13T06:00:00Z 0
 2025-01-24T06:00:00Z 1
 2025-04-17T06:00:00Z 1
-
-
-
 
 
 
@@ -358,9 +352,6 @@ Tags		ps20
 
 
 
-
-
-
 # Question 7
 
 
@@ -378,6 +369,8 @@ $$y'(0) = -3$$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -410,9 +403,6 @@ Tags
 
 
 
-
-
-
 # Question 8
 
 
@@ -429,6 +419,8 @@ where
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -461,9 +453,6 @@ Tags
 
 
 
-
-
-
 # Question 9
 
 
@@ -480,6 +469,8 @@ where
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -511,9 +502,6 @@ Tags
 
 
 
-
-
-
 # Question 10
 
 
@@ -525,6 +513,8 @@ $$y'' - y' - 2y = 10e^{4x}$$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -556,19 +546,22 @@ Tags
 
 
 
-
-
-
 # Question 11
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -594,9 +587,6 @@ Tags
 
 
 
-
-
-
 # Question 12
 
 
@@ -610,6 +600,8 @@ em que C é a interseção do cilindro $$x^2 + (y - 1)^2 = 1$$ com o plano $$z =
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -649,9 +641,6 @@ Tags
 
 
 
-
-
-
 # Question 13
 
 
@@ -671,6 +660,8 @@ $$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -695,9 +686,6 @@ Tags
 2025-03-12T06:00:00Z 1
 2025-04-17T06:00:00Z 1
 2025-06-02T19:06:36Z 1
-
-
-
 
 
 
@@ -765,9 +753,6 @@ Tags		ps1
 
 
 
-
-
-
 # Question 15
 
 
@@ -806,9 +791,6 @@ Tags		ps17
 2025-03-12T06:00:00Z 1
 2025-04-17T06:00:00Z 1
 2025-06-12T13:23:28Z 1
-
-
-
 
 
 
@@ -868,9 +850,6 @@ Tags
 
 
 
-
-
-
 # Question 17
 
 
@@ -884,6 +863,8 @@ em que $C$ é a parte da curva $y = x^{200}$ que liga o ponto $(0,0)$ ao ponto $
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -920,9 +901,6 @@ Tags		ps1
 
 
 
-
-
-
 # Question 18
 
 
@@ -938,6 +916,8 @@ em que $C$ é a curva parametrizada por $x = te^t$, $y = 1 + \sin\left(\frac{\pi
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -974,9 +954,6 @@ Tags
 
 
 
-
-
-
 # Question 19
 
 
@@ -992,6 +969,8 @@ em que $C$ é segmento de reta que liga o ponto $(1,0)$ ao ponto $(e,\pi)$.
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -1017,9 +996,6 @@ Tags
 2025-04-07T06:00:00Z 1
 2025-04-30T06:00:00Z 1
 2025-06-04T15:55:04Z 1
-
-
-
 
 
 
@@ -1092,9 +1068,6 @@ Tags		ps17
 
 
 
-
-
-
 # Question 21
 
 
@@ -1135,9 +1108,6 @@ Tags		ps17
 2025-03-04T06:00:00Z 1
 2025-04-22T06:00:00Z 1
 2025-06-30T18:49:32Z 0
-
-
-
 
 
 
@@ -1191,9 +1161,6 @@ Tags		ps17
 2025-03-04T06:00:00Z 1
 2025-04-22T06:00:00Z 1
 2025-06-30T18:54:11Z 1
-
-
-
 
 
 
@@ -1261,9 +1228,6 @@ Tags		ps17
 
 
 
-
-
-
 # Question 24
 
 
@@ -1277,6 +1241,8 @@ $$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -1316,9 +1282,6 @@ Tags
 
 
 
-
-
-
 # Question 25
 
 
@@ -1328,6 +1291,8 @@ Calcule a área da parte da esfera $x^2 + y^2 + z^2 = a^2$ que está acima do pl
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -1365,9 +1330,6 @@ Tags
 
 
 
-
-
-
 # Question 26
 
 
@@ -1377,6 +1339,8 @@ Calcule $\iint_S (x^2 + y^2)\, dS$ em que $S$ é a parte do plano $z = 2x + 2y -
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -1418,19 +1382,22 @@ Tags		ps2
 
 
 
-
-
-
 # Question 27
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -1458,9 +1425,6 @@ Tags
 
 
 
-
-
-
 # Question 28
 
 
@@ -1470,6 +1434,8 @@ Sejam $\vec{F}(x, y, z) = 3xy^2 \, \vec{i} + x^6 e^{-x^8} \, \vec{j} + 3x^2 z \,
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -1506,9 +1472,6 @@ Tags
 
 
 
-
-
-
 # Question 29
 
 
@@ -1520,6 +1483,8 @@ em que  $C$ é a interseção do parabolóide $z = x^2 + y^2$ com o cilindro $x
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -1560,9 +1525,6 @@ Tags
 
 
 
-
-
-
 # Question 30
 
 
@@ -1576,7 +1538,11 @@ Seja S a parte do plano $2x + 2y + z = 4$ que está no primeiro octante.
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -1605,19 +1571,22 @@ Tags
 
 
 
-
-
-
 # Question 31
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -1633,9 +1602,6 @@ Tags
 2025-01-13T06:00:00Z 0
 2025-01-14T06:00:00Z 1
 2025-04-07T06:00:00Z 1
-
-
-
 
 
 
@@ -1685,9 +1651,6 @@ Tags		ps17
 2025-03-18T06:00:00Z 1
 2025-04-26T06:00:00Z 1
 2025-06-21T16:16:33Z 1
-
-
-
 
 
 
@@ -1759,19 +1722,22 @@ Tags		ps17
 
 
 
-
-
-
 # Question 34
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -1806,19 +1772,22 @@ Tags
 
 
 
-
-
-
 # Question 35
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -1839,9 +1808,6 @@ Tags
 2025-03-27T06:00:00Z 1
 2025-04-23T06:00:00Z 1
 2025-06-02T16:27:48Z 1
-
-
-
 
 
 
@@ -1923,9 +1889,6 @@ Tags		ps17
 
 
 
-
-
-
 # Question 37
 
 
@@ -1973,9 +1936,6 @@ Tags
 2025-03-24T06:00:00Z 1
 2025-04-23T06:00:00Z 1
 2025-06-13T18:44:18Z 1
-
-
-
 
 
 
@@ -2044,9 +2004,6 @@ Tags
 
 
 
-
-
-
 # Question 39
 
 
@@ -2059,6 +2016,8 @@ $$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2091,9 +2050,6 @@ Tags
 
 
 
-
-
-
 # Question 40
 
 
@@ -2109,6 +2065,8 @@ O deslocamento de um objeto oscilando em função do tempo é mostrado na figura
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2154,9 +2112,6 @@ Tags
 
 
 
-
-
-
 # Question 41
 
 
@@ -2170,6 +2125,8 @@ Tente resolver este problema sem achar a constante da mola.
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2209,9 +2166,6 @@ Tags
 
 
 
-
-
-
 # Question 42
 
 
@@ -2224,6 +2178,8 @@ Um bloco de $2,0\ \mathrm{kg}$ sem atrito está preso a uma mola ideal cuja cons
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2261,9 +2217,6 @@ Tags
 
 
 
-
-
-
 # Question 43
 
 
@@ -2284,6 +2237,8 @@ Encontre
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2345,9 +2300,6 @@ Tags
 
 
 
-
-
-
 # Question 44
 
 
@@ -2360,6 +2312,8 @@ Um oscilador harmônico possui frequência $\omega$ e amplitude $A$.
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2448,9 +2402,6 @@ Tags
 
 
 
-
-
-
 # Question 45
 
 
@@ -2515,9 +2466,6 @@ Tags
 
 
 
-
-
-
 # Question 46
 
 
@@ -2529,6 +2477,8 @@ Uma bola de $1,50\,\mathrm{kg}$ e outra de $2,0\,\mathrm{kg}$ são coladas uma n
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -2562,9 +2512,6 @@ Tags
 2025-04-02T06:00:00Z 1
 2025-04-26T06:00:00Z 1
 2025-06-03T19:39:42Z 1
-
-
-
 
 
 
@@ -2652,9 +2599,6 @@ Tags
 
 
 
-
-
-
 # Question 48
 
 
@@ -2688,9 +2632,6 @@ Tags
 2025-03-31T06:00:00Z 1
 2025-04-23T06:00:00Z 1
 2025-06-03T20:42:23Z 1
-
-
-
 
 
 
@@ -2761,9 +2702,6 @@ Tags
 
 
 
-
-
-
 # Question 50
 
 
@@ -2783,7 +2721,11 @@ $$
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -2798,9 +2740,6 @@ Tags
 
 2025-03-27T06:00:00Z 0
 2025-04-02T06:00:00Z 0
-
-
-
 
 
 
@@ -2831,7 +2770,11 @@ c) Em termos de $F_{\max}$ e de $k$, qual é a amplitude para $\omega = \sqrt{k/
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -2858,19 +2801,22 @@ Tags
 
 
 
-
-
-
 # Question 52
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -2899,19 +2845,22 @@ Tags
 
 
 
-
-
-
 # Question 53
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -2939,19 +2888,22 @@ Tags
 
 
 
-
-
-
 # Question 54
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -2978,19 +2930,22 @@ Tags
 
 
 
-
-
-
 # Question 55
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3015,18 +2970,22 @@ Tags
 
 
 
-
-
 # Question 56
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3051,18 +3010,22 @@ Tags
 
 
 
-
-
 # Question 57
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3087,18 +3050,22 @@ Tags
 
 
 
-
-
 # Question 58
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3123,18 +3090,22 @@ Tags
 
 
 
-
-
 # Question 59
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3159,18 +3130,22 @@ Tags
 
 
 
-
-
 # Question 60
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3196,19 +3171,22 @@ Tags
 
 
 
-
-
-
 # Question 61
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3234,19 +3212,22 @@ Tags
 
 
 
-
-
-
 # Question 62
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3272,19 +3253,22 @@ Tags
 
 
 
-
-
-
 # Question 63
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3310,19 +3294,22 @@ Tags
 
 
 
-
-
-
 # Question 64
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3348,19 +3335,22 @@ Tags
 
 
 
-
-
-
 # Question 65
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3386,9 +3376,6 @@ Tags
 
 
 
-
-
-
 # Question 66
 
 
@@ -3398,6 +3385,8 @@ $$ \int \frac{1}{3 – y}\,dy $$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -3429,9 +3418,6 @@ Tags		ps17
 
 
 
-
-
-
 # Question 67
 
 
@@ -3441,6 +3427,8 @@ $$ \int \cos^2(t)\,dt $$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -3460,9 +3448,6 @@ Tags		ps17
 
 2025-04-17T06:00:00Z 0
 2025-06-11T21:45:04Z 1
-
-
-
 
 
 
@@ -3584,7 +3569,11 @@ The conservative force field does $-3$ J of work along that curve—i.e.\ you 
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -3596,8 +3585,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -3663,9 +3650,6 @@ Tags		ps12
 2025-05-05T06:00:00Z 1
 2025-05-19T06:00:00Z 1
 2025-06-11T22:09:21Z 1
-
-
-
 
 
 
@@ -3762,9 +3746,6 @@ Tags		ps12
 
 
 
-
-
-
 # Question 74
 
 
@@ -3819,9 +3800,6 @@ Tags		ps12
 2025-05-05T06:00:00Z 1
 2025-05-19T06:00:00Z 1
 2025-06-12T19:39:44Z 1
-
-
-
 
 
 
@@ -3935,9 +3913,6 @@ Tags		ps12
 
 
 
-
-
-
 # Question 76
 
 
@@ -3954,6 +3929,8 @@ Encontre a solução geral da EDO.
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -3996,9 +3973,6 @@ Tags		ps12
 2025-05-06T06:00:00Z 1
 2025-05-19T06:00:00Z 1
 2025-06-12T19:52:47Z 1
-
-
-
 
 
 
@@ -4100,9 +4074,6 @@ Tags		ps12
 
 
 
-
-
-
 # Question 78
 
 
@@ -4187,9 +4158,6 @@ Tags		ps12
 
 
 
-
-
-
 # Question 79
 
 
@@ -4235,6 +4203,8 @@ $$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		EDO
@@ -4244,8 +4214,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4283,6 +4251,8 @@ $$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		EDO
@@ -4292,8 +4262,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4338,6 +4306,8 @@ $$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		EDO
@@ -4347,8 +4317,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4386,6 +4354,8 @@ $$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		EDO
@@ -4395,8 +4365,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4424,6 +4392,8 @@ $$
 ## Step-by-step
 
 
+
+
 ## Answer
 
 $$
@@ -4440,8 +4410,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4483,6 +4451,8 @@ $$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		EDO
@@ -4492,8 +4462,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4521,6 +4489,8 @@ $$
 ## Step-by-step
 
 
+
+
 ## Answer
 
 A solução geral $y(x) = y_h(x) + y_p(x)$ é
@@ -4539,8 +4509,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -4622,9 +4590,6 @@ Tags		ps4
 
 
 
-
-
-
 # Question 90
 
 
@@ -4640,6 +4605,8 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $z$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -4676,9 +4643,6 @@ Tags
 
 
 
-
-
-
 # Question 91
 
 
@@ -4694,6 +4658,8 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $y$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -4730,9 +4696,6 @@ Tags
 
 
 
-
-
-
 # Question 92
 
 
@@ -4742,6 +4705,8 @@ Compare [[q88]] com [[q91]] e comente os valores das componentes $\sigma_{xx}$ e
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -4763,9 +4728,6 @@ Tags		ps4
 2025-05-12T06:00:00Z 1
 2025-06-01T16:09:36Z 1
 2025-06-30T18:27:26Z 1
-
-
-
 
 
 
@@ -4901,6 +4863,8 @@ $$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		MecSol
@@ -4912,9 +4876,6 @@ Tags
 ## Attempts
 
 2025-05-12T06:00:00Z 1
-
-
-
 
 
 
@@ -4944,7 +4905,11 @@ $$[\sigma] = \begin{bmatrix}
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -4958,9 +4923,6 @@ Tags
 ## Attempts
 
 2025-05-12T06:00:00Z 1
-
-
-
 
 
 
@@ -5005,6 +4967,8 @@ A tensão de normal média é a tensão de tração quando a tensão de cisalham
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		MecSol
@@ -5017,9 +4981,6 @@ Tags
 
 2025-05-12T06:00:00Z 0
 2025-05-15T06:00:00Z 0
-
-
-
 
 
 
@@ -5054,6 +5015,8 @@ $$
 
 
 ## Step-by-step
+
+
 
 
 ## Answer
@@ -5095,19 +5058,22 @@ Tags		ps10; ps11
 
 
 
-
-
-
 # Question 97
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5132,18 +5098,22 @@ Tags
 
 
 
-
-
 # Question 98
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5168,18 +5138,22 @@ Tags
 
 
 
-
-
 # Question 99
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5204,18 +5178,22 @@ Tags
 
 
 
-
-
 # Question 100
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5240,18 +5218,22 @@ Tags
 
 
 
-
-
 # Question 101
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5276,18 +5258,22 @@ Tags
 
 
 
-
-
 # Question 102
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5312,18 +5298,22 @@ Tags
 
 
 
-
-
 # Question 103
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5348,18 +5338,22 @@ Tags
 
 
 
-
-
 # Question 104
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5384,18 +5378,22 @@ Tags
 
 
 
-
-
 # Question 105
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5420,18 +5418,22 @@ Tags
 
 
 
-
-
 # Question 106
 
 
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -5457,9 +5459,6 @@ Tags
 
 
 
-
-
-
 # Question 107
 
 
@@ -5472,7 +5471,6 @@ $$S = \vec r(u,v) = (u^2, v^2, u + 2v)$$
 
 
 ## Step-by-step
-
 
 ### a)S é lisa em todo ponto?
 
@@ -5564,9 +5562,6 @@ Tags		ps22; ps29
 
 
 
-
-
-
 # Question 108
 
 
@@ -5644,9 +5639,6 @@ Tags		ps29
 
 
 
-
-
-
 # Question 109
 
 
@@ -5656,7 +5648,6 @@ Qual a área da superfície definida por S:  $z = x^2 + y^2$ com $z \le 1$
 
 
 ## Step-by-step
-
 
 ### Abordagem paramétrica (ou “integral vetorial de superfície”)
 $$\vec r(\theta,h)=(r_x(\theta,h),r_y(\theta,h),r_z(\theta,h))$$
@@ -5771,9 +5762,6 @@ Tags		ps29
 
 2025-06-05T19:45:01Z 0
 2025-06-21T19:05:55Z 1
-
-
-
 
 
 
@@ -5918,9 +5906,6 @@ Tags		ps34; ps7
 
 
 
-
-
-
 # Question 111
 
 
@@ -6032,9 +6017,6 @@ Tags		ps11
 
 
 
-
-
-
 # Question 112
 
 
@@ -6133,9 +6115,6 @@ Tags		ps7
 
 
 
-
-
-
 # Question 115
 
 
@@ -6183,9 +6162,6 @@ Tags		ps5; ps7
 2025-06-09T19:13:08Z 1
 2025-06-17T16:00:11Z 1
 2025-06-30T17:05:55Z 1
-
-
-
 
 
 
@@ -6371,9 +6347,6 @@ Tags		ps5; ps7; ps8
 
 
 
-
-
-
 # Question 117
 
 
@@ -6413,8 +6386,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -6490,8 +6461,6 @@ Tags
 
 
 
-
-
 # Question 119
 
 
@@ -6501,7 +6470,6 @@ Determine $\iint_S \vec{F}\,d\vec{s}$ sabendo que $\vec{F}(x,y,z) = (e^{y^2},\,x
 
 
 ## Step-by-step
-
 
 ### Método 1
 [[ps19#^divergenceTheorem]]
@@ -6627,9 +6595,6 @@ Tags		ps19; ps30
 
 
 
-
-
-
 # Question 120
 
 
@@ -6639,7 +6604,6 @@ Calcule $\oint_{C}\vec F\cdot d\vec r$ onde $\vec F=(y^2,x,z^2)$ e $C=\{\,y+z=2\
 
 
 ## Step-by-step
-
 
 ### Método 1 - Pelo teorema de Stokes
 ![[ps19#^stokesTheorem]]
@@ -6719,8 +6683,6 @@ Tags		ps19; ps28
 
 
 
-
-
 # Question 121
 
 
@@ -6744,7 +6706,6 @@ Faça o desenvolvimento da questão de duas formas:
 
 
 ## Step-by-step
-
 
 ### Círculo de Mohr
 ![](media/q96.png)
@@ -6852,9 +6813,6 @@ Tags		ps10; ps11
 
 
 
-
-
-
 # Question 122
 
 
@@ -6876,6 +6834,8 @@ $$A = (5.5, -9.5) \quad B = (9.5, 5.5)$$
 ## Answer
 
 
+
+
 ## Metadata
 
 Discipline		Mecsol
@@ -6885,8 +6845,6 @@ Tags		ps33
 
 
 ## Attempts
-
-
 
 
 
@@ -6987,9 +6945,6 @@ Tags		ps7
 
 
 
-
-
-
 # Question 124
 
 
@@ -7009,7 +6964,11 @@ c.2) Critério de Von Mises.
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7021,8 +6980,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7052,7 +7009,11 @@ c) Deformação longitudinal na direção de $30^{\circ}$ (sentido anti-horário
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7064,8 +7025,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7095,7 +7054,11 @@ Expresse seus resultados em termos de $E, \nu, \sigma_{xx}, "a"$ e "$b"$. $\sigm
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7107,8 +7070,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7137,7 +7098,11 @@ b) Os valores destas componentes principais de deformação.
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7149,8 +7114,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7177,7 +7140,11 @@ b) Variação $\Delta a$ da dimensão "$a$" na situação da letra (a), ou seja,
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7189,8 +7156,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7224,7 +7189,11 @@ c.2) Segundo Von MISES.
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7236,8 +7205,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7268,7 +7235,11 @@ d) Expresse a condição de Tresca em função de $E, \alpha, \Delta, L \text{ e
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -7280,8 +7251,6 @@ Tags
 
 
 ## Attempts
-
-
 
 
 
@@ -7308,7 +7277,6 @@ Determinar: $Q_{1 \to 2}$.
 
 
 ## Step-by-step
-
 
 ### Considerações
 - O cilindro se move livremente $\implies$ Sistema isobárico
@@ -7354,9 +7322,6 @@ Tags
 
 
 
-
-
-
 # Question 132
 
 
@@ -7366,7 +7331,6 @@ Um trecho de redução em um tubo de água tem um diâmetro de entrada de $50$ m
 
 
 ## Step-by-step
-
 
 ### Considerações
 - Água é um fluido incompressível $ \iff (\rho = \rho_i = \rho_e)$ 
@@ -7410,9 +7374,6 @@ Tags
 
 
 
-
-
-
 # Question 133
 
 
@@ -7422,7 +7383,6 @@ A resistência do ar (força de arrasto) sobre uma bola de $200$ g em queda livr
 
 
 ## Step-by-step
-
 
 ### Entendendo $F_D$
 $$[F_D] = [k] \cdot [V^2]$$
@@ -7559,9 +7519,6 @@ Tags
 
 
 
-
-
-
 # Question 134
 
 
@@ -7614,19 +7571,17 @@ Tags
 
 
 
-
-
 # Question 135
 
 
 ## Proposition
+
 A capacidade máxima de fornecimento de potência de um motor de combustão interna decresce com a altitude, devido ao fato de a massa específica do ar e, consequentemente, a vazão mássica de ar decrescerem com a altitude. Um caminhão parte do Rio de Janeiro (elevação de 0 metros) em um dia em que a temperatura e a pressão barométrica  são, respectivamente, de 40°C e 1 atm. O caminhão viaja para Belo Horizonte (elevação de aproximadamente 800 metros), em que a temperatura é de 27°C. Determinar a pressão barométrica em Belo Horizonte e a variação percentual na massa específica do ar. 
 
 Constante de Gás Específica para o Ar = 286,9 J/kg·K
 
 
 ## Step-by-step
-
 
 ### Fórmulas
 $$\frac{dp}{dz} = -\rho g$$
@@ -7665,6 +7620,7 @@ $$ = \frac{0,916}{1} \cdot \left(\frac{273,15 + 40}{273,15 + 27} \right) - 1 = -
 
 
 ## Answer
+
 $$p = 0,916 \, \text{atm}$$
 
 $$\Delta \rho \%  = -4,43 \, \%$$
@@ -7679,10 +7635,8 @@ Tags
 
 
 ## Attempts
+
 2025-08-20T18:31:52Z 0
-
-
-
 
 
 
@@ -7699,14 +7653,14 @@ Tags
 
 
 ## Proposition
+
 Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\rho_{\text{água}}=1000$ kg/m$^3$, carvalho $\rho_{\text{carvalho}}=770$ kg/m$^3$, e óleo $\rho_{\text{óleo}}=800$ kg/m$^3$.
 
 
 ![](media/q136-1.svg)
-	
+
 
 ## Step-by-step
-
 
 ### Fórmulas
 $$\frac{dp}{dz} = -\rho g$$
@@ -7790,6 +7744,7 @@ $$T = 264,87 \text{ N} - 203,95 \text{ N} = 60,92 \text{ N}$$
 
 
 ## Answer
+
 $$F_3 = 11235,96 N$$
 
 $$T = 60,92 N$$
@@ -7800,14 +7755,12 @@ $$T = 60,92 N$$
 Discipline		EMA091 Mecânica dos fluidos
 Description		1 - Cubo imerso
 Source		2025-08-20 Exercícios Estática - 01
-Tags	
+Tags		
 
 
 ## Attempts
+
 2025-08-20T19:50:54Z 0
-
-
-
 
 
 
@@ -7832,7 +7785,6 @@ Considere o manômetro de dois fluidos mostrado na Figura P.2. Calcule a diferen
 
 
 ## Step-by-step
-
 
 ### Fórmulas
 $$\frac{dp}{dz} = -\rho g$$
@@ -7915,14 +7867,12 @@ $$p_1-p_2 = 59,53 \text{ Pa}$$
 Discipline		EMA091 Mecânica dos fluidos
 Description		2 - Manômetro de dois fluidos
 Source		2025-08-20 Exercícios Estática - 01
-Tags	
+Tags		
 
 
 ## Attempts
+
 2025-08-20T22:26:22Z 0
-
-
-
 
 
 
@@ -7946,7 +7896,6 @@ Tags
 
 
 ## Step-by-step
-
 
 ### Fórmulas
 	$$\frac{dp}{dz} = -\rho g$$
@@ -7986,6 +7935,7 @@ $$ = 7357.5 - 18467.32 = \textbf{-11109,82 Pa}$$
 
 
 ## Answer
+
 $$p_a - p_b = 11,11 \, kPa$$
 
 
@@ -7994,13 +7944,12 @@ $$p_a - p_b = 11,11 \, kPa$$
 Discipline		EMA091 Mecânica dos fluidos
 Description		4 - Tanque com ar, gasolina e glicerina
 Source		2025-08-20 Exercícios Estática - 01
-Tags	
+Tags		
 
 
 ## Attempts
+
 2025-08-20T23:27:29Z 0
-
-
 
 
 
@@ -8024,10 +7973,13 @@ Na Figura P.4, o manômetro "A" lê a pressão de 1,5 kPa. Todos os fluidos est�
 
 
 ## Step-by-step
+
 ![](media/q139-2.svg)
 
 
 ## Answer
+
+
 
 
 ## Metadata
@@ -8035,12 +7987,10 @@ Na Figura P.4, o manômetro "A" lê a pressão de 1,5 kPa. Todos os fluidos est�
 Discipline		EMA091 Mecânica dos fluidos
 Description		1 - Cubo imerso
 Source		2025-08-20 Exercícios Estática - 01
-Tags	
+Tags		
 
 
 ## Attempts
-
-
 
 
 
@@ -8060,10 +8010,16 @@ Tags
 ## Proposition
 
 
+
+
 ## Step-by-step
 
 
+
+
 ## Answer
+
+
 
 
 ## Metadata
@@ -8071,10 +8027,20 @@ Tags
 Discipline		
 Description		
 Source		
-Tags	
+Tags		
 
 
 ## Attempts
+
+
+
+
+
+
+
+
+
+
 
 
 

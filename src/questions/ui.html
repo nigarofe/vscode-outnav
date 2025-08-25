@@ -22,7 +22,38 @@
   </vscode-tab-panel>
 
   <vscode-tab-header slot="header">🧭 Recommendations</vscode-tab-header>
+  <vscode-multi-select id="recommendationSelectDisciplines">
+    <vscode-option>
+      EES022 Introdução à Mecânica dos Sólidos
+    </vscode-option>
+    <vscode-option selected>
+      EMA091 Mecânica dos fluidos
+    </vscode-option>
+    <vscode-option>
+      EES003 Resistência dos Materiais
+    </vscode-option>
+    <vscode-option>
+      EMA093 Processos de Fabricação por Usinagem
+    </vscode-option>
+  </vscode-multi-select>
+
+
+
   <vscode-tab-panel>
-    💡 Do question x, y, z
+    <vscode-table zebra bordered-rows>
+      <vscode-table-header id="recommendationsTableHeader" slot="header">
+        <vscode-table-header-cell>#</vscode-table-header-cell>
+        <vscode-table-header-cell>Source</vscode-table-header-cell>
+        <vscode-table-header-cell>Description</vscode-table-header-cell>
+        <vscode-table-header-cell>Attempts Summary</vscode-table-header-cell>
+        <vscode-table-header-cell>DSLA</vscode-table-header-cell>
+        <vscode-table-header-cell>LaMI</vscode-table-header-cell>
+        <vscode-table-header-cell>PMG-D</vscode-table-header-cell>
+        <vscode-table-header-cell>PMG-X</vscode-table-header-cell>
+      </vscode-table-header>
+      <vscode-table-body id="recommendationsTableBody" slot="body">
+
+      </vscode-table-body>
+    </vscode-table>
   </vscode-tab-panel>
 </vscode-tabs>
