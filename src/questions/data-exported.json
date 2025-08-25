@@ -5,7 +5,7 @@
       "discipline": "Electromagnetism",
       "source": "An old dusty book",
       "description": "This is a question description",
-      "proposition": "**This is the q1 proposition**\n\n<button>this is a button</button>\n\n---\n\n---\n### Heading 3\n#### Heading 4\n*italic*\n\n\n```snippet:newtons-law\n$\\oiint$ Esse é um exemplo de snippet\n\n$$\\sin \\alpha$$\n\nLinha nova\n```\n\n![](media/ps11.png)",
+      "proposition": "**This is the q1 proposition**\n\n```snippet:newtons-law\n$\\oiint$ Esse é um exemplo de snippet\n\n$$\\sin \\alpha$$\n\nLinha nova\n```\n\n![](images/ps11.png)",
       "step_by_step": "{{newtons-law}}\n{{this-snippet-is-from-premises}}",
       "answer": "a\nthis is the q1 a",
       "tags": [
@@ -36,16 +36,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 56,
-        "PMG_D": 26,
-        "PMG_X": 1.46,
+        "PMG_D": 28,
+        "PMG_X": 1.5,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-02T16:55:31Z",
-        "PMG-X_cell_color": "hsl(100, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(104, 100%, 75%)"
       }
     },
     {
@@ -80,16 +80,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 96,
+        "DSLA": 98,
         "LaMI": 71,
-        "PMG_D": 25,
-        "PMG_X": 1.35,
+        "PMG_D": 27,
+        "PMG_X": 1.38,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-05-19T06:00:00Z",
-        "PMG-X_cell_color": "hsl(102, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(106, 100%, 75%)"
       }
     },
     {
@@ -116,16 +116,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 128,
+        "DSLA": 130,
         "LaMI": 83,
-        "PMG_D": 45,
-        "PMG_X": 1.54,
+        "PMG_D": 47,
+        "PMG_X": 1.57,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
         "last_attempt": "2025-04-17T06:00:00Z",
-        "PMG-X_cell_color": "hsl(99, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(103, 100%, 75%)"
       }
     },
     {
@@ -194,10 +194,10 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 10,
+        "DSLA": 12,
         "LaMI": 56,
-        "PMG_D": -46,
-        "PMG_X": 0.18,
+        "PMG_D": -44,
+        "PMG_X": 0.21,
         "total_attempts": 13,
         "memory_attempts": 9,
         "help_attempts": 4,
@@ -230,16 +230,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 128,
+        "DSLA": 130,
         "LaMI": 83,
-        "PMG_D": 45,
-        "PMG_X": 1.54,
+        "PMG_D": 47,
+        "PMG_X": 1.57,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
         "last_attempt": "2025-04-17T06:00:00Z",
-        "PMG-X_cell_color": "hsl(99, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(103, 100%, 75%)"
       }
     },
     {
@@ -308,16 +308,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 46,
-        "PMG_D": 17,
-        "PMG_X": 1.37,
+        "PMG_D": 19,
+        "PMG_X": 1.41,
         "total_attempts": 13,
         "memory_attempts": 7,
         "help_attempts": 6,
         "attempts_summary": "13;7;6",
         "last_attempt": "2025-06-21T16:00:33Z",
-        "PMG-X_cell_color": "hsl(102, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
       }
     },
     {
@@ -344,16 +344,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 96,
+        "DSLA": 98,
         "LaMI": 102,
-        "PMG_D": -6,
-        "PMG_X": 0.94,
+        "PMG_D": -4,
+        "PMG_X": 0.96,
         "total_attempts": 3,
         "memory_attempts": 1,
         "help_attempts": 2,
         "attempts_summary": "3;1;2",
         "last_attempt": "2025-05-19T06:00:00Z",
-        "PMG-X_cell_color": "hsl(108, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(111, 100%, 75%)"
       }
     },
     {
@@ -380,16 +380,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 84,
+        "DSLA": 86,
         "LaMI": 114,
-        "PMG_D": -30,
-        "PMG_X": 0.74,
+        "PMG_D": -28,
+        "PMG_X": 0.75,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
         "last_attempt": "2025-06-01T02:00:59Z",
-        "PMG-X_cell_color": "hsl(111, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(113, 100%, 75%)"
       }
     },
     {
@@ -412,16 +412,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 84,
+        "DSLA": 86,
         "LaMI": 194,
-        "PMG_D": -110,
-        "PMG_X": 0.43,
+        "PMG_D": -108,
+        "PMG_X": 0.44,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-01T02:15:36Z",
-        "PMG-X_cell_color": "hsl(116, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(117, 100%, 75%)"
       }
     },
     {
@@ -444,16 +444,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 196,
-        "PMG_D": -114,
-        "PMG_X": 0.42,
+        "PMG_D": -112,
+        "PMG_X": 0.43,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-02T17:03:26Z",
-        "PMG-X_cell_color": "hsl(116, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(117, 100%, 75%)"
       }
     },
     {
@@ -472,9 +472,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 278,
+        "DSLA": 280,
         "LaMI": "W/H",
-        "PMG_D": 278,
+        "PMG_D": 280,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -536,16 +536,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 28,
-        "PMG_D": 54,
-        "PMG_X": 2.93,
+        "PMG_D": 56,
+        "PMG_X": 3,
         "total_attempts": 10,
         "memory_attempts": 6,
         "help_attempts": 4,
         "attempts_summary": "10;6;4",
         "last_attempt": "2025-06-02T17:36:10Z",
-        "PMG-X_cell_color": "hsl(78, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(86, 100%, 75%)"
       }
     },
     {
@@ -588,16 +588,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 46,
-        "PMG_D": 36,
-        "PMG_X": 1.78,
+        "PMG_D": 38,
+        "PMG_X": 1.83,
         "total_attempts": 7,
         "memory_attempts": 4,
         "help_attempts": 3,
         "attempts_summary": "7;4;3",
         "last_attempt": "2025-06-02T19:06:36Z",
-        "PMG-X_cell_color": "hsl(95, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(100, 100%, 75%)"
       }
     },
     {
@@ -638,16 +638,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 71,
+        "DSLA": 73,
         "LaMI": 57,
-        "PMG_D": 14,
-        "PMG_X": 1.25,
+        "PMG_D": 16,
+        "PMG_X": 1.28,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-13T19:08:35Z",
-        "PMG-X_cell_color": "hsl(104, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(107, 100%, 75%)"
       }
     },
     {
@@ -688,16 +688,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 56,
-        "PMG_D": 16,
-        "PMG_X": 1.29,
+        "PMG_D": 18,
+        "PMG_X": 1.32,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
         "last_attempt": "2025-06-12T13:23:28Z",
-        "PMG-X_cell_color": "hsl(103, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(106, 100%, 75%)"
       }
     },
     {
@@ -724,9 +724,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 80,
+        "DSLA": 82,
         "LaMI": "W/H",
-        "PMG_D": 80,
+        "PMG_D": 82,
         "PMG_X": "W/H",
         "total_attempts": 3,
         "memory_attempts": 1,
@@ -778,16 +778,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 64,
+        "DSLA": 66,
         "LaMI": 45,
-        "PMG_D": 19,
-        "PMG_X": 1.42,
+        "PMG_D": 21,
+        "PMG_X": 1.47,
         "total_attempts": 7,
         "memory_attempts": 5,
         "help_attempts": 2,
         "attempts_summary": "7;5;2",
         "last_attempt": "2025-06-20T16:44:10Z",
-        "PMG-X_cell_color": "hsl(101, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
       }
     },
     {
@@ -830,16 +830,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 96,
+        "DSLA": 98,
         "LaMI": 42,
-        "PMG_D": 54,
-        "PMG_X": 2.29,
+        "PMG_D": 56,
+        "PMG_X": 2.33,
         "total_attempts": 7,
         "memory_attempts": 5,
         "help_attempts": 2,
         "attempts_summary": "7;5;2",
         "last_attempt": "2025-05-19T06:00:00Z",
-        "PMG-X_cell_color": "hsl(88, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(94, 100%, 75%)"
       }
     },
     {
@@ -886,16 +886,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 80,
+        "DSLA": 82,
         "LaMI": 35,
-        "PMG_D": 45,
-        "PMG_X": 2.29,
+        "PMG_D": 47,
+        "PMG_X": 2.34,
         "total_attempts": 8,
         "memory_attempts": 6,
         "help_attempts": 2,
         "attempts_summary": "8;6;2",
         "last_attempt": "2025-06-04T15:55:04Z",
-        "PMG-X_cell_color": "hsl(88, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(94, 100%, 75%)"
       }
     },
     {
@@ -940,16 +940,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 56,
-        "PMG_D": 7,
-        "PMG_X": 1.13,
+        "PMG_D": 9,
+        "PMG_X": 1.16,
         "total_attempts": 7,
         "memory_attempts": 5,
         "help_attempts": 2,
         "attempts_summary": "7;5;2",
         "last_attempt": "2025-06-21T15:40:35Z",
-        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
     {
@@ -986,9 +986,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 54,
+        "DSLA": 56,
         "LaMI": "W/H",
-        "PMG_D": 54,
+        "PMG_D": 56,
         "PMG_X": "W/H",
         "total_attempts": 5,
         "memory_attempts": 3,
@@ -1032,16 +1032,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 54,
+        "DSLA": 56,
         "LaMI": 69,
-        "PMG_D": -15,
-        "PMG_X": 0.78,
+        "PMG_D": -13,
+        "PMG_X": 0.81,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-30T18:54:11Z",
-        "PMG-X_cell_color": "hsl(111, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(113, 100%, 75%)"
       }
     },
     {
@@ -1078,16 +1078,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 52,
+        "DSLA": 54,
         "LaMI": 67,
-        "PMG_D": -15,
-        "PMG_X": 0.78,
+        "PMG_D": -13,
+        "PMG_X": 0.81,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-07-02T20:56:28Z",
-        "PMG-X_cell_color": "hsl(111, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(113, 100%, 75%)"
       }
     },
     {
@@ -1142,16 +1142,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 41,
-        "PMG_D": 41,
-        "PMG_X": 2,
+        "PMG_D": 43,
+        "PMG_X": 2.05,
         "total_attempts": 10,
         "memory_attempts": 8,
         "help_attempts": 2,
         "attempts_summary": "10;8;2",
         "last_attempt": "2025-06-02T16:15:32Z",
-        "PMG-X_cell_color": "hsl(92, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -1198,16 +1198,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 34,
-        "PMG_D": 48,
-        "PMG_X": 2.41,
+        "PMG_D": 50,
+        "PMG_X": 2.47,
         "total_attempts": 8,
         "memory_attempts": 4,
         "help_attempts": 4,
         "attempts_summary": "8;4;4",
         "last_attempt": "2025-06-02T16:24:49Z",
-        "PMG-X_cell_color": "hsl(86, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(92, 100%, 75%)"
       }
     },
     {
@@ -1272,9 +1272,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 43,
+        "DSLA": 45,
         "LaMI": "W/H",
-        "PMG_D": 43,
+        "PMG_D": 45,
         "PMG_X": "W/H",
         "total_attempts": 12,
         "memory_attempts": 6,
@@ -1308,16 +1308,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 138,
+        "DSLA": 140,
         "LaMI": 91,
-        "PMG_D": 47,
-        "PMG_X": 1.52,
+        "PMG_D": 49,
+        "PMG_X": 1.54,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
         "last_attempt": "2025-04-07T06:00:00Z",
-        "PMG-X_cell_color": "hsl(99, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(104, 100%, 75%)"
       }
     },
     {
@@ -1360,16 +1360,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 27,
-        "PMG_D": 55,
-        "PMG_X": 3.04,
+        "PMG_D": 57,
+        "PMG_X": 3.11,
         "total_attempts": 7,
         "memory_attempts": 2,
         "help_attempts": 5,
         "attempts_summary": "7;2;5",
         "last_attempt": "2025-06-02T16:50:16Z",
-        "PMG-X_cell_color": "hsl(76, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(84, 100%, 75%)"
       }
     },
     {
@@ -1428,16 +1428,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 27,
-        "PMG_D": 55,
-        "PMG_X": 3.04,
+        "PMG_D": 57,
+        "PMG_X": 3.11,
         "total_attempts": 11,
         "memory_attempts": 6,
         "help_attempts": 5,
         "attempts_summary": "11;6;5",
         "last_attempt": "2025-06-02T16:45:20Z",
-        "PMG-X_cell_color": "hsl(76, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(84, 100%, 75%)"
       }
     },
     {
@@ -1468,9 +1468,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": "W/H",
-        "PMG_D": 82,
+        "PMG_D": 84,
         "PMG_X": "W/H",
         "total_attempts": 4,
         "memory_attempts": 1,
@@ -1504,16 +1504,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 138,
+        "DSLA": 140,
         "LaMI": 83,
-        "PMG_D": 55,
-        "PMG_X": 1.66,
+        "PMG_D": 57,
+        "PMG_X": 1.69,
         "total_attempts": 3,
         "memory_attempts": 2,
         "help_attempts": 1,
         "attempts_summary": "3;2;1",
         "last_attempt": "2025-04-07T06:00:00Z",
-        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(102, 100%, 75%)"
       }
     },
     {
@@ -1554,16 +1554,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 56,
-        "PMG_D": 7,
-        "PMG_X": 1.13,
+        "PMG_D": 9,
+        "PMG_X": 1.16,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
         "last_attempt": "2025-06-21T16:16:33Z",
-        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
     {
@@ -1600,16 +1600,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 56,
-        "PMG_D": 7,
-        "PMG_X": 1.13,
+        "PMG_D": 9,
+        "PMG_X": 1.16,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-21T16:10:13Z",
-        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(108, 100%, 75%)"
       }
     },
     {
@@ -1664,16 +1664,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 10,
         "memory_attempts": 6,
         "help_attempts": 4,
         "attempts_summary": "10;6;4",
         "last_attempt": "2025-06-02T16:27:47Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -1720,16 +1720,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 8,
         "memory_attempts": 6,
         "help_attempts": 2,
         "attempts_summary": "8;6;2",
         "last_attempt": "2025-06-02T16:27:48Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -1766,16 +1766,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 71,
+        "DSLA": 73,
         "LaMI": 51,
-        "PMG_D": 20,
-        "PMG_X": 1.39,
+        "PMG_D": 22,
+        "PMG_X": 1.43,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-13T18:12:36Z",
-        "PMG-X_cell_color": "hsl(101, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
       }
     },
     {
@@ -1806,16 +1806,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 71,
+        "DSLA": 73,
         "LaMI": 51,
-        "PMG_D": 20,
-        "PMG_X": 1.39,
+        "PMG_D": 22,
+        "PMG_X": 1.43,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
         "last_attempt": "2025-06-13T18:44:18Z",
-        "PMG-X_cell_color": "hsl(101, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
       }
     },
     {
@@ -1846,16 +1846,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 71,
+        "DSLA": 73,
         "LaMI": 51,
-        "PMG_D": 20,
-        "PMG_X": 1.39,
+        "PMG_D": 22,
+        "PMG_X": 1.43,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
         "last_attempt": "2025-06-13T18:57:58Z",
-        "PMG-X_cell_color": "hsl(101, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(105, 100%, 75%)"
       }
     },
     {
@@ -1882,9 +1882,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 122,
+        "DSLA": 124,
         "LaMI": "W/H",
-        "PMG_D": 122,
+        "PMG_D": 124,
         "PMG_X": "W/H",
         "total_attempts": 3,
         "memory_attempts": 1,
@@ -1930,16 +1930,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-02T19:30:37Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -1978,16 +1978,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
         "last_attempt": "2025-06-02T19:34:40Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -2026,16 +2026,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-02T19:51:06Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -2074,16 +2074,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-02T20:06:48Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -2118,16 +2118,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 82,
+        "DSLA": 84,
         "LaMI": 40,
-        "PMG_D": 42,
-        "PMG_X": 2.05,
+        "PMG_D": 44,
+        "PMG_X": 2.1,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-02T20:28:28Z",
-        "PMG-X_cell_color": "hsl(91, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(97, 100%, 75%)"
       }
     },
     {
@@ -2162,16 +2162,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 81,
+        "DSLA": 83,
         "LaMI": 38,
-        "PMG_D": 43,
-        "PMG_X": 2.13,
+        "PMG_D": 45,
+        "PMG_X": 2.18,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-03T19:18:31Z",
-        "PMG-X_cell_color": "hsl(90, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(96, 100%, 75%)"
       }
     },
     {
@@ -2181,7 +2181,7 @@
       "description": "L1-Q7",
       "proposition": "Uma bola de $1,50\\,\\mathrm{kg}$ e outra de $2,0\\,\\mathrm{kg}$ são coladas uma na outra, a mais leve embaixo da mais pesada. A bola de cima é presa a uma mola vertical ideal de constante $165\\,\\mathrm{N/m}$, e o sistema está vibrando verticalmente com uma amplitude de $15,0\\,\\mathrm{cm}$. A cola usada para juntar as bolas é velha e fraca, e cede de repente, quando as bolas estão na posição mais baixa de seu movimento.\n- a) Por que é mais provável que a cola ceda no ponto mais baixo e não em qualquer outro ponto do movimento?\n- b) Calcule a amplitude e a frequência das vibrações depois que a bola de baixo houver se soltado.",
       "step_by_step": "",
-      "answer": "a) Pois é quando a força restauradora da mola é máxima e oposta à força peso.\n\nb) O sistema está em equilíbrio quando $F_k = F_g$:\n- $-\\,k\\,x = -\\,m\\,g$\n- $x = \\frac{m\\,g}{k}$\n- $x_{\\text{eq1}} = \\frac{(2 + 1,5)\\,\\cdot 10}{165} = 21,21\\,\\mathrm{cm}$\n- $x_{\\text{eq2}} = \\frac{2\\,\\cdot 10}{165} = 12,12\\,\\mathrm{cm}$\n- $\\omega = \\sqrt{\\frac{k}{m}}$\n- $\\omega_2 = \\sqrt{\\frac{165}{2}} = 9,08\\,\\mathrm{rad/s}$\n- $A_2 = A_1 + \\bigl(x_{\\text{eq1}} - x_{\\text{eq2}}\\bigr) = 15 + (21,21 - 12,12) = 24,09\\,\\mathrm{cm}$\n\n![](media/q46.png)",
+      "answer": "a) Pois é quando a força restauradora da mola é máxima e oposta à força peso.\n\nb) O sistema está em equilíbrio quando $F_k = F_g$:\n- $-\\,k\\,x = -\\,m\\,g$\n- $x = \\frac{m\\,g}{k}$\n- $x_{\\text{eq1}} = \\frac{(2 + 1,5)\\,\\cdot 10}{165} = 21,21\\,\\mathrm{cm}$\n- $x_{\\text{eq2}} = \\frac{2\\,\\cdot 10}{165} = 12,12\\,\\mathrm{cm}$\n- $\\omega = \\sqrt{\\frac{k}{m}}$\n- $\\omega_2 = \\sqrt{\\frac{165}{2}} = 9,08\\,\\mathrm{rad/s}$\n- $A_2 = A_1 + \\bigl(x_{\\text{eq1}} - x_{\\text{eq2}}\\bigr) = 15 + (21,21 - 12,12) = 24,09\\,\\mathrm{cm}$\n\n![](images/q46.png)",
       "tags": [],
       "attempts": [
         {
@@ -2206,16 +2206,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 81,
+        "DSLA": 83,
         "LaMI": 38,
-        "PMG_D": 43,
-        "PMG_X": 2.13,
+        "PMG_D": 45,
+        "PMG_X": 2.18,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-03T19:39:42Z",
-        "PMG-X_cell_color": "hsl(90, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(96, 100%, 75%)"
       }
     },
     {
@@ -2224,7 +2224,7 @@
       "source": "2025-1 Lista 1",
       "description": "L1-Q8",
       "proposition": "Você deseja determinar o momento de inércia de certa parte complicada de uma máquina em relação a um eixo passando em seu centro de massa. Você suspende o objeto por um fio ao longo desse eixo. A constante de torção do fio é igual a $0,450\\,\\mathrm{N\\cdot m/rad}$. Você torce ligeiramente o objeto ao redor desse eixo e o libera, cronometrando 125 oscilações em 265s. Qual é o momento de inércia?",
-      "step_by_step": "- $T = \\Theta / \\omega = 2,65 / 2,25 = 2,12\\,s$\n- $\\omega = 2\\pi f = 2\\pi (1/T) = 2\\pi (1/2,12) = 2,96\\,\\mathrm{rad/s}$\n- $T = 2\\pi \\sqrt{I/k} \\;\\to\\; I = \\frac{2,12^2 \\cdot 0,460}{(2\\pi)^2} = 0,051\\,\\mathrm{kg}\\cdot\\mathrm{m}^2$\n\n- A unidade da constante de torção de um fio é $[\\mathrm{N\\,m/rad}]$. Isso indica o torque em N\\,m necessário para torcer o fio 1 radiano, ou cerca de 57° (já que 180° = $\\pi$ radianos).\n- Ou seja, a unidade $\\mathrm{N\\cdot m/rad}$ responde à pergunta: “Quantos newton-metros de torque preciso aplicar para obter exatamente uma variação angular de 1 rad (≈57°) no fio?”\n\n\n\n- $I = \\frac{T^2\\,k}{4\\pi^2}$\n- $[\\mathrm{kg\\,m}^2] = [T]^2\\,[\\mathrm{N\\,m/rad}]\\;/\\;(4\\pi^2) = [s]^2\\,[\\mathrm{kg\\,m}/\\mathrm{rad}]\\;/(4\\pi^2) = [\\mathrm{kg\\,m}^2]$\n\n- Constante de torção $\\to$ Momento de inércia\n- $[\\mathrm{N\\,m/rad}]\\;\\cdot\\;[\\;?\\;]\\;\\to\\;[\\mathrm{kg\\,m}^2]$\n- $[\\mathrm{kg\\,m\\,m}/s^2]\\;\\cdot\\;[s^2]\\;\\to\\;[\\mathrm{kg\\,m}^2]$\n- $k \\cdot T^2 \\;\\to\\; I$\n- $I = \\frac{k\\,T^2}{(2\\pi)^2}$\n\n\n- $T = 2\\pi \\sqrt{I/k}$\n- $T = 2\\pi \\sqrt{m/k}$\n- $T = 2\\pi \\sqrt{J/k}$\n\n![](media/q47.png)",
+      "step_by_step": "- $T = \\Theta / \\omega = 2,65 / 2,25 = 2,12\\,s$\n- $\\omega = 2\\pi f = 2\\pi (1/T) = 2\\pi (1/2,12) = 2,96\\,\\mathrm{rad/s}$\n- $T = 2\\pi \\sqrt{I/k} \\;\\to\\; I = \\frac{2,12^2 \\cdot 0,460}{(2\\pi)^2} = 0,051\\,\\mathrm{kg}\\cdot\\mathrm{m}^2$\n\n- A unidade da constante de torção de um fio é $[\\mathrm{N\\,m/rad}]$. Isso indica o torque em N\\,m necessário para torcer o fio 1 radiano, ou cerca de 57° (já que 180° = $\\pi$ radianos).\n- Ou seja, a unidade $\\mathrm{N\\cdot m/rad}$ responde à pergunta: “Quantos newton-metros de torque preciso aplicar para obter exatamente uma variação angular de 1 rad (≈57°) no fio?”\n\n\n\n- $I = \\frac{T^2\\,k}{4\\pi^2}$\n- $[\\mathrm{kg\\,m}^2] = [T]^2\\,[\\mathrm{N\\,m/rad}]\\;/\\;(4\\pi^2) = [s]^2\\,[\\mathrm{kg\\,m}/\\mathrm{rad}]\\;/(4\\pi^2) = [\\mathrm{kg\\,m}^2]$\n\n- Constante de torção $\\to$ Momento de inércia\n- $[\\mathrm{N\\,m/rad}]\\;\\cdot\\;[\\;?\\;]\\;\\to\\;[\\mathrm{kg\\,m}^2]$\n- $[\\mathrm{kg\\,m\\,m}/s^2]\\;\\cdot\\;[s^2]\\;\\to\\;[\\mathrm{kg\\,m}^2]$\n- $k \\cdot T^2 \\;\\to\\; I$\n- $I = \\frac{k\\,T^2}{(2\\pi)^2}$\n\n\n- $T = 2\\pi \\sqrt{I/k}$\n- $T = 2\\pi \\sqrt{m/k}$\n- $T = 2\\pi \\sqrt{J/k}$\n\n![](images/q47.png)",
       "answer": "$$0,051 \\,kg\\,m^2$$\n\n\n\n\n- A unidade do momento de inércia é $\\displaystyle [\\mathrm{kg\\cdot m^2}]$. Em termos de torque e aceleração angular, isso também pode ser visto como $\\mathrm{N\\cdot m/(rad/s^2)}$, pois a relação básica de rotação é $τ  =  $$I α, \\tau \\;=\\; I\\,\\alpha,τ=Iα$$ \n- onde $\\tau$ é o torque (em N·m), $I$ é o momento de inércia (em kg·m²) e $\\alpha$ é a aceleração angular (em rad/s²). Como o radiano é adimensional, $\\mathrm{N\\cdot m/(rad/s^2)}$ simplifica-se para $\\mathrm{N\\cdot m\\cdot s^2}$, que equivale a $\\mathrm{kg\\cdot m^2}$.\n   \n- Ou seja, o valor numérico do momento de inércia responde à pergunta: “Quantos newton‐metros de torque preciso aplicar para obter exatamente uma aceleração angular de 1 rad/s² no corpo?” Por exemplo, se um bloco rígido tiver momento de inércia $I = 3;\\mathrm{kg\\cdot m^2}$, aplicar um torque de $3;\\mathrm{N\\cdot m}$ lhe dará $\\alpha = 1;\\mathrm{rad/s^2}$; se quisermos $\\alpha = 0{,}5;\\mathrm{rad/s^2}$, bastarão $1{,}5;\\mathrm{N\\cdot m}$, e assim por diante.",
       "tags": [],
       "attempts": [
@@ -2246,9 +2246,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 81,
+        "DSLA": 83,
         "LaMI": "W/H",
-        "PMG_D": 81,
+        "PMG_D": 83,
         "PMG_X": "W/H",
         "total_attempts": 4,
         "memory_attempts": 1,
@@ -2290,16 +2290,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 81,
+        "DSLA": 83,
         "LaMI": 41,
-        "PMG_D": 40,
-        "PMG_X": 1.98,
+        "PMG_D": 42,
+        "PMG_X": 2.02,
         "total_attempts": 5,
         "memory_attempts": 4,
         "help_attempts": 1,
         "attempts_summary": "5;4;1",
         "last_attempt": "2025-06-03T20:42:23Z",
-        "PMG-X_cell_color": "hsl(92, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(98, 100%, 75%)"
       }
     },
     {
@@ -2309,7 +2309,7 @@
       "description": "L1-Q10",
       "proposition": "Uma pequena esfera de massa $m$ está presa a uma barra de comprimento $L$ com um pivô em sua extremidade superior, formando um pêndulo simples. O pêndulo é puxado lateralmente até um ângulo $\\Theta$ com a vertical e a seguir é liberado a partir do repouso.\n- a) Desenhe um diagrama mostrando o pêndulo logo após o instante em que ele é liberado. No diagrama, desenhe vetores representando as forças que atuam sobre a esfera e a aceleração da esfera. A precisão é importante! Nesse ponto, qual é a aceleração linear da esfera?\n- b) Repita a parte (a) para o instante em que o pêndulo forma um ângulo $\\Theta/2$ com a vertical.\n- c) Repita a parte (a) para o instante em que o pêndulo está na direção vertical. Nesse ponto, qual é a velocidade linear da esfera?",
       "step_by_step": "- $a = g \\sin(\\theta)$\n- $E = K + U = K_{\\max} = U_{\\max}$\n- $K_{\\max} = \\frac{1}{2} m \\lvert v_{\\max} \\rvert^2$\n- $U_{\\max} = m g h = m g (L - v)$\n- $\\cos(\\theta) = \\frac{v}{L} \\;\\to\\; v = L \\cos(\\theta)$\n- $U_{\\max} = m g \\bigl(L - L \\cos(\\theta)\\bigr) = m g L (1 - \\cos(\\theta))$\n- $K_{\\max} = U_{\\max}$\n- $\\frac{1}{2} m \\lvert v_{\\max} \\rvert^2 = m g L (1 - \\cos(\\theta))$\n- $v_{\\max} = \\sqrt{2\\,m\\,g\\,L\\,\\bigl(1 - \\cos(\\theta)\\bigr)}$",
-      "answer": "$$a = g \\sin(\\theta)$$\n$$v_{\\max} = \\sqrt{2\\,m\\,g\\,L\\,\\bigl(1 - \\cos(\\theta)\\bigr)}$$\n\n![](media/q49.png)",
+      "answer": "$$a = g \\sin(\\theta)$$\n$$v_{\\max} = \\sqrt{2\\,m\\,g\\,L\\,\\bigl(1 - \\cos(\\theta)\\bigr)}$$\n\n![](images/q49.png)",
       "tags": [],
       "attempts": [
         {
@@ -2330,16 +2330,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 81,
+        "DSLA": 83,
         "LaMI": 41,
-        "PMG_D": 40,
-        "PMG_X": 1.98,
+        "PMG_D": 42,
+        "PMG_X": 2.02,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
         "last_attempt": "2025-06-03T21:05:26Z",
-        "PMG-X_cell_color": "hsl(92, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(98, 100%, 75%)"
       }
     },
     {
@@ -2362,9 +2362,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 143,
+        "DSLA": 145,
         "LaMI": "W/H",
-        "PMG_D": 143,
+        "PMG_D": 145,
         "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
@@ -2379,7 +2379,7 @@
       "discipline": "FOO",
       "source": "2025-1 Lista 1",
       "description": "L1-Q12",
-      "proposition": "Uma força propulsora variando senoidalmente é aplicada a um oscilador harmônico amortecido. \na) Quais são as unidades da constante de amortecimento $b$? \nb) Mostre que a grandeza $\\sqrt{k\\,m}$ possui as mesmas dimensões de $b$. \nc) Em termos de $F_{\\max}$ e de $k$, qual é a amplitude para $\\omega = \\sqrt{k/m}$ quando \n\ti) $b = 0{,}2\\,\\sqrt{k\\,m}$ e \n\tii) $b = 0{,}4\\,\\sqrt{k\\,m}$? Compare seus resultados com a Figura 13.28.\n\n![](media/q51.png)",
+      "proposition": "Uma força propulsora variando senoidalmente é aplicada a um oscilador harmônico amortecido. \na) Quais são as unidades da constante de amortecimento $b$? \nb) Mostre que a grandeza $\\sqrt{k\\,m}$ possui as mesmas dimensões de $b$. \nc) Em termos de $F_{\\max}$ e de $k$, qual é a amplitude para $\\omega = \\sqrt{k/m}$ quando \n\ti) $b = 0{,}2\\,\\sqrt{k\\,m}$ e \n\tii) $b = 0{,}4\\,\\sqrt{k\\,m}$? Compare seus resultados com a Figura 13.28.\n\n![](images/q51.png)",
       "step_by_step": "",
       "answer": "",
       "tags": [],
@@ -2394,9 +2394,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 143,
+        "DSLA": 145,
         "LaMI": "W/H",
-        "PMG_D": 143,
+        "PMG_D": 145,
         "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
@@ -2434,9 +2434,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 122,
+        "DSLA": 124,
         "LaMI": "W/H",
-        "PMG_D": 122,
+        "PMG_D": 124,
         "PMG_X": "W/H",
         "total_attempts": 4,
         "memory_attempts": 1,
@@ -2470,9 +2470,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 138,
+        "DSLA": 140,
         "LaMI": "W/H",
-        "PMG_D": 138,
+        "PMG_D": 140,
         "PMG_X": "W/H",
         "total_attempts": 3,
         "memory_attempts": 0,
@@ -2502,9 +2502,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 138,
+        "DSLA": 140,
         "LaMI": "W/H",
-        "PMG_D": 138,
+        "PMG_D": 140,
         "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
@@ -2621,7 +2621,7 @@
     },
     {
       "number": 60,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 1",
       "description": "Q1",
       "proposition": "",
@@ -2635,9 +2635,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 136,
+        "DSLA": 138,
         "LaMI": "W/H",
-        "PMG_D": 136,
+        "PMG_D": 138,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -2649,7 +2649,7 @@
     },
     {
       "number": 61,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 1",
       "description": "Q2",
       "proposition": "",
@@ -2663,9 +2663,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 136,
+        "DSLA": 138,
         "LaMI": "W/H",
-        "PMG_D": 136,
+        "PMG_D": 138,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -2677,7 +2677,7 @@
     },
     {
       "number": 62,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 1",
       "description": "Q3",
       "proposition": "",
@@ -2691,9 +2691,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 136,
+        "DSLA": 138,
         "LaMI": "W/H",
-        "PMG_D": 136,
+        "PMG_D": 138,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -2705,7 +2705,7 @@
     },
     {
       "number": 63,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 1",
       "description": "Q4",
       "proposition": "",
@@ -2719,9 +2719,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 135,
+        "DSLA": 137,
         "LaMI": "W/H",
-        "PMG_D": 135,
+        "PMG_D": 137,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -2733,7 +2733,7 @@
     },
     {
       "number": 64,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 1",
       "description": "Q5",
       "proposition": "",
@@ -2747,9 +2747,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 135,
+        "DSLA": 137,
         "LaMI": "W/H",
-        "PMG_D": 135,
+        "PMG_D": 137,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -2761,7 +2761,7 @@
     },
     {
       "number": 65,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 1",
       "description": "Q6",
       "proposition": "",
@@ -2775,9 +2775,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 135,
+        "DSLA": 137,
         "LaMI": "W/H",
-        "PMG_D": 135,
+        "PMG_D": 137,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -2809,16 +2809,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 73,
+        "DSLA": 75,
         "LaMI": 55,
-        "PMG_D": 18,
-        "PMG_X": 1.33,
+        "PMG_D": 20,
+        "PMG_X": 1.36,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-11T21:26:52Z",
-        "PMG-X_cell_color": "hsl(102, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(106, 100%, 75%)"
       }
     },
     {
@@ -2843,16 +2843,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 73,
+        "DSLA": 75,
         "LaMI": 55,
-        "PMG_D": 18,
-        "PMG_X": 1.33,
+        "PMG_D": 20,
+        "PMG_X": 1.36,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-11T21:45:04Z",
-        "PMG-X_cell_color": "hsl(102, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(106, 100%, 75%)"
       }
     },
     {
@@ -2914,16 +2914,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 73,
+        "DSLA": 75,
         "LaMI": 23,
-        "PMG_D": 50,
-        "PMG_X": 3.17,
+        "PMG_D": 52,
+        "PMG_X": 3.26,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-11T22:09:21Z",
-        "PMG-X_cell_color": "hsl(74, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(83, 100%, 75%)"
       }
     },
     {
@@ -2964,16 +2964,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 24,
-        "PMG_D": 48,
-        "PMG_X": 3,
+        "PMG_D": 50,
+        "PMG_X": 3.08,
         "total_attempts": 6,
         "memory_attempts": 6,
         "help_attempts": 0,
         "attempts_summary": "6;6;0",
         "last_attempt": "2025-06-12T13:18:59Z",
-        "PMG-X_cell_color": "hsl(77, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(85, 100%, 75%)"
       }
     },
     {
@@ -3014,16 +3014,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 24,
-        "PMG_D": 48,
-        "PMG_X": 3,
+        "PMG_D": 50,
+        "PMG_X": 3.08,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-12T19:39:44Z",
-        "PMG-X_cell_color": "hsl(77, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(85, 100%, 75%)"
       }
     },
     {
@@ -3064,16 +3064,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 24,
-        "PMG_D": 48,
-        "PMG_X": 3,
+        "PMG_D": 50,
+        "PMG_X": 3.08,
         "total_attempts": 6,
         "memory_attempts": 6,
         "help_attempts": 0,
         "attempts_summary": "6;6;0",
         "last_attempt": "2025-06-12T19:45:45Z",
-        "PMG-X_cell_color": "hsl(77, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(85, 100%, 75%)"
       }
     },
     {
@@ -3114,16 +3114,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 24,
-        "PMG_D": 48,
-        "PMG_X": 3,
+        "PMG_D": 50,
+        "PMG_X": 3.08,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-12T19:52:47Z",
-        "PMG-X_cell_color": "hsl(77, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(85, 100%, 75%)"
       }
     },
     {
@@ -3164,16 +3164,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 24,
-        "PMG_D": 48,
-        "PMG_X": 3,
+        "PMG_D": 50,
+        "PMG_X": 3.08,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-12T20:19:08Z",
-        "PMG-X_cell_color": "hsl(77, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(85, 100%, 75%)"
       }
     },
     {
@@ -3214,16 +3214,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 72,
+        "DSLA": 74,
         "LaMI": 24,
-        "PMG_D": 48,
-        "PMG_X": 3,
+        "PMG_D": 50,
+        "PMG_X": 3.08,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
         "attempts_summary": "6;5;1",
         "last_attempt": "2025-06-12T20:24:04Z",
-        "PMG-X_cell_color": "hsl(77, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(85, 100%, 75%)"
       }
     },
     {
@@ -3375,10 +3375,10 @@
     },
     {
       "number": 88,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q1 a",
-      "proposition": "Sendo $x', y', z'$ um giro de $30^\\circ$, sentido anti-horário, em torno de $y$, para as componentes de tensão representadas na figura:\n1. Escreva o tensor tensão em notação matricial.\n2. Determine as componentes de tensão no sistema $x'$, $y'$ e $z'$\n3. Represente em forma matricial\n4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$\n\n![](media/q88.png)",
+      "proposition": "Sendo $x', y', z'$ um giro de $30^\\circ$, sentido anti-horário, em torno de $y$, para as componentes de tensão representadas na figura:\n1. Escreva o tensor tensão em notação matricial.\n2. Determine as componentes de tensão no sistema $x'$, $y'$ e $z'$\n3. Represente em forma matricial\n4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$\n\n![](images/q88.png)",
       "step_by_step": "1. Escreva o tensor tensão em notação matricial.\n$$\n[\\sigma] = \n\\begin{bmatrix}\n\\sigma_{xx} & \\tau_{xy} & \\tau_{xz} \\\\\n\\tau_{yx} & \\sigma_{yy} & \\tau_{yz} \\\\\n\\tau_{zx} & \\tau_{zy} & \\sigma_{zz}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n100 & 0 & 120 \\\\\n0 & 20 & 0 \\\\\n120 & 0 & 80\n\\end{bmatrix} \\text{ MPa}.\n$$\n$$[L] = \\begin{pmatrix} \\cos (30^{\\circ}) & 0 & \\sin (30^{\\circ}) \\\\ 0 & 1 & 0 \\\\ -\\sin (30^{\\circ}) & 0 & \\cos (30^{\\circ}) \\end{pmatrix}$$\n\nCálculo das matrizes\n- https://matrixcalc.org/pt/#%7B%7Bcos%28%2830%29%C2%B0%29,0,sin%28%2830%29%C2%B0%29%7D,%7B0,1,0%7D,%7B-sin%28%2830%29%C2%B0%29,0,cos%28%2830%29%C2%B0%29%7D%7D*%7B%7B100,0,120%7D,%7B0,20,0%7D,%7B120,0,80%7D%7D*transpose%28%7B%7Bcos%28%2830%29%C2%B0%29,0,sin%28%2830%29%C2%B0%29%7D,%7B0,1,0%7D,%7B-sin%28%2830%29%C2%B0%29,0,cos%28%2830%29%C2%B°%29%7D%7D%29",
       "answer": "$$\\sigma' = \\begin{bmatrix} 198.923 & 0 & 51.340 \\\\ 0 & 20 & 0 \\\\ 51.340 & 0 & -18.923 \\end{bmatrix} \\text{MPa}$$",
       "tags": [
@@ -3403,24 +3403,24 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 54,
+        "DSLA": 56,
         "LaMI": 29,
-        "PMG_D": 25,
-        "PMG_X": 1.86,
+        "PMG_D": 27,
+        "PMG_X": 1.93,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
         "last_attempt": "2025-06-30T18:24:20Z",
-        "PMG-X_cell_color": "hsl(94, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(99, 100%, 75%)"
       }
     },
     {
       "number": 90,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q1 b",
-      "proposition": "Sendo $x', y', z'$ um giro de $30^\\circ$, sentido anti-horário, em torno de $z$, para as componentes de tensão representadas na figura:\n1. Escreva o tensor tensão em notação matricial.\n2. Determine as componentes de tensão no sistema $x'$, $y'$ e $z'$ indicado.\n3. Represente em forma matricial\n4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$\n\n![](media/q88.png)",
+      "proposition": "Sendo $x', y', z'$ um giro de $30^\\circ$, sentido anti-horário, em torno de $z$, para as componentes de tensão representadas na figura:\n1. Escreva o tensor tensão em notação matricial.\n2. Determine as componentes de tensão no sistema $x'$, $y'$ e $z'$ indicado.\n3. Represente em forma matricial\n4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$\n\n![](images/q88.png)",
       "step_by_step": "",
       "answer": "$$\n\\sigma' = \\begin{bmatrix}\n80 & -34,64 & 103,92 \\\\\n-34,64 & 40 & -60 \\\\\n103,92 & -60 & 80\n\\end{bmatrix}\\text{ MPa}\n$$",
       "tags": [],
@@ -3431,9 +3431,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 107,
+        "DSLA": 109,
         "LaMI": "SA",
-        "PMG_D": 107,
+        "PMG_D": 109,
         "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
@@ -3445,10 +3445,10 @@
     },
     {
       "number": 91,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q1 c",
-      "proposition": "Sendo $x', y', z'$ um giro de $30^\\circ$, sentido anti-horário, em torno de $y$, para as componentes de tensão representadas na figura:\n1. Escreva o tensor tensão em notação matricial.\n2. Determine as componentes de tensão no sistema $x'$, $y'$ e $z'$ indicado.\n3. Represente em forma matricial\n4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$\n\n![](media/q91.png)",
+      "proposition": "Sendo $x', y', z'$ um giro de $30^\\circ$, sentido anti-horário, em torno de $y$, para as componentes de tensão representadas na figura:\n1. Escreva o tensor tensão em notação matricial.\n2. Determine as componentes de tensão no sistema $x'$, $y'$ e $z'$ indicado.\n3. Represente em forma matricial\n4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$\n\n![](images/q91.png)",
       "step_by_step": "",
       "answer": "$$\n\\sigma' = \\begin{bmatrix}\n198,9 & 0 & 51,3 \\\\\n0 & 0 & 0 \\\\\n51,3 & 0 & -18,9\n\\end{bmatrix}\\text{ MPa}\n$$",
       "tags": [],
@@ -3459,9 +3459,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 107,
+        "DSLA": 109,
         "LaMI": "SA",
-        "PMG_D": 107,
+        "PMG_D": 109,
         "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
@@ -3473,7 +3473,7 @@
     },
     {
       "number": 92,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q1 d",
       "proposition": "Compare [[q88]] com [[q91]] e comente os valores das componentes $\\sigma_{xx}$ e $\\sigma_{x'x'}$ $\\sigma_{zz}$ e $\\sigma_{z'z'}$ e $\\sigma_{xz}$ e $\\sigma_{x'z'}$.",
@@ -3501,21 +3501,21 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 54,
+        "DSLA": 56,
         "LaMI": 29,
-        "PMG_D": 25,
-        "PMG_X": 1.86,
+        "PMG_D": 27,
+        "PMG_X": 1.93,
         "total_attempts": 4,
         "memory_attempts": 4,
         "help_attempts": 0,
         "attempts_summary": "4;4;0",
         "last_attempt": "2025-06-30T18:27:26Z",
-        "PMG-X_cell_color": "hsl(94, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(99, 100%, 75%)"
       }
     },
     {
       "number": 93,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q2",
       "proposition": "Mostre que para :\n$$[\\sigma] = \\begin{bmatrix}\n\\sigma_{xx} & \\sigma_{xy} & 0 \\\\\n\\sigma_{yx} & \\sigma_{yy} & 0 \\\\\n0 & 0 & \\sigma_{zz}\n\\end{bmatrix}\n\\quad e \\quad\n[L] = \\begin{bmatrix}\nc & s & 0 \\\\\n-s & c & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}$$\n\n$$\\sigma_{z'z'} = \\sigma_{zz}\n\\quad e \\quad\n\\begin{bmatrix}\n\\sigma_{x'x'} & \\sigma_{x'y'} \\\\\n\\sigma_{y'x'} & \\sigma_{y'y'}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\nc & s \\\\\n-s & c\n\\end{bmatrix}\n\\begin{bmatrix}\n\\sigma_{xx} & \\sigma_{xy} \\\\\n\\sigma_{yx} & \\sigma_{yy}\n\\end{bmatrix}\n\\begin{bmatrix}\nc & -s \\\\\ns & c\n\\end{bmatrix}$$\n\nonde, $c = \\cos(\\theta)$ e $s = \\sin(\\theta)$\n\nsugestão: utilize a equação ![[equations.md#^equationTensorNotation]]",
@@ -3529,9 +3529,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 103,
+        "DSLA": 105,
         "LaMI": "SA",
-        "PMG_D": 103,
+        "PMG_D": 105,
         "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
@@ -3543,7 +3543,7 @@
     },
     {
       "number": 94,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q3",
       "proposition": "Mostre que $\\sigma_{x'z'} \\neq \\sigma_{xz}$ e $\\sigma_{y'z'} \\neq \\sigma_{yz}$\n\n$$[\\sigma] = \\begin{bmatrix}\n\\sigma_{xx} & \\sigma_{xy} & \\sigma_{xz}\\\\\n\\sigma_{yx} & \\sigma_{yy} & \\sigma_{yz}\\\\\n\\sigma_{zx} & \\sigma_{zy} & \\sigma_{zz}\n\\end{bmatrix}$$",
@@ -3557,9 +3557,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 103,
+        "DSLA": 105,
         "LaMI": "SA",
-        "PMG_D": 103,
+        "PMG_D": 105,
         "PMG_X": "SA",
         "total_attempts": 1,
         "memory_attempts": 1,
@@ -3571,7 +3571,7 @@
     },
     {
       "number": 95,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q4",
       "proposition": "Para os tensores de tensão a seguir, determine:\na) Componentes principais de tensões\nb) Cossenos diretores dos planos principais\nc) Máxima componente de cisalhamento em 3D.\n\n$$\n[\\sigma] = \\begin{bmatrix}\n200 & 50 & 0\\\\\n50 & -70 & 0\\\\\n0 & 0 & 80\n\\end{bmatrix} MPa\n$$\n\nUse $\\det\\bigl([\\sigma] - \\lambda I\\bigr) = 0$",
@@ -3589,9 +3589,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 100,
+        "DSLA": 102,
         "LaMI": "W/H",
-        "PMG_D": 100,
+        "PMG_D": 102,
         "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
@@ -3603,7 +3603,7 @@
     },
     {
       "number": 96,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q5",
       "proposition": ">[!attention] A versão 2D dessa questão é [[q121]]\n\nUtilizando o círculo de Mohr\nPara os tensores de tensão a seguir, determine:\na) Componentes principais de tensões\nb) Cossenos diretores dos planos principais e do plano de cisalhamento máximo\nc) Máxima componente de cisalhamento em 3D.\n$$\n[\\sigma] = \\begin{bmatrix}\n200 & 50 & 0\\\\\n50 & -70 & 0\\\\\n0 & 0 & 80\n\\end{bmatrix} MPa\n$$",
@@ -3640,21 +3640,21 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 56,
+        "DSLA": 58,
         "LaMI": 11,
-        "PMG_D": 45,
-        "PMG_X": 5.09,
+        "PMG_D": 47,
+        "PMG_X": 5.27,
         "total_attempts": 6,
         "memory_attempts": 4,
         "help_attempts": 2,
         "attempts_summary": "6;4;2",
         "last_attempt": "2025-06-28T19:25:12Z",
-        "PMG-X_cell_color": "hsl(45, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(58, 100%, 75%)"
       }
     },
     {
       "number": 97,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q6",
       "proposition": "",
@@ -3675,7 +3675,7 @@
     },
     {
       "number": 98,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q7",
       "proposition": "",
@@ -3696,7 +3696,7 @@
     },
     {
       "number": 99,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q8",
       "proposition": "",
@@ -3717,7 +3717,7 @@
     },
     {
       "number": 100,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q9",
       "proposition": "",
@@ -3738,7 +3738,7 @@
     },
     {
       "number": 101,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q10",
       "proposition": "",
@@ -3759,7 +3759,7 @@
     },
     {
       "number": 102,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q11",
       "proposition": "",
@@ -3780,7 +3780,7 @@
     },
     {
       "number": 103,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q12",
       "proposition": "",
@@ -3801,7 +3801,7 @@
     },
     {
       "number": 104,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q13",
       "proposition": "",
@@ -3822,7 +3822,7 @@
     },
     {
       "number": 105,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 2",
       "description": "L2-Q14",
       "proposition": "",
@@ -3843,7 +3843,7 @@
     },
     {
       "number": 106,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "Youtube",
       "description": "Vídeo TENSÕES NO PLANO - CÍRCULO DE MOHR Passo a Passo",
       "proposition": "",
@@ -3857,9 +3857,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 103,
+        "DSLA": 105,
         "LaMI": "W/H",
-        "PMG_D": 103,
+        "PMG_D": 105,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -3892,16 +3892,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 16,
-        "PMG_D": 47,
-        "PMG_X": 3.94,
+        "PMG_D": 49,
+        "PMG_X": 4.06,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-21T16:53:50Z",
-        "PMG-X_cell_color": "hsl(62, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(73, 100%, 75%)"
       }
     },
     {
@@ -3926,16 +3926,16 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 15,
-        "PMG_D": 48,
-        "PMG_X": 4.2,
+        "PMG_D": 50,
+        "PMG_X": 4.33,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-21T18:03:55Z",
-        "PMG-X_cell_color": "hsl(58, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(69, 100%, 75%)"
       }
     },
     {
@@ -3960,24 +3960,24 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 63,
+        "DSLA": 65,
         "LaMI": 15,
-        "PMG_D": 48,
-        "PMG_X": 4.2,
+        "PMG_D": 50,
+        "PMG_X": 4.33,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
         "attempts_summary": "2;1;1",
         "last_attempt": "2025-06-21T19:05:55Z",
-        "PMG-X_cell_color": "hsl(58, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(69, 100%, 75%)"
       }
     },
     {
       "number": 110,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q1",
-      "proposition": "Em um ponto na superfície de um sólido, os extensômetros da roseta retangular indicada na figura registraram\n$$\n\\varepsilon_A = 2\\times10^{-6},\\quad \\varepsilon_B = 6\\times10^{-6},\\quad \\varepsilon_C = -9\\times10^{-6}.\n$$\n![](media/q110.png)\n(Legenda: $\\varepsilon_A$ no eixo X, $\\varepsilon_C$ no eixo Y e $\\varepsilon_B$ à 45°, entre o eixo X e Y)\n\nDado\n$$E = 2\\times10^5\\,\\mathrm{MPa} \\quad\\;\\nu = 0,3$$\nDetermine: \n\n- a) Tensor deformação considerando $\\varepsilon_{zz} = \\varepsilon_{xz} = \\varepsilon_{yz} = 0$\n- b) Tensor tensão para o caso acima (obs: $\\varepsilon_{zz} \\neq 0$)\n- c) Tensor deformação considerando $\\sigma_{zz} = 0,\\; \\sigma_{xz} = \\sigma_{yz} = 0$\n- d) Tensor tensão para o caso da letra (c)",
+      "proposition": "Em um ponto na superfície de um sólido, os extensômetros da roseta retangular indicada na figura registraram\n$$\n\\varepsilon_A = 2\\times10^{-6},\\quad \\varepsilon_B = 6\\times10^{-6},\\quad \\varepsilon_C = -9\\times10^{-6}.\n$$\n![](images/q110.png)\n(Legenda: $\\varepsilon_A$ no eixo X, $\\varepsilon_C$ no eixo Y e $\\varepsilon_B$ à 45°, entre o eixo X e Y)\n\nDado\n$$E = 2\\times10^5\\,\\mathrm{MPa} \\quad\\;\\nu = 0,3$$\nDetermine: \n\n- a) Tensor deformação considerando $\\varepsilon_{zz} = \\varepsilon_{xz} = \\varepsilon_{yz} = 0$\n- b) Tensor tensão para o caso acima (obs: $\\varepsilon_{zz} \\neq 0$)\n- c) Tensor deformação considerando $\\sigma_{zz} = 0,\\; \\sigma_{xz} = \\sigma_{yz} = 0$\n- d) Tensor tensão para o caso da letra (c)",
       "step_by_step": "- This can also be achieved using the logic of [[q122]]\n\n\n### Letra a\n[[ps34]]\n![[ps34#^formulaMestraRotacao]]\n\n$$\\varepsilon_A = \\varepsilon_{0^\\circ} = \\varepsilon_{xx} = 2 \\times 10^{-6}$$\n$$\\varepsilon_B = \\varepsilon_{45^\\circ} = 6 \\times 10^{-6}$$\n$$\\varepsilon_C = \\varepsilon_{90^\\circ} = \\varepsilon_{yy}= -9 \\times 10^{-6}$$\n\n$$\\theta = 45° \\implies \\cos (2\\theta) = 0; \\quad \\sin(2\\theta) = 1$$\n$$\\varepsilon_{45^\\circ} = \\frac{\\varepsilon_{xx} + \\varepsilon_{yy}}{2} + \\frac{\\varepsilon_{xx} - \\varepsilon_{yy}}{2}\\cos(2\\theta) + \\left(\\frac{\\gamma_{xy}}{2}\\right)\\sin(2\\theta)$$\n$$6 \\times 10^{-6} = \\frac{2 \\times 10^{-6} + (-9 \\times 10^{-6})}{2} + \\frac{2 \\times 10^{-6} - (-9 \\times 10^{-6})}{2}(0) + \\left(\\frac{\\gamma_{xy}}{2}\\right) (1)$$\n$$\\left(\\frac{\\gamma_{xy}}{2}\\right) = -\\frac{2 \\times 10^{-6} + (-9 \\times 10^{-6})}{2} - \\frac{2 \\times 10^{-6} - (-9 \\times 10^{-6})}{2}(0) + 6 \\times 10^{-6}$$\n$$\\left(\\frac{\\gamma_{xy}}{2}\\right) = 9.5 \\times 10^{-6}$$\n$$[\\varepsilon] = \\begin{pmatrix} \\varepsilon_{xx} & \\varepsilon_{xy} & \\varepsilon_{xz} \\\\ \\varepsilon_{yx} & \\varepsilon_{yy} & \\varepsilon_{yz} \\\\ \\varepsilon_{zx} & \\varepsilon_{zy} & \\varepsilon_{zz} \\end{pmatrix} = \\begin{pmatrix} 2 & 9,5 & 0 \\\\ 9,5 & -9 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix} \\times 10^{-6}$$\n\n\n### Letra b\n[[ps7]]\n![[ps7#^equacoesDaTensao]]\n\n$$E = 2\\times10^5\\,\\mathrm{MPa} \\quad\\;\\nu = 0,3$$\n$$\\sigma_{ij} = 2\\mu \\,\\varepsilon_{ij} + \\lambda \\,(\\varepsilon_{kk})\\delta_{ij} $$\n$$2 \\mu = \\frac{E}{1 + \\nu} = \\frac{2 \\times 10^5\\,\\mathrm{MPa}}{1 + 0,3} \\approx 1,538 \\times 10^5\\,\\mathrm{MPa}$$\n$$\\lambda = \\frac{\\nu E}{(1 + \\nu)(1 - 2\\nu)} = \\frac{0,3 \\times (2 \\times 10^5\\,\\mathrm{MPa})}{(1 + 0,3)(1 - 2 \\times 0,3)} \\approx 1,154 \\times 10^5\\,\\mathrm{MPa}$$\n$$\\varepsilon_{kk} = \\varepsilon_{xx} + \\varepsilon_{yy} + \\varepsilon_{zz} = (2 - 9 + 0)\\times 10^{-6} = -7\\times 10^{-6}$$\n\n\nDica: Salvar na calculadora científica $A = 2 \\mu; B=\\lambda \\,(\\varepsilon_{kk})$\n\n$$\\sigma_{xx} = 2\\mu\\varepsilon_{xx} + \\lambda\\varepsilon_{kk} = (1, 5385\\times 10^{5})(2\\times 10^{-6}) + (1, 1538\\times 10^{5})(-7\\times 10^{-6})$$\n$$\\sigma_{xx} = 0, 3077 - 0, 8077 = -0, 5 \\text{ MPa}$$\n$$\\sigma_{yy} = 2\\mu\\varepsilon_{yy} + \\lambda\\varepsilon_{kk} = (1, 5385\\times 10^{5})(-9\\times 10^{-6}) + (1, 1538\\times 10^{5})(-7\\times 10^{-6})$$\n$$\\sigma_{yy} = -1, 3847 - 0, 8077 = -2, 192 \\text{ MPa}$$\n$$\\sigma_{xy} = 2\\mu\\varepsilon_{xy} = (1, 5385\\times 10^{5})(9, 5\\times 10^{-6}) = 1, 462 \\text{ MPa}$$\n$$\\sigma_{zz} = 2\\mu\\varepsilon_{zz} + \\lambda\\varepsilon_{kk} = 0 + (1, 1538\\times 10^{5})(-7\\times 10^{-6}) = -0, 808 \\text{ MPa}$$\n$$[\\sigma] = \\begin{pmatrix} -0, 500 & 1, 462 & 0 \\\\ 1, 462 & -2, 192 & 0 \\\\ 0 & 0 & -0, 808 \\end{pmatrix} \\text{ MPa}$$\n\n\n### Letra c\n[[ps7]]\n![[ps7#^equacoesTensaoPlana]]\n\n$$\\varepsilon_{zz} = - \\frac{0,3}{1-0,3}(2 \\times 10^{-6} - 9 \\times 10^{-6}) = - \\frac{0,3}{0,7}(-7 \\times 10^{-6}) = 3 \\times 10^{-6}$$\n$$[\\varepsilon] = \\begin{pmatrix} 2 & 9,5 & 0 \\\\ 9,5 & -9 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix} \\times 10^{-6}$$\n\n\n### Letra d\n\n#### Método 1 - Sem usar o resultado da letra c\n[[ps7]]\n![[ps7#^equacoesTensaoPlana]]\n\n$$\\sigma_{xx} = \\frac{2 \\times 10^{5}}{1-0,3^{2}}[2 \\times 10^{-6} + 0,3(-9 \\times 10^{-6})] = -0,15 \\text{ MPa}$$\n$$\\sigma_{yy} = \\frac{2 \\times 10^{5}}{1-0,09}[-9 \\times 10^{-6} + 0,3(2 \\times 10^{-6})] = -1,85 \\text{ MPa}$$\n$$\\tau_{xy} = \\frac{2 \\times 10^{5}}{2(1+0,3)}(19 \\times 10^{-6}) = 1,46 \\text{ MPa}$$\n$$[\\sigma] = \\begin{pmatrix} -0,15 & 1,46 & 0 \\\\ 1,46 & -1,85 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix} \\text{ MPa}$$\n\n#### Método 2 - Usando o resultado da letra c\n$$\\varepsilon_{kk} = \\varepsilon_{xx} + \\varepsilon_{yy} + \\varepsilon_{zz} = (2 - 9 + 3)\\times 10^{-6} = -4\\times 10^{-6}$$\n$$\\sigma_{xx} = 2\\mu\\varepsilon_{xx} + \\lambda\\varepsilon_{kk} = (1,5385\\times 10^{5})(2\\times 10^{-6}) + (1,1538\\times 10^{5})(-4\\times 10^{-6})$$\n$$\\sigma_{xx} = 0,3077 - 0,4615 = -0,1538 \\approx -0,15 \\text{ MPa}$$\n$$\\sigma_{yy} = 2\\mu\\varepsilon_{yy} + \\lambda\\varepsilon_{kk} = (1,5385 \\times 10^5)(-9 \\times 10^{-6}) + (1,1538 \\times 10^5)(-4 \\times 10^{-6})$$\n$$\\sigma_{yy} = -1,3847 - 0,4615 = -1,8462 \\approx -1,85 \\text{ MPa}$$\n$$\\sigma_{xy} = 2\\mu\\varepsilon_{xy} = (1,5385 \\times 10^5)(9,5 \\times 10^{-6}) = 1,4616 \\approx 1,46 \\text{ MPa}$$\n$$\\sigma_{zz} = 2\\mu\\varepsilon_{zz} + \\lambda\\varepsilon_{kk} = (1,5385 \\times 10^5)(3 \\times 10^{-6}) + (1,1538 \\times 10^5)(-4 \\times 10^{-6})$$\n$$\\sigma_{zz} = 0,4615 - 0,4615 = 0 \\text{ MPa}$$",
       "answer": "a)\n$$[\\varepsilon] = \\begin{pmatrix} \\varepsilon_{xx} & \\varepsilon_{xy} & \\varepsilon_{xz} \\\\ \\varepsilon_{yx} & \\varepsilon_{yy} & \\varepsilon_{yz} \\\\ \\varepsilon_{zx} & \\varepsilon_{zy} & \\varepsilon_{zz} \\end{pmatrix} = \\begin{pmatrix} 2 & 9,5 & 0 \\\\ 9,5 & -9 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix} \\times 10^{-6}$$\nb)\n$$[\\sigma] = \\begin{pmatrix} -0, 500 & 1, 462 & 0 \\\\ 1, 462 & -2, 192 & 0 \\\\ 0 & 0 & -0, 808 \\end{pmatrix} \\text{ MPa}$$\n\nc)\n$$[\\varepsilon] = \\begin{pmatrix} 2 & 9,5 & 0 \\\\ 9,5 & -9 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix} \\times 10^{-6}$$\n\nd)\n$$[\\sigma] = \\begin{pmatrix} -0,15 & 1,46 & 0 \\\\ 1,46 & -1,85 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix} \\text{ MPa}$$",
       "tags": [
@@ -3991,9 +3991,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 52,
+        "DSLA": 54,
         "LaMI": "W/H",
-        "PMG_D": 52,
+        "PMG_D": 54,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4005,7 +4005,7 @@
     },
     {
       "number": 111,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q2",
       "proposition": "Para o tensor deformação $[\\varepsilon]$ ao lado, determine:\n$$\n[\\varepsilon] = \\begin{bmatrix}\n2 & 7 & 0\\\\\n7 & -9 & 0\\\\\n0 & 0 & 3\n\\end{bmatrix}\\times10^{-6}.\n$$\n\na) componentes principais\nb) cossenos diretores das direções principais  \nc) maior distorção de cisalhamento em 3D",
@@ -4021,9 +4021,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 51,
+        "DSLA": 53,
         "LaMI": "W/H",
-        "PMG_D": 51,
+        "PMG_D": 53,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4035,7 +4035,7 @@
     },
     {
       "number": 112,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q3",
       "proposition": "Para o tensor tensões no ponto de um corpo, determine:\n$$\n[\\sigma] = \\begin{bmatrix}\n50 & 25 & 0\\\\\n25 & 100 & 0\\\\\n0 & 0 & -200\n\\end{bmatrix}\\,\\mathrm{MPa}\n$$\n$$\\alpha = 10^{-6}\\,\\!^\\circ\\mathrm{C}^{-1} \\quad E = 2\\times10^5\\,\\mathrm{MPa} \\quad\\nu = 0,3$$\n\na) Tensor deformação no ponto  \nb) Tensor deformação para a situação em que houve uma variação de temperatura $\\Delta T = 30^\\circ\\mathrm{C}$\nc) Tensor tensão para a situação (b). Considere que o corpo todo foi submetido a $\\Delta T$ e que não existe restrição para expansão do corpo.",
@@ -4051,9 +4051,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 51,
+        "DSLA": 53,
         "LaMI": "W/H",
-        "PMG_D": 51,
+        "PMG_D": 53,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4065,7 +4065,7 @@
     },
     {
       "number": 115,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "",
       "description": "Deformação 1D",
       "proposition": "Considere um caso unidimensional (ou seja, $\\nu=0$) onde uma barra de aço com as seguintes características:\n- Comprimento inicial: $L_0 = 1{,}00\\,\\mathrm{m}$.\n- Área da seção transversal: $A = 1{,}0 \\times 10^{-4}\\,\\mathrm{m}^2$.\n- Módulo de Young (aço): $E = 210\\,\\mathrm{GPa}$.\n\nSuponha que aplicamos uma força de $F = 10{,}5\\,\\mathrm{kN}$ ao longo do eixo da barra, de modo que ela tente esticá-la.\n1. Calcular a tensão $\\sigma$\n2. Calcular a deformação $\\varepsilon$\n3. Determinar o novo comprimento $L$",
@@ -4098,21 +4098,21 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 54,
+        "DSLA": 56,
         "LaMI": 13,
-        "PMG_D": 41,
-        "PMG_X": 4.15,
+        "PMG_D": 43,
+        "PMG_X": 4.31,
         "total_attempts": 5,
         "memory_attempts": 5,
         "help_attempts": 0,
         "attempts_summary": "5;5;0",
         "last_attempt": "2025-06-30T17:05:55Z",
-        "PMG-X_cell_color": "hsl(59, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(70, 100%, 75%)"
       }
     },
     {
       "number": 116,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "",
       "description": "Deformação 1D vs 3D",
       "proposition": "Considere um cubo de arestas iniciais $L_0 = 0,5\\ \\mathrm{m}$ cujo material é definido por\n$$E = 200\\ \\mathrm{GPa} \\quad \\nu = 0,3$$\nNas faces normais ao eixo $x$ aplica-se o estado uniforme de tensões\n$$\n\\sigma_{xx} = 150\\ \\mathrm{MPa}, \\quad \\sigma_{yy} = 0, \\quad \\sigma_{zz} = 0, \\quad \\sigma_{xy} = \\sigma_{xz} = \\sigma_{yz} = 0,\n$$\ne assume-se que o cubo não sofre torções nem cisalhamentos adicionais.\n\n1. Determine o tensor de tensões\n2. Determine o tensor de deformações\n3. Determine as novas dimensões do cubo ($L_x, \\quad L_y, \\quad L_z$)\n4. Determine a variação volumétrica relativa\n5. Explique, resumidamente, por que na situação tridimensional não é suficiente aplicar a relação uniaxial $\\varepsilon = \\sigma/E$.\n\n\n\n\nPara pequenas deformações, considere\n$$\n\\frac{\\Delta V}{V_0} \\approx \\varepsilon_{xx} + \\varepsilon_{yy} + \\varepsilon_{zz}, \\quad V_0 = L_0^3.\n$$",
@@ -4150,10 +4150,10 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 10,
+        "DSLA": 12,
         "LaMI": 45,
-        "PMG_D": -35,
-        "PMG_X": 0.22,
+        "PMG_D": -33,
+        "PMG_X": 0.27,
         "total_attempts": 6,
         "memory_attempts": 5,
         "help_attempts": 1,
@@ -4227,9 +4227,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 59,
+        "DSLA": 61,
         "LaMI": "W/H",
-        "PMG_D": 59,
+        "PMG_D": 61,
         "PMG_X": "W/H",
         "total_attempts": 2,
         "memory_attempts": 0,
@@ -4265,11 +4265,11 @@
     },
     {
       "number": 121,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "q96 modificada",
       "description": "",
       "proposition": ">[!attention] A versão 2,5D dessa questão é [[q96]]\n\nPara o tensor de tensões a seguir, determine:\na) Tensões principais\nb) Tensão de cisalhamento máxima\nc) Cossenos diretores dos planos principais e do plano de cisalhamento máximo\n$$\n[\\sigma] = \\begin{bmatrix}\n200 & 50\\\\\n50 & -70\n\\end{bmatrix} MPa\n$$\nFaça o desenvolvimento da questão de duas formas:\n- graficamente com o Círculo de Mohr\n- algebricamente com as relações entre autovalores e autovetores.",
-      "step_by_step": "### Círculo de Mohr\n![](media/q96.png)\n\n>[!info] ![[ps11#^tensaoMedia]]\n\n$$\\sigma_{\\text{med}}^{(2D)} = \\frac{\\sigma_{xx} + \\sigma_{yy}}{2} = \\frac{200 + (-70)}{2} = 65$$\n>[!info] ![[ps11#^tensaoMaximaCisalhamento]]\n\n$$\\tau_{\\max}^{(2D)} =\\sqrt{ (\\sigma_{xx} - \\sigma_{medio})^2 + \\tau_{xy}^2 } \\,=\\, \\sqrt{(200 - 65)^2 + 50^2} = 143.962$$\n\n>[!info] ![[ps11#^tensoesPrincipais]]\n\n$$\\sigma_{\\text{1}}^{(2D)} = \\sigma_{\\mathrm{med}} + \\tau_{max} = 65 + 143.962 = 208.962$$\n$$\\sigma_{\\text{2}}^{(2D)} = \\sigma_{\\mathrm{med}} - \\tau_{max} = 65 - 143.962 = -78.962$$\n\n\n\n$$\\tan(2\\theta_1) = \\frac{\\tau_{xy}}{\\sigma_{xx} - \\sigma_{\\mathrm{med}}}$$\n$$\\theta_{p1} = \\arctan\\!\\bigl(\\frac{\\tau_{xy}}{\\sigma_{xx} - \\sigma_{\\mathrm{med}}}\\bigr) \\frac{1}{2} =\\arctan\\!\\bigl(\\tfrac{50}{200 - 65}\\bigr) \\frac{1}{2}= 10.161^\\circ \\quad \\circlearrowleft$$\n$$\\theta_{p2} = \\theta_{p1}+90° = 10.161° + 90° = 100.161°$$\n$$\\theta_{s1}, \\theta_{s_{2}} = \\theta_{p1} \\mp 45° = 10.161° \\mp 45° = -34.839°,55.161°$$\n\n---\nComo escrito na [[ps4]]:\n$$\\hat{n}_{k} = (\\cos\\theta_{xx'}, \\cos \\theta_{xy'}) = (\\cos\\theta_{xx'}, \\cos (\\theta_{xx'}-90°))= (\\cos(\\theta_{k}), \\sin(\\theta_{k}))$$\n$$\\hat{n}_{p1} = (\\cos\\theta_{p1}, \\sin\\theta_{p1}) = (\\cos(10.161^\\circ), \\sin(10.161^\\circ)) = (0.984, 0.176)$$\n$$\\hat{n}_{p_{2}} = (\\cos\\theta_{p2}, \\sin\\theta_{p2}) = (\\cos(100.161^\\circ), \\sin(100.161^\\circ)) = (-0.176, 0.984)$$\n$$\\hat{n}_{s_{1}} = (\\cos\\theta_{s2}, \\sin\\theta_{s2}) = (\\cos(-34.839^\\circ), \\sin(-34.839^\\circ)) = (0.821, -0.571)$$\n$$\\hat{n}_{s_{2}} = (\\cos\\theta_{s1}, \\sin\\theta_{s1}) = (\\cos(55.161^\\circ), \\sin(55.161^\\circ)) = (0.571, 0.821)$$\n---\nou, de maneira simplificada\n\n![](media/q121.png)\n\n\n### Autovalores e autovetores\n![[ps11#^autovaloreAutovetores]]\n\n\n---\n$$\\det(\\sigma - \\lambda I) = 0$$\n$$\\sigma = \\begin{bmatrix} 200 & 50 \\\\ 50 & -70 \\end{bmatrix}$$\n$$\\lambda I = \\lambda \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} \\lambda & 0 \\\\ 0 & \\lambda \\end{bmatrix}$$\n$$(\\sigma - \\lambda I) = \\begin{bmatrix} 200 & 50 \\\\ 50 & -70 \\end{bmatrix} - \\begin{bmatrix} \\lambda & 0 \\\\ 0 & \\lambda \\end{bmatrix} = \\begin{bmatrix} 200 - \\lambda & 50 \\\\ 50 & -70 - \\lambda \\end{bmatrix}$$\n$$\\det(\\sigma - \\lambda I) = \\det \\begin{bmatrix} 200 - \\lambda & 50 \\\\ 50 & -70 - \\lambda \\end{bmatrix} = 0$$\n---\n$$(200-\\lambda)(-70-\\lambda) - (50)(50) = 0$$\n$$-14000 - 200\\lambda + 70\\lambda + \\lambda^2 - 2500 = 0$$\n$$\\lambda^2 - 130\\lambda - 16500 = 0$$\n$$\\lambda = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n$$\\lambda = \\frac{-(-130) \\pm \\sqrt{(-130)^2 - 4(1)(-16500)}}{2(1)}$$\n$$\\lambda = \\frac{130 \\pm \\sqrt{16900 + 66000}}{2}$$\n$$\\lambda = \\frac{130 \\pm \\sqrt{82900}}{2}$$\n$$\\lambda = \\frac{130 \\pm 287.923}{2}$$\n$$\\lambda_1 = \\frac{130 + 287.923}{2} = \\frac{417.923}{2}  \\approx 208.962 \\text{ MPa}$$\n$$\\lambda_2 = \\frac{130 - 287.923}{2} = \\frac{-157.923}{2}  \\approx -78.962 \\text{ MPa}$$\n---\n$$\\lambda_{\\text{medio}} = \\frac{\\lambda_{1} +\\lambda_{2}}{2} = \\frac{208.962 + (-78.962)}{2} = 65 \\text{ MPa}$$\n$$\\tau_{\\max}^{(2D)} = \\frac{\\sigma_1 - \\sigma_2}{2} = \\frac{208.962 - (-78.962)}{2} = 143.962 \\text{ MPa}$$\n---\n$$([\\sigma] - \\lambda_{i} [I])\\vec{v_{i}} = \\vec{0}$$\n$$([\\sigma] - \\lambda_{1} [I])\\vec{v_{1}} = \\vec{0}$$\n$$\\begin{bmatrix} 200 - 208.962 & 50 \\\\ 50 & -70 - 208.962 \\end{bmatrix} \\begin{bmatrix} v_{1x} \\\\ v_{1y} \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$$\n$$\\begin{bmatrix} -8.962 & 50 \\\\ 50 & -278.962 \\end{bmatrix} \\begin{bmatrix} v_{1x} \\\\ v_{1y} \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$$\nComo queremos apenas uma proporção entre $v_{1x}$ e $v_{1y}$, necessitamos apenas de uma das equações e podemos escolher $v_{1y} = 1$ \n$$-8.962v_{1x} + 50v_{1y} = 0 \\implies v_{1x} = \\frac{50}{8.962}v_{1y} \\approx 5.579v_{1y}$$\n$$v_{1y} = 1 \\implies v_{1x} = 5.579$$\n$$\\tan \\theta_{p_{1}} = \\frac{\\sin \\theta_{p_{1}}}{\\cos \\theta_{p_{1}}} = \\frac{v_{1y}}{v_{1x}}$$\n$$\\theta_{p_{1}} = \\arctan \\left( \\frac{v_{1y}}{v_{1x}} \\right) = \\arctan \\left( \\frac{1}{5.579} \\right) \\approx 10.14^\\circ$$\nDaqui em diante segue da mesma forma que pelo círculo de Mohr",
+      "step_by_step": "### Círculo de Mohr\n![](images/q96.png)\n\n>[!info] ![[ps11#^tensaoMedia]]\n\n$$\\sigma_{\\text{med}}^{(2D)} = \\frac{\\sigma_{xx} + \\sigma_{yy}}{2} = \\frac{200 + (-70)}{2} = 65$$\n>[!info] ![[ps11#^tensaoMaximaCisalhamento]]\n\n$$\\tau_{\\max}^{(2D)} =\\sqrt{ (\\sigma_{xx} - \\sigma_{medio})^2 + \\tau_{xy}^2 } \\,=\\, \\sqrt{(200 - 65)^2 + 50^2} = 143.962$$\n\n>[!info] ![[ps11#^tensoesPrincipais]]\n\n$$\\sigma_{\\text{1}}^{(2D)} = \\sigma_{\\mathrm{med}} + \\tau_{max} = 65 + 143.962 = 208.962$$\n$$\\sigma_{\\text{2}}^{(2D)} = \\sigma_{\\mathrm{med}} - \\tau_{max} = 65 - 143.962 = -78.962$$\n\n\n\n$$\\tan(2\\theta_1) = \\frac{\\tau_{xy}}{\\sigma_{xx} - \\sigma_{\\mathrm{med}}}$$\n$$\\theta_{p1} = \\arctan\\!\\bigl(\\frac{\\tau_{xy}}{\\sigma_{xx} - \\sigma_{\\mathrm{med}}}\\bigr) \\frac{1}{2} =\\arctan\\!\\bigl(\\tfrac{50}{200 - 65}\\bigr) \\frac{1}{2}= 10.161^\\circ \\quad \\circlearrowleft$$\n$$\\theta_{p2} = \\theta_{p1}+90° = 10.161° + 90° = 100.161°$$\n$$\\theta_{s1}, \\theta_{s_{2}} = \\theta_{p1} \\mp 45° = 10.161° \\mp 45° = -34.839°,55.161°$$\n\n---\nComo escrito na [[ps4]]:\n$$\\hat{n}_{k} = (\\cos\\theta_{xx'}, \\cos \\theta_{xy'}) = (\\cos\\theta_{xx'}, \\cos (\\theta_{xx'}-90°))= (\\cos(\\theta_{k}), \\sin(\\theta_{k}))$$\n$$\\hat{n}_{p1} = (\\cos\\theta_{p1}, \\sin\\theta_{p1}) = (\\cos(10.161^\\circ), \\sin(10.161^\\circ)) = (0.984, 0.176)$$\n$$\\hat{n}_{p_{2}} = (\\cos\\theta_{p2}, \\sin\\theta_{p2}) = (\\cos(100.161^\\circ), \\sin(100.161^\\circ)) = (-0.176, 0.984)$$\n$$\\hat{n}_{s_{1}} = (\\cos\\theta_{s2}, \\sin\\theta_{s2}) = (\\cos(-34.839^\\circ), \\sin(-34.839^\\circ)) = (0.821, -0.571)$$\n$$\\hat{n}_{s_{2}} = (\\cos\\theta_{s1}, \\sin\\theta_{s1}) = (\\cos(55.161^\\circ), \\sin(55.161^\\circ)) = (0.571, 0.821)$$\n---\nou, de maneira simplificada\n\n![](images/q121.png)\n\n\n### Autovalores e autovetores\n![[ps11#^autovaloreAutovetores]]\n\n\n---\n$$\\det(\\sigma - \\lambda I) = 0$$\n$$\\sigma = \\begin{bmatrix} 200 & 50 \\\\ 50 & -70 \\end{bmatrix}$$\n$$\\lambda I = \\lambda \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} \\lambda & 0 \\\\ 0 & \\lambda \\end{bmatrix}$$\n$$(\\sigma - \\lambda I) = \\begin{bmatrix} 200 & 50 \\\\ 50 & -70 \\end{bmatrix} - \\begin{bmatrix} \\lambda & 0 \\\\ 0 & \\lambda \\end{bmatrix} = \\begin{bmatrix} 200 - \\lambda & 50 \\\\ 50 & -70 - \\lambda \\end{bmatrix}$$\n$$\\det(\\sigma - \\lambda I) = \\det \\begin{bmatrix} 200 - \\lambda & 50 \\\\ 50 & -70 - \\lambda \\end{bmatrix} = 0$$\n---\n$$(200-\\lambda)(-70-\\lambda) - (50)(50) = 0$$\n$$-14000 - 200\\lambda + 70\\lambda + \\lambda^2 - 2500 = 0$$\n$$\\lambda^2 - 130\\lambda - 16500 = 0$$\n$$\\lambda = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n$$\\lambda = \\frac{-(-130) \\pm \\sqrt{(-130)^2 - 4(1)(-16500)}}{2(1)}$$\n$$\\lambda = \\frac{130 \\pm \\sqrt{16900 + 66000}}{2}$$\n$$\\lambda = \\frac{130 \\pm \\sqrt{82900}}{2}$$\n$$\\lambda = \\frac{130 \\pm 287.923}{2}$$\n$$\\lambda_1 = \\frac{130 + 287.923}{2} = \\frac{417.923}{2}  \\approx 208.962 \\text{ MPa}$$\n$$\\lambda_2 = \\frac{130 - 287.923}{2} = \\frac{-157.923}{2}  \\approx -78.962 \\text{ MPa}$$\n---\n$$\\lambda_{\\text{medio}} = \\frac{\\lambda_{1} +\\lambda_{2}}{2} = \\frac{208.962 + (-78.962)}{2} = 65 \\text{ MPa}$$\n$$\\tau_{\\max}^{(2D)} = \\frac{\\sigma_1 - \\sigma_2}{2} = \\frac{208.962 - (-78.962)}{2} = 143.962 \\text{ MPa}$$\n---\n$$([\\sigma] - \\lambda_{i} [I])\\vec{v_{i}} = \\vec{0}$$\n$$([\\sigma] - \\lambda_{1} [I])\\vec{v_{1}} = \\vec{0}$$\n$$\\begin{bmatrix} 200 - 208.962 & 50 \\\\ 50 & -70 - 208.962 \\end{bmatrix} \\begin{bmatrix} v_{1x} \\\\ v_{1y} \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$$\n$$\\begin{bmatrix} -8.962 & 50 \\\\ 50 & -278.962 \\end{bmatrix} \\begin{bmatrix} v_{1x} \\\\ v_{1y} \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$$\nComo queremos apenas uma proporção entre $v_{1x}$ e $v_{1y}$, necessitamos apenas de uma das equações e podemos escolher $v_{1y} = 1$ \n$$-8.962v_{1x} + 50v_{1y} = 0 \\implies v_{1x} = \\frac{50}{8.962}v_{1y} \\approx 5.579v_{1y}$$\n$$v_{1y} = 1 \\implies v_{1x} = 5.579$$\n$$\\tan \\theta_{p_{1}} = \\frac{\\sin \\theta_{p_{1}}}{\\cos \\theta_{p_{1}}} = \\frac{v_{1y}}{v_{1x}}$$\n$$\\theta_{p_{1}} = \\arctan \\left( \\frac{v_{1y}}{v_{1x}} \\right) = \\arctan \\left( \\frac{1}{5.579} \\right) \\approx 10.14^\\circ$$\nDaqui em diante segue da mesma forma que pelo círculo de Mohr",
       "answer": "$$\\sigma_1 = 208,962 \\, MPa \\quad \\sigma_2 = -78,962 \\, MPa \\quad \\sigma_{\\text{médio}} = 65 \\, MPa$$\n$$\\tau_{\\max}^{(2D)} = 143,962 \\, MPa$$\n$$\\hat{n}_{p_{1}} = (0.984, 0.176) \\quad \\hat{n}_{p_{2}} = (-0.176, 0.984)$$\n$$\\hat{n}_{s_{1}} = (0.821, -0.571) \\quad\\hat{n}_{s_{2}} = (0.571, 0.821)$$",
       "tags": [
         "ps10",
@@ -4294,21 +4294,21 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 10,
+        "DSLA": 12,
         "LaMI": 36,
-        "PMG_D": -26,
-        "PMG_X": 0.28,
+        "PMG_D": -24,
+        "PMG_X": 0.33,
         "total_attempts": 4,
         "memory_attempts": 3,
         "help_attempts": 1,
         "attempts_summary": "4;3;1",
         "last_attempt": "2025-08-13T15:08:51Z",
-        "PMG-X_cell_color": "hsl(118, 100%, 75%)"
+        "PMG-X_cell_color": "hsl(119, 100%, 75%)"
       }
     },
     {
       "number": 122,
-      "discipline": "Mecsol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "Can be related to q110",
       "description": "Seja um círculo C de centro C = (-3.5, 0)",
       "proposition": "Seja um círculo $C$ de centro $C = (-3.5, 0)$ e raio $r$ desconhecido. Definem-se dois pontos $A$ e $B$ pertencentes a $C$ por $$ A = (2,\\ y_a), \\qquad B = (6,\\ y_b). $$ Sabe-se que o ângulo central $$ \\angle ACB = 90^\\circ. $$ Determine os valores de $y_a$ e $y_b$.",
@@ -4331,10 +4331,10 @@
     },
     {
       "number": 123,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q4",
-      "proposition": "Para a chapa da figura, submetida a $\\sigma_{xx}$ e a uma variação de temperatura uniforme $\\Delta T$, determine:\n\na) $\\Delta T$ para que a dimensão $a$ não seja alterada.\n\nb) Variação $\\Delta b$ da dimensão $b$ para a situação em que $a$ não seja alterada, com $\\Delta T$ e $\\sigma_{xx}$ atuando.\n\nExpresse os resultados em função de $\\Delta T, \\sigma_{xx}, E, \\nu, a, b$ e $\\alpha$\n![](media/q123.png)\n\n\n### Descrição da figura\nA figura apresenta um diagrama de um corpo retangular, possivelmente uma placa ou um bloco, em duas dimensões.\n\nAqui está uma descrição detalhada dos elementos da figura:\n\n- **Forma e Dimensões:** O corpo tem formato retangular com altura **a** e comprimento **b**.\n    \n- **Variação de Temperatura:** No centro do retângulo, a notação **ΔT** (delta T) indica que o corpo está sujeito a uma variação de temperatura.\n    \n- **Tensão Aplicada:** Nas faces verticais (de altura **a**), há setas apontando para fora, representando a aplicação de uma força de tração. A notação **σ_xx** (sigma xx) indica que se trata de uma **tensão normal** na direção do eixo x (horizontal).\n    \n\nEm resumo, a figura ilustra um problema típico de **termomecânica** ou **mecânica dos sólidos**, onde um corpo retangular está simultaneamente sujeito a uma variação de temperatura (ΔT) e a uma tensão mecânica de tração (σ_xx) em uma direção. Este tipo de análise é importante para entender como o material se deforma ou se comporta sob o efeito combinado de cargas térmicas e mecânicas.",
+      "proposition": "Para a chapa da figura, submetida a $\\sigma_{xx}$ e a uma variação de temperatura uniforme $\\Delta T$, determine:\n\na) $\\Delta T$ para que a dimensão $a$ não seja alterada.\n\nb) Variação $\\Delta b$ da dimensão $b$ para a situação em que $a$ não seja alterada, com $\\Delta T$ e $\\sigma_{xx}$ atuando.\n\nExpresse os resultados em função de $\\Delta T, \\sigma_{xx}, E, \\nu, a, b$ e $\\alpha$\n![](images/q123.png)\n\n\n### Descrição da figura\nA figura apresenta um diagrama de um corpo retangular, possivelmente uma placa ou um bloco, em duas dimensões.\n\nAqui está uma descrição detalhada dos elementos da figura:\n\n- **Forma e Dimensões:** O corpo tem formato retangular com altura **a** e comprimento **b**.\n    \n- **Variação de Temperatura:** No centro do retângulo, a notação **ΔT** (delta T) indica que o corpo está sujeito a uma variação de temperatura.\n    \n- **Tensão Aplicada:** Nas faces verticais (de altura **a**), há setas apontando para fora, representando a aplicação de uma força de tração. A notação **σ_xx** (sigma xx) indica que se trata de uma **tensão normal** na direção do eixo x (horizontal).\n    \n\nEm resumo, a figura ilustra um problema típico de **termomecânica** ou **mecânica dos sólidos**, onde um corpo retangular está simultaneamente sujeito a uma variação de temperatura (ΔT) e a uma tensão mecânica de tração (σ_xx) em uma direção. Este tipo de análise é importante para entender como o material se deforma ou se comporta sob o efeito combinado de cargas térmicas e mecânicas.",
       "step_by_step": "![[ps7#2 fórmulas principais]]\n\n$$\\varepsilon_{ij} = \\frac{1}{2\\mu} \\sigma_{ij} - \\frac{\\nu}{E} \\sigma_{kk} \\delta_{ij} + \\alpha \\Delta T$$\n\n$$\\mu = \\frac{E}{2(1+\\nu)}$$\n$$\\frac{1}{2\\mu} = \\frac{1+\\nu}{E}$$\n\n$$\\sigma_{yy} = \\sigma_{zz} = 0$$\n\n$$\\varepsilon_{yy} = \\frac{1}{2\\mu} \\sigma_{yy} - \\frac{\\nu}{E} (\\sigma_{xx} + \\sigma_{yy} + \\sigma_{zz}) + \\alpha \\Delta T$$\n\n$$\\Delta T = \\left[-\\frac{1}{2\\mu} \\sigma_{yy} + \\frac{\\nu}{E} (\\sigma_{xx} + \\sigma_{yy} + \\sigma_{zz})\\right] \\cdot \\frac{1}{\\alpha}$$\n\n$$\\Delta T = \\left[-\\frac{1+\\nu}{E} \\sigma_{yy} + \\frac{\\nu}{E} (\\sigma_{xx} + \\sigma_{yy} + \\sigma_{zz})\\right] \\cdot \\frac{1}{\\alpha}$$\n\n$$\\Delta T = \\frac{\\nu}{E\\alpha} \\sigma_{xx}$$\n---\n$$\\varepsilon_{xx} = \\frac{1}{2\\mu} \\sigma_{xx} - \\frac{\\nu}{E} (\\sigma_{xx} + \\sigma_{yy} + \\sigma_{zz}) + \\alpha \\Delta T$$\n\n$$\\varepsilon_{xx} = \\frac{1+\\nu}{E} \\sigma_{xx} - \\frac{\\nu}{E} \\sigma_{xx} + \\frac{\\nu}{E} \\sigma_{xx}$$\n\n$$\\varepsilon_{xx} = \\frac{1+\\nu}{E} \\sigma_{xx}$$\n\n$$\\Delta b = b(1+\\varepsilon_{xx}) - b(1) = b \\cdot \\frac{1+\\nu}{E} \\sigma_{xx}$$",
       "answer": "$$\\Delta T = \\frac{\\nu}{E\\alpha} \\sigma_{xx}$$\n$$\\Delta b = b \\cdot \\frac{1+\\nu}{E} \\sigma_{xx}$$",
       "tags": [
@@ -4347,9 +4347,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 51,
+        "DSLA": 53,
         "LaMI": "W/H",
-        "PMG_D": 51,
+        "PMG_D": 53,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4361,10 +4361,10 @@
     },
     {
       "number": 124,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q5",
-      "proposition": "Para a chapa ao lado, $\\sigma_{xx} = 20 MPa, \\varepsilon_{yy}=0, E = 2 \\times 10^5 MPa, \\nu=0.3 \\text{ e } \\alpha=10^{-6}/^{\\circ}C$\n\na) Determine $\\sigma_{yy}$ para $\\Delta T=0$\nb) Determine $\\Delta T$ para que $\\sigma_{yy}$ seja nulo. Considere $\\sigma_{zz}=\\sigma_{xz}=\\sigma_{yz}=0$\nc) Verifique se haverá escoamento do material da placa sabendo que $\\sigma_{escoamento} = 400 MPa$. Faça sua verificação considerando:\nc.1) Critério de TRESCA\nc.2) Critério de Von Mises.\n\n![](media/q124.png)",
+      "proposition": "Para a chapa ao lado, $\\sigma_{xx} = 20 MPa, \\varepsilon_{yy}=0, E = 2 \\times 10^5 MPa, \\nu=0.3 \\text{ e } \\alpha=10^{-6}/^{\\circ}C$\n\na) Determine $\\sigma_{yy}$ para $\\Delta T=0$\nb) Determine $\\Delta T$ para que $\\sigma_{yy}$ seja nulo. Considere $\\sigma_{zz}=\\sigma_{xz}=\\sigma_{yz}=0$\nc) Verifique se haverá escoamento do material da placa sabendo que $\\sigma_{escoamento} = 400 MPa$. Faça sua verificação considerando:\nc.1) Critério de TRESCA\nc.2) Critério de Von Mises.\n\n![](images/q124.png)",
       "step_by_step": "",
       "answer": "",
       "tags": [],
@@ -4382,10 +4382,10 @@
     },
     {
       "number": 125,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q6",
-      "proposition": "Uma chapa de alumínio ($E=7.2 \\times 10^{10} N/m^2$ e $\\nu=0.33$) está submetida ao estado plano de tensões indicado na figura. Determine:\na) Componentes principais tensões.\nb) Componentes principais deformação.\nc) Deformação longitudinal na direção de $30^{\\circ}$ (sentido anti-horário) com eixo $x$.\n\n![](media/q125.png)",
+      "proposition": "Uma chapa de alumínio ($E=7.2 \\times 10^{10} N/m^2$ e $\\nu=0.33$) está submetida ao estado plano de tensões indicado na figura. Determine:\na) Componentes principais tensões.\nb) Componentes principais deformação.\nc) Deformação longitudinal na direção de $30^{\\circ}$ (sentido anti-horário) com eixo $x$.\n\n![](images/q125.png)",
       "step_by_step": "",
       "answer": "",
       "tags": [],
@@ -4403,10 +4403,10 @@
     },
     {
       "number": 126,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q7",
-      "proposition": "Para a chapa da figura, determine:\na) $\\sigma_{yy}$ para que a dimensão \"$b$\" não altere.\nb) Variação $\\Delta a$ da dimensão \"$a$\" na situação da letra (a).\n\nExpresse seus resultados em termos de $E, \\nu, \\sigma_{xx}, \"a\"$ e \"$b\"$. $\\sigma_{xx}$ e $\\sigma_{yy}$ são uniformemente distribuídas.\n![](media/q126.png)",
+      "proposition": "Para a chapa da figura, determine:\na) $\\sigma_{yy}$ para que a dimensão \"$b$\" não altere.\nb) Variação $\\Delta a$ da dimensão \"$a$\" na situação da letra (a).\n\nExpresse seus resultados em termos de $E, \\nu, \\sigma_{xx}, \"a\"$ e \"$b\"$. $\\sigma_{xx}$ e $\\sigma_{yy}$ são uniformemente distribuídas.\n![](images/q126.png)",
       "step_by_step": "",
       "answer": "",
       "tags": [],
@@ -4424,7 +4424,7 @@
     },
     {
       "number": 127,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q8",
       "proposition": "Um ponto do contínuo está submetido ao tensor $[\\sigma]$ indicado. Determine:\n$$[\\sigma] = \\begin{bmatrix} 200 & -50 & 0 \\\\ -50 & 100 & 0 \\\\ 0 & 0 & 300 \\end{bmatrix} MPa$$\n\na) Direções em que devem ser instalados os extensômetros no plano $(x,y)$, para registrar as componentes principais de deformação. ($E=2 \\times 10^{11} Pa, \\nu=0.3$)\nb) Os valores destas componentes principais de deformação.",
@@ -4445,7 +4445,7 @@
     },
     {
       "number": 128,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q9",
       "proposition": "Para a placa do prob. [[q126]], considere $\\sigma_{yy}=0$. Determine:\na) $\\Delta T$ para que a dimensão \"$b$\" não altere.\nb) Variação $\\Delta a$ da dimensão \"$a$\" na situação da letra (a), ou seja, com $\\Delta T$ e $\\sigma_{xx}$ atuando. Resultados em função de $E, \\nu, \\sigma_{xx}, \"a\", \"b\"$ e $\\alpha$.",
@@ -4466,10 +4466,10 @@
     },
     {
       "number": 129,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q10",
-      "proposition": "Uma chapa quadrada de lado igual a $600 mm$ e espessura igual a $15 mm$, feita de aço ($E=2,0 \\times 10^5 MPa; \\nu=0,3$) é submetida a uma tração tal que: $\\epsilon_{yy}=0, \\sigma_{zz}=\\sigma_{xz}=\\sigma_{yz}=0$ (estado plano de tensão), $\\sigma_{xx} = \\sigma_I = 800 MPa$.\n\nDetermine:\na) $\\sigma_{yy} = \\sigma_{II}$ (componente principal)\nb) Dimensões finais da placa, após deformação da mesma. Considere material linear elástico.\nc) Verifique se haverá escoamento da placa.\nc.1) segundo TRESCA ($\\tau_{escoamento} = 400 MPa$)\nc.2) Segundo Von MISES.\n\n![](media/q129.png)",
+      "proposition": "Uma chapa quadrada de lado igual a $600 mm$ e espessura igual a $15 mm$, feita de aço ($E=2,0 \\times 10^5 MPa; \\nu=0,3$) é submetida a uma tração tal que: $\\epsilon_{yy}=0, \\sigma_{zz}=\\sigma_{xz}=\\sigma_{yz}=0$ (estado plano de tensão), $\\sigma_{xx} = \\sigma_I = 800 MPa$.\n\nDetermine:\na) $\\sigma_{yy} = \\sigma_{II}$ (componente principal)\nb) Dimensões finais da placa, após deformação da mesma. Considere material linear elástico.\nc) Verifique se haverá escoamento da placa.\nc.1) segundo TRESCA ($\\tau_{escoamento} = 400 MPa$)\nc.2) Segundo Von MISES.\n\n![](images/q129.png)",
       "step_by_step": "",
       "answer": "",
       "tags": [],
@@ -4487,7 +4487,7 @@
     },
     {
       "number": 130,
-      "discipline": "MecSol",
+      "discipline": "EES022 Introduçao à Mecânica dos Sólidos",
       "source": "2025-1 Lista 3",
       "description": "L3-Q11",
       "proposition": "Para a barra da figura ao lado, submetida à variação de temperatura $\\Delta T$, determine:\n\na) $\\Delta T_e$ para que a barra encoste no apoio B sem gerar tensão normal na barra (expresse o resultado em termos de $\\Delta, \\alpha, \\text{e } L$).\nb) Tensor tensão e tensor deformação para $\\Delta T \\leq \\Delta T_e$. (em termos de $E, \\alpha \\text{ e } \\Delta T$)\nc) Tensor tensão e tensor deformação para $\\Delta T > \\Delta T_e$. (em termos de $E, \\alpha, \\Delta, L \\text{ e } \\Delta T$)\nd) Expresse a condição de Tresca em função de $E, \\alpha, \\Delta, L \\text{ e } \\Delta T \\text{ e } \\sigma_{esc}$ para que não ocorra escoamento.\n![[q130.png]]",
@@ -4526,10 +4526,10 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 10,
+        "DSLA": 12,
         "LaMI": 11,
-        "PMG_D": -1,
-        "PMG_X": 0.91,
+        "PMG_D": 1,
+        "PMG_X": 1.09,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
@@ -4558,10 +4558,10 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 10,
+        "DSLA": 12,
         "LaMI": 11,
-        "PMG_D": -1,
-        "PMG_X": 0.91,
+        "PMG_D": 1,
+        "PMG_X": 1.09,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
@@ -4590,10 +4590,10 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 8,
+        "DSLA": 10,
         "LaMI": 1,
-        "PMG_D": 7,
-        "PMG_X": 8,
+        "PMG_D": 9,
+        "PMG_X": 10,
         "total_attempts": 2,
         "memory_attempts": 1,
         "help_attempts": 1,
@@ -4607,7 +4607,7 @@
       "discipline": "EMA091 Mecânica dos fluidos",
       "source": "FOX AND McDONALD’S Edição 8 - p59",
       "description": "Exemplo 2.2 VISCOSIDADE E TENSÃO DE CISALHAMENTO EM UM FLUIDO NEWTONIANO",
-      "proposition": "Uma placa infinita move-se sobre uma segunda placa, havendo entre elas uma camada de líquido, como mostrado. Para uma pequena altura da camada, d, podemos supor uma distribuição linear de velocidade no líquido. A viscosidade do líquido é 0,0065 g/cm · s e sua densidade relativa é 0,88.\nDetermine:\na) A viscosidade absoluta do líquido, em N · s/m2.\nb) A viscosidade cinemática do líquido, em m2/s.\nc) A tensão de cisalhamento na placa superior, em N/m2.\nd) A tensão de cisalhamento na placa inferior, em Pa.\ne) O sentido de cada tensão cisalhante calculada nas partes c) e d)\n\n![](media/q134.png)",
+      "proposition": "Uma placa infinita move-se sobre uma segunda placa, havendo entre elas uma camada de líquido, como mostrado. Para uma pequena altura da camada, d, podemos supor uma distribuição linear de velocidade no líquido. A viscosidade do líquido é 0,0065 g/cm · s e sua densidade relativa é 0,88.\nDetermine:\na) A viscosidade absoluta do líquido, em N · s/m2.\nb) A viscosidade cinemática do líquido, em m2/s.\nc) A tensão de cisalhamento na placa superior, em N/m2.\nd) A tensão de cisalhamento na placa inferior, em Pa.\ne) O sentido de cada tensão cisalhante calculada nas partes c) e d)\n\n![](images/q134.png)",
       "step_by_step": "$$v = \\frac{1 \\, \\text{N} \\cdot 1 \\, \\text{m}}{1 \\, \\text{m}^2 \\cdot 0,001 \\, \\text{N s/m}^2}$$",
       "answer": "a) $\\mu = 0,00065 \\, N·s/m²$\nb) $\\nu = 7,386 \\cdot 10⁻⁷ m²/s$\nc) $\\tau_\\text{superior} = 0,65 N/m²$\nd) $\\tau_\\text{inferior} = 0,65 Pa$\ne) Na placa superior: para a esquerda (sentido contrário ao movimento). Na placa inferior: para a direita (sentido do movimento do fluido).",
       "tags": [],
@@ -4639,9 +4639,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 3,
+        "DSLA": 5,
         "LaMI": "W/H",
-        "PMG_D": 3,
+        "PMG_D": 5,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4656,8 +4656,8 @@
       "discipline": "EMA091 Mecânica dos fluidos",
       "source": "2025-08-20 Exercícios Estática - 01",
       "description": "1 - Cubo imerso",
-      "proposition": "Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\\rho_{\\text{água}}=1000$ kg/m$^3$, carvalho $\\rho_{\\text{carvalho}}=770$ kg/m$^3$, e óleo $\\rho_{\\text{óleo}}=800$ kg/m$^3$.\n\n\n![](media/q136-1.svg)",
-      "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$\\vec F = - \\int \\rho \\, d\\, \\vec A$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Densidade dos fluidos constantes\n\n\t\n### Cálculos\n![](media/q136-2.svg)\n\nSendo \n- $h_0$ a altura na superfície do óleo\n- $h_1$ a altura na altura entre o óleo entra em contato com a água\n- $h_2$ a altura na face superior do cubo\n- $h_3$ a altura na face inferior do cubo\n---\n- $F_2$ a pressão da coluna de fluido na face superior do cubo \n- $F_3$ a pressão da coluna de fluido na face inferior\n- W o peso do cubo\n- T a tração do tirante no cubo\n---\n\n$$\\frac{dp}{dh} = \\rho g$$\n\n$$dp = \\rho g dh$$\n\n$$\\int_{p_{0}=p_{atm}}^{p_3} dp = \\int_{h_0}^{h_3} \\rho g dh = \\int_{h_0}^{h_1} \\rho_{óleo} g dh + \\int_{h_1}^{h_3} \\rho_{água} g dh$$\n\n$$p_3 - p_{atm} = \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$p_3 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,7 - 1,5)$$\n\n$$= 124844 N/m^2$$\n\n---\n\n$$p_2 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_2 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,4 - 1,5)$$\n\n$$= 121901 N/m^2$$\n\n---\n\n$$\\vec{F} = - \\int \\rho d\\vec{A}$$\n\n$$F_3 = p_3 \\int dA = 124844 \\cdot 0,3^2 = 11235,96 N$$\n\n$$F_2 = p_2 \\int dA = 121901 \\cdot 0,3^2 = 10971,09 N$$\n\n$$W = \\rho_{carvalho} g V = 770 \\cdot 9,81 \\cdot 0,3^3 = 203,95 N$$\n\n$$\\sum F_y = 0 = F_3 - F_2 - W - T$$\n\n$$T = F_3 - F_2 - W$$\n\n$$T = 11235,96 - 10971,09 - 203,95 = 60,92 N$$\n\n\n### Método 2: usando empuxo\n$$E = \\rho_{\\text{água}} \\cdot g \\cdot V_{\\text{cubo}}$$\n\n$$E = 1000 \\frac{\\text{kg}}{\\text{m}^3} \\cdot 9,81 \\frac{\\text{m}}{\\text{s}^2} \\cdot (0,3 \\text{ m})^3$$\n\n$$E = 1000 \\cdot 9,81 \\cdot 0,027 = 264,87 \\text{ N}$$\n\n---\n\n$$E - W - T = 0$$\n\n$$T = E - W$$\n\n$$T = 264,87 \\text{ N} - 203,95 \\text{ N} = 60,92 \\text{ N}$$",
+      "proposition": "Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\\rho_{\\text{água}}=1000$ kg/m$^3$, carvalho $\\rho_{\\text{carvalho}}=770$ kg/m$^3$, e óleo $\\rho_{\\text{óleo}}=800$ kg/m$^3$.\n\n\n![](images/q136-1.svg)",
+      "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$\\vec F = - \\int \\rho \\, d\\, \\vec A$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Densidade dos fluidos constantes\n\n\n### Cálculos\n![](images/q136-2.svg)\n\nSendo \n- $h_0$ a altura na superfície do óleo\n- $h_1$ a altura na altura entre o óleo entra em contato com a água\n- $h_2$ a altura na face superior do cubo\n- $h_3$ a altura na face inferior do cubo\n---\n- $F_2$ a pressão da coluna de fluido na face superior do cubo \n- $F_3$ a pressão da coluna de fluido na face inferior\n- W o peso do cubo\n- T a tração do tirante no cubo\n---\n\n$$\\frac{dp}{dh} = \\rho g$$\n\n$$dp = \\rho g dh$$\n\n$$\\int_{p_{0}=p_{atm}}^{p_3} dp = \\int_{h_0}^{h_3} \\rho g dh = \\int_{h_0}^{h_1} \\rho_{óleo} g dh + \\int_{h_1}^{h_3} \\rho_{água} g dh$$\n\n$$p_3 - p_{atm} = \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$p_3 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_3 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,7 - 1,5)$$\n\n$$= 124844 N/m^2$$\n\n---\n\n$$p_2 = p_{atm} + \\rho_{óleo} g (h_1 - h_0) + \\rho_{água} g (h_2 - h_1)$$\n\n$$= 101,3 \\cdot 10^3 + 800 \\cdot 9,81(1,5 - 0) + 1000 \\cdot 9,81(2,4 - 1,5)$$\n\n$$= 121901 N/m^2$$\n\n---\n\n$$\\vec{F} = - \\int \\rho d\\vec{A}$$\n\n$$F_3 = p_3 \\int dA = 124844 \\cdot 0,3^2 = 11235,96 N$$\n\n$$F_2 = p_2 \\int dA = 121901 \\cdot 0,3^2 = 10971,09 N$$\n\n$$W = \\rho_{carvalho} g V = 770 \\cdot 9,81 \\cdot 0,3^3 = 203,95 N$$\n\n$$\\sum F_y = 0 = F_3 - F_2 - W - T$$\n\n$$T = F_3 - F_2 - W$$\n\n$$T = 11235,96 - 10971,09 - 203,95 = 60,92 N$$\n\n\n### Método 2: usando empuxo\n$$E = \\rho_{\\text{água}} \\cdot g \\cdot V_{\\text{cubo}}$$\n\n$$E = 1000 \\frac{\\text{kg}}{\\text{m}^3} \\cdot 9,81 \\frac{\\text{m}}{\\text{s}^2} \\cdot (0,3 \\text{ m})^3$$\n\n$$E = 1000 \\cdot 9,81 \\cdot 0,027 = 264,87 \\text{ N}$$\n\n---\n\n$$E - W - T = 0$$\n\n$$T = E - W$$\n\n$$T = 264,87 \\text{ N} - 203,95 \\text{ N} = 60,92 \\text{ N}$$",
       "answer": "$$F_3 = 11235,96 N$$\n\n$$T = 60,92 N$$",
       "tags": [],
       "attempts": [
@@ -4667,9 +4667,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 3,
+        "DSLA": 5,
         "LaMI": "W/H",
-        "PMG_D": 3,
+        "PMG_D": 5,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4684,7 +4684,7 @@
       "discipline": "EMA091 Mecânica dos fluidos",
       "source": "2025-08-20 Exercícios Estática - 01",
       "description": "2 - Manômetro de dois fluidos",
-      "proposition": "Considere o manômetro de dois fluidos mostrado na Figura P.2. Calcule a diferença de pressão aplicada nos dois recipientes. O SG do Tetracloreto de carbono é 1,595.\n\n\n![](media/q137.png)",
+      "proposition": "Considere o manômetro de dois fluidos mostrado na Figura P.2. Calcule a diferença de pressão aplicada nos dois recipientes. O SG do Tetracloreto de carbono é 1,595.\n\n\n![](images/q137.png)",
       "step_by_step": "### Fórmulas\n$$\\frac{dp}{dz} = -\\rho g$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Por simetria, todas as pressões existentes fora da região definida por h se anulam\n\n\n### Cálculos\n---\n**Observação quando pensar nos sinais**\n\nDeterminemos o sentido y positivo para cima.\nSe a integral for definida como $\\int_{p1}^{p2}$, lê-se integral de p1 a p2. Ou seja, iremos partir do ponto onde ocorre a pressão 1 até o ponto onde ocorre a pressão 2.\n\nA abordagem de \"caminhar\" pelo manômetro partindo da pressão 1 até a 2 é a maneira padrão de resolver este tipo de problema.Coloque o lápis onde está definido a pressão 1 e ande, pelo mesmo caminho que os fluidos passam, até onde está a pressão 2.\n\nOs limites das integrais devem sempre seguir a direção desse caminho. Falando de outra forma: o limite inferior da integral sempre deve estar antes do limite superior da integral no que diz respeito à esse caminho que definimos\n\n---\n\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$dp = -\\rho g dz$$\n\n$$\\int_{p_1}^{p_2} dp = \\int_0^{-h} -\\rho_{agua} g \\,dz + \\int_{-h}^0 -\\rho_{CCl_4} g \\,dz$$\n\n$$p_2 - p_1 = -\\rho_{agua} g (-h) - \\rho_{CCl_4} g [0 - (-h)]$$\n\n$$= \\rho_{agua} g h - \\rho_{CCl_4} g h$$\n\n$$= g h (\\rho_{agua} - \\rho_{CCl_4})$$\n\n$$= 9,81 \\cdot 10,2 \\cdot 10^{-3} (1000-1595)$$\n\n$$= -59,53 \\text{ Pa}$$\n\n---\n\n$$\\rho_{CCl_4} = SG \\times \\rho_{\\text{água}} = 1,595 \\times 1000 = 1595 \\text{ kg/m}^3$$\n\n---\n\n\n### Método 2 (Mais complicado, porém interessante para aplicação dos sinais)\nDesconsiderando que \"por simetria, todas as pressões existentes fora da região definida por h se anulam\"\n\nConsideração adicional (opcional): A pressão exercida pela coluna de gás é irrelevante por sua densidade ser muito menor que a do fluido manométrico (também poderia ser considerado que a pressão exercida pela coluna de gás do lado esquerdo anula a do direito)\n\nAdicionemos um comprimento \"d\" que é a distância entre o limite superior da água e o limite superior de \"h\".\n\n$$\\frac{dp}{dz} = -\\rho g$$\n\n$$dp = -\\rho g dz$$\n\n$$\\int_{p_1}^{p_2} dp = \\int_{0}^{-(d+h)} -\\rho_{\\text{água}} g dz + \\int_{-(d+h)}^{-d} -\\rho_{CCl4} g dz + \\int_{-d}^{0} -\\rho_{\\text{água}} g dz$$\n\n$$p_2 - p_1 = -\\rho_{\\text{água}} g [-(d+h) - 0] - \\rho_{CCl4} g [(-d) - (-(d+h))] - \\rho_{\\text{água}} g [0 - (-d)]$$\n\n$$p_2 - p_1 = -\\rho_{\\text{água}} g (-d-h) - \\rho_{CCl4} g h - \\rho_{\\text{água}} d$$\n\n$$p_2 - p_1 = +\\rho_{\\text{água}} g d + \\rho_{\\text{água}} g h - \\rho_{CCl4} g h - \\rho_{\\text{água}} d$$\n\n$$p_2 - p_1 = \\rho_{\\text{água}} g h - \\rho_{CCl4} g h$$\n\n$$p_2 - p_1 = 1000 \\cdot 9.81 \\cdot 10 \\cdot 10^{-3} - 1595 \\cdot 9.81 \\cdot 10 \\cdot 2 \\cdot 10^{-3}$$\n\n$$p_2 - p_1 = 9.81 \\cdot 10 \\cdot 2 \\cdot 10^{-3}(1000 - 1595) = -59.53 \\ \\text{Pa}$$",
       "answer": "$$p_1-p_2 = 59,53 \\text{ Pa}$$",
       "tags": [],
@@ -4695,9 +4695,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 3,
+        "DSLA": 5,
         "LaMI": "W/H",
-        "PMG_D": 3,
+        "PMG_D": 5,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4712,7 +4712,7 @@
       "discipline": "EMA091 Mecânica dos fluidos",
       "source": "2025-08-20 Exercícios Estática - 01",
       "description": "4 - Tanque com ar, gasolina e glicerina",
-      "proposition": "Água flui ao longo de um tubo inclinado de $30^{\\circ}$ em relação à horizontal conforme mostrado. A diferença de pressão $p_A - p_B$ é causada parcialmente pela gravidade e parcialmente pelo atrito. Calcule a diferença de pressão se $L=1,5$ m e $h=0,15$ m.\n\n![](media/q138.png)",
+      "proposition": "Água flui ao longo de um tubo inclinado de $30^{\\circ}$ em relação à horizontal conforme mostrado. A diferença de pressão $p_A - p_B$ é causada parcialmente pela gravidade e parcialmente pelo atrito. Calcule a diferença de pressão se $L=1,5$ m e $h=0,15$ m.\n\n![](images/q138.png)",
       "step_by_step": "### Fórmulas\n\t$$\\frac{dp}{dz} = -\\rho g$$\n\n\n### Considerações necessárias para resolver o problema com as fórmulas acima\n1. Fluido estático\n2. Por simetria, todas as pressões existentes fora da região definida por h e pela direferença de altura $z_{AB}$ se anulam\n\n\n### Cálculos\n$$\\sin(30°) = \\frac{z_{AB}}{L}$$\n\n$$z_{AB} = L \\sin(30°) = 1,5 \\cdot 0,5 = 0,75m$$\n\n---\n\nSendo x o comprimento entre a altura B e a superfície água-mercúrio na coluna direita\n\n---\n\n$$\\frac{dP}{dz} = -\\rho g$$\n\n$$dP = -\\rho g dz$$\n\n$$\\int_{p_a}^{p_b} dP = \\int_0^{-z_{AB}} -\\rho_{\\text{água}} g dz + \\int_{-x}^{-x-h} -\\rho_{\\text{água}} g dz + \\int_{-x-h}^{-x} -\\rho_{\\text{Hg}} g dz$$\n\n$$p_b-p_a = -\\rho_{\\text{água}}g(-z_{AB}) - \\rho_{\\text{água}}g[(-x-h)-(-x)] - \\rho_{\\text{Hg}}g[(-x)-(-x-h)]$$\n\n$$ = \\rho_{\\text{água}}g(z_{AB}) + \\rho_{\\text{água}}gh - \\rho_{\\text{Hg}}gh$$\n\n$$= \\rho_{\\text{água}}g(z_{AB}) + (\\rho_{\\text{água}} - \\rho_{\\text{Hg}})gh$$\n\n$$= (1000 \\cdot 9.81 \\cdot 0.75) + (1000 - 13550) \\cdot 9.81 \\cdot 0.15$$\n\n$$ = 7357.5 - 18467.32 = \\textbf{-11109,82 Pa}$$",
       "answer": "$$p_a - p_b = 11,11 \\, kPa$$",
       "tags": [],
@@ -4723,9 +4723,9 @@
         }
       ],
       "calculated_metrics": {
-        "DSLA": 3,
+        "DSLA": 5,
         "LaMI": "W/H",
-        "PMG_D": 3,
+        "PMG_D": 5,
         "PMG_X": "W/H",
         "total_attempts": 1,
         "memory_attempts": 0,
@@ -4740,8 +4740,8 @@
       "discipline": "EMA091 Mecânica dos fluidos",
       "source": "2025-08-20 Exercícios Estática - 01",
       "description": "1 - Cubo imerso",
-      "proposition": "Na Figura P.4, o manômetro \"A\" lê a pressão de 1,5 kPa. Todos os fluidos estão a $20^{\\circ}$C e os pesos específicos ($\\gamma=\\rho g$) dos mesmos são: $\\gamma_{\\text{ar}}=12$ N/m$^3$, $\\gamma_{\\text{gasolina}}=6670$ N/m$^3$, $\\gamma_{\\text{glicerina}}=12360$ N/m$^3$. Determinar as alturas (em metros) dos líquidos nos tubos abertos B e C.\n\n![](media/q139-1.png)",
-      "step_by_step": "![](media/q139-2.svg)",
+      "proposition": "Na Figura P.4, o manômetro \"A\" lê a pressão de 1,5 kPa. Todos os fluidos estão a $20^{\\circ}$C e os pesos específicos ($\\gamma=\\rho g$) dos mesmos são: $\\gamma_{\\text{ar}}=12$ N/m$^3$, $\\gamma_{\\text{gasolina}}=6670$ N/m$^3$, $\\gamma_{\\text{glicerina}}=12360$ N/m$^3$. Determinar as alturas (em metros) dos líquidos nos tubos abertos B e C.\n\n![](images/q139-1.png)",
+      "step_by_step": "![](images/q139-2.svg)",
       "answer": "",
       "tags": [],
       "calculated_metrics": {
@@ -4778,6 +4778,6 @@
       }
     }
   ],
-  "lastUpdated": "2025-08-23T20:11:20.859Z",
+  "lastUpdated": "2025-08-25T22:34:28.828Z",
   "totalQuestions": 132
 }

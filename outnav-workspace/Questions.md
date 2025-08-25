@@ -8,22 +8,17 @@
 
 
 
+
+
+
+
+
 # Question 1
 
 
 ## Proposition
 
 **This is the q1 proposition**
-
-<button>this is a button</button>
-
----
-
----
-### Heading 3
-#### Heading 4
-*italic*
-
 
 ```snippet:newtons-law
 $\oiint$ Esse é um exemplo de snippet
@@ -33,7 +28,7 @@ $$\sin \alpha$$
 Linha nova
 ```
 
-![](media/ps11.png)
+![](images/ps11.png)
 
 
 ## Step-by-step
@@ -75,6 +70,9 @@ Tags		Math; Science; Physics
 
 
 
+
+
+
 # Question 2
 
 
@@ -84,8 +82,6 @@ $$\frac{d^2}{dt^2} \left( e^{\gamma t} \right)$$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -120,22 +116,19 @@ Tags
 
 
 
+
+
+
 # Question 3
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -163,6 +156,9 @@ Tags
 
 
 
+
+
+
 # Question 4
 
 
@@ -177,8 +173,6 @@ $$y(0) = 5$$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -221,22 +215,19 @@ Tags		ps20
 
 
 
+
+
+
 # Question 5
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -252,6 +243,9 @@ Tags
 2024-11-13T06:00:00Z 0
 2025-01-24T06:00:00Z 1
 2025-04-17T06:00:00Z 1
+
+
+
 
 
 
@@ -352,6 +346,9 @@ Tags		ps20
 
 
 
+
+
+
 # Question 7
 
 
@@ -369,8 +366,6 @@ $$y'(0) = -3$$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -403,6 +398,9 @@ Tags
 
 
 
+
+
+
 # Question 8
 
 
@@ -419,8 +417,6 @@ where
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -453,6 +449,9 @@ Tags
 
 
 
+
+
+
 # Question 9
 
 
@@ -469,8 +468,6 @@ where
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -502,6 +499,9 @@ Tags
 
 
 
+
+
+
 # Question 10
 
 
@@ -513,8 +513,6 @@ $$y'' - y' - 2y = 10e^{4x}$$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -546,22 +544,19 @@ Tags
 
 
 
+
+
+
 # Question 11
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -587,6 +582,9 @@ Tags
 
 
 
+
+
+
 # Question 12
 
 
@@ -600,8 +598,6 @@ em que C é a interseção do cilindro $$x^2 + (y - 1)^2 = 1$$ com o plano $$z =
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -641,6 +637,9 @@ Tags
 
 
 
+
+
+
 # Question 13
 
 
@@ -660,8 +659,6 @@ $$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -686,6 +683,9 @@ Tags
 2025-03-12T06:00:00Z 1
 2025-04-17T06:00:00Z 1
 2025-06-02T19:06:36Z 1
+
+
+
 
 
 
@@ -753,6 +753,9 @@ Tags		ps1
 
 
 
+
+
+
 # Question 15
 
 
@@ -791,6 +794,9 @@ Tags		ps17
 2025-03-12T06:00:00Z 1
 2025-04-17T06:00:00Z 1
 2025-06-12T13:23:28Z 1
+
+
+
 
 
 
@@ -850,6 +856,9 @@ Tags
 
 
 
+
+
+
 # Question 17
 
 
@@ -863,8 +872,6 @@ em que $C$ é a parte da curva $y = x^{200}$ que liga o ponto $(0,0)$ ao ponto $
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -901,6 +908,9 @@ Tags		ps1
 
 
 
+
+
+
 # Question 18
 
 
@@ -916,8 +926,6 @@ em que $C$ é a curva parametrizada por $x = te^t$, $y = 1 + \sin\left(\frac{\pi
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -954,6 +962,9 @@ Tags
 
 
 
+
+
+
 # Question 19
 
 
@@ -969,8 +980,6 @@ em que $C$ é segmento de reta que liga o ponto $(1,0)$ ao ponto $(e,\pi)$.
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -996,6 +1005,9 @@ Tags
 2025-04-07T06:00:00Z 1
 2025-04-30T06:00:00Z 1
 2025-06-04T15:55:04Z 1
+
+
+
 
 
 
@@ -1068,6 +1080,9 @@ Tags		ps17
 
 
 
+
+
+
 # Question 21
 
 
@@ -1108,6 +1123,9 @@ Tags		ps17
 2025-03-04T06:00:00Z 1
 2025-04-22T06:00:00Z 1
 2025-06-30T18:49:32Z 0
+
+
+
 
 
 
@@ -1161,6 +1179,9 @@ Tags		ps17
 2025-03-04T06:00:00Z 1
 2025-04-22T06:00:00Z 1
 2025-06-30T18:54:11Z 1
+
+
+
 
 
 
@@ -1228,6 +1249,9 @@ Tags		ps17
 
 
 
+
+
+
 # Question 24
 
 
@@ -1241,8 +1265,6 @@ $$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -1282,6 +1304,9 @@ Tags
 
 
 
+
+
+
 # Question 25
 
 
@@ -1291,8 +1316,6 @@ Calcule a área da parte da esfera $x^2 + y^2 + z^2 = a^2$ que está acima do pl
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -1330,6 +1353,9 @@ Tags
 
 
 
+
+
+
 # Question 26
 
 
@@ -1339,8 +1365,6 @@ Calcule $\iint_S (x^2 + y^2)\, dS$ em que $S$ é a parte do plano $z = 2x + 2y -
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -1382,22 +1406,19 @@ Tags		ps2
 
 
 
+
+
+
 # Question 27
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -1425,6 +1446,9 @@ Tags
 
 
 
+
+
+
 # Question 28
 
 
@@ -1434,8 +1458,6 @@ Sejam $\vec{F}(x, y, z) = 3xy^2 \, \vec{i} + x^6 e^{-x^8} \, \vec{j} + 3x^2 z \,
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -1472,6 +1494,9 @@ Tags
 
 
 
+
+
+
 # Question 29
 
 
@@ -1483,8 +1508,6 @@ em que  $C$ é a interseção do parabolóide $z = x^2 + y^2$ com o cilindro $x
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -1525,6 +1548,9 @@ Tags
 
 
 
+
+
+
 # Question 30
 
 
@@ -1538,11 +1564,7 @@ Seja S a parte do plano $2x + 2y + z = 4$ que está no primeiro octante.
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -1571,22 +1593,19 @@ Tags
 
 
 
+
+
+
 # Question 31
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -1602,6 +1621,9 @@ Tags
 2025-01-13T06:00:00Z 0
 2025-01-14T06:00:00Z 1
 2025-04-07T06:00:00Z 1
+
+
+
 
 
 
@@ -1651,6 +1673,9 @@ Tags		ps17
 2025-03-18T06:00:00Z 1
 2025-04-26T06:00:00Z 1
 2025-06-21T16:16:33Z 1
+
+
+
 
 
 
@@ -1722,22 +1747,19 @@ Tags		ps17
 
 
 
+
+
+
 # Question 34
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -1772,22 +1794,19 @@ Tags
 
 
 
+
+
+
 # Question 35
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -1808,6 +1827,9 @@ Tags
 2025-03-27T06:00:00Z 1
 2025-04-23T06:00:00Z 1
 2025-06-02T16:27:48Z 1
+
+
+
 
 
 
@@ -1889,6 +1911,9 @@ Tags		ps17
 
 
 
+
+
+
 # Question 37
 
 
@@ -1936,6 +1961,9 @@ Tags
 2025-03-24T06:00:00Z 1
 2025-04-23T06:00:00Z 1
 2025-06-13T18:44:18Z 1
+
+
+
 
 
 
@@ -2004,6 +2032,9 @@ Tags
 
 
 
+
+
+
 # Question 39
 
 
@@ -2016,8 +2047,6 @@ $$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2050,6 +2079,9 @@ Tags
 
 
 
+
+
+
 # Question 40
 
 
@@ -2065,8 +2097,6 @@ O deslocamento de um objeto oscilando em função do tempo é mostrado na figura
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2112,6 +2142,9 @@ Tags
 
 
 
+
+
+
 # Question 41
 
 
@@ -2125,8 +2158,6 @@ Tente resolver este problema sem achar a constante da mola.
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2166,6 +2197,9 @@ Tags
 
 
 
+
+
+
 # Question 42
 
 
@@ -2178,8 +2212,6 @@ Um bloco de $2,0\ \mathrm{kg}$ sem atrito está preso a uma mola ideal cuja cons
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2217,6 +2249,9 @@ Tags
 
 
 
+
+
+
 # Question 43
 
 
@@ -2237,8 +2272,6 @@ Encontre
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2300,6 +2333,9 @@ Tags
 
 
 
+
+
+
 # Question 44
 
 
@@ -2312,8 +2348,6 @@ Um oscilador harmônico possui frequência $\omega$ e amplitude $A$.
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2402,6 +2436,9 @@ Tags
 
 
 
+
+
+
 # Question 45
 
 
@@ -2466,6 +2503,9 @@ Tags
 
 
 
+
+
+
 # Question 46
 
 
@@ -2477,8 +2517,6 @@ Uma bola de $1,50\,\mathrm{kg}$ e outra de $2,0\,\mathrm{kg}$ são coladas uma n
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -2494,7 +2532,7 @@ b) O sistema está em equilíbrio quando $F_k = F_g$:
 - $\omega_2 = \sqrt{\frac{165}{2}} = 9,08\,\mathrm{rad/s}$
 - $A_2 = A_1 + \bigl(x_{\text{eq1}} - x_{\text{eq2}}\bigr) = 15 + (21,21 - 12,12) = 24,09\,\mathrm{cm}$
 
-![](media/q46.png)
+![](images/q46.png)
 
 
 ## Metadata
@@ -2512,6 +2550,9 @@ Tags
 2025-04-02T06:00:00Z 1
 2025-04-26T06:00:00Z 1
 2025-06-03T19:39:42Z 1
+
+
+
 
 
 
@@ -2557,7 +2598,7 @@ Você deseja determinar o momento de inércia de certa parte complicada de uma m
 - $T = 2\pi \sqrt{m/k}$
 - $T = 2\pi \sqrt{J/k}$
 
-![](media/q47.png)
+![](images/q47.png)
 
 
 ## Answer
@@ -2587,6 +2628,9 @@ Tags
 2025-03-27T06:00:00Z 1
 2025-04-02T06:00:00Z 0
 2025-06-03T19:46:43Z 0
+
+
+
 
 
 
@@ -2644,6 +2688,9 @@ Tags
 
 
 
+
+
+
 # Question 49
 
 
@@ -2673,7 +2720,7 @@ Uma pequena esfera de massa $m$ está presa a uma barra de comprimento $L$ com u
 $$a = g \sin(\theta)$$
 $$v_{\max} = \sqrt{2\,m\,g\,L\,\bigl(1 - \cos(\theta)\bigr)}$$
 
-![](media/q49.png)
+![](images/q49.png)
 
 
 ## Metadata
@@ -2690,6 +2737,9 @@ Tags
 2025-03-31T06:00:00Z 1
 2025-04-23T06:00:00Z 1
 2025-06-03T21:05:26Z 1
+
+
+
 
 
 
@@ -2721,11 +2771,7 @@ $$
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -2752,6 +2798,9 @@ Tags
 
 
 
+
+
+
 # Question 51
 
 
@@ -2764,17 +2813,13 @@ c) Em termos de $F_{\max}$ e de $k$, qual é a amplitude para $\omega = \sqrt{k/
 	i) $b = 0{,}2\,\sqrt{k\,m}$ e 
 	ii) $b = 0{,}4\,\sqrt{k\,m}$? Compare seus resultados com a Figura 13.28.
 
-![](media/q51.png)
+![](images/q51.png)
 
 
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -2801,22 +2846,19 @@ Tags
 
 
 
+
+
+
 # Question 52
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -2845,22 +2887,19 @@ Tags
 
 
 
+
+
+
 # Question 53
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -2888,22 +2927,19 @@ Tags
 
 
 
+
+
+
 # Question 54
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -2930,22 +2966,19 @@ Tags
 
 
 
+
+
+
 # Question 55
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -2970,22 +3003,18 @@ Tags
 
 
 
+
+
 # Question 56
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -3010,22 +3039,18 @@ Tags
 
 
 
+
+
 # Question 57
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -3050,22 +3075,18 @@ Tags
 
 
 
+
+
 # Question 58
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -3090,22 +3111,18 @@ Tags
 
 
 
+
+
 # Question 59
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -3130,27 +3147,23 @@ Tags
 
 
 
+
+
 # Question 60
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Q1
 Source		2025-1 Lista 1
 Tags		
@@ -3171,27 +3184,24 @@ Tags
 
 
 
+
+
+
 # Question 61
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Q2
 Source		2025-1 Lista 1
 Tags		
@@ -3212,27 +3222,24 @@ Tags
 
 
 
+
+
+
 # Question 62
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Q3
 Source		2025-1 Lista 1
 Tags		
@@ -3253,27 +3260,24 @@ Tags
 
 
 
+
+
+
 # Question 63
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Q4
 Source		2025-1 Lista 1
 Tags		
@@ -3294,27 +3298,24 @@ Tags
 
 
 
+
+
+
 # Question 64
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Q5
 Source		2025-1 Lista 1
 Tags		
@@ -3335,27 +3336,24 @@ Tags
 
 
 
+
+
+
 # Question 65
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Q6
 Source		2025-1 Lista 1
 Tags		
@@ -3364,6 +3362,9 @@ Tags
 ## Attempts
 
 2025-04-10T06:00:00Z 0
+
+
+
 
 
 
@@ -3385,8 +3386,6 @@ $$ \int \frac{1}{3 – y}\,dy $$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -3418,6 +3417,9 @@ Tags		ps17
 
 
 
+
+
+
 # Question 67
 
 
@@ -3427,8 +3429,6 @@ $$ \int \cos^2(t)\,dt $$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -3448,6 +3448,9 @@ Tags		ps17
 
 2025-04-17T06:00:00Z 0
 2025-06-11T21:45:04Z 1
+
+
+
 
 
 
@@ -3569,11 +3572,7 @@ The conservative force field does $-3$ J of work along that curve—i.e.\ you 
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -3585,6 +3584,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -3650,6 +3651,9 @@ Tags		ps12
 2025-05-05T06:00:00Z 1
 2025-05-19T06:00:00Z 1
 2025-06-11T22:09:21Z 1
+
+
+
 
 
 
@@ -3746,6 +3750,9 @@ Tags		ps12
 
 
 
+
+
+
 # Question 74
 
 
@@ -3800,6 +3807,9 @@ Tags		ps12
 2025-05-05T06:00:00Z 1
 2025-05-19T06:00:00Z 1
 2025-06-12T19:39:44Z 1
+
+
+
 
 
 
@@ -3913,6 +3923,9 @@ Tags		ps12
 
 
 
+
+
+
 # Question 76
 
 
@@ -3929,8 +3942,6 @@ Encontre a solução geral da EDO.
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -3973,6 +3984,9 @@ Tags		ps12
 2025-05-06T06:00:00Z 1
 2025-05-19T06:00:00Z 1
 2025-06-12T19:52:47Z 1
+
+
+
 
 
 
@@ -4074,6 +4088,9 @@ Tags		ps12
 
 
 
+
+
+
 # Question 78
 
 
@@ -4158,6 +4175,9 @@ Tags		ps12
 
 
 
+
+
+
 # Question 79
 
 
@@ -4203,8 +4223,6 @@ $$
 ## Answer
 
 
-
-
 ## Metadata
 
 Discipline		EDO
@@ -4214,6 +4232,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -4251,8 +4271,6 @@ $$
 ## Answer
 
 
-
-
 ## Metadata
 
 Discipline		EDO
@@ -4262,6 +4280,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -4306,8 +4326,6 @@ $$
 ## Answer
 
 
-
-
 ## Metadata
 
 Discipline		EDO
@@ -4317,6 +4335,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -4354,8 +4374,6 @@ $$
 ## Answer
 
 
-
-
 ## Metadata
 
 Discipline		EDO
@@ -4365,6 +4383,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -4392,8 +4412,6 @@ $$
 ## Step-by-step
 
 
-
-
 ## Answer
 
 $$
@@ -4410,6 +4428,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -4451,8 +4471,6 @@ $$
 ## Answer
 
 
-
-
 ## Metadata
 
 Discipline		EDO
@@ -4462,6 +4480,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -4487,8 +4507,6 @@ $$
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -4522,6 +4540,8 @@ Tags
 
 
 
+
+
 # Question 88
 
 
@@ -4533,7 +4553,7 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $y$
 3. Represente em forma matricial
 4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$
 
-![](media/q88.png)
+![](images/q88.png)
 
 
 ## Step-by-step
@@ -4566,7 +4586,7 @@ $$\sigma' = \begin{bmatrix} 198.923 & 0 & 51.340 \\ 0 & 20 & 0 \\ 51.340 & 0 & -
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q1 a
 Source		2025-1 Lista 2
 Tags		ps4
@@ -4590,6 +4610,9 @@ Tags		ps4
 
 
 
+
+
+
 # Question 90
 
 
@@ -4601,12 +4624,10 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $z$
 3. Represente em forma matricial
 4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$
 
-![](media/q88.png)
+![](images/q88.png)
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -4622,7 +4643,7 @@ $$
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q1 b
 Source		2025-1 Lista 2
 Tags		
@@ -4631,6 +4652,9 @@ Tags
 ## Attempts
 
 2025-05-08T06:00:00Z 1
+
+
+
 
 
 
@@ -4654,12 +4678,10 @@ Sendo $x', y', z'$ um giro de $30^\circ$, sentido anti-horário, em torno de $y$
 3. Represente em forma matricial
 4. Represente as componentes nas faces de um cubo (elemento do contínuo) nos eixos $x'$, $y'$ e $z'$
 
-![](media/q91.png)
+![](images/q91.png)
 
 
 ## Step-by-step
-
-
 
 
 ## Answer
@@ -4675,7 +4697,7 @@ $$
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q1 c
 Source		2025-1 Lista 2
 Tags		
@@ -4684,6 +4706,9 @@ Tags
 ## Attempts
 
 2025-05-08T06:00:00Z 1
+
+
+
 
 
 
@@ -4707,8 +4732,6 @@ Compare [[q88]] com [[q91]] e comente os valores das componentes $\sigma_{xx}$ e
 ## Step-by-step
 
 
-
-
 ## Answer
 
 Pode-se observar que como a rotação em ambas questões acontecem em torno do eixo Y, a magnitude dessa componente não altera os valores das outras tensões ($\sigma_{xx}$ e $\sigma_{x'x'}$ $\sigma_{zz}$ e $\sigma_{z'z'}$ e $\sigma_{xz}$ e $\sigma_{x'z'}$.)
@@ -4716,7 +4739,7 @@ Pode-se observar que como a rotação em ambas questões acontecem em torno do e
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q1 d
 Source		2025-1 Lista 2
 Tags		ps4
@@ -4728,6 +4751,9 @@ Tags		ps4
 2025-05-12T06:00:00Z 1
 2025-06-01T16:09:36Z 1
 2025-06-30T18:27:26Z 1
+
+
+
 
 
 
@@ -4863,11 +4889,9 @@ $$
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q2
 Source		2025-1 Lista 2
 Tags		
@@ -4876,6 +4900,9 @@ Tags
 ## Attempts
 
 2025-05-12T06:00:00Z 1
+
+
+
 
 
 
@@ -4905,16 +4932,12 @@ $$[\sigma] = \begin{bmatrix}
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q3
 Source		2025-1 Lista 2
 Tags		
@@ -4923,6 +4946,9 @@ Tags
 ## Attempts
 
 2025-05-12T06:00:00Z 1
+
+
+
 
 
 
@@ -4967,11 +4993,9 @@ A tensão de normal média é a tensão de tração quando a tensão de cisalham
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q4
 Source		2025-1 Lista 2
 Tags		
@@ -4981,6 +5005,9 @@ Tags
 
 2025-05-12T06:00:00Z 0
 2025-05-15T06:00:00Z 0
+
+
+
 
 
 
@@ -5017,8 +5044,6 @@ $$
 ## Step-by-step
 
 
-
-
 ## Answer
 
 $$\sigma_1 = 208,962 \, MPa \quad \sigma_{2}=80 \quad\sigma_3 = -78,962 \, MPa \quad \sigma_{\text{médio}} = 65 \, MPa$$
@@ -5032,7 +5057,7 @@ $$\tau_{\max}^{(3D)} = \tau_{\max}^{(2D)} = 143,962 \, MPa$$
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q5
 Source		2025-1 Lista 2
 Tags		ps10; ps11
@@ -5058,27 +5083,24 @@ Tags		ps10; ps11
 
 
 
+
+
+
 # Question 97
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q6
 Source		2025-1 Lista 2
 Tags		
@@ -5098,27 +5120,23 @@ Tags
 
 
 
+
+
 # Question 98
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q7
 Source		2025-1 Lista 2
 Tags		
@@ -5138,27 +5156,23 @@ Tags
 
 
 
+
+
 # Question 99
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q8
 Source		2025-1 Lista 2
 Tags		
@@ -5178,27 +5192,23 @@ Tags
 
 
 
+
+
 # Question 100
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q9
 Source		2025-1 Lista 2
 Tags		
@@ -5218,27 +5228,23 @@ Tags
 
 
 
+
+
 # Question 101
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q10
 Source		2025-1 Lista 2
 Tags		
@@ -5258,27 +5264,23 @@ Tags
 
 
 
+
+
 # Question 102
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q11
 Source		2025-1 Lista 2
 Tags		
@@ -5298,27 +5300,23 @@ Tags
 
 
 
+
+
 # Question 103
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q12
 Source		2025-1 Lista 2
 Tags		
@@ -5338,27 +5336,23 @@ Tags
 
 
 
+
+
 # Question 104
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q13
 Source		2025-1 Lista 2
 Tags		
@@ -5378,27 +5372,23 @@ Tags
 
 
 
+
+
 # Question 105
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L2-Q14
 Source		2025-1 Lista 2
 Tags		
@@ -5418,27 +5408,23 @@ Tags
 
 
 
+
+
 # Question 106
 
 
 ## Proposition
 
 
-
-
 ## Step-by-step
-
-
 
 
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Vídeo TENSÕES NO PLANO - CÍRCULO DE MOHR Passo a Passo
 Source		Youtube
 Tags		
@@ -5447,6 +5433,9 @@ Tags
 ## Attempts
 
 2025-05-12T06:00:00Z 0
+
+
+
 
 
 
@@ -5471,6 +5460,7 @@ $$S = \vec r(u,v) = (u^2, v^2, u + 2v)$$
 
 
 ## Step-by-step
+
 
 ### a)S é lisa em todo ponto?
 
@@ -5562,6 +5552,9 @@ Tags		ps22; ps29
 
 
 
+
+
+
 # Question 108
 
 
@@ -5639,6 +5632,9 @@ Tags		ps29
 
 
 
+
+
+
 # Question 109
 
 
@@ -5648,6 +5644,7 @@ Qual a área da superfície definida por S:  $z = x^2 + y^2$ com $z \le 1$
 
 
 ## Step-by-step
+
 
 ### Abordagem paramétrica (ou “integral vetorial de superfície”)
 $$\vec r(\theta,h)=(r_x(\theta,h),r_y(\theta,h),r_z(\theta,h))$$
@@ -5774,6 +5771,9 @@ Tags		ps29
 
 
 
+
+
+
 # Question 110
 
 
@@ -5783,7 +5783,7 @@ Em um ponto na superfície de um sólido, os extensômetros da roseta retangular
 $$
 \varepsilon_A = 2\times10^{-6},\quad \varepsilon_B = 6\times10^{-6},\quad \varepsilon_C = -9\times10^{-6}.
 $$
-![](media/q110.png)
+![](images/q110.png)
 (Legenda: $\varepsilon_A$ no eixo X, $\varepsilon_C$ no eixo Y e $\varepsilon_B$ à 45°, entre o eixo X e Y)
 
 Dado
@@ -5885,7 +5885,7 @@ $$[\sigma] = \begin{pmatrix} -0,15 & 1,46 & 0 \\ 1,46 & -1,85 & 0 \\ 0 & 0 & 0 \
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q1
 Source		2025-1 Lista 3
 Tags		ps34; ps7
@@ -5894,6 +5894,9 @@ Tags		ps34; ps7
 ## Attempts
 
 2025-07-02T19:25:43Z 0
+
+
+
 
 
 
@@ -5996,7 +5999,7 @@ $$\hat{n}_1=(0,899,0,437,0) \quad\hat{n}_2=(0,0,1) \quad\hat{n}_3=(-0,437,0,899,
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q2
 Source		2025-1 Lista 3
 Tags		ps11
@@ -6005,6 +6008,9 @@ Tags		ps11
 ## Attempts
 
 2025-07-03T16:21:37Z 0
+
+
+
 
 
 
@@ -6094,7 +6100,7 @@ $$[\sigma'] = [\sigma]$$
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q3
 Source		2025-1 Lista 3
 Tags		ps7
@@ -6103,6 +6109,9 @@ Tags		ps7
 ## Attempts
 
 2025-07-03T17:49:44Z 0
+
+
+
 
 
 
@@ -6149,7 +6158,7 @@ $$\varepsilon = \frac{L - L_0}{L_0} = \frac{\Delta L}{L_0} \;\to\; L = \varepsil
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Deformação 1D
 Source		
 Tags		ps5; ps7
@@ -6162,6 +6171,9 @@ Tags		ps5; ps7
 2025-06-09T19:13:08Z 1
 2025-06-17T16:00:11Z 1
 2025-06-30T17:05:55Z 1
+
+
+
 
 
 
@@ -6321,7 +6333,7 @@ Pois em um estado tridimensional as deformações são acopladas em todas as dir
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Deformação 1D vs 3D
 Source		
 Tags		ps5; ps7; ps8
@@ -6335,6 +6347,9 @@ Tags		ps5; ps7; ps8
 2025-06-17T16:40:45Z 1
 2025-06-29T01:54:16Z 1
 2025-08-13T18:07:33Z 1
+
+
+
 
 
 
@@ -6386,6 +6401,8 @@ Tags
 
 
 ## Attempts
+
+
 
 
 
@@ -6461,6 +6478,8 @@ Tags
 
 
 
+
+
 # Question 119
 
 
@@ -6470,6 +6489,7 @@ Determine $\iint_S \vec{F}\,d\vec{s}$ sabendo que $\vec{F}(x,y,z) = (e^{y^2},\,x
 
 
 ## Step-by-step
+
 
 ### Método 1
 [[ps19#^divergenceTheorem]]
@@ -6595,6 +6615,9 @@ Tags		ps19; ps30
 
 
 
+
+
+
 # Question 120
 
 
@@ -6604,6 +6627,7 @@ Calcule $\oint_{C}\vec F\cdot d\vec r$ onde $\vec F=(y^2,x,z^2)$ e $C=\{\,y+z=2\
 
 
 ## Step-by-step
+
 
 ### Método 1 - Pelo teorema de Stokes
 ![[ps19#^stokesTheorem]]
@@ -6683,6 +6707,8 @@ Tags		ps19; ps28
 
 
 
+
+
 # Question 121
 
 
@@ -6707,8 +6733,9 @@ Faça o desenvolvimento da questão de duas formas:
 
 ## Step-by-step
 
+
 ### Círculo de Mohr
-![](media/q96.png)
+![](images/q96.png)
 
 >[!info] ![[ps11#^tensaoMedia]]
 
@@ -6739,7 +6766,7 @@ $$\hat{n}_{s_{2}} = (\cos\theta_{s1}, \sin\theta_{s1}) = (\cos(55.161^\circ), \s
 ---
 ou, de maneira simplificada
 
-![](media/q121.png)
+![](images/q121.png)
 
 
 ### Autovalores e autovetores
@@ -6789,7 +6816,7 @@ $$\hat{n}_{s_{1}} = (0.821, -0.571) \quad\hat{n}_{s_{2}} = (0.571, 0.821)$$
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		
 Source		q96 modificada
 Tags		ps10; ps11
@@ -6801,6 +6828,9 @@ Tags		ps10; ps11
 2025-07-03T14:13:27Z 1
 2025-07-07T17:43:10Z 1
 2025-08-13T15:08:51Z 1
+
+
+
 
 
 
@@ -6834,17 +6864,17 @@ $$A = (5.5, -9.5) \quad B = (9.5, 5.5)$$
 ## Answer
 
 
-
-
 ## Metadata
 
-Discipline		Mecsol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		Seja um círculo C de centro C = (-3.5, 0)
 Source		Can be related to q110
 Tags		ps33
 
 
 ## Attempts
+
+
 
 
 
@@ -6870,7 +6900,7 @@ a) $\Delta T$ para que a dimensão $a$ não seja alterada.
 b) Variação $\Delta b$ da dimensão $b$ para a situação em que $a$ não seja alterada, com $\Delta T$ e $\sigma_{xx}$ atuando.
 
 Expresse os resultados em função de $\Delta T, \sigma_{xx}, E, \nu, a, b$ e $\alpha$
-![](media/q123.png)
+![](images/q123.png)
 
 
 ### Descrição da figura
@@ -6924,7 +6954,7 @@ $$\Delta b = b \cdot \frac{1+\nu}{E} \sigma_{xx}$$
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q4
 Source		2025-1 Lista 3
 Tags		ps7
@@ -6933,6 +6963,9 @@ Tags		ps7
 ## Attempts
 
 2025-07-03T22:36:39Z 0
+
+
+
 
 
 
@@ -6958,28 +6991,26 @@ c) Verifique se haverá escoamento do material da placa sabendo que $\sigma_{esc
 c.1) Critério de TRESCA
 c.2) Critério de Von Mises.
 
-![](media/q124.png)
+![](images/q124.png)
 
 
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q5
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7003,28 +7034,26 @@ a) Componentes principais tensões.
 b) Componentes principais deformação.
 c) Deformação longitudinal na direção de $30^{\circ}$ (sentido anti-horário) com eixo $x$.
 
-![](media/q125.png)
+![](images/q125.png)
 
 
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q6
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7048,28 +7077,26 @@ a) $\sigma_{yy}$ para que a dimensão "$b$" não altere.
 b) Variação $\Delta a$ da dimensão "$a$" na situação da letra (a).
 
 Expresse seus resultados em termos de $E, \nu, \sigma_{xx}, "a"$ e "$b"$. $\sigma_{xx}$ e $\sigma_{yy}$ são uniformemente distribuídas.
-![](media/q126.png)
+![](images/q126.png)
 
 
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q7
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7098,22 +7125,20 @@ b) Os valores destas componentes principais de deformação.
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q8
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7140,22 +7165,20 @@ b) Variação $\Delta a$ da dimensão "$a$" na situação da letra (a), ou seja,
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q9
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7183,28 +7206,26 @@ c) Verifique se haverá escoamento da placa.
 c.1) segundo TRESCA ($\tau_{escoamento} = 400 MPa$)
 c.2) Segundo Von MISES.
 
-![](media/q129.png)
+![](images/q129.png)
 
 
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q10
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7235,22 +7256,20 @@ d) Expresse a condição de Tresca em função de $E, \alpha, \Delta, L \text{ e
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
 
-Discipline		MecSol
+Discipline		EES022 Introduçao à Mecânica dos Sólidos
 Description		L3-Q11
 Source		2025-1 Lista 3
 Tags		
 
 
 ## Attempts
+
+
 
 
 
@@ -7277,6 +7296,7 @@ Determinar: $Q_{1 \to 2}$.
 
 
 ## Step-by-step
+
 
 ### Considerações
 - O cilindro se move livremente $\implies$ Sistema isobárico
@@ -7322,6 +7342,9 @@ Tags
 
 
 
+
+
+
 # Question 132
 
 
@@ -7331,6 +7354,7 @@ Um trecho de redução em um tubo de água tem um diâmetro de entrada de $50$ m
 
 
 ## Step-by-step
+
 
 ### Considerações
 - Água é um fluido incompressível $ \iff (\rho = \rho_i = \rho_e)$ 
@@ -7374,6 +7398,9 @@ Tags
 
 
 
+
+
+
 # Question 133
 
 
@@ -7383,6 +7410,7 @@ A resistência do ar (força de arrasto) sobre uma bola de $200$ g em queda livr
 
 
 ## Step-by-step
+
 
 ### Entendendo $F_D$
 $$[F_D] = [k] \cdot [V^2]$$
@@ -7519,6 +7547,9 @@ Tags
 
 
 
+
+
+
 # Question 134
 
 
@@ -7532,7 +7563,7 @@ c) A tensão de cisalhamento na placa superior, em N/m2.
 d) A tensão de cisalhamento na placa inferior, em Pa.
 e) O sentido de cada tensão cisalhante calculada nas partes c) e d)
 
-![](media/q134.png)
+![](images/q134.png)
 
 
 ## Step-by-step
@@ -7571,17 +7602,19 @@ Tags
 
 
 
+
+
 # Question 135
 
 
 ## Proposition
-
 A capacidade máxima de fornecimento de potência de um motor de combustão interna decresce com a altitude, devido ao fato de a massa específica do ar e, consequentemente, a vazão mássica de ar decrescerem com a altitude. Um caminhão parte do Rio de Janeiro (elevação de 0 metros) em um dia em que a temperatura e a pressão barométrica  são, respectivamente, de 40°C e 1 atm. O caminhão viaja para Belo Horizonte (elevação de aproximadamente 800 metros), em que a temperatura é de 27°C. Determinar a pressão barométrica em Belo Horizonte e a variação percentual na massa específica do ar. 
 
 Constante de Gás Específica para o Ar = 286,9 J/kg·K
 
 
 ## Step-by-step
+
 
 ### Fórmulas
 $$\frac{dp}{dz} = -\rho g$$
@@ -7620,7 +7653,6 @@ $$ = \frac{0,916}{1} \cdot \left(\frac{273,15 + 40}{273,15 + 27} \right) - 1 = -
 
 
 ## Answer
-
 $$p = 0,916 \, \text{atm}$$
 
 $$\Delta \rho \%  = -4,43 \, \%$$
@@ -7635,8 +7667,10 @@ Tags
 
 
 ## Attempts
-
 2025-08-20T18:31:52Z 0
+
+
+
 
 
 
@@ -7653,14 +7687,14 @@ Tags
 
 
 ## Proposition
-
 Um cubo de carvalho maciço com 30 cm de aresta é mantido submerso por um tirante, conforme mostrado na Figura P.1. Calcule a força real da água sobre a superfície inferior do cubo e a tração no tirante. Os valores das densidades são: água $\rho_{\text{água}}=1000$ kg/m$^3$, carvalho $\rho_{\text{carvalho}}=770$ kg/m$^3$, e óleo $\rho_{\text{óleo}}=800$ kg/m$^3$.
 
 
-![](media/q136-1.svg)
+![](images/q136-1.svg)
 
 
 ## Step-by-step
+
 
 ### Fórmulas
 $$\frac{dp}{dz} = -\rho g$$
@@ -7672,9 +7706,9 @@ $$\vec F = - \int \rho \, d\, \vec A$$
 1. Fluido estático
 2. Densidade dos fluidos constantes
 
-	
+
 ### Cálculos
-![](media/q136-2.svg)
+![](images/q136-2.svg)
 
 Sendo 
 - $h_0$ a altura na superfície do óleo
@@ -7744,7 +7778,6 @@ $$T = 264,87 \text{ N} - 203,95 \text{ N} = 60,92 \text{ N}$$
 
 
 ## Answer
-
 $$F_3 = 11235,96 N$$
 
 $$T = 60,92 N$$
@@ -7755,12 +7788,14 @@ $$T = 60,92 N$$
 Discipline		EMA091 Mecânica dos fluidos
 Description		1 - Cubo imerso
 Source		2025-08-20 Exercícios Estática - 01
-Tags		
+Tags	
 
 
 ## Attempts
-
 2025-08-20T19:50:54Z 0
+
+
+
 
 
 
@@ -7781,10 +7816,11 @@ Tags
 Considere o manômetro de dois fluidos mostrado na Figura P.2. Calcule a diferença de pressão aplicada nos dois recipientes. O SG do Tetracloreto de carbono é 1,595.
 
 
-![](media/q137.png)
+![](images/q137.png)
 
 
 ## Step-by-step
+
 
 ### Fórmulas
 $$\frac{dp}{dz} = -\rho g$$
@@ -7867,12 +7903,14 @@ $$p_1-p_2 = 59,53 \text{ Pa}$$
 Discipline		EMA091 Mecânica dos fluidos
 Description		2 - Manômetro de dois fluidos
 Source		2025-08-20 Exercícios Estática - 01
-Tags		
+Tags	
 
 
 ## Attempts
-
 2025-08-20T22:26:22Z 0
+
+
+
 
 
 
@@ -7892,10 +7930,11 @@ Tags
 
 Água flui ao longo de um tubo inclinado de $30^{\circ}$ em relação à horizontal conforme mostrado. A diferença de pressão $p_A - p_B$ é causada parcialmente pela gravidade e parcialmente pelo atrito. Calcule a diferença de pressão se $L=1,5$ m e $h=0,15$ m.
 
-![](media/q138.png)
+![](images/q138.png)
 
 
 ## Step-by-step
+
 
 ### Fórmulas
 	$$\frac{dp}{dz} = -\rho g$$
@@ -7935,7 +7974,6 @@ $$ = 7357.5 - 18467.32 = \textbf{-11109,82 Pa}$$
 
 
 ## Answer
-
 $$p_a - p_b = 11,11 \, kPa$$
 
 
@@ -7944,12 +7982,13 @@ $$p_a - p_b = 11,11 \, kPa$$
 Discipline		EMA091 Mecânica dos fluidos
 Description		4 - Tanque com ar, gasolina e glicerina
 Source		2025-08-20 Exercícios Estática - 01
-Tags		
+Tags	
 
 
 ## Attempts
-
 2025-08-20T23:27:29Z 0
+
+
 
 
 
@@ -7969,17 +8008,14 @@ Tags
 
 Na Figura P.4, o manômetro "A" lê a pressão de 1,5 kPa. Todos os fluidos estão a $20^{\circ}$C e os pesos específicos ($\gamma=\rho g$) dos mesmos são: $\gamma_{\text{ar}}=12$ N/m$^3$, $\gamma_{\text{gasolina}}=6670$ N/m$^3$, $\gamma_{\text{glicerina}}=12360$ N/m$^3$. Determinar as alturas (em metros) dos líquidos nos tubos abertos B e C.
 
-![](media/q139-1.png)
+![](images/q139-1.png)
 
 
 ## Step-by-step
-
-![](media/q139-2.svg)
+![](images/q139-2.svg)
 
 
 ## Answer
-
-
 
 
 ## Metadata
@@ -7987,10 +8023,12 @@ Na Figura P.4, o manômetro "A" lê a pressão de 1,5 kPa. Todos os fluidos est�
 Discipline		EMA091 Mecânica dos fluidos
 Description		1 - Cubo imerso
 Source		2025-08-20 Exercícios Estática - 01
-Tags		
+Tags	
 
 
 ## Attempts
+
+
 
 
 
@@ -8010,16 +8048,10 @@ Tags
 ## Proposition
 
 
-
-
 ## Step-by-step
 
 
-
-
 ## Answer
-
-
 
 
 ## Metadata
@@ -8027,20 +8059,10 @@ Tags
 Discipline		
 Description		
 Source		
-Tags		
+Tags	
 
 
 ## Attempts
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,40 +1,93 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const questionNumberElement = document.getElementById('questionNumber');
-    const questionPropositionElement = document.getElementById('questionProposition');
-    const questionStepByStepElement = document.getElementById('questionStepByStep');
-    const questionAnswerElement = document.getElementById('questionAnswer');
+const questionNumberEl = document.getElementById('questionNumber');
+const questionPropositionEl = document.getElementById('questionProposition');
+const questionStepByStepEl = document.getElementById('questionStepByStep');
+const questionAnswerEl = document.getElementById('questionAnswer');
 
-    if (!window.__outnav_message_handler_installed) {
-        const __outnav_message_handler = (event) => {
-            // console.log("Received message in questionsWebview:", event.data);
+const recommendationSelectDisciplinesEl = document.getElementById('recommendationSelectDisciplines');
+const recommendationTableBodyEl = document.getElementById('recommendationsTableBody');
 
-            if (!event.data.payload.currentQuestionNumber) {
-                questionNumberElement.textContent = '?';
-                questionPropositionElement.textContent = 'No question loaded.';
-                questionStepByStepElement.textContent = 'No question loaded.';
-                questionAnswerElement.textContent = 'No question loaded.';
-                console.log("No current question number available. Returned: " + event.data.payload.currentQuestionNumber);
-                return;
-            }
+let questionsJson = [];
 
-            if (!questionNumberElement || !questionPropositionElement || !questionStepByStepElement || !questionAnswerElement) { return; }
-
-            const currentQuestionNumber = event.data.payload.currentQuestionNumber;
-            const questionsJson = Object.values(event.data.payload.questionsJson);
-
-            const currentQuestion = questionsJson.find((q) => q && q.number === currentQuestionNumber);
-            // markdownToHtml returns HTML (e.g. <vscode-divider>), insert as HTML so elements render
-            // console.log(currentQuestion.proposition)
-            // console.log(typeof currentQuestion.proposition)
-            questionPropositionElement.innerHTML = markdownToHtml(currentQuestion.proposition);
-            questionStepByStepElement.innerHTML = markdownToHtml(currentQuestion.step_by_step);
-            questionAnswerElement.innerHTML = markdownToHtml(currentQuestion.answer);
-            questionNumberElement.innerHTML = currentQuestionNumber;
-
-            renderKatex();
-        };
-        window.addEventListener("message", __outnav_message_handler);
-        window.__outnav_message_handler_installed = true;
-    }
+recommendationSelectDisciplinesEl.addEventListener("change", () => {
+    updateRecommendedTable();
 });
 
+
+window.addEventListener("message", (event) => {
+    const currentQuestionNumber = event.data.payload.currentQuestionNumber;
+    if (!currentQuestionNumber) {
+        questionNumberEl.textContent = '?';
+        questionPropositionEl.textContent = 'No question loaded.';
+        questionStepByStepEl.textContent = 'No question loaded.';
+        questionAnswerEl.textContent = 'No question loaded.';
+        console.log("No current question number available. Returned: " + currentQuestionNumber);
+        return;
+    }
+    questionsJson = Object.values(event.data.payload.questionsJson);
+
+    // Populate first tab
+    const currentQuestion = questionsJson.find((q) => q && q.number === currentQuestionNumber);
+    questionPropositionEl.innerHTML = markdownToHtml(currentQuestion.proposition);
+    questionStepByStepEl.innerHTML = markdownToHtml(currentQuestion.step_by_step);
+    questionAnswerEl.innerHTML = markdownToHtml(currentQuestion.answer);
+    questionNumberEl.innerHTML = currentQuestionNumber;
+
+    // Populate second tab
+    updateRecommendedTable(questionsJson);
+
+    // Render Katex
+    renderKatex();
+});
+
+
+
+
+function filterQuestionsByDisciplines(questions, selectedDisciplines) {
+    return questions.filter(q => {
+        const questionDiscipline = q.discipline || [];
+        return selectedDisciplines.some(d => questionDiscipline.includes(d));
+    });
+}
+
+function updateRecommendedTable() {
+    let selectedDisciplines = recommendationSelectDisciplinesEl.value;
+    let filteredQuestions = filterQuestionsByDisciplines(questionsJson, selectedDisciplines);
+    console.log("selectedDisciplines", selectedDisciplines);
+    console.log("filteredQuestions", filteredQuestions);
+
+    recommendationTableBodyEl.innerHTML = '';
+    filteredQuestions.forEach((q) => {
+        const cells = [];
+
+        const qNumberCell = document.createElement('vscode-table-cell');
+        const qSourceCell = document.createElement('vscode-table-cell');
+        const qDescriptionCell = document.createElement('vscode-table-cell');
+        const qAttemptsSummaryCell = document.createElement('vscode-table-cell');
+        const qDSLA = document.createElement('vscode-table-cell');
+        const qLaMI = document.createElement('vscode-table-cell');
+        const qPMG_D = document.createElement('vscode-table-cell');
+        const qPMG_X = document.createElement('vscode-table-cell');
+
+        qNumberCell.textContent = q.number;
+        qSourceCell.innerHTML = markdownToHtml(q.source || '');
+        qDescriptionCell.innerHTML = markdownToHtml(q.description || '');
+        qAttemptsSummaryCell.innerHTML = markdownToHtml(q.calculated_metrics.attempts_summary || '');
+        qDSLA.innerHTML = markdownToHtml(q.calculated_metrics.DSLA || '');
+        qLaMI.innerHTML = markdownToHtml(q.calculated_metrics.LaMI || '');
+        qPMG_D.innerHTML = markdownToHtml(q.calculated_metrics.PMG_D || '');
+        qPMG_X.innerHTML = markdownToHtml(q.calculated_metrics.PMG_X || '');
+
+        cells.push(qNumberCell);
+        cells.push(qSourceCell);
+        cells.push(qDescriptionCell);
+        cells.push(qAttemptsSummaryCell);
+        cells.push(qDSLA);
+        cells.push(qLaMI);
+        cells.push(qPMG_D);
+        cells.push(qPMG_X);
+
+        const row = document.createElement('vscode-table-row');
+        cells.forEach(c => row.appendChild(c));
+        recommendationTableBodyEl.appendChild(row);
+    });
+}
