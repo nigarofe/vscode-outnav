@@ -1,61 +1,56 @@
+import { WORKSPACE_DIR, EXTENSION_SRC } from '../extension';
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { WORKSPACE_DIR, EXTENSION_SRC } from '../extension';
 
 export async function parseOutlinesToJson() {
-    const raw = await fs.readFile(path.join(WORKSPACE_DIR, 'Outlines.md'), 'utf8');
+    interface OutlineNode { title: string; line: number; level: number; children?: OutlineNode[] }
+    const stack: OutlineNode[] = [];
+    const roots: OutlineNode[] = []; // collect top-level nodes when parent is undefined
 
-    // Split the outlines by lines and filter out empty lines
+    const raw = await fs.readFile(path.join(WORKSPACE_DIR, 'Outlines.md'), 'utf8');
     const lines = raw.split(/\r?\n/).map(l => l.replace(/\r$/, ''))
-        .map(l => l.replace(/\uFEFF/g, '')) // strip BOM if present
+        .map(l => l.replace(/\uFEFF/g, ''))
         .map(l => l.replace(/\s+$/g, ''))
         .filter(l => l.trim().length > 0);
 
-    interface OutlineNode { title: string; level: number; children?: OutlineNode[] }
-
-    // Create a synthetic root that will hold all top-level entries. Root.level = 0.
-    const root: OutlineNode = { title: 'Document', level: 0, children: [] };
-
-    // stack[level] = last node seen at that level. seed with root at level 0.
-    const stack: OutlineNode[] = [];
-    stack[0] = root;
-
-    function countIndent(s: string) {
-        const m = s.match(/^([\t ]*)/);
-        if (!m) return 0;
-        const indent = m[1] || '';
-        // The outlines format expresses indentation as tabs. Count tabs only.
-        // Mixing spaces and tabs can produce unexpected levels; prefer tabs per spec.
-        const tabs = (indent.match(/\t/g) || []).length;
-        return tabs;
-    }
-
-    for (const rawLine of lines) {
+    for (let i = 0; i < lines.length; i++) {
+        const rawLine = lines[i];
         const indentLevel = countIndent(rawLine);
         const title = rawLine.replace(/^([\t ]*)/, '').trim();
-        // Map file indent to node.level where root=0, so top-level items become level 1.
         let nodeLevel = indentLevel + 1;
 
-        // If stack doesn't have parent at nodeLevel-1, clamp to nearest existing parent.
         while (nodeLevel - 1 > stack.length - 1) {
             nodeLevel -= 1;
         }
 
-        const node: OutlineNode = { title, level: nodeLevel, children: [] };
+        const node: OutlineNode = { title, line: i+1, level: nodeLevel, children: [] };
 
-        const parent = stack[nodeLevel - 1] || root;
-        if (!parent.children) parent.children = [];
-        parent.children.push(node);
+        const parent = stack[nodeLevel - 1];
+        if (parent) {
+            if (!parent.children) parent.children = [];
+            parent.children.push(node);
+        } else {
+            // no parent at that level => treat as top-level
+            roots.push(node);
+        }
 
-        // set/replace stack entry for this level and truncate deeper levels
         stack[nodeLevel] = node;
         stack.length = nodeLevel + 1;
     }
 
-    const out = { outlines: root };
+    const out = { outlines: roots };
 
     let data_path = path.join(EXTENSION_SRC, 'outlines', 'data-exported.json');
     await fs.writeFile(data_path, JSON.stringify(out, null, 2), 'utf8');
 
     return data_path
+}
+
+
+function countIndent(s: string) {
+    const m = s.match(/^([\t ]*)/);
+    if (!m) return 0;
+    const indent = m[1] || '';
+    const tabs = (indent.match(/\t/g) || []).length;
+    return tabs;
 }

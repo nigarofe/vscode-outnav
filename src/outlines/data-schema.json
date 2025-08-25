@@ -2,8 +2,11 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "document": {
-      "$ref": "#/definitions/OutlineNode"
+    "outlines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/OutlineNode"
+      }
     }
   },
   "definitions": {
@@ -12,6 +15,10 @@
       "properties": {
         "title": {
           "type": "string"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 0
         },
         "level": {
           "type": "integer",
@@ -24,7 +31,7 @@
           }
         }
       },
-      "required": ["title", "level"],
+      "required": ["title", "line", "level"],
       "additionalProperties": false
     }
   }
