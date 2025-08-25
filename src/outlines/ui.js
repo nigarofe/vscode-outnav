@@ -28,94 +28,86 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// --- Keyboard shortcuts for RSVP / navigation ---
+(function () {
+    // Avoid installing multiple times
+    if (window.__outlines_keyboard_installed) return;
+    window.__outlines_keyboard_installed = true;
 
-        // if (!window.__outnav_message_handler_installed) {
-        //     const __outnav_message_handler = (event) => {
-        //         const payload = event.data.payload;
+    function isTyping(event) {
+        const t = event.target;
+        return t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
+    }
 
-        //         outlinesWebviewJSONel.textContent = JSON.stringify(payload, null, 2);
-        //         parentsBreadcrumbEl.textContent = payload.parents.join(" > ") + " > ";
-        //         currentItemEl.textContent = payload.currentLineContent;
+    const lpmInput = document.getElementById('lpm');
 
-        //         // outlinesTree.innerHTML = '';
-        //         // const renderedResult = renderNode(payload);
-        //         // if (renderedResult && renderedResult.el) outlinesTree.appendChild(renderedResult.el);
+    function changeLpm(delta) {
+        if (!lpmInput) return;
+        const cur = parseInt(lpmInput.value || '200', 10) || 0;
+        const next = Math.max(1, Math.min(5000, cur + delta));
+        lpmInput.value = next;
+        lpmInput.dispatchEvent(new CustomEvent('lpmChanged', { detail: { lpm: next } }));
+    }
 
+    function togglePlay() {
+        const paused = document.body.dataset.rsvpPaused === 'true' ? 'false' : 'true';
+        document.body.dataset.rsvpPaused = paused;
+        document.body.dispatchEvent(new CustomEvent('rsvpToggle', { detail: { paused: paused === 'true' } }));
+    }
 
-        //         siblingsEl.innerHTML = '';
-        //         payload.siblings.forEach(element => {
-        //             const treeItem = document.createElement("vscode-tree-item");
-        //             treeItem.textContent = element;
-        //             siblingsEl.appendChild(treeItem);
-        //         });
-        //     };
-        //     window.addEventListener("message", __outnav_message_handler);
-        //     window.__outnav_message_handler_installed = true;
-        // }
-    
+    function changeIndent(delta) {
+        document.body.dispatchEvent(new CustomEvent('indentChange', { detail: { delta } }));
+    }
 
+    function navigate(direction) {
+        // dispatch on document so any panel can catch it
+        document.dispatchEvent(new CustomEvent('navigate', { detail: { direction } }));
+    }
 
+    window.addEventListener('keydown', (e) => {
+        if (isTyping(e)) return;
 
+        const key = e.key;
+        switch (key) {
+            case ' ': // space -> pause/continue
+                e.preventDefault();
+                togglePlay();
+                break;
+            case '-':
+            case '_':
+                e.preventDefault();
+                changeLpm(-10);
+                break;
+            case '=':
+            case '+':
+                e.preventDefault();
+                changeLpm(10);
+                break;
+            case 'a':
+            case 'A':
+                e.preventDefault();
+                changeIndent(-1);
+                break;
+            case 'd':
+            case 'D':
+                e.preventDefault();
+                changeIndent(1);
+                break;
+            case 'j':
+            case 'J':
+                e.preventDefault();
+                navigate('previous');
+                break;
+            case 'l':
+            case 'L':
+                e.preventDefault();
+                navigate('next');
+                break;
+            default:
+                break;
+        }
+    });
 
-
-// function renderNode(payload) {
-//     const node = payload.outlinesJson;
-//     if (!node) return { el: null, found: false };
-
-//     // If an array is provided, return a DocumentFragment with each child appended
-//     if (Array.isArray(node)) {
-//         const frag = document.createDocumentFragment();
-//         let anyFound = false;
-//         node.forEach(n => {
-//             const { el, found } = renderNode(n);
-//             if (el) frag.appendChild(el);
-//             if (found) anyFound = true;
-//         });
-//         return { el: frag, found: anyFound };
-//     }
-
-//     // unwrap document wrapper if present
-//     if (node.document) return renderNode(node.document);
-
-//     const title = (node.title || node.text || '').toString();
-//     const current = (payload.currentLineContent || '').toString();
-
-//     // Create a tree item and nest children inside it (matches the example structure)
-//     const treeItem = document.createElement('vscode-tree-item');
-//     const countSuffix = (node.children && node.children.length) ? ' (' + node.children.length + ')' : '';
-//     treeItem.textContent = title + countSuffix;
-
-//     // Render children and detect if any descendant matches
-//     let descendantFound = false;
-//     if (node.children && node.children.length) {
-//         node.children.forEach(child => {
-//             const { el, found } = renderNode(child);
-//             if (el) treeItem.appendChild(el);
-//             if (found) descendantFound = true;
-//         });
-//     }
-
-//     // Determine if this node matches the current line. Use a few sensible
-//     // matching heuristics: exact match, trimmed equality, or containment.
-//     const matches = (title === current)
-//         || (title.trim() === current.trim())
-//         || (title.includes(current) && current.length > 0)
-//         || (current.includes(title) && title.length > 0);
-
-//     const found = matches || descendantFound;
-
-//     // If found anywhere in this subtree, mark this tree item as `open`
-//     // so ancestors are opened. For an exact match, also mark the item
-//     // `selected` so it is visually highlighted by the component.
-//     if (found) {
-//         try { treeItem.setAttribute('open', ''); } catch (e) { }
-//         try { treeItem.open = true; } catch (e) { }
-//     }
-//     if (matches) {
-//         try { treeItem.setAttribute('selected', ''); } catch (e) { }
-//         try { treeItem.setAttribute('aria-selected', 'true'); } catch (e) { }
-//         try { treeItem.selected = true; } catch (e) { }
-//     }
-
-//     return { el: treeItem, found };
-// }
+    // Small public API for tests / other scripts
+    window.outlinesKeyboard = { changeLpm, togglePlay, changeIndent, navigate };
+})();
