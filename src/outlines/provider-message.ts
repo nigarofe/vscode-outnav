@@ -1,6 +1,10 @@
 import * as vscode from 'vscode';
 import { readJson } from '../common/json-reader';
 
+function normalizeTitle(s: string) {
+    return (s || '').toLowerCase().replace(/\s+/g, ' ').replace(/["'`{}\[\]\(\)]/g, '').trim();
+}
+
 export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     const currentLineNumber = editor.selection.active.line + 1;
     const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
@@ -13,15 +17,16 @@ export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     }
 
     const payload = {
+        siblings: getSiblings(outlinesJson, currentLineContent),
+        parents: getParents(outlinesJson, currentLineContent),
+
         currentLineNumber,
-        selectedRange: editor.selection,
         currentLineContent,
         currentIndentationLevel,
         selectedLines: getSelectedLines(editor),
 
-        outlinesJson,
-        siblings: getSiblings(outlinesJson, currentLineContent),
-        parents: getParents(outlinesJson, currentLineContent),
+        selectedRange: editor.selection,
+        outlinesJson
     };
 
     // console.log('Sent payload:', payload);
@@ -46,12 +51,14 @@ function getParents(outlinesJson: any[] | null, currentLineContent: string): str
 
     const title = currentLineContent.replace(/\t/g, '').trim();
     const tabCount = (currentLineContent.match(/\t/g) || []).length;
-    // JSON 'level' appears to be 1-based under the document root while tabs are 0-based
-    const expectedLevel = tabCount + 1;
+    // parser now writes level as zero-based indent counts; be tolerant and accept either
+    const expectedLevel = tabCount;
 
-    // normalize root: if outlinesJson has a `document` root, start from it
+    // normalize root: support several shapes: { outlines: [...] }, { document: ... }, array, or single object
     const roots: any[] = [];
-    if ((outlinesJson as any).document) {
+    if ((outlinesJson as any).outlines && Array.isArray((outlinesJson as any).outlines)) {
+        roots.push(...(outlinesJson as any).outlines);
+    } else if ((outlinesJson as any).document) {
         roots.push((outlinesJson as any).document);
     } else if (Array.isArray(outlinesJson)) {
         roots.push(...outlinesJson);
@@ -59,9 +66,16 @@ function getParents(outlinesJson: any[] | null, currentLineContent: string): str
         roots.push(outlinesJson as any);
     }
 
+    function normalizeTitle(s: string) {
+        return (s || '').toLowerCase().replace(/\s+/g, ' ').replace(/["'`{}\[\]\(\)]/g, '').trim();
+    }
+
+    const targetNorm = normalizeTitle(title);
+
     function findPath(node: any, targetTitle: string, path: any[]): any[] | null {
         const newPath = path.concat(node);
-        if (node && node.title && node.title.trim() === targetTitle && (node.level == null || node.level === expectedLevel)) {
+        const nodeTitleNorm = node && node.title ? normalizeTitle(node.title) : '';
+        if (node && node.title && nodeTitleNorm === targetNorm && (node.level == null || node.level === expectedLevel || node.level === expectedLevel + 1)) {
             return newPath;
         }
 
@@ -93,10 +107,13 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
 
     const title = currentLineContent.replace(/\t/g, '').trim();
     const tabCount = (currentLineContent.match(/\t/g) || []).length;
-    const expectedLevel = tabCount + 1;
+    const expectedLevel = tabCount;
 
+    // normalize roots: support { outlines: [...] }, { document: ... }, array, single object
     const roots: any[] = [];
-    if ((outlinesJson as any).document) {
+    if ((outlinesJson as any).outlines && Array.isArray((outlinesJson as any).outlines)) {
+        roots.push(...(outlinesJson as any).outlines);
+    } else if ((outlinesJson as any).document) {
         roots.push((outlinesJson as any).document);
     } else if (Array.isArray(outlinesJson)) {
         roots.push(...outlinesJson);
@@ -104,9 +121,12 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
         roots.push(outlinesJson as any);
     }
 
+    const targetNorm = normalizeTitle(title);
+
     function findPath(node: any, targetTitle: string, path: any[]): any[] | null {
         const newPath = path.concat(node);
-        if (node && node.title && node.title.trim() === targetTitle && (node.level == null || node.level === expectedLevel)) {
+        const nodeTitleNorm = node && node.title ? normalizeTitle(node.title) : '';
+        if (node && node.title && nodeTitleNorm === targetNorm && (node.level == null || node.level === expectedLevel || node.level === expectedLevel + 1)) {
             return newPath;
         }
 
@@ -125,7 +145,8 @@ function getSiblings(outlinesJson: any[] | null, currentLineContent: string): st
         if (path) {
             // parent is previous element in the path (if any)
             const parent = path.length >= 2 ? path[path.length - 2] : null;
-            const candidates = parent ? parent.children : (root.children || []);
+            // if parent is null the node is a top-level root; siblings are other roots
+            const candidates = parent ? parent.children : roots;
             if (!Array.isArray(candidates)) return siblings;
 
             for (const c of candidates) {

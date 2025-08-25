@@ -17,15 +17,18 @@ export async function parseOutlinesToJson() {
         const rawLine = lines[i];
         const indentLevel = countIndent(rawLine);
         const title = rawLine.replace(/^([\t ]*)/, '').trim();
-        let nodeLevel = indentLevel + 1;
+        // treat zero indentation as level 0
+        const nodeLevel = indentLevel;
 
-        while (nodeLevel - 1 > stack.length - 1) {
-            nodeLevel -= 1;
+        const node: OutlineNode = { title, line: i + 1, level: nodeLevel, children: [] };
+
+        // if there is no node at the exact parent index (missing intermediate levels),
+        // attach to the nearest existing ancestor (last item in the stack)
+        let parent: OutlineNode | undefined;
+        if (nodeLevel > 0) {
+            const parentIndex = Math.min(nodeLevel - 1, stack.length - 1);
+            parent = parentIndex >= 0 ? stack[parentIndex] : undefined;
         }
-
-        const node: OutlineNode = { title, line: i+1, level: nodeLevel, children: [] };
-
-        const parent = stack[nodeLevel - 1];
         if (parent) {
             if (!parent.children) parent.children = [];
             parent.children.push(node);
@@ -34,6 +37,7 @@ export async function parseOutlinesToJson() {
             roots.push(node);
         }
 
+        // place node at its level index and trim the stack to this level
         stack[nodeLevel] = node;
         stack.length = nodeLevel + 1;
     }
@@ -51,6 +55,9 @@ function countIndent(s: string) {
     const m = s.match(/^([\t ]*)/);
     if (!m) return 0;
     const indent = m[1] || '';
+    // Count tabs as one indent level. Count groups of 4 spaces as one level.
     const tabs = (indent.match(/\t/g) || []).length;
-    return tabs;
+    const spaces = indent.replace(/\t/g, '').length;
+    const spaceLevels = Math.floor(spaces / 4);
+    return tabs + spaceLevels;
 }
