@@ -1,6 +1,6 @@
 let RVSP_lpm = 200;
 let RVSP_indentation = 0;
-let RVSP_childNumber = 1;
+let RVSP_itemNumber = 1;
 
 const payloadJsonEl = document.getElementById("payloadJson");
 
@@ -10,7 +10,7 @@ const siblingsEl = document.getElementById("siblings");
 
 const lpmValueEl = document.getElementById('lpmValue');
 const indentationValueEl = document.getElementById('indentationValue');
-const childNumberValueEl = document.getElementById('childNumberValue');
+const itemNumberValueEl = document.getElementById('itemNumberValue');
 
 window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener("message", (event) => {
@@ -44,11 +44,11 @@ function changeIndent(delta) {
     indentationValueEl.dispatchEvent(new CustomEvent('indentationChanged', { detail: { indentation: next } }));
 }
 
-function changeChildNumber(delta) {
-    const next = Math.max(1, RVSP_childNumber + delta);
-    RVSP_childNumber = next;
-    childNumberValueEl.textContent = next;
-    childNumberValueEl.dispatchEvent(new CustomEvent('childNumberChanged', { detail: { childNumber: next } }));
+function changeItemNumber(delta) {
+    const next = Math.max(1, RVSP_itemNumber + delta);
+    RVSP_itemNumber = next;
+    itemNumberValueEl.textContent = next;
+    itemNumberValueEl.dispatchEvent(new CustomEvent('itemNumberChanged', { detail: { itemNumber: next } }));
 }
 
 
@@ -81,13 +81,13 @@ window.addEventListener('keydown', (e) => {
         case 'j':
         case 'J':
             e.preventDefault();
-            changeChildNumber(-1);
+            changeItemNumber(-1);
             navigate('previous');
             break;
         case 'l':
         case 'L':
             e.preventDefault();
-            changeChildNumber(1);
+            changeItemNumber(1);
             navigate('next');
             break;
         default:
