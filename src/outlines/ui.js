@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const outlinesWebviewJSONel = document.getElementById("outlinesWebviewJSON");
     const parentsBreadcrumbEl = document.getElementById("parentsBreadcrumb");
     const currentItemEl = document.getElementById("currentItem");
-    const indentationOrderingExerciseEl = document.getElementById("indentationOrderingExercise");
     const outlinesTree = document.getElementById("outlinesTree");
     const siblingsTree = document.getElementById("siblingsTree");
 
@@ -14,10 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
             outlinesWebviewJSONel.textContent = JSON.stringify(payload, null, 2);
             parentsBreadcrumbEl.textContent = payload.parents.join(" > ") + " > ";
             currentItemEl.textContent = payload.currentLineContent;
-
-            indentationOrderingExerciseEl.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
-            const raw = JSON.stringify(payload.indentationOrderingExercise, null, 2).replace(/[\[\]",]/g, '');
-            indentationOrderingExerciseEl.textContent = raw.split('\n').map(line => line.trim()).join('\n');
 
             outlinesTree.innerHTML = '';
 

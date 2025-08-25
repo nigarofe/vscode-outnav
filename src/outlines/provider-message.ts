@@ -18,7 +18,6 @@ export async function generateMessageForOutlines(editor: vscode.TextEditor) {
         currentLineContent,
         currentIndentationLevel,
         selectedLines: getSelectedLines(editor),
-        indentationOrderingExercise: getIndentationOrderingExercise(editor),
 
         outlinesJson,
         siblings: getSiblings(outlinesJson, currentLineContent),
@@ -29,23 +28,6 @@ export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     return payload;
 }
 
-function getIndentationOrderingExercise(editor: vscode.TextEditor) {
-    const lines = getSelectedLines(editor);
-
-    const processed = lines
-        .map(line => line.replace(/\t/g, ''))
-        .filter(line => line.trim().length > 0);
-
-    // Fisher–Yates shuffle
-    for (let i = processed.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const tmp = processed[i];
-        processed[i] = processed[j];
-        processed[j] = tmp;
-    }
-
-    return processed;
-}
 
 function getSelectedLines(editor: vscode.TextEditor) {
     const selectedLines: string[] = [];
