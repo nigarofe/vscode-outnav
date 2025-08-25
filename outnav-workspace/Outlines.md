@@ -207,4 +207,6 @@ Book Live More Think Less
 				Sushi conveyor belt: You can choose to reach for them or let them pass by.
 
 				
-	
+vscode-cal
+	TODO
+		Save and restore UI state from JSON

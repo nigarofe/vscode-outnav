@@ -1,5 +1,7 @@
-<body>
-  <h1>Outlines</h3>
+<vscode-tabs selected-index="1">
+  <vscode-tab-header slot="header">📃 Outlines</vscode-tab-header>
+  <vscode-tab-panel>
+    <h1>Outlines</h1>
     <h2>Outlines Tree</h2>
     <vscode-tree id="outlinesTree"></vscode-tree>
     <vscode-divider></vscode-divider>
@@ -24,4 +26,25 @@
 
     <h2>Payload JSON</h2>
     <pre id="outlinesWebviewJSON"></pre>
-</body>
+
+  </vscode-tab-panel>
+
+
+
+
+  <vscode-tab-header slot="header">⚡ RSVP Structural Review</vscode-tab-header>
+  <vscode-tab-panel>
+    <h2>Rapid Serial Visual Presentation Structural Review</h2>
+
+    <vscode-checkbox-group>
+      <vscode-checkbox toggle label="Grandparents"></vscode-checkbox>
+
+      <vscode-checkbox toggle label="Parents"></vscode-checkbox>
+      <vscode-checkbox toggle label="Siblings" checked></vscode-checkbox>
+      <vscode-checkbox toggle label="Children"></vscode-checkbox>
+
+      <vscode-checkbox toggle label="Uncles"></vscode-checkbox>
+      <vscode-checkbox toggle label="Nephews"></vscode-checkbox>
+    </vscode-checkbox-group>
+  </vscode-tab-panel>
+</vscode-tabs>

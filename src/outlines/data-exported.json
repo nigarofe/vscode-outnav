@@ -1031,6 +1031,23 @@
             ]
           }
         ]
+      },
+      {
+        "title": "vscode-cal",
+        "level": 1,
+        "children": [
+          {
+            "title": "TODO",
+            "level": 2,
+            "children": [
+              {
+                "title": "Save and restore UI state from JSON",
+                "level": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
       }
     ]
   }
