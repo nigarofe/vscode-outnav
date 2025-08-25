@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (!window.__outnav_message_handler_installed) {
         const __outnav_message_handler = (event) => {
             const payload = event.data.payload;
-            console.log("received payload = " , payload)
 
             outlinesWebviewJSONel.style.whiteSpace = 'pre-wrap'; // preserve line breaks and wrapping
             outlinesWebviewJSONel.textContent = JSON.stringify(payload, null, 2);

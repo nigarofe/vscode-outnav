@@ -1,9 +1,9 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { workspaceDir, jsonExportsDir } from '../extension';
+import { WORKSPACE_DIR, EXTENSION_SRC } from '../extension';
 
 export async function parseOutlinesToJson() {
-    const raw = await fs.readFile(path.join(workspaceDir, 'Outlines.md'), 'utf8');
+    const raw = await fs.readFile(path.join(WORKSPACE_DIR, 'Outlines.md'), 'utf8');
 
     // Split the outlines by lines and filter out empty lines
     const lines = raw.split(/\r?\n/).map(l => l.replace(/\r$/, ''))
@@ -52,10 +52,10 @@ export async function parseOutlinesToJson() {
         stack.length = nodeLevel + 1;
     }
 
-    const out = { document: root };
+    const out = { outlines: root };
 
-    await fs.mkdir(path.dirname(jsonExportsDir), { recursive: true });
-    await fs.writeFile(path.join(jsonExportsDir, 'outlines.json'), JSON.stringify(out, null, 2), 'utf8');
+    let data_path = path.join(EXTENSION_SRC, 'outlines', 'data-exported.json');
+    await fs.writeFile(data_path, JSON.stringify(out, null, 2), 'utf8');
 
-    return path.join(jsonExportsDir, 'outlines.json');
+    return data_path
 }

@@ -1,8 +1,9 @@
 import * as vscode from "vscode";
 import * as path from "path";
 import { promises as fs } from "fs";
+import {EXTENSION_ROOT, EXTENSION_SRC} from "../extension";
 
-export async function getHtmlForWebview(ep: string, webview: vscode.Webview, currentFileName: string): Promise<string> {
+export async function getHtmlForWebview(webview: vscode.Webview, currentFileName: string): Promise<string> {
 	const baseName = path.parse(currentFileName).name.toLowerCase();
 
 	const resources: { [key: string]: string } = {
@@ -14,25 +15,25 @@ export async function getHtmlForWebview(ep: string, webview: vscode.Webview, cur
 		markdownIt: 'node_modules/markdown-it/dist/markdown-it.min.js',
 
 		// shared
-		sharedHtmlHead: 'src/webviews/sharedHead.html',
-		sharedScript: 'src/webviews/sharedScript.js',
+		commonHtml: 'src/common/ui.html',
+		commonScript: 'src/common/ui.js',
 
 		// custom
-		customHtml: `src/webviews/${baseName}.html`,
-		customScript: `src/webviews/${baseName}.js`
+		customHtml: `src/${baseName}/ui.html`,
+		customScript: `src/${baseName}/ui.js`
 	};
 
 	const webviewUris: { [key: string]: string } = {};
 	for (const [key, relativePath] of Object.entries(resources)) {
-		const absolutePath = path.join(ep, relativePath);
+		const absolutePath = path.join(EXTENSION_ROOT, relativePath);
 		const uri = vscode.Uri.file(absolutePath);
 		webviewUris[key] = webview.asWebviewUri(uri).toString();
 	}
 
 	const nonce = getNonce();
-	const imageUriMappings = await generateImageUriMappings(ep, webview);
+	const imageUriMappings = await generateImageUriMappings(EXTENSION_SRC, webview);
 
-	let html = await fs.readFile(path.join(ep, resources.sharedHtmlHead), 'utf8');
+	let html = await fs.readFile(path.join(EXTENSION_ROOT, resources.commonHtml), 'utf8');
 	html = html
 		.replace(/%%WEBVIEW_CSP%%/g, webview.cspSource)
 		.replace('%%TOOLKIT_JS_URI%%', webviewUris.vscodeElements)
@@ -40,14 +41,14 @@ export async function getHtmlForWebview(ep: string, webview: vscode.Webview, cur
 		.replace('%%KATEX_CSS_URI%%', webviewUris.katexCss)
 		.replace('%%KATEX_AUTO_RENDER_URI%%', webviewUris.katexAutoRender)
 		.replace('%%MARKDOWNIT_JS_URI%%', webviewUris.markdownIt)
-		.replace('%%SHARED_SCRIPT_URI%%', webviewUris.sharedScript)
+		.replace('%%COMMON_SCRIPT_URI%%', webviewUris.commonScript)
 		.replace('%%CUSTOM_SCRIPT_URI%%', webviewUris.customScript)
 		.replace(/"%%IMAGE_URI_MAPPINGS%%"/g, JSON.stringify(imageUriMappings))
 		.replace(/%%NONCE%%/g, nonce);
 
-	console.log('trying path for html', path.join(ep, resources.customHtml));
-	html += await fs.readFile(path.join(ep, resources.customHtml), 'utf8');
-	html += '</html>';
+	let customHtmlPath = path.join(EXTENSION_ROOT, resources.customHtml);
+	let customHtml = await fs.readFile(customHtmlPath, 'utf8');
+	html = html.replace('%%CUSTOM_HTML%%', customHtml);
 
 	return html;
 }

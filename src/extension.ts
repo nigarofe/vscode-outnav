@@ -1,26 +1,22 @@
-// General
 import * as vscode from "vscode";
 import * as path from "path";
-export const workspaceRoot = path.resolve(__dirname, '..');
-export const workspaceDir = path.join(workspaceRoot, 'outnav-workspace');
-export const jsonExportsDir = path.join(workspaceRoot, 'src', 'json_exports');
 
-// Questions.md
-import { generateMessageForQuestions } from "./webviews/questions";
-import { parseQuestionsToJson } from './parsers/questionsToJson';
-let questionsPanel: Promise<vscode.WebviewPanel> | null = null;
+// Paths
+export const EXTENSION_ROOT = path.resolve(__dirname, '..');
+export const EXTENSION_SRC = path.resolve(EXTENSION_ROOT, 'src');
+export const WORKSPACE_DIR = path.join(EXTENSION_ROOT, 'outnav-workspace');
 
-
-
-// Outlines.md
-import { generateMessageForOutlines } from "./webviews/outlines";
-import { parseOutlinesToJson } from './parsers/outlinesToJson';
+// Vital files
+import { generateMessageForOutlines } from "./outlines/provider-message";
+import { generateMessageForQuestions } from "./questions/provider-message";
+import { generateMessageForPremises } from "./premises/provider-message";
+import { parseOutlinesToJson } from './outlines/parser-md-to-json';
+import { parseQuestionsToJson } from './questions/parser-md-to-json';
 let outlinesPanel: Promise<vscode.WebviewPanel> | null = null;
-
-// Premises.md
+let questionsPanel: Promise<vscode.WebviewPanel> | null = null
 let premisesPanel: Promise<vscode.WebviewPanel> | null = null;
-import { generateMessageForPremises } from "./webviews/premises";
-import { getHtmlForWebview } from "./webviews/sharedHtmlProvider";
+
+import { getHtmlForWebview } from "./common/html-provider";
 
 
 export function activate(c: vscode.ExtensionContext) {
@@ -61,9 +57,8 @@ async function createPanelForFile(filename: string): Promise<vscode.WebviewPanel
 			enableScripts: true,
 		}
 	);
-	panel.webview.html = await getHtmlForWebview(workspaceRoot, panel.webview, filename);
+	panel.webview.html = await getHtmlForWebview(panel.webview, filename);
 
-	// when the panel is disposed, clear the cached promise so a new panel can be created later
 	panel.onDidDispose(() => {
 		const base = path.parse(filename).name + '.md';
 		switch (base) {
@@ -98,7 +93,6 @@ async function ensurePanelForCurrentFile(e: vscode.TextEditor) {
 
 async function sendPayloadToCurrentPanel(e: vscode.TextEditor) {
 	const currentFileName = getCurrentFileName(e);
-	console.log('sending payload to current panel. Filename = ', currentFileName);
 	const currentPanel = await getPanelForFile(currentFileName);
 	const payload = await getPayloadForCurrentPanel(e);
 	currentPanel?.webview.postMessage({ payload: payload });
@@ -131,6 +125,7 @@ async function parseFileToJson(currentFileName: string) {
 			await parseOutlinesToJson();
 			break;
 		case 'Premises.md':
+			// await parsePremisesToJson();
 			break;
 		case 'Questions.md':
 			await parseQuestionsToJson();

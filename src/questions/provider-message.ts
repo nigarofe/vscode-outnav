@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
-import { readJson } from './readJson';
+import { readJson } from '../common/json-reader';
 
 export async function generateMessageForQuestions(editor: vscode.TextEditor) {
     let payload = {
         currentQuestionNumber: getCurrentQuestionNumber(editor),
-        questionsJson: await readJson('questions.json', 'questions')
+        questionsJson: await readJson('questions')
     }
     return payload;
 }
@@ -26,5 +26,3 @@ function getCurrentQuestionNumber(editor: vscode.TextEditor): any {
 
     return null;
 }
-
-// readJson handles loading questions.json from the exports directory

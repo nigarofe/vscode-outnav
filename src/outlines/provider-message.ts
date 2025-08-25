@@ -1,12 +1,16 @@
 import * as vscode from 'vscode';
-import { readJson } from './readJson';
+import { readJson } from '../common/json-reader';
 
 export async function generateMessageForOutlines(editor: vscode.TextEditor) {
     const currentLineNumber = editor.selection.active.line + 1;
     const currentLineContent = editor.document.lineAt(editor.selection.active.line).text;
     const currentIndentationLevel = (currentLineContent.match(/\t/g) || []).length;
 
-    const outlinesJson = await readJson('outlines.json', 'document');
+    const outlinesJson = await readJson('outlines');
+    if (!outlinesJson) {
+        console.error('No outlinesJson provided');
+        return null;
+    }
 
     const payload = {
         currentLineNumber,
@@ -21,11 +25,9 @@ export async function generateMessageForOutlines(editor: vscode.TextEditor) {
         parents: getParents(outlinesJson, currentLineContent),
     };
 
-    console.log('Sent payload:', payload);
+    // console.log('Sent payload:', payload);
     return payload;
 }
-
-// readJson handles loading outlines.json from the exports directory
 
 function getIndentationOrderingExercise(editor: vscode.TextEditor) {
     const lines = getSelectedLines(editor);
@@ -59,8 +61,6 @@ function getSelectedLines(editor: vscode.TextEditor) {
 
 function getParents(outlinesJson: any[] | null, currentLineContent: string): string[] {
     const parents: string[] = [];
-    if (!outlinesJson) console.error('No outlinesJson provided');
-    if (!outlinesJson) return parents;
 
     const title = currentLineContent.replace(/\t/g, '').trim();
     const tabCount = (currentLineContent.match(/\t/g) || []).length;

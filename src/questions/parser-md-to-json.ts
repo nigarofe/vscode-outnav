@@ -1,5 +1,5 @@
 import * as fs from 'fs/promises';
-import { workspaceDir, jsonExportsDir } from '../extension';
+import { WORKSPACE_DIR, EXTENSION_SRC} from '../extension';
 import * as path from 'path';
 
 interface AttemptEntry {
@@ -42,7 +42,7 @@ interface OutFile {
 }
 
 export async function parseQuestionsToJson(): Promise<string> {
-    const raw = await fs.readFile(path.join(workspaceDir, 'Questions.md'), 'utf8');
+    const raw = await fs.readFile(path.join(WORKSPACE_DIR, 'Questions.md'), 'utf8');
 
     const headerRe = /^#\s+Question\s+(\d+)/gm;
     const headers: Array<{ num: number; start: number; headerEnd: number }> = [];
@@ -128,9 +128,10 @@ export async function parseQuestionsToJson(): Promise<string> {
 
     const out: OutFile = { questions, lastUpdated: new Date().toISOString(), totalQuestions: questions.length };
 
-    await fs.writeFile(path.join(jsonExportsDir, 'questions.json'), JSON.stringify(out, null, 2), 'utf8');
+    let data_path = path.join(EXTENSION_SRC, 'questions', 'data-exported.json');
+    await fs.writeFile(data_path, JSON.stringify(out, null, 2), 'utf8');
 
-    return path.join(jsonExportsDir, 'questions.json');
+    return data_path;
 }
 
 // --- Helper functions (ported/adapted from deprecated implementation) ---

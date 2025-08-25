@@ -9,7 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
             // console.log("Received message in questionsWebview:", event.data);
 
             if (!event.data.payload.currentQuestionNumber) {
-                if (questionNumberElement) { questionNumberElement.textContent = '?'; }
+                questionNumberElement.textContent = '?';
+                questionPropositionElement.textContent = 'No question loaded.';
+                questionStepByStepElement.textContent = 'No question loaded.';
+                questionAnswerElement.textContent = 'No question loaded.';
                 console.log("No current question number available. Returned: " + event.data.payload.currentQuestionNumber);
                 return;
             }
